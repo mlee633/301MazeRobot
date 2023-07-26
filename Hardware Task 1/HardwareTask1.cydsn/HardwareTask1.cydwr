@@ -303,6 +303,8 @@
       <Data key="c0fb34bd-1044-4931-9788-16b01ce89812" value="timer_clock" />
     </Group>
     <Group key="Pin">
+      <Data key="7a0d8562-307d-4b16-a6ee-926e1263c7d6" value="LED" />
+      <Data key="6988424d-7ce4-43e8-abfe-a1c7edf81c4d/7e0d1a6c-1235-4546-a71b-ea6e528924f8" value="ADC_SAR_1_ExtVref" />
       <Data key="6988424d-7ce4-43e8-abfe-a1c7edf81c4d/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_SAR_1_Bypass" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="ADC_Input" />
       <Data key="beca5e2d-f70f-4900-a4db-7eca1ed3126e/8b77a6c4-10a0-4390-971c-672353e2a49c" value="USBUART_1_Dm" />
@@ -3394,6 +3396,11 @@
     </Group>
   </Group>
   <Group key="Pin2">
+    <Group key="7a0d8562-307d-4b16-a6ee-926e1263c7d6">
+      <Group key="0">
+        <Data key="Port Format" value="2,1" />
+      </Group>
+    </Group>
     <Group key="6988424d-7ce4-43e8-abfe-a1c7edf81c4d/16a808f6-2e13-45b9-bce0-b001c8655113">
       <Group key="0">
         <Data key="Port Format" value="0,4" />

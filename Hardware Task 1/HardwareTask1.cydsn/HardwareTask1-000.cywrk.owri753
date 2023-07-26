@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c">
+<ExpandedNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Pins</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Analog</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Clocks</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Interrupts</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\DMA</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\System</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Directives</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Flash Security</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\EEPROM</v>
+<v>HardwareTask1-000\HardwareTask1\Header Files</v>
+<v>HardwareTask1-000\HardwareTask1\Header Files\cyapicallbacks.h</v>
+<v>HardwareTask1-000\HardwareTask1\Source Files</v>
+<v>HardwareTask1-000\HardwareTask1\Source Files\main.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Pins</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Analog</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Clocks</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Interrupts</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\DMA</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\System</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Directives</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\Flash Security</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.cydwr\EEPROM</v>
+<v>HardwareTask1-000\HardwareTask1\Header Files</v>
+<v>HardwareTask1-000\HardwareTask1\Header Files\cyapicallbacks.h</v>
+<v>HardwareTask1-000\HardwareTask1\Source Files</v>
+<v>HardwareTask1-000\HardwareTask1\Source Files\main.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_Finished_Interrupt</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_Input</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cy_boot</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\DAC_Output</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\LED</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\Timer_1</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\timer_clock</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\USBUART_1</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\USBUART_1_Dm</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\USBUART_1_Dp</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\VDAC8_1</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevice.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cyfitter.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>HardwareTask1-000\HardwareTask1\Generated_Source\PSoC5\cyfittergnu.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign</v>
+<v>HardwareTask1-000\HardwareTask1\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Finished_Interrupt.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Input.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\DAC_Output.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_audio.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_boot.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cdc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cls.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_descr.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dp.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_drv.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_episr.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_hid.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_midi.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_msc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_pm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_std.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_vnd.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.elf</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.hex</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.map</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.gpdsc</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.rpt</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Finished_Interrupt.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Input.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\DAC_Output.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_audio.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_boot.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cdc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cls.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_descr.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dp.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_drv.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_episr.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_hid.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_midi.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_msc.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_pm.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_std.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_vnd.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1_PM.lst</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.elf</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.hex</v>
+<v>HardwareTask1-000\HardwareTask1\CortexM3\ARM_GCC_541\Debug\HardwareTask1.map</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.gpdsc</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1.rpt</v>
+<v>HardwareTask1-000\HardwareTask1\HardwareTask1_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\PSoC 5LP Architecture TRM</v>
+<v>HardwareTask1-000\HardwareTask1\CY8C58LP Family Datasheet</v>
+<v>HardwareTask1-000\HardwareTask1\System Reference Guides</v>
+<v>HardwareTask1-000\HardwareTask1\ADC_SAR_v3_10.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_clock_v2_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_isr_v1_70.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_pins_v2_20</v>
+<v>HardwareTask1-000\HardwareTask1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\Timer_v2_80.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\USBFS_v3_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\VDAC8_v1_90.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>HardwareTask1-000</v>
+<v>HardwareTask1-000\HardwareTask1</v>
+<v>HardwareTask1-000\HardwareTask1\PSoC 5LP Architecture TRM</v>
+<v>HardwareTask1-000\HardwareTask1\CY8C58LP Family Datasheet</v>
+<v>HardwareTask1-000\HardwareTask1\System Reference Guides</v>
+<v>HardwareTask1-000\HardwareTask1\ADC_SAR_v3_10.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_clock_v2_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_isr_v1_70.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\cy_pins_v2_20</v>
+<v>HardwareTask1-000\HardwareTask1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\Timer_v2_80.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\USBFS_v3_20.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\VDAC8_v1_90.pdf</v>
+<v>HardwareTask1-000\HardwareTask1\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\main.c" />
+<name v=".\HardwareTask1.cydwr" />
+<name v=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
+<name v=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1317, 831" SelectedTabbedMdiWindow="35deaf4a-4cc3-47dd-aa40-2769fa076222"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0d2fe445-4a58-47d4-b771-0be8ca8c24b6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\TopDesign\TopDesign.cysch" Guid="35deaf4a-4cc3-47dd-aa40-2769fa076222" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\main.c" Guid="e60214a6-800b-42b4-aac2-d803cbc86d4e" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\HardwareTask1.cydwr" Guid="b89d2c39-13ed-49f9-bea4-76262c092ed7" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\Generated_Source\PSoC5\ADC_SAR_1.h" Guid="15b33f63-1eb8-4fc2-af9e-b3dc06ffe1e9" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\Generated_Source\PSoC5\ADC_SAR_1.c" Guid="400a5d09-5436-45df-9dca-4b2ea9d74973" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
