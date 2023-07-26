@@ -2,4 +2,6 @@ Generated_Source/
 Export/
 CortexM3/
 codegentemp/
+Backup/
 *.log
+*Log.txt
