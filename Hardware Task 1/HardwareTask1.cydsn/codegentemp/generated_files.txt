@@ -61,9 +61,6 @@
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\USBUART_1_cydmac.h" value="HEADER;;;;;USBUART_1" />
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\USBUART_1_msc.c" value="SOURCE_C;CortexM3;;;;USBUART_1" />
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\USBUART_1_msc.h" value="HEADER;;;;;USBUART_1" />
-  <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\LED_aliases.h" value="HEADER;;;;;LED" />
-  <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\LED.c" value="SOURCE_C;CortexM3;;;;LED" />
-  <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\LED.h" value="HEADER;;;;;LED" />
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\ADC_SAR_1_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_IRQ" />
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\ADC_SAR_1_IRQ.h" value="HEADER;;;;;ADC_SAR_1_IRQ" />
   <file name="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\codegentemp\ADC_SAR_1_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_theACLK" />

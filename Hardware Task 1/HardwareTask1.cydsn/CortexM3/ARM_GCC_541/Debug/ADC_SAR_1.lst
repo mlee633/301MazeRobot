@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
   29:Generated_Source\PSoC5/ADC_SAR_1.c **** static void ADC_SAR_1_CalcGain(uint8 resolution);
   30:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   31:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 2
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 2
 
 
   32:Generated_Source\PSoC5/ADC_SAR_1.c **** /***************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
   86:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   87:Generated_Source\PSoC5/ADC_SAR_1.c **** /*******************************************************************************
   88:Generated_Source\PSoC5/ADC_SAR_1.c **** * Function Name: ADC_SAR_1_Init
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 3
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 3
 
 
   89:Generated_Source\PSoC5/ADC_SAR_1.c **** ********************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  143:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_Enable(void)
  144:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  145:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 tmpReg;
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 4
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 4
 
 
  146:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 enableInterrupts;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  200:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG |= ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
  201:Generated_Source\PSoC5/ADC_SAR_1.c ****     #else /* for <500ksps */
  202:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG &= (uint8)~ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 5
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 5
 
 
  203:Generated_Source\PSoC5/ADC_SAR_1.c ****     #endif /* ADC_SAR_1_HIGH_POWER_PULSE == 0u */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  257:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* Disable the SAR ADC in Standby Power Mode */
  258:Generated_Source\PSoC5/ADC_SAR_1.c ****     ADC_SAR_1_STBY_PWRMGR_SAR_REG &= (uint8)~ADC_SAR_1_STBY_PWR_SAR_EN;
  259:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 6
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 6
 
 
  260:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* This is only valid if there is an internal clock */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  314:Generated_Source\PSoC5/ADC_SAR_1.c **** *  10 ->    RES10
  315:Generated_Source\PSoC5/ADC_SAR_1.c **** *  8  ->    RES8
  316:Generated_Source\PSoC5/ADC_SAR_1.c **** *
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 7
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 7
 
 
  317:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  371:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  372:Generated_Source\PSoC5/ADC_SAR_1.c ****     /*******************************************************************************
  373:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Function Name: ADC_SAR_1_StartConvert
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 8
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 8
 
 
  374:Generated_Source\PSoC5/ADC_SAR_1.c ****     ********************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  428:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  Stops ADC conversion in Free Running mode.
  429:Generated_Source\PSoC5/ADC_SAR_1.c ****     *
  430:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Side Effects:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 9
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 9
 
 
  431:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  In Software Trigger sample mode, this function sets a software version of the
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  485:Generated_Source\PSoC5/ADC_SAR_1.c ****     {
  486:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* wait one ADC clock to let the EOC status bit release */
  487:Generated_Source\PSoC5/ADC_SAR_1.c ****         CyDelayUs(1u);
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 10
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 10
 
 
  488:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* Do the unconditional read operation of the CSR1 register to make sure the EOC bit has be
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  542:Generated_Source\PSoC5/ADC_SAR_1.c **** * Global Variables:
  543:Generated_Source\PSoC5/ADC_SAR_1.c **** *  ADC_SAR_1_shift - used to convert the ADC counts to the 2s
  544:Generated_Source\PSoC5/ADC_SAR_1.c **** *  compliment form.
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 11
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 11
 
 
  545:Generated_Source\PSoC5/ADC_SAR_1.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  599:Generated_Source\PSoC5/ADC_SAR_1.c **** *  uint8: resolution
  600:Generated_Source\PSoC5/ADC_SAR_1.c **** *
  601:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 12
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 12
 
 
  602:Generated_Source\PSoC5/ADC_SAR_1.c **** *  None.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  633:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDDA) || \
  634:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDAC)) )
  635:Generated_Source\PSoC5/ADC_SAR_1.c ****                 diff_zero = ADC_SAR_1_SAR_DIFF_SHIFT >> 2u;
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 13
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 13
 
 
  636:Generated_Source\PSoC5/ADC_SAR_1.c ****             #endif /* End ADC_SAR_1_DEFAULT_RANGE */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
   78 0038 13F58063 		adds	r3, r3, #1024
   79 003c 01D5     		bpl	.L6
   80 003e 03F2FF73 		addw	r3, r3, #2047
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 14
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 14
 
 
   81              	.L6:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  126 000a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  127 000c 43F00203 		orr	r3, r3, #2
  128 0010 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 15
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 15
 
 
  153:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  218:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  173              		.loc 1 218 0
  174 005c 0225     		movs	r5, #2
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 16
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 16
 
 
  175 005e A3F59753 		sub	r3, r3, #4832
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  223 0002 FFF7FEFF 		bl	CyEnterCriticalSection
  224              	.LVL17:
  254:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* Disable the SAR ADC block in Active Power Mode */
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 17
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 17
 
 
  225              		.loc 1 254 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  273              		@ frame_needed = 0, uses_anonymous_args = 0
  274              		@ link register save eliminated.
  275              	.LVL19:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 18
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 18
 
 
  298:Generated_Source\PSoC5/ADC_SAR_1.c ****     tmpReg |= (uint8)(power << ADC_SAR_1_SAR_POWER_SHIFT);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  324 0012 C222     		movs	r2, #194
  325 0014 07E0     		b	.L25
  326              	.L27:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 19
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 19
 
 
  327              	.LVL24:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  373              		@ args = 0, pretend = 0, frame = 0
  374              		@ frame_needed = 0, uses_anonymous_args = 0
  375 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 20
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 20
 
 
  376              		.cfi_def_cfa_offset 8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
   75:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  424              		.loc 1 75 0
  425              		.cfi_startproc
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 21
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 21
 
 
  426              		@ args = 0, pretend = 0, frame = 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  474 0002 074B     		ldr	r3, .L47
  475 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  476              	.LVL38:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 22
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 22
 
 
  482:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* If convertion complete, wait until EOF bit released */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  523 0008 00B2     		sxth	r0, r0
  524 000a 181A     		subs	r0, r3, r0
  523:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 23
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 23
 
 
  525              		.loc 1 523 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  575              		.type	ADC_SAR_1_SetOffset, %function
  576              	ADC_SAR_1_SetOffset:
  577              	.LFB9:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 24
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 24
 
 
  586:Generated_Source\PSoC5/ADC_SAR_1.c ****     ADC_SAR_1_offset = offset;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  692:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_SetGain(int16 adcGain)
  693:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  603              		.loc 1 693 0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 25
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 25
 
 
  604              		.cfi_startproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  631              		.loc 1 720 0
  632              		.cfi_startproc
  633              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 26
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 26
 
 
  634              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  664              		.cfi_offset 4, -4
  745:Generated_Source\PSoC5/ADC_SAR_1.c ****     int16 mVolts;
  746:Generated_Source\PSoC5/ADC_SAR_1.c ****     int32 countsPer10Volt;
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 27
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 27
 
 
  747:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  704 003c 4010     		asrs	r0, r0, #1
  705 003e 4042     		negs	r0, r0
  706              	.L68:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 28
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 28
 
 
  760:Generated_Source\PSoC5/ADC_SAR_1.c ****                        (countsPer10Volt / 2) : (-(countsPer10Volt / 2)) )) / countsPer10Volt);
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  785:Generated_Source\PSoC5/ADC_SAR_1.c **** int32 ADC_SAR_1_CountsTo_uVolts(int16 adcCounts)
  786:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  737              		.loc 1 786 0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 29
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 29
 
 
  738              		.cfi_startproc
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  773              		.loc 1 805 0
  774 0022 24B2     		sxth	r4, r4
  775 0024 E517     		asrs	r5, r4, #31
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 30
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 30
 
 
  776 0026 074B     		ldr	r3, .L76+12
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  830:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  806              		.loc 1 830 0
  807              		.cfi_startproc
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 31
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 31
 
 
  808              		@ args = 0, pretend = 0, frame = 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  846 0028 0849     		ldr	r1, .L82+12
  847 002a FFF7FEFF 		bl	__aeabi_fmul
  848              	.LVL67:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 32
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 32
 
 
  849 002e 0546     		mov	r5, r0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  900 0025 02       		.uleb128 0x2
  901 0026 04       		.byte	0x4
  902 0027 05       		.byte	0x5
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 33
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 33
 
 
  903 0028 696E7400 		.ascii	"int\000"
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  957 008c 04       		.uleb128 0x4
  958 008d 00000000 		.4byte	.LASF13
  959 0091 02       		.byte	0x2
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 34
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 34
 
 
  960 0092 E801     		.2byte	0x1e8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1014 0110 04       		.uleb128 0x4
  1015 0111 96010000 		.4byte	.LASF24
  1016 0115 02       		.byte	0x2
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 35
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 35
 
 
  1017 0116 9302     		.2byte	0x293
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1071 0192 80000000 		.4byte	0x80
  1072 0196 98000000 		.4byte	.LLST3
  1073 019a 0D       		.uleb128 0xd
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 36
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 36
 
 
  1074 019b 06000000 		.4byte	.LVL8
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1128 0214 07       		.uleb128 0x7
  1129 0215 78020000 		.4byte	.LASF32
  1130 0219 01       		.byte	0x1
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 37
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 37
 
 
  1131 021a 2201     		.2byte	0x122
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1185 0294 01       		.byte	0x1
  1186 0295 6A       		.byte	0x6a
  1187 0296 00000000 		.4byte	.LFB1
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 38
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 38
 
 
  1188 029a 3C000000 		.4byte	.LFE1-.LFB1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1242 02fd 1C000000 		.4byte	.LFE0-.LFB0
  1243 0301 01       		.uleb128 0x1
  1244 0302 9C       		.byte	0x9c
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 39
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 39
 
 
  1245 0303 1A030000 		.4byte	0x31a
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1299 0386 00000000 		.4byte	.LFB8
  1300 038a 18000000 		.4byte	.LFE8-.LFB8
  1301 038e 01       		.uleb128 0x1
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 40
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 40
 
 
  1302 038f 9C       		.byte	0x9c
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1356 040d CF02     		.2byte	0x2cf
  1357 040f BC000000 		.4byte	0xbc
  1358 0413 01       		.uleb128 0x1
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 41
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 41
 
 
  1359 0414 50       		.byte	0x50
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1413 0496 FE000000 		.4byte	.LASF48
  1414 049a 01       		.byte	0x1
  1415 049b 1503     		.2byte	0x315
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 42
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 42
 
 
  1416 049d BC000000 		.4byte	0xbc
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1470 051c 25       		.byte	0x25
  1471 051d 11050000 		.4byte	0x511
  1472 0521 05       		.uleb128 0x5
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 43
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 43
 
 
  1473 0522 03       		.byte	0x3
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1527 059a 88       		.byte	0x88
  1528 059b 00       		.byte	0
  1529              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 44
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 44
 
 
  1530              	.Ldebug_abbrev0:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1584 0035 00       		.byte	0
  1585 0036 05       		.uleb128 0x5
  1586 0037 35       		.uleb128 0x35
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 45
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 45
 
 
  1587 0038 00       		.byte	0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1641 006f 02       		.uleb128 0x2
  1642 0070 17       		.uleb128 0x17
  1643 0071 00       		.byte	0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 46
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 46
 
 
  1644 0072 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1698 00ae 13       		.uleb128 0x13
  1699 00af 02       		.uleb128 0x2
  1700 00b0 17       		.uleb128 0x17
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 47
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 47
 
 
  1701 00b1 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1755 00ec 3A       		.uleb128 0x3a
  1756 00ed 0B       		.uleb128 0xb
  1757 00ee 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 48
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 48
 
 
  1758 00ef 05       		.uleb128 0x5
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1812 0127 17       		.uleb128 0x17
  1813 0128 00       		.byte	0
  1814 0129 00       		.byte	0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 49
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 49
 
 
  1815 012a 13       		.uleb128 0x13
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1869 0161 13       		.uleb128 0x13
  1870 0162 00       		.byte	0
  1871 0163 00       		.byte	0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 50
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 50
 
 
  1872 0164 16       		.uleb128 0x16
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1926 000a 50       		.byte	0x50
  1927 000b 1E000000 		.4byte	.LVL3
  1928 000f 26000000 		.4byte	.LVL5
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 51
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 51
 
 
  1929 0013 0400     		.2byte	0x4
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  1983 0090 00000000 		.4byte	0
  1984 0094 00000000 		.4byte	0
  1985              	.LLST3:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 52
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 52
 
 
  1986 0098 08000000 		.4byte	.LVL9
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2040 011d 24000000 		.4byte	.LVL28
  2041 0121 0400     		.2byte	0x4
  2042 0123 F3       		.byte	0xf3
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 53
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 53
 
 
  2043 0124 01       		.uleb128 0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2097 01a1 00       		.sleb128 0
  2098 01a2 31       		.byte	0x31
  2099 01a3 1A       		.byte	0x1a
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 54
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 54
 
 
  2100 01a4 9F       		.byte	0x9f
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2154 0232 54       		.byte	0x54
  2155 0233 00000000 		.4byte	0
  2156 0237 00000000 		.4byte	0
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 55
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 55
 
 
  2157              	.LLST16:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2211 0044 1C000000 		.4byte	.LFE0-.LFB0
  2212 0048 00000000 		.4byte	.LFB6
  2213 004c 24000000 		.4byte	.LFE6-.LFB6
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 56
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 56
 
 
  2214 0050 00000000 		.4byte	.LFB7
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2268              		.section	.debug_line,"",%progbits
  2269              	.Ldebug_line0:
  2270 0000 FA010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 57
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 57
 
 
  2270      02006800 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2292      66736574 
  2292      00
  2293              	.LASF23:
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 58
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 58
 
 
  2294 009d 72656731 		.ascii	"reg16\000"
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2319      7300
  2320              	.LASF58:
  2321 0151 4379456E 		.ascii	"CyEnterCriticalSection\000"
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 59
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 59
 
 
  2321      74657243 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2345 0203 4144435F 		.ascii	"ADC_SAR_1_theACLK_SetModeRegister\000"
  2345      5341525F 
  2345      315F7468 
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 60
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 60
 
 
  2345      6541434C 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2369      7400
  2370              	.LASF43:
  2371 02bc 61646347 		.ascii	"adcGain\000"
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 61
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 61
 
 
  2371      61696E00 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 1
  2390              	.LASF41:
  2391 03dd 6F666673 		.ascii	"offset\000"
  2391      657400
-ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccr96krk.s 			page 62
+ARM GAS  C:\Users\owri753\AppData\Local\Temp\ccOjXvg0.s 			page 62
 
 
  2392              	.LASF46:

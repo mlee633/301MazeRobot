@@ -36,8 +36,6 @@
 #include "USBUART_1_pvt.h"
 #include "USBUART_1_cydmac.h"
 #include "USBUART_1_msc.h"
-#include "LED_aliases.h"
-#include "LED.h"
 #include "ADC_SAR_1_IRQ.h"
 #include "ADC_SAR_1_theACLK.h"
 #include "USBUART_1_Dm_aliases.h"

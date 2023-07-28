@@ -24,4 +24,3 @@ set_io "ADC_Input(0)" iocell 1 6
 set_io "DAC_Output(0)" iocell 1 7
 # Note: port 15 is the logical name for port 8
 set_io "\USBUART_1:Dm(0)\" iocell 15 7
-set_io "LED(0)" iocell 2 1

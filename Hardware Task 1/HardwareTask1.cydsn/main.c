@@ -14,12 +14,11 @@
 void uart_send_str(const char* data);
 void uart_conv_uint16(uint16_t x);
 volatile static uint16 ADCresult;
-volatile static uint16 count = 0;
+volatile static uint8_t adc_flag = 0;
 
 CY_ISR(adc_finished_interrupt) {
     ADCresult = ADC_SAR_1_GetResult16();
-    LED_Write(~LED_Read());
-    count++;
+    adc_flag = !adc_flag;
     //uart_conv_uint16(ADCresult);
 }
 
@@ -31,6 +30,7 @@ int main(void)
     Timer_1_Start();   
     ADC_SAR_1_Start();
     ADC_Finished_Interrupt_StartEx(adc_finished_interrupt);
+    VDAC8_1_Start();
     
     // INITIALIZE READING:
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
@@ -40,16 +40,19 @@ int main(void)
     
     
 
-    uint16_t prevAdcVal = ADCresult;
+    uint8_t prev_adc_flag = adc_flag;
     for(;;)
     {
         /* Place your application code here. */
-        if(prevAdcVal != count) {
-            uart_conv_uint16(count);
-            uart_send_str(",");
-            uart_conv_uint16(ADC_SAR_1_CountsTo_mVolts(ADCresult));
-            uart_send_str(",\r\n");
-            prevAdcVal = count;
+        if(prev_adc_flag != adc_flag) {
+            uint16_t mV = ADC_SAR_1_CountsTo_mVolts(ADCresult);
+            uint8_t dacVal = (ADCresult >> 4 /* Account for difference between 12bit ADC and 8bit DAC*/) >> 1 /* Compensate for different voltage ranges */;
+            VDAC8_1_SetValue(dacVal);
+//            uart_conv_uint16(mV);
+//            uart_send_str(", ");
+//            uart_conv_uint16(dacVal);
+//            uart_send_str("\r\n");
+            prev_adc_flag = adc_flag;
         }
         
     }

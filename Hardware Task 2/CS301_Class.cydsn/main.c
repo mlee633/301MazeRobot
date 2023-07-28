@@ -35,7 +35,7 @@ int main()
 // --------------------------------    
 // ----- INITIALIZATIONS ----------
     CYGlobalIntEnable;
-
+      PWM_1_Start();
     
     
 // ------PWM SETUP ----------------  

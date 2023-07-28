@@ -1,6 +1,6 @@
-H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\HardwareTask1.cyprj|26b35f26-92b4-40e6-99a7-511d67137c47
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|625c4df2-0d26-4fa2-86ab-54eac76e1862
-C:\Users\owri753\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|92765183-b842-43e6-83f9-2eab12234054
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0fe3d3c6-49f8-4bfa-bccd-97512730b626
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9945a2fd-ce51-4fc7-9022-75f5dd617fd4
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|09487ef9-de6f-49bf-9b47-6e698a3440b1
+H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\HardwareTask1.cyprj|a3c650b8-f676-41f3-9f0c-411c3e1103d0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6d4a40ea-a020-4a49-ad0a-cf7b7f7629e6
+C:\Users\owri753\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|0412bd43-eb93-4f0b-b6f9-bd53fecc690f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|59d4f9b1-6306-4864-915e-6d0f04470eff
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a14ad7fa-6499-4713-8079-2308623013c9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|617e9f47-a072-4ed7-9ec9-106f6af70a24
