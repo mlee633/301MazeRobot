@@ -17,6 +17,11 @@ used.
 - `cmake`: A cross-platform build system ([link](cmake.org))
 - A C compiler
 
+*OR*
+
+- `Visual Studio`: Microsofts IDE for C/C++ and other
+  projects ([link](https://visualstudio.microsoft.com/#vs-section))
+
 **macOS / Linux**
 - `raylib`: C library for drawing visuals
   ([link](https://www.raylib.com/))
