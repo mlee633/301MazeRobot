@@ -1,4 +1,6 @@
 #include "algo.h"
+#include "defs.h"
+#include "queue.h"
 
 #include <assert.h>
 #include <stdint.h>
@@ -10,6 +12,11 @@
 #define RIGHT(p) ((Point){.x = (p).x + 1, .y = (p).y})
 #define ABOVE(p) ((Point){.x = (p).x, .y = (p).y - 1})
 #define BELOW(p) ((Point){.x = (p).x, .y = (p).y + 1})
+
+#define LEFT_FLAG (1 << 4)
+#define RIGHT_FLAG (1 << 5)
+#define UP_FLAG (1 << 6)
+#define DOWN_FLAG (1 << 7)
 
 // INPUTS
 // map:
@@ -26,58 +33,75 @@ int run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start, Point end,
   // The following algorithm finds a random possible path
   // uses the result array as a stack
 
-  result[0] = start;
-  size_t stackSize = 1;
+  // Setup variables
+  static uint8_t visitAndParentMap[MAP_HEIGHT][MAP_WIDTH];
+  static Point queueMem[512];
+  PointQueue queue;
 
-  // Stack allocated map, might be inefficient
-  // if we know we aren't multi-threaded, we can make it static
-  uint8_t visited[MAP_HEIGHT][MAP_WIDTH];
-  memset(visited, 0, sizeof(visited));
+  // Initialise
+  memset(visitAndParentMap, 0, sizeof(visitAndParentMap));
+  point_queue_init(&queue, queueMem, 512);
+  enqueue_point(&queue, start);
 
-  while (stackSize != 0) {
-    Point curr = result[stackSize - 1];
+  // Perform BFS
+  Point curr;
+  int depth = 1;
+  while (point_queue_size(&queue) != 0) {
+    curr = dequeue_point(&queue);
     assert(IDX_POINT(map, curr) != POINT_WALL);
-    IDX_POINT(visited, curr) = true;
 
     if (point_eq(curr, end)) {
-      return stackSize;
+      break;
     }
 
     // clang-format off
     if (curr.x - 1 >= 0 
 				&& !IDX_POINT(map, LEFT(curr)) 
-				&& !IDX_POINT(visited, LEFT(curr))) {
-      assert(stackSize < MAX_PATH_SIZE);
-      result[stackSize++] = LEFT(curr);
-      continue;
+				&& !IDX_POINT(visitAndParentMap, LEFT(curr))) {
+			IDX_POINT(visitAndParentMap, LEFT(curr)) |= RIGHT_FLAG | 1;
+			enqueue_point(&queue, LEFT(curr));
     }
 
     if (curr.x + 1 < MAP_WIDTH 
 				&& !IDX_POINT(map, RIGHT(curr)) 
-				&& !IDX_POINT(visited, RIGHT(curr))) {
-      assert(stackSize < MAX_PATH_SIZE);
-      result[stackSize++] = RIGHT(curr);
-      continue;
+				&& !IDX_POINT(visitAndParentMap, RIGHT(curr))) {
+			IDX_POINT(visitAndParentMap, RIGHT(curr)) |= LEFT_FLAG | 1;
+			enqueue_point(&queue, RIGHT(curr));
     }
 
     if (curr.y - 1 >= 0 
 				&& !IDX_POINT(map, ABOVE(curr))
-				&& !IDX_POINT(visited, ABOVE(curr))) {
-      assert(stackSize < MAX_PATH_SIZE);
-      result[stackSize++] = ABOVE(curr);
-      continue;
+				&& !IDX_POINT(visitAndParentMap, ABOVE(curr))) {
+			IDX_POINT(visitAndParentMap, ABOVE(curr)) |= DOWN_FLAG | 1;
+			enqueue_point(&queue, ABOVE(curr));
     }
 
     if (curr.y + 1 < MAP_HEIGHT 
 				&& !IDX_POINT(map, BELOW(curr))
-				&& !IDX_POINT(visited, BELOW(curr))) {
-      assert(stackSize < MAX_PATH_SIZE);
-      result[stackSize++] = BELOW(curr);
-      continue;
+				&& !IDX_POINT(visitAndParentMap, BELOW(curr))) {
+			IDX_POINT(visitAndParentMap, BELOW(curr)) |= UP_FLAG | 1;
+			enqueue_point(&queue, BELOW(curr));
     }
     // clang-format on
+    depth++;
+  }
 
-    stackSize--;
+  if (point_eq(curr, end)) {
+    assert(depth <= MAX_PATH_SIZE);
+    for (int i = depth - 1; i >= 0; i--) {
+      result[i] = curr;
+      uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
+      if (dirFlags & LEFT_FLAG)
+        curr = LEFT(curr);
+      if (dirFlags & RIGHT_FLAG)
+        curr = RIGHT(curr);
+      if (dirFlags & UP_FLAG)
+        curr = ABOVE(curr);
+      if (dirFlags & DOWN_FLAG)
+        curr = BELOW(curr);
+    }
+
+    return depth;
   }
 
   return 0;
