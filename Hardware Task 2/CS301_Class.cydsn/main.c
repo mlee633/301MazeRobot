@@ -39,7 +39,10 @@ int main()
     
     
 // ------PWM SETUP ----------------  
-    
+    PWM_3_WritePeriod(200);
+    PWM_3_Start();
+    PWM_3_WriteCompare(25);
+    return(0);
     
     
     
