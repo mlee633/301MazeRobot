@@ -5,7 +5,6 @@
 
 #define MAP_WIDTH 19
 #define MAP_HEIGHT 15
-#define MAX_PATH_SIZE 512
 
 #define POINT_WALL 1
 #define POINT_EMPTY 0

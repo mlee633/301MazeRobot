@@ -22,8 +22,8 @@ Point dequeue_point(PointQueue *queue) {
 }
 
 size_t point_queue_size(PointQueue *queue) {
-  if (queue->front >= queue->back)
-    return queue->front - queue->back;
+  if (queue->back >= queue->front)
+    return queue->back - queue->front;
 
-  return (queue->memSize - queue->back) + queue->front;
+  return (queue->memSize - queue->front) + queue->back;
 }

@@ -20,29 +20,43 @@
 
 // INPUTS
 // map:
-//   Outer pointer points to rows
-//   Inner pointer points to each column inside the row
+//	 The map to be used to run BFS on
+// start:
+//	 Start points for the algorithm
+// ends:
+//   The end points which the algorithm should search for
+// endCount:
+//	 The number of possible end points we have
 // result:
-//   The output of your path should be put here. It is
-//   an array of MAX_PATH_SIZE points.
-//
+//   The output of your path should be put here.
+// resultSize:
+//   The size of the output array.
+// maxQueueSize:
+//   If it is not null, it should be filled with the maximum size of the
+//   memory used by the algorithm. N.B. This should be the in-use memory.
 // RETURNS:
 //  The length of the path
-int run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start, Point end,
-             Point *result) {
+size_t run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                Point start,
+                Point *ends,
+                size_t endCount,
+                Point *result,
+                size_t resultCount,
+                size_t *maxInternalMem) {
   // The following algorithm finds a random possible path
   // uses the result array as a stack
+  if (maxInternalMem)
+    *maxInternalMem = 0;
 
   // Setup variables
   static uint8_t visitAndParentMap[MAP_HEIGHT][MAP_WIDTH];
-  static Point
-      queueMem[MAP_HEIGHT * MAP_WIDTH]; // Upper limit for max num vals in queue
+  static Point queueMem[64]; // Upper limit for max num vals in queue
   PointQueue queue;
 
   // Initialise
   memset(visitAndParentMap, 0, sizeof(visitAndParentMap));
   IDX_POINT(visitAndParentMap, start) |= 1;
-  point_queue_init(&queue, queueMem, 512);
+  point_queue_init(&queue, queueMem, sizeof(queueMem) / sizeof(Point));
   enqueue_point(&queue, start);
 
   // Perform BFS
@@ -51,8 +65,10 @@ int run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start, Point end,
     curr = dequeue_point(&queue);
     assert(IDX_POINT(map, curr) != POINT_WALL);
 
-    if (point_eq(curr, end)) {
-      break;
+    for (int i = 0; i < endCount; i++) {
+      if (point_eq(curr, ends[i])) {
+        goto found;
+      }
     }
 
     // clang-format off
@@ -84,47 +100,52 @@ int run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start, Point end,
 			enqueue_point(&queue, BELOW(curr));
     }
     // clang-format on
+    if (maxInternalMem &&
+        *maxInternalMem < (point_queue_size(&queue) * sizeof(Point))) {
+      *maxInternalMem = point_queue_size(&queue) * sizeof(Point);
+    }
   }
 
-  if (point_eq(curr, end)) {
-    // Calculate the size of the path
-    int pathSize = 0;
-    for (pathSize = 0; pathSize < MAX_PATH_SIZE; pathSize++) {
-      uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
-      assert(dirFlags & 1); /* Assert that we have visited a node */
-      if (dirFlags & LEFT_FLAG)
-        curr = LEFT(curr);
-      else if (dirFlags & RIGHT_FLAG)
-        curr = RIGHT(curr);
-      else if (dirFlags & UP_FLAG)
-        curr = ABOVE(curr);
-      else if (dirFlags & DOWN_FLAG)
-        curr = BELOW(curr);
-      else /* If there any direction flags, we must have reached the start */
-        break;
-    }
-
-    // This means we didn't reach the end of the path in time
-    assert(pathSize != MAX_PATH_SIZE);
-    curr = end;
-    pathSize++;
-    for (int i = 0; i <= pathSize; i++) {
-      result[pathSize - 1 - i] = curr;
-      uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
-      if (dirFlags & LEFT_FLAG)
-        curr = LEFT(curr);
-      else if (dirFlags & RIGHT_FLAG)
-        curr = RIGHT(curr);
-      else if (dirFlags & UP_FLAG)
-        curr = ABOVE(curr);
-      else if (dirFlags & DOWN_FLAG)
-        curr = BELOW(curr);
-      else
-        break;
-    }
-
-    return pathSize;
-  }
-
+  // If we exit out of the loop without finding
+  // anything, we return a path length of 0
   return 0;
+
+found:;
+  Point end = curr;
+  int pathSize = 0;
+  for (pathSize = 0; pathSize < resultCount; pathSize++) {
+    uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
+    assert(dirFlags & 1); /* Assert that we have visited a node */
+    if (dirFlags & LEFT_FLAG)
+      curr = LEFT(curr);
+    else if (dirFlags & RIGHT_FLAG)
+      curr = RIGHT(curr);
+    else if (dirFlags & UP_FLAG)
+      curr = ABOVE(curr);
+    else if (dirFlags & DOWN_FLAG)
+      curr = BELOW(curr);
+    else /* If there any direction flags, we must have reached the start */
+      break;
+  }
+
+  // This means we didn't reach the end of the path in time
+  assert(pathSize != resultCount);
+  curr = end;
+  pathSize++;
+  for (int i = 0; i < pathSize; i++) {
+    result[pathSize - 1 - i] = curr;
+    uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
+    if (dirFlags & LEFT_FLAG)
+      curr = LEFT(curr);
+    else if (dirFlags & RIGHT_FLAG)
+      curr = RIGHT(curr);
+    else if (dirFlags & UP_FLAG)
+      curr = ABOVE(curr);
+    else if (dirFlags & DOWN_FLAG)
+      curr = BELOW(curr);
+    else
+      break;
+  }
+
+  return pathSize;
 }

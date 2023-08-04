@@ -1,5 +1,6 @@
 #include "algo.h"
 #include "defs.h"
+#include <assert.h>
 #include <raylib.h>
 #include <stddef.h>
 #include <stdio.h>
@@ -7,25 +8,8 @@
 
 #define GRID_SCALE 30
 #define T(x) ((x)*GRID_SCALE)
-
-// static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = {
-//     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-//     {1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-//     {1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1},
-//     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1},
-//     {1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1},
-//     {1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1},
-//     {1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1},
-//     {1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
-//     {1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1},
-//     {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1},
-//     {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1},
-//     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
-//     {1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1},
-//     {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-//     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-// };
-//
+#define COUNT_OF(x)                                                                    \
+  ((sizeof(x) / sizeof(0 [x])) / ((size_t)(!(sizeof(x) % sizeof(0 [x])))))
 
 static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -45,7 +29,25 @@ static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
 
-static uint8_t food_list[5][2] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
+/* static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = { */
+/*     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, */
+/*     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, */
+/* }; */
+
+static Point food_list[] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
 
 // Pre-declaration for functions defined later on
 void visualise_map(uint8_t map[MAP_HEIGHT][MAP_WIDTH], int startx, int starty);
@@ -54,14 +56,22 @@ void draw_path(Point *path, int pathLength, int startx, int starty);
 int main(int argc, char **argv) {
 
   SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-  InitWindow(40 + MAP_WIDTH * GRID_SCALE, 60 + MAP_HEIGHT * GRID_SCALE,
+  InitWindow(40 + MAP_WIDTH * GRID_SCALE,
+             60 + MAP_HEIGHT * GRID_SCALE,
              "Robot Visualiser - 301");
 
-  const Point startPoint = (Point){.x = 1, .y = MAP_HEIGHT - 2};
-  const Point endPoint = (Point){.x = 17, .y = 13};
+  const Point startPoint = (Point){.x = 7, .y = MAP_HEIGHT - 2};
+  Point pathArray[256];
+  size_t maxBfsMem = 0;
 
-  Point path[MAX_PATH_SIZE];
-  int pathLength = run_algo(map, startPoint, endPoint, path);
+  // Find the quickest path to the first piece of food
+  size_t totalPathLength = run_algo(map,
+                                    startPoint,
+                                    food_list,
+                                    COUNT_OF(food_list),
+                                    pathArray,
+                                    COUNT_OF(pathArray),
+                                    &maxBfsMem);
 
   // Event loop
   while (!WindowShouldClose()) {
@@ -73,14 +83,20 @@ int main(int argc, char **argv) {
 
     // Draw start and end points
     DrawCircle(T(startPoint.x) + 20 + 5, T(startPoint.y) + 20 + 5, 2, ORANGE);
-    DrawCircle(T(endPoint.x) + 20 + 5, T(endPoint.y) + 20 + 5, 2, GREEN);
-
+    for (int i = 0; i < COUNT_OF(food_list); i++) {
+      Point food = food_list[i];
+      DrawCircle(T(food.x) + 20 + 5, T(food.y) + 20 + 5, 2, GREEN);
+    }
     // Display path length
     char buffer[255];
-    snprintf(buffer, sizeof(buffer), "Path Length: %d", pathLength);
+    snprintf(buffer,
+             sizeof(buffer),
+             "Path Length: %ld, Memory Usage: %ld bytes",
+             totalPathLength,
+             maxBfsMem);
     DrawText(buffer, 20, 40 + T(MAP_HEIGHT), 15, WHITE);
 
-    draw_path(path, pathLength, 20, 20);
+    draw_path(pathArray, totalPathLength, 20, 20);
 
     EndDrawing();
   }
@@ -111,20 +127,22 @@ void draw_path(Point *path, int pathLength, int sx, int sy) {
         .b = 255,
     };
 
-    DrawLine(T(curr.x) + sx + GRID_SCALE / 2, T(curr.y) + sy + GRID_SCALE / 2,
-             T(next.x) + sx + GRID_SCALE / 2, T(next.y) + sy + GRID_SCALE / 2,
+    DrawLine(T(curr.x) + sx + GRID_SCALE / 2,
+             T(curr.y) + sy + GRID_SCALE / 2,
+             T(next.x) + sx + GRID_SCALE / 2,
+             T(next.y) + sy + GRID_SCALE / 2,
              drawColor);
 
-    DrawCircle(T(curr.x) + sx + GRID_SCALE / 2, T(curr.y) + sy + GRID_SCALE / 2, 3,
-               drawColor);
+    DrawCircle(
+        T(curr.x) + sx + GRID_SCALE / 2, T(curr.y) + sy + GRID_SCALE / 2, 3, drawColor);
   }
 
   // If we have a non-zero length path, draw the
   // last circle
   if (pathLength > 0) {
     Point last = path[pathLength - 1];
-    DrawCircle(T(last.x) + sx + GRID_SCALE / 2, T(last.y) + sy + GRID_SCALE / 2, 3,
-               drawColor);
+    DrawCircle(
+        T(last.x) + sx + GRID_SCALE / 2, T(last.y) + sy + GRID_SCALE / 2, 3, drawColor);
   }
 }
 
