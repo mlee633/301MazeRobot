@@ -27,43 +27,45 @@
 //   The end points which the algorithm should search for
 // endCount:
 //	 The number of possible end points we have
-// result:
+// out:
 //   The output of your path should be put here.
-// resultSize:
-//   The size of the output array.
-// maxQueueSize:
-//   If it is not null, it should be filled with the maximum size of the
+// outCap:
+//   The capacity of result array
 //   memory used by the algorithm. N.B. This should be the in-use memory.
 // RETURNS:
 //  The length of the path
-size_t run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH],
-                Point start,
-                Point *ends,
-                size_t endCount,
-                Point *result,
-                size_t resultCount,
-                size_t *maxInternalMem) {
+AlgoResult run_algo(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                    Point start,
+                    const Point *ends,
+                    size_t endCount,
+                    Point *out,
+                    size_t outCap) {
   // The following algorithm finds a random possible path
   // uses the result array as a stack
-  if (maxInternalMem)
-    *maxInternalMem = 0;
 
   // Setup variables
   static uint8_t visitAndParentMap[MAP_HEIGHT][MAP_WIDTH];
   static Point queueMem[64]; // Upper limit for max num vals in queue
   PointQueue queue;
+  AlgoResult result;
 
   // Initialise
   memset(visitAndParentMap, 0, sizeof(visitAndParentMap));
   IDX_POINT(visitAndParentMap, start) |= 1;
   point_queue_init(&queue, queueMem, sizeof(queueMem) / sizeof(Point));
   enqueue_point(&queue, start);
+  result = (AlgoResult){
+      .pathLength = 0,
+#ifdef TRACK_STATS
+      .stats.maxMemUsage = 0,
+#endif
+  };
 
   // Perform BFS
   Point curr;
   while (point_queue_size(&queue) != 0) {
     curr = dequeue_point(&queue);
-    assert(IDX_POINT(map, curr) != POINT_WALL);
+    assert(!IDX_POINT(map, curr)); // Assert that we're looking at an empty space
 
     for (int i = 0; i < endCount; i++) {
       if (point_eq(curr, ends[i])) {
@@ -100,20 +102,22 @@ size_t run_algo(uint8_t map[MAP_HEIGHT][MAP_WIDTH],
 			enqueue_point(&queue, BELOW(curr));
     }
     // clang-format on
-    if (maxInternalMem &&
-        *maxInternalMem < (point_queue_size(&queue) * sizeof(Point))) {
-      *maxInternalMem = point_queue_size(&queue) * sizeof(Point);
-    }
+
+#ifdef TRACK_STATS
+    size_t queueMem = point_queue_size(&queue) * sizeof(Point);
+    result.stats.maxMemUsage =
+        (queueMem > result.stats.maxMemUsage) ? queueMem : result.stats.maxMemUsage;
+#endif
   }
 
   // If we exit out of the loop without finding
   // anything, we return a path length of 0
-  return 0;
+  return result;
 
 found:;
   Point end = curr;
   int pathSize = 0;
-  for (pathSize = 0; pathSize < resultCount; pathSize++) {
+  for (pathSize = 0; pathSize < outCap; pathSize++) {
     uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
     assert(dirFlags & 1); /* Assert that we have visited a node */
     if (dirFlags & LEFT_FLAG)
@@ -129,11 +133,11 @@ found:;
   }
 
   // This means we didn't reach the end of the path in time
-  assert(pathSize != resultCount);
+  assert(pathSize != outCap);
   curr = end;
   pathSize++;
   for (int i = 0; i < pathSize; i++) {
-    result[pathSize - 1 - i] = curr;
+    out[pathSize - 1 - i] = curr;
     uint8_t dirFlags = IDX_POINT(visitAndParentMap, curr);
     if (dirFlags & LEFT_FLAG)
       curr = LEFT(curr);
@@ -147,5 +151,6 @@ found:;
       break;
   }
 
-  return pathSize;
+  result.pathLength = pathSize;
+  return result;
 }
