@@ -35,43 +35,15 @@ int main()
 // --------------------------------    
 // ----- INITIALIZATIONS ----------
     CYGlobalIntEnable;
-      PWM_1_Start();
+    PWM_1_WritePeriod(255);
+    PWM_1_Start();
+    PWM_1_WriteCompare(255);
     
-    
-// ------PWM SETUP ----------------  
-    PWM_3_WritePeriod(200);
-    PWM_3_Start();
-    PWM_3_WriteCompare(25);
-    return(0);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-// ------USB SETUP ----------------    
-#ifdef USE_USB    
-    USBUART_Start(0,USBUART_5V_OPERATION);
-#endif        
-        
-    RF_BT_SELECT_Write(0);
-
-    usbPutString(displaystring);
-    for(;;)
-    {
-        /* Place your application code here. */
-        handle_usb();
-        if (flag_KB_string == 1)
-        {
-            usbPutString(line);
-            flag_KB_string = 0;
-        }        
-    }   
+    PWM_2_WritePeriod(255);
+    PWM_2_Start();
+    PWM_2_WriteCompare(255);
+  
+    for(;;) {}
 }
 //* ========================================
 void usbPutString(char *s)
