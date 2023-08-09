@@ -16,11 +16,9 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    
     for(;;)
     {
-        uint8_t transIn = TransIn_Read();
-        LEDOut_Write(transIn);
     }
 }
 

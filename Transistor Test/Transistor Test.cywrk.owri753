@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\TopDesign</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Pins</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Analog</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Clocks</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Interrupts</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\DMA</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\System</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Directives</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Flash Security</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\EEPROM</v>
+<v>Transistor Test\Transistor Test\Header Files</v>
+<v>Transistor Test\Transistor Test\Header Files\cyapicallbacks.h</v>
+<v>Transistor Test\Transistor Test\Source Files</v>
+<v>Transistor Test\Transistor Test\Source Files\main.c</v>
+<v>Transistor Test\Transistor Test\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\TopDesign</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Pins</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Analog</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Clocks</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Interrupts</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\DMA</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\System</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Directives</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\Flash Security</v>
+<v>Transistor Test\Transistor Test\Transistor Test.cydwr\EEPROM</v>
+<v>Transistor Test\Transistor Test\Header Files</v>
+<v>Transistor Test\Transistor Test\Header Files\cyapicallbacks.h</v>
+<v>Transistor Test\Transistor Test\Source Files</v>
+<v>Transistor Test\Transistor Test\Source Files\main.c</v>
+<v>Transistor Test\Transistor Test\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\TopDesign</v>
+<v>Transistor Test\Transistor Test\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\TopDesign</v>
+<v>Transistor Test\Transistor Test\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\CortexM3</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LEDOut.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TransIn.lst</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Transistor Test.elf</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Transistor Test.hex</v>
+<v>Transistor Test\Transistor Test\CortexM3\ARM_GCC_541\Debug\Transistor Test.map</v>
+<v>Transistor Test\Transistor Test\Transistor Test.gpdsc</v>
+<v>Transistor Test\Transistor Test\Transistor Test.rpt</v>
+<v>Transistor Test\Transistor Test\Transistor Test_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\Transistor Test.rpt</v>
+<v>Transistor Test\Transistor Test\Transistor Test_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\PSoC 5LP Architecture TRM</v>
+<v>Transistor Test\Transistor Test\CY8C58LP Family Datasheet</v>
+<v>Transistor Test\Transistor Test\System Reference Guides</v>
+<v>Transistor Test\Transistor Test\System Reference Guides\cy_boot_v5_70</v>
+<v>Transistor Test\Transistor Test\cy_pins_v2_20</v>
+<v>Transistor Test\Transistor Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Transistor Test</v>
+<v>Transistor Test\Transistor Test</v>
+<v>Transistor Test\Transistor Test\PSoC 5LP Architecture TRM</v>
+<v>Transistor Test\Transistor Test\CY8C58LP Family Datasheet</v>
+<v>Transistor Test\Transistor Test\System Reference Guides</v>
+<v>Transistor Test\Transistor Test\System Reference Guides\cy_boot_v5_70</v>
+<v>Transistor Test\Transistor Test\cy_pins_v2_20</v>
+<v>Transistor Test\Transistor Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Transistor Test.cydsn\main.c" />
+<name v=".\Transistor Test.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Transistor Test.cydsn\Transistor Test.cydwr" />
+<name v=".\Transistor Test.cydsn\cyapicallbacks.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1693, 711" SelectedTabbedMdiWindow="bb14b213-13db-4ff3-bb7a-e4ced495728e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="dd26224a-8742-4e0d-b17c-8590432fc71c" /><DocumentWindow Key="H:\Documents\301_Project\Transistor Test\Transistor Test.cydsn\main.c" Guid="7142c2fe-c256-4f40-b20c-17bc0ec62013" /><DocumentWindow Key="H:\Documents\301_Project\Transistor Test\Transistor Test.cydsn\TopDesign\TopDesign.cysch" Guid="cd051f9a-cbc9-459f-97ed-3edb3384f277" /><DocumentWindow Key="H:\Documents\301_Project\Transistor Test\Transistor Test.cydsn\Transistor Test.cydwr" Guid="bb14b213-13db-4ff3-bb7a-e4ced495728e" /><DocumentWindow Key="H:\Documents\301_Project\Transistor Test\Transistor Test.cydsn\cyapicallbacks.h" Guid="4d77245e-afbc-4625-a07d-64ad0239ed7e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
