@@ -1,3 +1,5 @@
+
+
 /* ========================================
  * Fully working code: 
  * PWM      : 
@@ -31,19 +33,34 @@ void handle_usb();
 int main()
 {
     
-
-// --------------------------------    
-// ----- INITIALIZATIONS ----------
-    CYGlobalIntEnable;
+  CYGlobalIntEnable;
     PWM_1_WritePeriod(255);
     PWM_1_Start();
-    PWM_1_WriteCompare(255);
+    PWM_1_WriteCompare(255); // writecompare value / write period = Duty cycle percentage
     
     PWM_2_WritePeriod(255);
     PWM_2_Start();
     PWM_2_WriteCompare(255);
   
-    for(;;) {}
+
+// ------USB SETUP ----------------    
+#ifdef USE_USB    
+    USBUART_Start(0,USBUART_5V_OPERATION);
+#endif        
+        
+    RF_BT_SELECT_Write(0);
+
+    usbPutString(displaystring);
+    for(;;)
+    {
+        /* Place your application code here. */
+        handle_usb();
+        if (flag_KB_string == 1)
+        {
+            usbPutString(line);
+            flag_KB_string = 0;
+        }        
+    }   
 }
 //* ========================================
 void usbPutString(char *s)
@@ -123,3 +140,4 @@ void handle_usb()
 
 
 /* [] END OF FILE */
+
