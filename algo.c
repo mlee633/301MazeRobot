@@ -42,10 +42,12 @@ AlgoResult run_algo(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
                     size_t outCap) {
   // The following algorithm finds a random possible path
   // uses the result array as a stack
-
-  // Setup variables
+  // [50 1 10];
+  //                                      have we been visited
+  // Setup variables                      V
+  // each point is a set of flags: 00000000
   static uint8_t visitAndParentMap[MAP_HEIGHT][MAP_WIDTH];
-  static Point queueMem[64]; // Upper limit for max num vals in queue
+  static Point queueMem[32]; // Upper limit for max num vals in queue
   PointQueue queue;
   AlgoResult result;
 
@@ -112,6 +114,7 @@ AlgoResult run_algo(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
 
   // If we exit out of the loop without finding
   // anything, we return a path length of 0
+  result.pathLength = 0;
   return result;
 
 found:;

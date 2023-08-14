@@ -62,8 +62,8 @@ int main(int argc, char **argv) {
              60 + MAP_HEIGHT * GRID_SCALE,
              "Robot Visualiser - 301");
 
-  const Point start = (Point){.x = 7, .y = MAP_HEIGHT - 2};
-  Point pathArray[256];
+  static const Point start = (Point){.x = 7, .y = MAP_HEIGHT - 2};
+  static Point pathArray[128];
 
   // Find the quickest path to the first piece of food
   AlgoResult result = find_full_path(start, pathArray, COUNT_OF(pathArray));
@@ -156,6 +156,7 @@ AlgoResult find_full_path(Point start, Point *out, size_t outCap) {
   *out = start;
   while (foodLeft > 0) {
     AlgoResult runResult = run_algo(map, *out, food, foodLeft, out, outCap);
+		assert(outCap >= runResult.pathLength);
 
     Point last = out[runResult.pathLength - 1];
     bool found = false;
@@ -175,7 +176,7 @@ AlgoResult find_full_path(Point start, Point *out, size_t outCap) {
 
     result.pathLength += runResult.pathLength - 1;
     out += runResult.pathLength - 1;
-    outCap -= runResult.pathLength;
+    outCap -= runResult.pathLength - 1;
     foodLeft -= 1;
 
 #ifdef TRACK_STATS
