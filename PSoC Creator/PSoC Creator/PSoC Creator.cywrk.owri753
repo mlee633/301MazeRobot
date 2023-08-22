@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Creator\Light Sensor Read Test\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>PSoC Creator</v>
 <v>PSoC Creator\Light Sensor Read Test</v>
@@ -37,6 +37,7 @@
 <v>PSoC Creator\Light Sensor Read Test\Header Files\cyapicallbacks.h</v>
 <v>PSoC Creator\Light Sensor Read Test\Source Files</v>
 <v>PSoC Creator\Light Sensor Read Test\Source Files\main.c</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source</v>
 <v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -58,6 +59,36 @@
 <v>PSoC Creator\Light Sensor Read Test\Source Files</v>
 <v>PSoC Creator\Light Sensor Read Test\Source Files\main.c</v>
 <v>PSoC Creator\Light Sensor Read Test\Generated_Source</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cy_boot</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\DebugLED</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\DebugTCPin</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens1</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens1_TimeOut</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens1Edge</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens1Overflow</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens2</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens2_TimeOut</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens2Edge</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LightSens2Overflow</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LSDebug1</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\LSDebug2</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\TimeOutResetReg</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\timer_clock</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\timer_clock_1</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevice.h</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5\cydisabledsheets.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -105,6 +136,8 @@
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2_TimeOut_PM.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Edge.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Overflow.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug1.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug2.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg_PM.lst</v>
@@ -147,6 +180,8 @@
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2_TimeOut_PM.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Edge.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Overflow.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug1.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug2.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg.lst</v>
 <v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg_PM.lst</v>
@@ -180,8 +215,10 @@
 <v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20</v>
 <v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>PSoC Creator\Light Sensor Read Test\CyControlReg_v1_80.pdf</v>
-<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0.pdf</v>
-<v>PSoC Creator\Light Sensor Read Test\LED_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0\LED_v1_0.pdf</v>
 <v>PSoC Creator\Light Sensor Read Test\Timer_v2_80</v>
 <v>PSoC Creator\Light Sensor Read Test\Timer_v2_80\Timer_v2_80.pdf</v>
 </ExpandedNodeIds>
@@ -199,8 +236,10 @@
 <v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20</v>
 <v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>PSoC Creator\Light Sensor Read Test\CyControlReg_v1_80.pdf</v>
-<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0.pdf</v>
-<v>PSoC Creator\Light Sensor Read Test\LED_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0\LED_v1_0.pdf</v>
 <v>PSoC Creator\Light Sensor Read Test\Timer_v2_80</v>
 <v>PSoC Creator\Light Sensor Read Test\Timer_v2_80\Timer_v2_80.pdf</v>
 </VisibleNodeIds>
@@ -222,7 +261,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b242aea3-a0fe-4acf-9fe5-02f4388985dd"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="067b985c-cd07-4d57-83d8-8bdb23eb53f2" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\TopDesign\TopDesign.cysch" Guid="d62487d5-b3d9-4720-9a0d-b2076bd84d80" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\main.c" Guid="b242aea3-a0fe-4acf-9fe5-02f4388985dd" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\Light Sensor Read Test.cydwr" Guid="3c609391-d027-410b-8061-f334086c465b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1693, 711" SelectedTabbedMdiWindow="3c609391-d027-410b-8061-f334086c465b"><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\TopDesign\TopDesign.cysch" Guid="d62487d5-b3d9-4720-9a0d-b2076bd84d80" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\main.c" Guid="b242aea3-a0fe-4acf-9fe5-02f4388985dd" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\Light Sensor Read Test.cydwr" Guid="3c609391-d027-410b-8061-f334086c465b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="067b985c-cd07-4d57-83d8-8bdb23eb53f2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

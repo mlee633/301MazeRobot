@@ -11,34 +11,6 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o">
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.c" />
-<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\cyapicallbacks.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\CyFlash.h" />
-<file name=".\Generated_Source\PSoC5\CyLib.h" />
-<file name=".\Generated_Source\PSoC5\CySpc.h" />
-<file name=".\Generated_Source\PSoC5\cyPm.h" />
-<file name=".\Generated_Source\PSoC5\cydevice.h" />
-<file name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC5\cyfitter.h" />
-<file name=".\Generated_Source\PSoC5\cyfitter_cfg.c" />
-<file name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
-<file name=".\Generated_Source\PSoC5\cytypes.h" />
-<file name=".\cyapicallbacks.h" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\cymetadata.o">
-<dep name=".\Generated_Source\PSoC5\cymetadata.c" />
-</file>
-<file name=".\Generated_Source\PSoC5\cymetadata.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o">
 <dep name=".\Generated_Source\PSoC5\Cm3Start.c" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -55,6 +27,16 @@
 </file>
 <file name=".\Generated_Source\PSoC5\Cm3Start.c" />
 <file name=".\Generated_Source\PSoC5\CyDmac.h" />
+<file name=".\Generated_Source\PSoC5\CyFlash.h" />
+<file name=".\Generated_Source\PSoC5\CyLib.h" />
+<file name=".\Generated_Source\PSoC5\CySpc.h" />
+<file name=".\Generated_Source\PSoC5\cyPm.h" />
+<file name=".\Generated_Source\PSoC5\cydevice.h" />
+<file name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC5\cyfitter.h" />
+<file name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC5\cytypes.h" />
+<file name=".\cyapicallbacks.h" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\CyDmac.o">
 <dep name=".\Generated_Source\PSoC5\CyDmac.c" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -131,6 +113,32 @@
 <file name=".\Generated_Source\PSoC5\DebugTCPin.c" />
 <file name=".\Generated_Source\PSoC5\DebugTCPin.h" />
 <file name=".\Generated_Source\PSoC5\DebugTCPin_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\LSDebug1.o">
+<dep name=".\Generated_Source\PSoC5\LSDebug1.c" />
+<dep name=".\Generated_Source\PSoC5\LSDebug1.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\LSDebug1.c" />
+<file name=".\Generated_Source\PSoC5\LSDebug1.h" />
+<file name=".\Generated_Source\PSoC5\LSDebug1_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\LSDebug2.o">
+<dep name=".\Generated_Source\PSoC5\LSDebug2.c" />
+<dep name=".\Generated_Source\PSoC5\LSDebug2.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\LSDebug2.c" />
+<file name=".\Generated_Source\PSoC5\LSDebug2.h" />
+<file name=".\Generated_Source\PSoC5\LSDebug2_aliases.h" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\LightSens1.o">
 <dep name=".\Generated_Source\PSoC5\LightSens1.c" />
 <dep name=".\Generated_Source\PSoC5\LightSens1.h" />
@@ -317,6 +325,24 @@
 </file>
 <file name=".\Generated_Source\PSoC5\cy_em_eeprom.c" />
 <file name=".\Generated_Source\PSoC5\cy_em_eeprom.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.c" />
+<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\cyfitter_cfg.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\cymetadata.o">
+<dep name=".\Generated_Source\PSoC5\cymetadata.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\cymetadata.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\cyutils.o">
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
@@ -361,6 +387,10 @@
 <dep name=".\Generated_Source\PSoC5\DebugLED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\DebugTCPin.h" />
 <dep name=".\Generated_Source\PSoC5\DebugTCPin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug1.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug2.h" />
+<dep name=".\Generated_Source\PSoC5\LSDebug2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\LightSens1.h" />
 <dep name=".\Generated_Source\PSoC5\LightSens1Edge.h" />
 <dep name=".\Generated_Source\PSoC5\LightSens1Overflow.h" />
@@ -446,6 +476,19 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1Edge.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2Edge.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\DebugLED.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2_TimeOut.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2_TimeOut_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1_TimeOut.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1_TimeOut_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1Overflow.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2Overflow.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\TimeOutResetReg.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\TimeOutResetReg_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\DebugTCPin.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock_1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LSDebug1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LSDebug2.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\CyDmac.o" />
@@ -455,17 +498,6 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\CySpc.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\cyutils.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1_TimeOut.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1_TimeOut_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens1Overflow.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2Overflow.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2_TimeOut.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LightSens2_TimeOut_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\DebugTCPin.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\TimeOutResetReg.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\TimeOutResetReg_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock_1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Light Sensor Read Test.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" />
 </file>
@@ -510,6 +542,8 @@
 <name_val_pair name="Generated_Source\PSoC5\TimeOutResetReg.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\TimeOutResetReg_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\timer_clock_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\LSDebug1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\LSDebug2.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\owri753\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\Light Sensor Read Test.cyprj&quot; -d CY8C5888LTI-LP097 -s &quot;H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\Generated_Source\PSoC5&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -773,6 +807,32 @@
 <v>Generated_Source\PSoC5\DebugLED_aliases.h</v>
 <v>Generated_Source\PSoC5\DebugLED.c</v>
 <v>Generated_Source\PSoC5\DebugLED.h</v>
+<v>Generated_Source\PSoC5\timer_clock.c</v>
+<v>Generated_Source\PSoC5\timer_clock.h</v>
+<v>Generated_Source\PSoC5\LightSens2_TimeOut.c</v>
+<v>Generated_Source\PSoC5\LightSens2_TimeOut.h</v>
+<v>Generated_Source\PSoC5\LightSens2_TimeOut_PM.c</v>
+<v>Generated_Source\PSoC5\LightSens1_TimeOut.c</v>
+<v>Generated_Source\PSoC5\LightSens1_TimeOut.h</v>
+<v>Generated_Source\PSoC5\LightSens1_TimeOut_PM.c</v>
+<v>Generated_Source\PSoC5\LightSens1Overflow.c</v>
+<v>Generated_Source\PSoC5\LightSens1Overflow.h</v>
+<v>Generated_Source\PSoC5\LightSens2Overflow.c</v>
+<v>Generated_Source\PSoC5\LightSens2Overflow.h</v>
+<v>Generated_Source\PSoC5\TimeOutResetReg.h</v>
+<v>Generated_Source\PSoC5\TimeOutResetReg.c</v>
+<v>Generated_Source\PSoC5\TimeOutResetReg_PM.c</v>
+<v>Generated_Source\PSoC5\DebugTCPin_aliases.h</v>
+<v>Generated_Source\PSoC5\DebugTCPin.c</v>
+<v>Generated_Source\PSoC5\DebugTCPin.h</v>
+<v>Generated_Source\PSoC5\timer_clock_1.c</v>
+<v>Generated_Source\PSoC5\timer_clock_1.h</v>
+<v>Generated_Source\PSoC5\LSDebug1_aliases.h</v>
+<v>Generated_Source\PSoC5\LSDebug1.c</v>
+<v>Generated_Source\PSoC5\LSDebug1.h</v>
+<v>Generated_Source\PSoC5\LSDebug2_aliases.h</v>
+<v>Generated_Source\PSoC5\LSDebug2.c</v>
+<v>Generated_Source\PSoC5\LSDebug2.h</v>
 <v>Generated_Source\PSoC5\cm3gcc.ld</v>
 <v>Generated_Source\PSoC5\Cm3RealView.scat</v>
 <v>Generated_Source\PSoC5\Cm3Start.c</v>
@@ -806,29 +866,6 @@
 <v>Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>Generated_Source\PSoC5\timer_clock.c</v>
-<v>Generated_Source\PSoC5\timer_clock.h</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut_1.c</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut_1.h</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut_1_PM.c</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut.c</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut.h</v>
-<v>Generated_Source\PSoC5\LightSens1_TimeOut_PM.c</v>
-<v>Generated_Source\PSoC5\LightSens1Overflow.c</v>
-<v>Generated_Source\PSoC5\LightSens1Overflow.h</v>
-<v>Generated_Source\PSoC5\LightSens2Overflow.c</v>
-<v>Generated_Source\PSoC5\LightSens2Overflow.h</v>
-<v>Generated_Source\PSoC5\LightSens2_TimeOut.c</v>
-<v>Generated_Source\PSoC5\LightSens2_TimeOut.h</v>
-<v>Generated_Source\PSoC5\LightSens2_TimeOut_PM.c</v>
-<v>Generated_Source\PSoC5\DebugTCPin_aliases.h</v>
-<v>Generated_Source\PSoC5\DebugTCPin.c</v>
-<v>Generated_Source\PSoC5\DebugTCPin.h</v>
-<v>Generated_Source\PSoC5\TimeOutResetReg.h</v>
-<v>Generated_Source\PSoC5\TimeOutResetReg.c</v>
-<v>Generated_Source\PSoC5\TimeOutResetReg_PM.c</v>
-<v>Generated_Source\PSoC5\timer_clock_1.c</v>
-<v>Generated_Source\PSoC5\timer_clock_1.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -837,9 +874,9 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="133371436923162950" />
+<deps_time v="133371581950391001" />
 <top_block v="TopDesign" />
-<last_generation v="0" />
+<last_generation v="2" />
 <pdl_path v="" />
 <sw_packages />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
@@ -847,7 +884,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133371436934400910" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133371582006975364" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

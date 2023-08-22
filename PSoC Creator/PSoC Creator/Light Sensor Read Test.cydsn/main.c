@@ -1,4 +1,4 @@
-/* ========================================
+   /* ========================================
  *
  * Copyright YOUR COMPANY, THE YEAR
  * All Rights Reserved
@@ -66,9 +66,15 @@ int main(void)
     for(;;)
     {
         if(light1Val) {
-            DebugLED_Write(0xff);   
+            LSDebug1_Write(0xff);
         } else {
-            DebugLED_Write(0x00);   
+            LSDebug1_Write(0x00);   
+        }
+        
+        if(light2Val) {
+            LSDebug2_Write(0xff);
+        } else {
+            LSDebug2_Write(0x00);   
         }
         /* Place your application code here. */
     }

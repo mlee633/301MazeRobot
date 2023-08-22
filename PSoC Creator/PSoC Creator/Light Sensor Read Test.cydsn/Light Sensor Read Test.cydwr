@@ -254,7 +254,9 @@
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="LightSens1" />
       <Data key="54d95b3c-4518-4920-a85b-a43d97a9c158" value="DebugTCPin" />
       <Data key="313ab015-648d-438d-85dc-e95f92bd0db8" value="LightSens2" />
+      <Data key="cb1aace9-f5bc-4a78-b44e-b533f8e9eead" value="LSDebug2" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="DebugLED" />
+      <Data key="eef9a864-0903-4e91-9d57-b90962f1991b" value="LSDebug1" />
     </Group>
   </Group>
   <Group key="EEPROM">
@@ -3353,7 +3355,12 @@
     </Group>
     <Group key="313ab015-648d-438d-85dc-e95f92bd0db8">
       <Group key="0">
-        <Data key="Port Format" value="12,6" />
+        <Data key="Port Format" value="15,4" />
+      </Group>
+    </Group>
+    <Group key="cb1aace9-f5bc-4a78-b44e-b533f8e9eead">
+      <Group key="0">
+        <Data key="Port Format" value="1,6" />
       </Group>
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
@@ -3361,6 +3368,12 @@
         <Data key="Port Format" value="2,1" />
       </Group>
     </Group>
+    <Group key="eef9a864-0903-4e91-9d57-b90962f1991b">
+      <Group key="0">
+        <Data key="Port Format" value="12,2" />
+      </Group>
+    </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />
