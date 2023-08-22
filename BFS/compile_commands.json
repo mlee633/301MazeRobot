@@ -1,0 +1,30 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-I/opt/homebrew/Cellar/raylib/4.5.0/include",
+      "-ggdb",
+      "-o",
+      "./bin/visualise",
+      "./main.c"
+    ],
+    "directory": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser",
+    "file": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser/main.c",
+    "output": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser/bin/visualise"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-I/opt/homebrew/Cellar/raylib/4.5.0/include",
+      "-ggdb",
+      "-o",
+      "./bin/visualise",
+      "./algo.c"
+    ],
+    "directory": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser",
+    "file": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser/algo.c",
+    "output": "/Users/obwan02/Documents/repos/301MazeRobot/MazeAlgoVisualiser/bin/visualise"
+  }
+]
