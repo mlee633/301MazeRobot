@@ -26,7 +26,7 @@ endif()
 
 set(CMAKE_C_STANDARD 11) # Requires C11 standard
 
-add_executable(${PROJECT_NAME} main.c algo.c)
+add_executable(${PROJECT_NAME} main.c algo.c queue.c)
 target_link_libraries(${PROJECT_NAME} raylib)
 if (APPLE)
     target_link_libraries(${PROJECT_NAME} "-framework IOKit")
