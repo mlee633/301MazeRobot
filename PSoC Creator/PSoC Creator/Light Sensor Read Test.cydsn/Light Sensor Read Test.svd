@@ -7,6 +7,27 @@
   <width>32</width>
   <peripherals>
     <peripheral>
+      <name>TimeOutResetReg</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>TimeOutResetReg_CONTROL_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x4000647B</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>LightSens1_TimeOut</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
@@ -299,7 +320,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>LightSens1_TimeOut_1</name>
+      <name>LightSens2_TimeOut</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -309,7 +330,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>LightSens1_TimeOut_1_GLOBAL_ENABLE</name>
+          <name>LightSens2_TimeOut_GLOBAL_ENABLE</name>
           <description>PM.ACT.CFG</description>
           <addressOffset>0x400043A3</addressOffset>
           <size>8</size>
@@ -327,7 +348,7 @@
           </fields>
         </register>
         <register>
-          <name>LightSens1_TimeOut_1_CONTROL</name>
+          <name>LightSens2_TimeOut_CONTROL</name>
           <description>TMRx.CFG0</description>
           <addressOffset>0x40004F0C</addressOffset>
           <size>8</size>
@@ -411,7 +432,7 @@
           </fields>
         </register>
         <register>
-          <name>LightSens1_TimeOut_1_CONTROL2</name>
+          <name>LightSens2_TimeOut_CONTROL2</name>
           <description>TMRx.CFG1</description>
           <addressOffset>0x40004F0D</addressOffset>
           <size>8</size>
@@ -476,7 +497,7 @@
           </fields>
         </register>
         <register>
-          <name>LightSens1_TimeOut_1_CONTROL3_</name>
+          <name>LightSens2_TimeOut_CONTROL3_</name>
           <description>TMRx.CFG2</description>
           <addressOffset>0x40004F0E</addressOffset>
           <size>8</size>
@@ -571,7 +592,7 @@
           </fields>
         </register>
         <register>
-          <name>LightSens1_TimeOut_1_PERIOD</name>
+          <name>LightSens2_TimeOut_PERIOD</name>
           <description>TMRx.PER0 - Assigned Period</description>
           <addressOffset>0x40004F10</addressOffset>
           <size>16</size>
@@ -580,7 +601,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>LightSens1_TimeOut_1_COUNTER</name>
+          <name>LightSens2_TimeOut_COUNTER</name>
           <description>TMRx.CNT_CMP0 - Current Down Counter Value</description>
           <addressOffset>0x40004F12</addressOffset>
           <size>16</size>
