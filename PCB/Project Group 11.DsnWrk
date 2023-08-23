@@ -5,4 +5,6 @@ ProjectPath=Brian301.LibPkg
 [Project2]
 ProjectPath=PCB_301_Project\PCB_301_Project.PrjPcb
 [Project3]
-ProjectPath=..\Altium Libraries\EE209_Library\EE209_Library.LibPkg
+ProjectPath=301.LibPkg
+[Project4]
+ProjectPath=..\Altium Libraries\ece components\ece components.LibPkg
