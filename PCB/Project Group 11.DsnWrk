@@ -1,10 +1,8 @@
 [ProjectGroup]
 Version=1.0
 [Project1]
-ProjectPath=Brian301.LibPkg
-[Project2]
 ProjectPath=PCB_301_Project\PCB_301_Project.PrjPcb
-[Project3]
+[Project2]
 ProjectPath=301.LibPkg
-[Project4]
+[Project3]
 ProjectPath=..\Altium Libraries\ece components\ece components.LibPkg
