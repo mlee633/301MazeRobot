@@ -8,3 +8,7 @@ ProjectPath=301.LibPkg
 ProjectPath=LM393E\AltiumDesigner\LM393EDR2G.LibPkg
 [Project4]
 ProjectPath=ul_BAT54JFILM\AltiumDesigner\BAT54JFILM.LibPkg
+[Project5]
+ProjectPath=..\Altium Libraries\EE209_Library\EE209_Library.LibPkg
+[Project6]
+ProjectPath=..\Altium Libraries\COMSYS301_2013\COMSYS301_2013.LibPkg
