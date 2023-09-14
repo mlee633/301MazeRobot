@@ -44,7 +44,6 @@ CY_ISR(light_sens2_overflow_interrupt) {
     light2Val = 0;
 }
 
-
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
@@ -60,6 +59,7 @@ int main(void)
     // Enable timers
     LightSens1_TimeOut_Start();
     LightSens2_TimeOut_Start();
+    
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 

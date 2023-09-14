@@ -3,11 +3,12 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="PSoC Creator" persistent="PSoC Creator.cywrk" platform="NOT_USED">
-<current_project name=".\Light Sensor Read Test.cydsn\Light Sensor Read Test.cyprj" />
+<current_project name=".\Final.cydsn\Final.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
 <v>.\Light Sensor Read Test.cydsn\Light Sensor Read Test.cyprj</v>
+<v>.\Final.cydsn\Final.cyprj</v>
 </projects>
 <workspace_id v="49f33a48-0fc7-4e66-b31c-90dae894690d" />
 <WriteAppVersionLastSavedWith v="4.2.0.641" />
