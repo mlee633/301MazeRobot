@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.527ms
+Loading plugins phase: Elapsed time ==> 0s.259ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj -d CY8C5888LTI-LP097 -s H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.419ms
+Elaboration phase: Elapsed time ==> 1s.178ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.100ms
+HDL generation phase: Elapsed time ==> 0s.092ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu Sep 14 16:56:28 2023
+Fri Sep 15 17:40:04 2023
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Final.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu Sep 14 16:56:28 2023
+Fri Sep 15 17:40:04 2023
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -64,6 +64,8 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 
 vpp:  No errors.
 
@@ -93,7 +95,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu Sep 14 16:56:28 2023
+Fri Sep 15 17:40:04 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -116,6 +118,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -129,7 +132,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu Sep 14 16:56:28 2023
+Fri Sep 15 17:40:05 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -152,6 +155,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
@@ -160,22 +164,22 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\l
 Detecting unused logic.
 ----------------------------------------------------------
     User names
-	\QuadDec_1:Net_1123\
-	\QuadDec_1:Cnt8:Net_82\
-	\QuadDec_1:Cnt8:Net_95\
-	\QuadDec_1:Cnt8:Net_91\
-	\QuadDec_1:Cnt8:Net_102\
-	\QuadDec_1:Cnt8:CounterUDB:ctrl_cmod_2\
-	\QuadDec_1:Cnt8:CounterUDB:ctrl_cmod_1\
-	\QuadDec_1:Cnt8:CounterUDB:ctrl_cmod_0\
-	\QuadDec_2:Net_1123\
-	\QuadDec_2:Cnt8:Net_82\
-	\QuadDec_2:Cnt8:Net_95\
-	\QuadDec_2:Cnt8:Net_91\
-	\QuadDec_2:Cnt8:Net_102\
-	\QuadDec_2:Cnt8:CounterUDB:ctrl_cmod_2\
-	\QuadDec_2:Cnt8:CounterUDB:ctrl_cmod_1\
-	\QuadDec_2:Cnt8:CounterUDB:ctrl_cmod_0\
+	\QuadDec_1:Net_1129\
+	\QuadDec_1:Cnt16:Net_82\
+	\QuadDec_1:Cnt16:Net_95\
+	\QuadDec_1:Cnt16:Net_91\
+	\QuadDec_1:Cnt16:Net_102\
+	\QuadDec_1:Cnt16:CounterUDB:ctrl_cmod_2\
+	\QuadDec_1:Cnt16:CounterUDB:ctrl_cmod_1\
+	\QuadDec_1:Cnt16:CounterUDB:ctrl_cmod_0\
+	\QuadDec_2:Net_1129\
+	\QuadDec_2:Cnt16:Net_82\
+	\QuadDec_2:Cnt16:Net_95\
+	\QuadDec_2:Cnt16:Net_91\
+	\QuadDec_2:Cnt16:Net_102\
+	\QuadDec_2:Cnt16:CounterUDB:ctrl_cmod_2\
+	\QuadDec_2:Cnt16:CounterUDB:ctrl_cmod_1\
+	\QuadDec_2:Cnt16:CounterUDB:ctrl_cmod_0\
 	Net_245
 	Net_242
 	\PWM_1:Net_114\
@@ -198,9 +202,16 @@ Detecting unused logic.
 	\USBUART_1:Net_1916\
 	\USBUART_1:dma_complete_7\
 	\USBUART_1:Net_1915\
+	Net_273
+	Net_294
+	Net_295
+	Net_297
+	Net_298
+	Net_299
+	Net_300
 
 
-Deleted 38 User equations/components.
+Deleted 45 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -209,20 +220,20 @@ Alias Detection
 Aliasing one to tmpOE__TrackLED3_net_0
 Aliasing tmpOE__TrackLED1_net_0 to tmpOE__TrackLED3_net_0
 Aliasing tmpOE__TrackLED2_net_0 to tmpOE__TrackLED3_net_0
-Aliasing \QuadDec_1:Cnt8:CounterUDB:ctrl_capmode_1\ to zero
-Aliasing \QuadDec_1:Cnt8:CounterUDB:ctrl_capmode_0\ to zero
-Aliasing \QuadDec_1:Cnt8:CounterUDB:capt_rising\ to zero
-Aliasing \QuadDec_1:Cnt8:CounterUDB:underflow\ to \QuadDec_1:Cnt8:CounterUDB:status_1\
-Aliasing \QuadDec_1:Cnt8:CounterUDB:tc_i\ to \QuadDec_1:Cnt8:CounterUDB:reload_tc\
+Aliasing \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_1\ to zero
+Aliasing \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_0\ to zero
+Aliasing \QuadDec_1:Cnt16:CounterUDB:capt_rising\ to zero
+Aliasing \QuadDec_1:Cnt16:CounterUDB:underflow\ to \QuadDec_1:Cnt16:CounterUDB:status_1\
+Aliasing \QuadDec_1:Cnt16:CounterUDB:tc_i\ to \QuadDec_1:Cnt16:CounterUDB:reload_tc\
 Aliasing \QuadDec_1:bQuadDec:status_4\ to zero
 Aliasing \QuadDec_1:bQuadDec:status_5\ to zero
 Aliasing \QuadDec_1:bQuadDec:status_6\ to zero
 Aliasing \QuadDec_1:Net_1229\ to tmpOE__TrackLED3_net_0
-Aliasing \QuadDec_2:Cnt8:CounterUDB:ctrl_capmode_1\ to zero
-Aliasing \QuadDec_2:Cnt8:CounterUDB:ctrl_capmode_0\ to zero
-Aliasing \QuadDec_2:Cnt8:CounterUDB:capt_rising\ to zero
-Aliasing \QuadDec_2:Cnt8:CounterUDB:underflow\ to \QuadDec_2:Cnt8:CounterUDB:status_1\
-Aliasing \QuadDec_2:Cnt8:CounterUDB:tc_i\ to \QuadDec_2:Cnt8:CounterUDB:reload_tc\
+Aliasing \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_1\ to zero
+Aliasing \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_0\ to zero
+Aliasing \QuadDec_2:Cnt16:CounterUDB:capt_rising\ to zero
+Aliasing \QuadDec_2:Cnt16:CounterUDB:underflow\ to \QuadDec_2:Cnt16:CounterUDB:status_1\
+Aliasing \QuadDec_2:Cnt16:CounterUDB:tc_i\ to \QuadDec_2:Cnt16:CounterUDB:reload_tc\
 Aliasing \QuadDec_2:bQuadDec:status_4\ to zero
 Aliasing \QuadDec_2:bQuadDec:status_5\ to zero
 Aliasing \QuadDec_2:bQuadDec:status_6\ to zero
@@ -240,136 +251,148 @@ Aliasing \PWM_2:Net_113\ to tmpOE__TrackLED3_net_0
 Aliasing tmpOE__M1_IN2_net_0 to tmpOE__TrackLED3_net_0
 Aliasing tmpOE__M1_IN1_net_0 to tmpOE__TrackLED3_net_0
 Aliasing tmpOE__M2_D1_net_0 to tmpOE__TrackLED3_net_0
-Aliasing Net_266 to zero
 Aliasing tmpOE__M1_D1_net_0 to tmpOE__TrackLED3_net_0
-Aliasing Net_267 to zero
 Aliasing \USBUART_1:tmpOE__Dm_net_0\ to tmpOE__TrackLED3_net_0
 Aliasing \USBUART_1:tmpOE__Dp_net_0\ to tmpOE__TrackLED3_net_0
-Aliasing \QuadDec_1:Cnt8:CounterUDB:prevCapture\\D\ to zero
-Aliasing \QuadDec_1:Cnt8:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_1:Cnt8:CounterUDB:prevCompare\\D\
-Aliasing \QuadDec_2:Cnt8:CounterUDB:prevCapture\\D\ to zero
-Aliasing \QuadDec_2:Cnt8:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_2:Cnt8:CounterUDB:prevCompare\\D\
+Aliasing Net_12 to zero
+Aliasing \MotorSpeedTimer:Net_260\ to zero
+Aliasing \MotorSpeedTimer:Net_102\ to tmpOE__TrackLED3_net_0
+Aliasing \MotorStopReg:clk\ to zero
+Aliasing \MotorStopReg:rst\ to zero
+Aliasing \QuadDec_1:Cnt16:CounterUDB:prevCapture\\D\ to zero
+Aliasing \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_1:Cnt16:CounterUDB:prevCompare\\D\
+Aliasing \QuadDec_2:Cnt16:CounterUDB:prevCapture\\D\ to zero
+Aliasing \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_2:Cnt16:CounterUDB:prevCompare\\D\
 Removing Lhs of wire one[10] = tmpOE__TrackLED3_net_0[4]
 Removing Lhs of wire tmpOE__TrackLED1_net_0[13] = tmpOE__TrackLED3_net_0[4]
 Removing Lhs of wire tmpOE__TrackLED2_net_0[20] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_1:Net_1276\[31] = \QuadDec_1:Cnt8:Net_49\[32]
-Removing Rhs of wire \QuadDec_1:Net_1276\[31] = \QuadDec_1:Cnt8:CounterUDB:tc_reg_i\[89]
-Removing Lhs of wire \QuadDec_1:Cnt8:Net_89\[34] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:ctrl_capmode_1\[45] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:ctrl_capmode_0\[46] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:ctrl_enable\[58] = \QuadDec_1:Cnt8:CounterUDB:control_7\[50]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:capt_rising\[60] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:capt_falling\[61] = \QuadDec_1:Cnt8:CounterUDB:prevCapture\[59]
-Removing Rhs of wire \QuadDec_1:Net_1260\[65] = \QuadDec_1:bQuadDec:state_2\[155]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:final_enable\[67] = \QuadDec_1:Cnt8:CounterUDB:control_7\[50]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:counter_enable\[68] = \QuadDec_1:Cnt8:CounterUDB:control_7\[50]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_0\[69] = \QuadDec_1:Cnt8:CounterUDB:cmp_out_status\[70]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_1\[71] = \QuadDec_1:Cnt8:CounterUDB:per_zero\[72]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_2\[73] = \QuadDec_1:Cnt8:CounterUDB:overflow_status\[74]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_3\[75] = \QuadDec_1:Cnt8:CounterUDB:underflow_status\[76]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:status_4\[77] = \QuadDec_1:Cnt8:CounterUDB:hwCapture\[63]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_5\[78] = \QuadDec_1:Cnt8:CounterUDB:fifo_full\[79]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:status_6\[80] = \QuadDec_1:Cnt8:CounterUDB:fifo_nempty\[81]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:overflow\[83] = \QuadDec_1:Cnt8:CounterUDB:per_FF\[84]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:underflow\[85] = \QuadDec_1:Cnt8:CounterUDB:status_1\[71]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:tc_i\[88] = \QuadDec_1:Cnt8:CounterUDB:reload_tc\[66]
-Removing Rhs of wire \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\[90] = \QuadDec_1:Cnt8:CounterUDB:cmp_equal\[91]
-Removing Rhs of wire \QuadDec_1:Net_1269\[94] = \QuadDec_1:Cnt8:CounterUDB:cmp_out_reg_i\[93]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:dp_dir\[98] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:cs_addr_2\[99] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:cs_addr_1\[100] = \QuadDec_1:Cnt8:CounterUDB:count_enable\[97]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:cs_addr_0\[101] = \QuadDec_1:Cnt8:CounterUDB:reload\[64]
-Removing Lhs of wire \QuadDec_1:Net_1290\[130] = \QuadDec_1:Net_1276\[31]
-Removing Lhs of wire \QuadDec_1:bQuadDec:index_filt\[153] = \QuadDec_1:Net_1232\[154]
-Removing Lhs of wire \QuadDec_1:Net_1232\[154] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_1:bQuadDec:error\[156] = \QuadDec_1:bQuadDec:state_3\[157]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_0\[160] = \QuadDec_1:Net_530\[161]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_1\[162] = \QuadDec_1:Net_611\[163]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_2\[164] = \QuadDec_1:Net_1260\[65]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_3\[165] = \QuadDec_1:bQuadDec:error\[156]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_4\[166] = zero[5]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_5\[167] = zero[5]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_6\[168] = zero[5]
-Removing Lhs of wire \QuadDec_1:Net_1229\[173] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \QuadDec_1:Net_1272\[174] = \QuadDec_1:Net_1269\[94]
-Removing Rhs of wire \QuadDec_2:Net_1276\[178] = \QuadDec_2:Cnt8:Net_49\[179]
-Removing Rhs of wire \QuadDec_2:Net_1276\[178] = \QuadDec_2:Cnt8:CounterUDB:tc_reg_i\[235]
-Removing Lhs of wire \QuadDec_2:Cnt8:Net_89\[181] = \QuadDec_2:Net_1251\[182]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:ctrl_capmode_1\[191] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:ctrl_capmode_0\[192] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:ctrl_enable\[204] = \QuadDec_2:Cnt8:CounterUDB:control_7\[196]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:capt_rising\[206] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:capt_falling\[207] = \QuadDec_2:Cnt8:CounterUDB:prevCapture\[205]
-Removing Rhs of wire \QuadDec_2:Net_1260\[211] = \QuadDec_2:bQuadDec:state_2\[301]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:final_enable\[213] = \QuadDec_2:Cnt8:CounterUDB:control_7\[196]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:counter_enable\[214] = \QuadDec_2:Cnt8:CounterUDB:control_7\[196]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_0\[215] = \QuadDec_2:Cnt8:CounterUDB:cmp_out_status\[216]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_1\[217] = \QuadDec_2:Cnt8:CounterUDB:per_zero\[218]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_2\[219] = \QuadDec_2:Cnt8:CounterUDB:overflow_status\[220]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_3\[221] = \QuadDec_2:Cnt8:CounterUDB:underflow_status\[222]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:status_4\[223] = \QuadDec_2:Cnt8:CounterUDB:hwCapture\[209]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_5\[224] = \QuadDec_2:Cnt8:CounterUDB:fifo_full\[225]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:status_6\[226] = \QuadDec_2:Cnt8:CounterUDB:fifo_nempty\[227]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:overflow\[229] = \QuadDec_2:Cnt8:CounterUDB:per_FF\[230]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:underflow\[231] = \QuadDec_2:Cnt8:CounterUDB:status_1\[217]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:tc_i\[234] = \QuadDec_2:Cnt8:CounterUDB:reload_tc\[212]
-Removing Rhs of wire \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\[236] = \QuadDec_2:Cnt8:CounterUDB:cmp_equal\[237]
-Removing Rhs of wire \QuadDec_2:Net_1269\[240] = \QuadDec_2:Cnt8:CounterUDB:cmp_out_reg_i\[239]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:dp_dir\[244] = \QuadDec_2:Net_1251\[182]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:cs_addr_2\[245] = \QuadDec_2:Net_1251\[182]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:cs_addr_1\[246] = \QuadDec_2:Cnt8:CounterUDB:count_enable\[243]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:cs_addr_0\[247] = \QuadDec_2:Cnt8:CounterUDB:reload\[210]
-Removing Lhs of wire \QuadDec_2:Net_1290\[276] = \QuadDec_2:Net_1276\[178]
-Removing Lhs of wire \QuadDec_2:bQuadDec:index_filt\[299] = \QuadDec_2:Net_1232\[300]
-Removing Lhs of wire \QuadDec_2:Net_1232\[300] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_2:bQuadDec:error\[302] = \QuadDec_2:bQuadDec:state_3\[303]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_0\[306] = \QuadDec_2:Net_530\[307]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_1\[308] = \QuadDec_2:Net_611\[309]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_2\[310] = \QuadDec_2:Net_1260\[211]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_3\[311] = \QuadDec_2:bQuadDec:error\[302]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_4\[312] = zero[5]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_5\[313] = zero[5]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_6\[314] = zero[5]
-Removing Lhs of wire \QuadDec_2:Net_1229\[319] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \QuadDec_2:Net_1272\[320] = \QuadDec_2:Net_1269\[240]
-Removing Lhs of wire tmpOE__Mot1A_net_0[323] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot1B_net_0[328] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot2A_net_0[333] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot2B_net_0[338] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M2_IN1_net_0[348] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_2460[349] = \PWM_2:Net_57\[377]
-Removing Lhs of wire tmpOE__M2_IN2_net_0[355] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_2404[362] = \PWM_1:Net_57\[368]
-Removing Lhs of wire \PWM_1:Net_107\[364] = zero[5]
-Removing Lhs of wire \PWM_1:Net_113\[365] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire Net_2183[366] = zero[5]
-Removing Lhs of wire \PWM_2:Net_107\[374] = zero[5]
-Removing Lhs of wire \PWM_2:Net_113\[375] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M1_IN2_net_0[383] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M1_IN1_net_0[389] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M2_D1_net_0[395] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire Net_266[396] = zero[5]
-Removing Lhs of wire tmpOE__M1_D1_net_0[402] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire Net_267[403] = zero[5]
-Removing Lhs of wire \USBUART_1:tmpOE__Dm_net_0\[411] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \USBUART_1:tmpOE__Dp_net_0\[418] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:prevCapture\\D\[470] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\\D\[471] = \QuadDec_1:Cnt8:CounterUDB:overflow\[83]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\\D\[472] = \QuadDec_1:Cnt8:CounterUDB:status_1\[71]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:tc_reg_i\\D\[473] = \QuadDec_1:Cnt8:CounterUDB:reload_tc\[66]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:prevCompare\\D\[474] = \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\[90]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:cmp_out_reg_i\\D\[475] = \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\[90]
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:count_stored_i\\D\[476] = \QuadDec_1:Net_1203\[96]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:prevCapture\\D\[485] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\\D\[486] = \QuadDec_2:Cnt8:CounterUDB:overflow\[229]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\\D\[487] = \QuadDec_2:Cnt8:CounterUDB:status_1\[217]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:tc_reg_i\\D\[488] = \QuadDec_2:Cnt8:CounterUDB:reload_tc\[212]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:prevCompare\\D\[489] = \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\[236]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:cmp_out_reg_i\\D\[490] = \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\[236]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:count_stored_i\\D\[491] = \QuadDec_2:Net_1203\[242]
+Removing Rhs of wire \QuadDec_1:Net_1275\[31] = \QuadDec_1:Cnt16:Net_49\[32]
+Removing Rhs of wire \QuadDec_1:Net_1275\[31] = \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\[89]
+Removing Lhs of wire \QuadDec_1:Cnt16:Net_89\[34] = \QuadDec_1:Net_1251\[35]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_1\[45] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_0\[46] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_enable\[58] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_rising\[60] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_falling\[61] = \QuadDec_1:Cnt16:CounterUDB:prevCapture\[59]
+Removing Rhs of wire \QuadDec_1:Net_1260\[65] = \QuadDec_1:bQuadDec:state_2\[203]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:final_enable\[67] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:counter_enable\[68] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_0\[69] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_status\[70]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_1\[71] = \QuadDec_1:Cnt16:CounterUDB:per_zero\[72]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_2\[73] = \QuadDec_1:Cnt16:CounterUDB:overflow_status\[74]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_3\[75] = \QuadDec_1:Cnt16:CounterUDB:underflow_status\[76]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:status_4\[77] = \QuadDec_1:Cnt16:CounterUDB:hwCapture\[63]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_5\[78] = \QuadDec_1:Cnt16:CounterUDB:fifo_full\[79]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_6\[80] = \QuadDec_1:Cnt16:CounterUDB:fifo_nempty\[81]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow\[83] = \QuadDec_1:Cnt16:CounterUDB:per_FF\[84]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow\[85] = \QuadDec_1:Cnt16:CounterUDB:status_1\[71]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_i\[88] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[66]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90] = \QuadDec_1:Cnt16:CounterUDB:cmp_equal\[91]
+Removing Rhs of wire \QuadDec_1:Net_1264\[94] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\[93]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:dp_dir\[98] = \QuadDec_1:Net_1251\[35]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_2\[99] = \QuadDec_1:Net_1251\[35]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_1\[100] = \QuadDec_1:Cnt16:CounterUDB:count_enable\[97]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_0\[101] = \QuadDec_1:Cnt16:CounterUDB:reload\[64]
+Removing Lhs of wire \QuadDec_1:Net_1290\[178] = \QuadDec_1:Net_1275\[31]
+Removing Lhs of wire \QuadDec_1:bQuadDec:index_filt\[201] = \QuadDec_1:Net_1232\[202]
+Removing Lhs of wire \QuadDec_1:Net_1232\[202] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire \QuadDec_1:bQuadDec:error\[204] = \QuadDec_1:bQuadDec:state_3\[205]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_0\[208] = \QuadDec_1:Net_530\[209]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_1\[210] = \QuadDec_1:Net_611\[211]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_2\[212] = \QuadDec_1:Net_1260\[65]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_3\[213] = \QuadDec_1:bQuadDec:error\[204]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_4\[214] = zero[5]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_5\[215] = zero[5]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_6\[216] = zero[5]
+Removing Lhs of wire \QuadDec_1:Net_1229\[221] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \QuadDec_1:Net_1272\[222] = \QuadDec_1:Net_1264\[94]
+Removing Rhs of wire \QuadDec_2:Net_1275\[226] = \QuadDec_2:Cnt16:Net_49\[227]
+Removing Rhs of wire \QuadDec_2:Net_1275\[226] = \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\[283]
+Removing Lhs of wire \QuadDec_2:Cnt16:Net_89\[229] = \QuadDec_2:Net_1251\[230]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_1\[239] = zero[5]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_0\[240] = zero[5]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_enable\[252] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_rising\[254] = zero[5]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_falling\[255] = \QuadDec_2:Cnt16:CounterUDB:prevCapture\[253]
+Removing Rhs of wire \QuadDec_2:Net_1260\[259] = \QuadDec_2:bQuadDec:state_2\[397]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:final_enable\[261] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:counter_enable\[262] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_0\[263] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_status\[264]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_1\[265] = \QuadDec_2:Cnt16:CounterUDB:per_zero\[266]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_2\[267] = \QuadDec_2:Cnt16:CounterUDB:overflow_status\[268]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_3\[269] = \QuadDec_2:Cnt16:CounterUDB:underflow_status\[270]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:status_4\[271] = \QuadDec_2:Cnt16:CounterUDB:hwCapture\[257]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_5\[272] = \QuadDec_2:Cnt16:CounterUDB:fifo_full\[273]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_6\[274] = \QuadDec_2:Cnt16:CounterUDB:fifo_nempty\[275]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow\[277] = \QuadDec_2:Cnt16:CounterUDB:per_FF\[278]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow\[279] = \QuadDec_2:Cnt16:CounterUDB:status_1\[265]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_i\[282] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[260]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284] = \QuadDec_2:Cnt16:CounterUDB:cmp_equal\[285]
+Removing Rhs of wire \QuadDec_2:Net_1264\[288] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\[287]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:dp_dir\[292] = \QuadDec_2:Net_1251\[230]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_2\[293] = \QuadDec_2:Net_1251\[230]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_1\[294] = \QuadDec_2:Cnt16:CounterUDB:count_enable\[291]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_0\[295] = \QuadDec_2:Cnt16:CounterUDB:reload\[258]
+Removing Lhs of wire \QuadDec_2:Net_1290\[372] = \QuadDec_2:Net_1275\[226]
+Removing Lhs of wire \QuadDec_2:bQuadDec:index_filt\[395] = \QuadDec_2:Net_1232\[396]
+Removing Lhs of wire \QuadDec_2:Net_1232\[396] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire \QuadDec_2:bQuadDec:error\[398] = \QuadDec_2:bQuadDec:state_3\[399]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_0\[402] = \QuadDec_2:Net_530\[403]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_1\[404] = \QuadDec_2:Net_611\[405]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_2\[406] = \QuadDec_2:Net_1260\[259]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_3\[407] = \QuadDec_2:bQuadDec:error\[398]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_4\[408] = zero[5]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_5\[409] = zero[5]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_6\[410] = zero[5]
+Removing Lhs of wire \QuadDec_2:Net_1229\[415] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \QuadDec_2:Net_1272\[416] = \QuadDec_2:Net_1264\[288]
+Removing Lhs of wire tmpOE__Mot1A_net_0[419] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot1B_net_0[424] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot2A_net_0[429] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot2B_net_0[434] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M2_IN1_net_0[444] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_2460[445] = \PWM_2:Net_57\[473]
+Removing Lhs of wire tmpOE__M2_IN2_net_0[451] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_2404[458] = \PWM_1:Net_57\[464]
+Removing Lhs of wire \PWM_1:Net_107\[460] = zero[5]
+Removing Lhs of wire \PWM_1:Net_113\[461] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire Net_2183[462] = zero[5]
+Removing Lhs of wire \PWM_2:Net_107\[470] = zero[5]
+Removing Lhs of wire \PWM_2:Net_113\[471] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M1_IN2_net_0[479] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M1_IN1_net_0[485] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M2_D1_net_0[491] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_293[492] = \MotorStopReg:control_out_1\[581]
+Removing Rhs of wire Net_293[492] = \MotorStopReg:control_1\[601]
+Removing Lhs of wire tmpOE__M1_D1_net_0[498] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_296[499] = \MotorStopReg:control_out_0\[580]
+Removing Rhs of wire Net_296[499] = \MotorStopReg:control_0\[602]
+Removing Lhs of wire \USBUART_1:tmpOE__Dm_net_0\[507] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \USBUART_1:tmpOE__Dp_net_0\[514] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire Net_12[567] = zero[5]
+Removing Lhs of wire \MotorSpeedTimer:Net_260\[569] = zero[5]
+Removing Lhs of wire \MotorSpeedTimer:Net_266\[570] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_281[575] = \MotorSpeedTimer:Net_51\[571]
+Removing Lhs of wire \MotorSpeedTimer:Net_102\[576] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \MotorStopReg:clk\[578] = zero[5]
+Removing Lhs of wire \MotorStopReg:rst\[579] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCapture\\D\[604] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\\D\[605] = \QuadDec_1:Cnt16:CounterUDB:overflow\[83]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\\D\[606] = \QuadDec_1:Cnt16:CounterUDB:status_1\[71]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\\D\[607] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[66]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCompare\\D\[608] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\\D\[609] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:count_stored_i\\D\[610] = \QuadDec_1:Net_1203\[96]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCapture\\D\[619] = zero[5]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\\D\[620] = \QuadDec_2:Cnt16:CounterUDB:overflow\[277]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\\D\[621] = \QuadDec_2:Cnt16:CounterUDB:status_1\[265]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\\D\[622] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[260]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCompare\\D\[623] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\\D\[624] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:count_stored_i\\D\[625] = \QuadDec_2:Net_1203\[290]
 
 ------------------------------------------------------
-Aliased 0 equations, 118 wires.
+Aliased 0 equations, 127 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -384,12 +407,12 @@ tmpOE__TrackLED3_net_0 <=  ('1') ;
 Note:  Expanding virtual equation for 'zero' (cost = 0):
 zero <=  ('0') ;
 
-Note:  Expanding virtual equation for '\QuadDec_1:Cnt8:CounterUDB:capt_either_edge\' (cost = 0):
-\QuadDec_1:Cnt8:CounterUDB:capt_either_edge\ <= (\QuadDec_1:Cnt8:CounterUDB:prevCapture\);
+Note:  Expanding virtual equation for '\QuadDec_1:Cnt16:CounterUDB:capt_either_edge\' (cost = 0):
+\QuadDec_1:Cnt16:CounterUDB:capt_either_edge\ <= (\QuadDec_1:Cnt16:CounterUDB:prevCapture\);
 
-Note:  Expanding virtual equation for '\QuadDec_1:Cnt8:CounterUDB:reload_tc\' (cost = 2):
-\QuadDec_1:Cnt8:CounterUDB:reload_tc\ <= (\QuadDec_1:Cnt8:CounterUDB:status_1\
-	OR \QuadDec_1:Cnt8:CounterUDB:overflow\);
+Note:  Expanding virtual equation for '\QuadDec_1:Cnt16:CounterUDB:reload_tc\' (cost = 2):
+\QuadDec_1:Cnt16:CounterUDB:reload_tc\ <= (\QuadDec_1:Cnt16:CounterUDB:status_1\
+	OR \QuadDec_1:Cnt16:CounterUDB:overflow\);
 
 Note:  Expanding virtual equation for '\QuadDec_1:bQuadDec:A_j\' (cost = 1):
 \QuadDec_1:bQuadDec:A_j\ <= ((\QuadDec_1:bQuadDec:quad_A_delayed_0\ and \QuadDec_1:bQuadDec:quad_A_delayed_1\ and \QuadDec_1:bQuadDec:quad_A_delayed_2\));
@@ -407,14 +430,14 @@ Note:  Expanding virtual equation for '\QuadDec_1:Net_1151\' (cost = 0):
 \QuadDec_1:Net_1151\ <= (not \QuadDec_1:Net_1251\);
 
 Note:  Expanding virtual equation for '\QuadDec_1:Net_1287\' (cost = 0):
-\QuadDec_1:Net_1287\ <= (not \QuadDec_1:Net_1269\);
+\QuadDec_1:Net_1287\ <= (not \QuadDec_1:Net_1264\);
 
-Note:  Expanding virtual equation for '\QuadDec_2:Cnt8:CounterUDB:capt_either_edge\' (cost = 0):
-\QuadDec_2:Cnt8:CounterUDB:capt_either_edge\ <= (\QuadDec_2:Cnt8:CounterUDB:prevCapture\);
+Note:  Expanding virtual equation for '\QuadDec_2:Cnt16:CounterUDB:capt_either_edge\' (cost = 0):
+\QuadDec_2:Cnt16:CounterUDB:capt_either_edge\ <= (\QuadDec_2:Cnt16:CounterUDB:prevCapture\);
 
-Note:  Expanding virtual equation for '\QuadDec_2:Cnt8:CounterUDB:reload_tc\' (cost = 2):
-\QuadDec_2:Cnt8:CounterUDB:reload_tc\ <= (\QuadDec_2:Cnt8:CounterUDB:status_1\
-	OR \QuadDec_2:Cnt8:CounterUDB:overflow\);
+Note:  Expanding virtual equation for '\QuadDec_2:Cnt16:CounterUDB:reload_tc\' (cost = 2):
+\QuadDec_2:Cnt16:CounterUDB:reload_tc\ <= (\QuadDec_2:Cnt16:CounterUDB:status_1\
+	OR \QuadDec_2:Cnt16:CounterUDB:overflow\);
 
 Note:  Expanding virtual equation for '\QuadDec_2:bQuadDec:A_j\' (cost = 1):
 \QuadDec_2:bQuadDec:A_j\ <= ((\QuadDec_2:bQuadDec:quad_A_delayed_0\ and \QuadDec_2:bQuadDec:quad_A_delayed_1\ and \QuadDec_2:bQuadDec:quad_A_delayed_2\));
@@ -432,16 +455,16 @@ Note:  Expanding virtual equation for '\QuadDec_2:Net_1151\' (cost = 0):
 \QuadDec_2:Net_1151\ <= (not \QuadDec_2:Net_1251\);
 
 Note:  Expanding virtual equation for '\QuadDec_2:Net_1287\' (cost = 0):
-\QuadDec_2:Net_1287\ <= (not \QuadDec_2:Net_1269\);
+\QuadDec_2:Net_1287\ <= (not \QuadDec_2:Net_1264\);
 
 
 Substituting virtuals - pass 2:
 
 Note:  Expanding virtual equation for '\QuadDec_1:Net_1248\' (cost = 2):
-\QuadDec_1:Net_1248\ <= ((not \QuadDec_1:Net_1269\ and \QuadDec_1:Net_1276\));
+\QuadDec_1:Net_1248\ <= ((not \QuadDec_1:Net_1264\ and \QuadDec_1:Net_1275\));
 
 Note:  Expanding virtual equation for '\QuadDec_2:Net_1248\' (cost = 2):
-\QuadDec_2:Net_1248\ <= ((not \QuadDec_2:Net_1269\ and \QuadDec_2:Net_1276\));
+\QuadDec_2:Net_1248\ <= ((not \QuadDec_2:Net_1264\ and \QuadDec_2:Net_1275\));
 
 
 Substituting virtuals - pass 3:
@@ -458,10 +481,10 @@ Circuit simplification results:
 ------------------------------------------------------
 Alias Detection
 ------------------------------------------------------
-Aliasing \QuadDec_1:Cnt8:CounterUDB:hwCapture\ to zero
-Aliasing \QuadDec_2:Cnt8:CounterUDB:hwCapture\ to zero
-Removing Lhs of wire \QuadDec_1:Cnt8:CounterUDB:hwCapture\[63] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt8:CounterUDB:hwCapture\[209] = zero[5]
+Aliasing \QuadDec_1:Cnt16:CounterUDB:hwCapture\ to zero
+Aliasing \QuadDec_2:Cnt16:CounterUDB:hwCapture\ to zero
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:hwCapture\[63] = zero[5]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:hwCapture\[257] = zero[5]
 
 ------------------------------------------------------
 Aliased 0 equations, 2 wires.
@@ -494,32 +517,33 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj" -dcpsoc3 Final.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.325ms
+Warp synthesis phase: Elapsed time ==> 1s.565ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Thursday, 14 September 2023 16:56:29
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Friday, 15 September 2023 17:40:06
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj -d CY8C5888LTI-LP097 Final.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.058ms
+Design parsing phase: Elapsed time ==> 0s.057ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
-    Converted constant MacroCell: \QuadDec_1:Cnt8:CounterUDB:prevCapture\ from registered to combinatorial
-    Converted constant MacroCell: \QuadDec_2:Cnt8:CounterUDB:prevCapture\ from registered to combinatorial
+    Converted constant MacroCell: \QuadDec_1:Cnt16:CounterUDB:prevCapture\ from registered to combinatorial
+    Converted constant MacroCell: \QuadDec_2:Cnt16:CounterUDB:prevCapture\ from registered to combinatorial
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'QuadDecClk'. Fanout=6, Signal=Net_202
     Digital Clock 1: Automatic-assigning  clock 'Clock_PWM'. Fanout=2, Signal=CLK24M
+    Digital Clock 2: Automatic-assigning  clock 'timer_clock'. Fanout=1, Signal=Net_284
 </CYPRESSTAG>
 
 Removing unused cells resulting from optimization
 Done removing unused cells.
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
-    UDB Clk/Enable \QuadDec_1:Cnt8:CounterUDB:clock_enable_block\: with output requested to be synchronous
+    UDB Clk/Enable \QuadDec_1:Cnt16:CounterUDB:clock_enable_block\: with output requested to be synchronous
         ClockIn: QuadDecClk was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: QuadDecClk, EnableOut: Constant 1
-    UDB Clk/Enable \QuadDec_1:Cnt8:CounterUDB:sCTRLReg:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
+    UDB Clk/Enable \QuadDec_1:Cnt16:CounterUDB:sCTRLReg:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
         ClockIn: QuadDecClk was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: QuadDecClk, EnableOut: Constant 1
@@ -527,11 +551,11 @@ Done removing unused cells.
         ClockIn: QuadDecClk was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: QuadDecClk, EnableOut: Constant 1
-    UDB Clk/Enable \QuadDec_2:Cnt8:CounterUDB:clock_enable_block\: with output requested to be synchronous
+    UDB Clk/Enable \QuadDec_2:Cnt16:CounterUDB:clock_enable_block\: with output requested to be synchronous
         ClockIn: QuadDecClk was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: QuadDecClk, EnableOut: Constant 1
-    UDB Clk/Enable \QuadDec_2:Cnt8:CounterUDB:sCTRLReg:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
+    UDB Clk/Enable \QuadDec_2:Cnt16:CounterUDB:sCTRLReg:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
         ClockIn: QuadDecClk was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: QuadDecClk, EnableOut: Constant 1
@@ -546,8 +570,8 @@ Done removing unused cells.
 <CYPRESSTAG name="Duplicate Macrocell detection">
 
 Removing duplicate macrocells
-    Removing \QuadDec_2:Net_1269\, Duplicate of \QuadDec_2:Cnt8:CounterUDB:prevCompare\ 
-    MacroCell: Name=\QuadDec_2:Net_1269\, Mode=(D-Register)
+    Removing \QuadDec_2:Net_1264\, Duplicate of \QuadDec_2:Cnt16:CounterUDB:prevCompare\ 
+    MacroCell: Name=\QuadDec_2:Net_1264\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -555,12 +579,12 @@ Removing duplicate macrocells
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+              \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\
         );
-        Output = \QuadDec_2:Net_1269\ (fanout=2)
+        Output = \QuadDec_2:Net_1264\ (fanout=2)
 
-    Removing \QuadDec_1:Net_1269\, Duplicate of \QuadDec_1:Cnt8:CounterUDB:prevCompare\ 
-    MacroCell: Name=\QuadDec_1:Net_1269\, Mode=(D-Register)
+    Removing \QuadDec_1:Net_1264\, Duplicate of \QuadDec_1:Cnt16:CounterUDB:prevCompare\ 
+    MacroCell: Name=\QuadDec_1:Net_1264\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -568,9 +592,9 @@ Removing duplicate macrocells
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\
         );
-        Output = \QuadDec_1:Net_1269\ (fanout=2)
+        Output = \QuadDec_1:Net_1264\ (fanout=2)
 
 End removing duplicate macrocells: used 1 pass
 </CYPRESSTAG>
@@ -1056,11 +1080,12 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL
+            Required Capabilities: DIGITAL, ROUTABLE
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
             pa_out => M2_D1(0)__PA ,
+            pin_input => Net_293 ,
             pad => M2_D1(0)_PAD );
         Properties:
         {
@@ -1095,11 +1120,12 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL
+            Required Capabilities: DIGITAL, ROUTABLE
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
             pa_out => M1_D1(0)__PA ,
+            pin_input => Net_296 ,
             pad => M1_D1(0)_PAD );
         Properties:
         {
@@ -1224,61 +1250,61 @@ Design Equations
         );
         Output = \QuadDec_2:Net_1251_split\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:reload\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:reload\, Mode=(Combinatorial)
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         !(
-              !\QuadDec_1:Net_1260\ * !\QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow\
+              !\QuadDec_1:Net_1260\ * !\QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:reload\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:reload\ (fanout=2)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_0\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_0\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_0\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_0\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_2\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_2\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:overflow\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\
+              \QuadDec_1:Cnt16:CounterUDB:overflow\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_2\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_2\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_3\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_3\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\
+              \QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_3\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_3\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:count_enable\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:count_enable\, Mode=(Combinatorial)
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:control_7\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:count_stored_i\ * 
+              \QuadDec_1:Cnt16:CounterUDB:control_7\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:count_stored_i\ * 
               \QuadDec_1:Net_1203\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:count_enable\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:count_enable\ (fanout=2)
 
     MacroCell: Name=\QuadDec_1:Net_530\, Mode=(Combinatorial)
         Total # of inputs        : 3
@@ -1286,8 +1312,8 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Net_1276\ * \QuadDec_1:Net_1251\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_1:Net_1275\ * \QuadDec_1:Net_1251\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
         );
         Output = \QuadDec_1:Net_530\ (fanout=1)
 
@@ -1297,66 +1323,66 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Net_1276\ * !\QuadDec_1:Net_1251\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_1:Net_1275\ * !\QuadDec_1:Net_1251\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
         );
         Output = \QuadDec_1:Net_611\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:reload\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:reload\, Mode=(Combinatorial)
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         !(
-              !\QuadDec_2:Net_1260\ * !\QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow\
+              !\QuadDec_2:Net_1260\ * !\QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:reload\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:reload\ (fanout=2)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_0\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_0\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_0\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_0\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_2\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_2\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:overflow\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\
+              \QuadDec_2:Cnt16:CounterUDB:overflow\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_2\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_2\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_3\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_3\, Mode=(Combinatorial)
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\
+              \QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_3\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_3\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:count_enable\, Mode=(Combinatorial)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:count_enable\, Mode=(Combinatorial)
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:control_7\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:count_stored_i\ * 
+              \QuadDec_2:Cnt16:CounterUDB:control_7\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:count_stored_i\ * 
               \QuadDec_2:Net_1203\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:count_enable\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:count_enable\ (fanout=2)
 
     MacroCell: Name=\QuadDec_2:Net_530\, Mode=(Combinatorial)
         Total # of inputs        : 3
@@ -1364,8 +1390,8 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Net_1276\ * \QuadDec_2:Net_1251\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_2:Net_1275\ * \QuadDec_2:Net_1251\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
         );
         Output = \QuadDec_2:Net_530\ (fanout=1)
 
@@ -1375,8 +1401,8 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Net_1276\ * !\QuadDec_2:Net_1251\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+              \QuadDec_2:Net_1275\ * !\QuadDec_2:Net_1251\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
         );
         Output = \QuadDec_2:Net_611\ (fanout=1)
 
@@ -1408,7 +1434,7 @@ Design Equations
         !(
             0
         );
-        Output = __ONE__ (fanout=2)
+        Output = __ONE__ (fanout=3)
 
     MacroCell: Name=\QuadDec_2:Net_1203_split\, Mode=(Combinatorial)
         Total # of inputs        : 7
@@ -1606,9 +1632,9 @@ Design Equations
               \QuadDec_1:bQuadDec:state_1\
             + \QuadDec_1:Net_1251_split\
         );
-        Output = \QuadDec_1:Net_1251\ (fanout=5)
+        Output = \QuadDec_1:Net_1251\ (fanout=6)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1616,11 +1642,11 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:overflow\
+              \QuadDec_1:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1628,11 +1654,11 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:status_1\
+              \QuadDec_1:Cnt16:CounterUDB:status_1\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Net_1276\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_1:Net_1275\, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1640,12 +1666,12 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         !(
-              !\QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow\
+              !\QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_1:Net_1276\ (fanout=2)
+        Output = \QuadDec_1:Net_1275\ (fanout=2)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:prevCompare\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:prevCompare\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1653,9 +1679,9 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:prevCompare\ (fanout=3)
+        Output = \QuadDec_1:Cnt16:CounterUDB:prevCompare\ (fanout=3)
 
     MacroCell: Name=\QuadDec_1:Net_1251_split\, Mode=(Combinatorial)
         Total # of inputs        : 7
@@ -1690,7 +1716,7 @@ Design Equations
         );
         Output = \QuadDec_1:Net_1251_split\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:count_stored_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:count_stored_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1700,7 +1726,7 @@ Design Equations
         (
               \QuadDec_1:Net_1203\
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:count_stored_i\ (fanout=1)
+        Output = \QuadDec_1:Cnt16:CounterUDB:count_stored_i\ (fanout=1)
 
     MacroCell: Name=\QuadDec_1:Net_1203\, Mode=(D-Register)
         Total # of inputs        : 6
@@ -1857,9 +1883,9 @@ Design Equations
               \QuadDec_2:bQuadDec:state_1\
             + \QuadDec_2:Net_1251_split\
         );
-        Output = \QuadDec_2:Net_1251\ (fanout=5)
+        Output = \QuadDec_2:Net_1251\ (fanout=6)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1867,11 +1893,11 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:overflow\
+              \QuadDec_2:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1879,11 +1905,11 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:status_1\
+              \QuadDec_2:Cnt16:CounterUDB:status_1\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Net_1276\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_2:Net_1275\, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1891,12 +1917,12 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         !(
-              !\QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow\
+              !\QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_2:Net_1276\ (fanout=2)
+        Output = \QuadDec_2:Net_1275\ (fanout=2)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:prevCompare\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:prevCompare\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1904,9 +1930,9 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+              \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:prevCompare\ (fanout=3)
+        Output = \QuadDec_2:Cnt16:CounterUDB:prevCompare\ (fanout=3)
 
     MacroCell: Name=\QuadDec_1:Net_1203_split\, Mode=(Combinatorial)
         Total # of inputs        : 7
@@ -1941,7 +1967,7 @@ Design Equations
         );
         Output = \QuadDec_1:Net_1203_split\ (fanout=1)
 
-    MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:count_stored_i\, Mode=(D-Register)
+    MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:count_stored_i\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1951,7 +1977,7 @@ Design Equations
         (
               \QuadDec_2:Net_1203\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:count_stored_i\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:count_stored_i\ (fanout=1)
 
     MacroCell: Name=\QuadDec_2:Net_1203\, Mode=(D-Register)
         Total # of inputs        : 6
@@ -2095,17 +2121,13 @@ Design Equations
     Datapath listing
     ------------------------------------------------------------
 
-    datapathcell: Name =\QuadDec_1:Cnt8:CounterUDB:sC8:counterdp:u0\
+    datapathcell: Name =\QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u0\
         PORT MAP (
             clock => Net_202 ,
             cs_addr_2 => \QuadDec_1:Net_1251\ ,
-            cs_addr_1 => \QuadDec_1:Cnt8:CounterUDB:count_enable\ ,
-            cs_addr_0 => \QuadDec_1:Cnt8:CounterUDB:reload\ ,
-            z0_comb => \QuadDec_1:Cnt8:CounterUDB:status_1\ ,
-            f0_comb => \QuadDec_1:Cnt8:CounterUDB:overflow\ ,
-            ce1_comb => \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\ ,
-            f0_bus_stat_comb => \QuadDec_1:Cnt8:CounterUDB:status_6\ ,
-            f0_blk_stat_comb => \QuadDec_1:Cnt8:CounterUDB:status_5\ );
+            cs_addr_1 => \QuadDec_1:Cnt16:CounterUDB:count_enable\ ,
+            cs_addr_0 => \QuadDec_1:Cnt16:CounterUDB:reload\ ,
+            chain_out => \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:carry\ );
         Properties:
         {
             a0_init = "00000000"
@@ -2132,18 +2154,55 @@ Design Equations
         }
         Clock Polarity: Active High
         Clock Enable: True
+        Next in chain : \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u1\
 
-    datapathcell: Name =\QuadDec_2:Cnt8:CounterUDB:sC8:counterdp:u0\
+    datapathcell: Name =\QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u1\
+        PORT MAP (
+            clock => Net_202 ,
+            cs_addr_2 => \QuadDec_1:Net_1251\ ,
+            cs_addr_1 => \QuadDec_1:Cnt16:CounterUDB:count_enable\ ,
+            cs_addr_0 => \QuadDec_1:Cnt16:CounterUDB:reload\ ,
+            z0_comb => \QuadDec_1:Cnt16:CounterUDB:status_1\ ,
+            f0_comb => \QuadDec_1:Cnt16:CounterUDB:overflow\ ,
+            ce1_comb => \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\ ,
+            f0_bus_stat_comb => \QuadDec_1:Cnt16:CounterUDB:status_6\ ,
+            f0_blk_stat_comb => \QuadDec_1:Cnt16:CounterUDB:status_5\ ,
+            chain_in => \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:carry\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u0\
+
+    datapathcell: Name =\QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u0\
         PORT MAP (
             clock => Net_202 ,
             cs_addr_2 => \QuadDec_2:Net_1251\ ,
-            cs_addr_1 => \QuadDec_2:Cnt8:CounterUDB:count_enable\ ,
-            cs_addr_0 => \QuadDec_2:Cnt8:CounterUDB:reload\ ,
-            z0_comb => \QuadDec_2:Cnt8:CounterUDB:status_1\ ,
-            f0_comb => \QuadDec_2:Cnt8:CounterUDB:overflow\ ,
-            ce1_comb => \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\ ,
-            f0_bus_stat_comb => \QuadDec_2:Cnt8:CounterUDB:status_6\ ,
-            f0_blk_stat_comb => \QuadDec_2:Cnt8:CounterUDB:status_5\ );
+            cs_addr_1 => \QuadDec_2:Cnt16:CounterUDB:count_enable\ ,
+            cs_addr_0 => \QuadDec_2:Cnt16:CounterUDB:reload\ ,
+            chain_out => \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:carry\ );
         Properties:
         {
             a0_init = "00000000"
@@ -2170,6 +2229,47 @@ Design Equations
         }
         Clock Polarity: Active High
         Clock Enable: True
+        Next in chain : \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u1\
+
+    datapathcell: Name =\QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u1\
+        PORT MAP (
+            clock => Net_202 ,
+            cs_addr_2 => \QuadDec_2:Net_1251\ ,
+            cs_addr_1 => \QuadDec_2:Cnt16:CounterUDB:count_enable\ ,
+            cs_addr_0 => \QuadDec_2:Cnt16:CounterUDB:reload\ ,
+            z0_comb => \QuadDec_2:Cnt16:CounterUDB:status_1\ ,
+            f0_comb => \QuadDec_2:Cnt16:CounterUDB:overflow\ ,
+            ce1_comb => \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\ ,
+            f0_bus_stat_comb => \QuadDec_2:Cnt16:CounterUDB:status_6\ ,
+            f0_blk_stat_comb => \QuadDec_2:Cnt16:CounterUDB:status_5\ ,
+            chain_in => \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:carry\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u0\
     </CYPRESSTAG>
     <CYPRESSTAG name="Status register listing">
     </CYPRESSTAG>
@@ -2179,16 +2279,16 @@ Design Equations
     StatusI register listing
     ------------------------------------------------------------
 
-    statusicell: Name =\QuadDec_1:Cnt8:CounterUDB:sSTSReg:stsreg\
+    statusicell: Name =\QuadDec_1:Cnt16:CounterUDB:sSTSReg:stsreg\
         PORT MAP (
             reset => \QuadDec_1:Net_1260\ ,
             clock => Net_202 ,
-            status_6 => \QuadDec_1:Cnt8:CounterUDB:status_6\ ,
-            status_5 => \QuadDec_1:Cnt8:CounterUDB:status_5\ ,
-            status_3 => \QuadDec_1:Cnt8:CounterUDB:status_3\ ,
-            status_2 => \QuadDec_1:Cnt8:CounterUDB:status_2\ ,
-            status_1 => \QuadDec_1:Cnt8:CounterUDB:status_1\ ,
-            status_0 => \QuadDec_1:Cnt8:CounterUDB:status_0\ );
+            status_6 => \QuadDec_1:Cnt16:CounterUDB:status_6\ ,
+            status_5 => \QuadDec_1:Cnt16:CounterUDB:status_5\ ,
+            status_3 => \QuadDec_1:Cnt16:CounterUDB:status_3\ ,
+            status_2 => \QuadDec_1:Cnt16:CounterUDB:status_2\ ,
+            status_1 => \QuadDec_1:Cnt16:CounterUDB:status_1\ ,
+            status_0 => \QuadDec_1:Cnt16:CounterUDB:status_0\ );
         Properties:
         {
             cy_force_order = 1
@@ -2215,16 +2315,16 @@ Design Equations
         Clock Polarity: Active High
         Clock Enable: True
 
-    statusicell: Name =\QuadDec_2:Cnt8:CounterUDB:sSTSReg:stsreg\
+    statusicell: Name =\QuadDec_2:Cnt16:CounterUDB:sSTSReg:stsreg\
         PORT MAP (
             reset => \QuadDec_2:Net_1260\ ,
             clock => Net_202 ,
-            status_6 => \QuadDec_2:Cnt8:CounterUDB:status_6\ ,
-            status_5 => \QuadDec_2:Cnt8:CounterUDB:status_5\ ,
-            status_3 => \QuadDec_2:Cnt8:CounterUDB:status_3\ ,
-            status_2 => \QuadDec_2:Cnt8:CounterUDB:status_2\ ,
-            status_1 => \QuadDec_2:Cnt8:CounterUDB:status_1\ ,
-            status_0 => \QuadDec_2:Cnt8:CounterUDB:status_0\ );
+            status_6 => \QuadDec_2:Cnt16:CounterUDB:status_6\ ,
+            status_5 => \QuadDec_2:Cnt16:CounterUDB:status_5\ ,
+            status_3 => \QuadDec_2:Cnt16:CounterUDB:status_3\ ,
+            status_2 => \QuadDec_2:Cnt16:CounterUDB:status_2\ ,
+            status_1 => \QuadDec_2:Cnt16:CounterUDB:status_1\ ,
+            status_0 => \QuadDec_2:Cnt16:CounterUDB:status_0\ );
         Properties:
         {
             cy_force_order = 1
@@ -2259,17 +2359,17 @@ Design Equations
     Control register listing
     ------------------------------------------------------------
 
-    controlcell: Name =\QuadDec_1:Cnt8:CounterUDB:sCTRLReg:ctrlreg\
+    controlcell: Name =\QuadDec_1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\
         PORT MAP (
             clock => Net_202 ,
-            control_7 => \QuadDec_1:Cnt8:CounterUDB:control_7\ ,
-            control_6 => \QuadDec_1:Cnt8:CounterUDB:control_6\ ,
-            control_5 => \QuadDec_1:Cnt8:CounterUDB:control_5\ ,
-            control_4 => \QuadDec_1:Cnt8:CounterUDB:control_4\ ,
-            control_3 => \QuadDec_1:Cnt8:CounterUDB:control_3\ ,
-            control_2 => \QuadDec_1:Cnt8:CounterUDB:control_2\ ,
-            control_1 => \QuadDec_1:Cnt8:CounterUDB:control_1\ ,
-            control_0 => \QuadDec_1:Cnt8:CounterUDB:control_0\ );
+            control_7 => \QuadDec_1:Cnt16:CounterUDB:control_7\ ,
+            control_6 => \QuadDec_1:Cnt16:CounterUDB:control_6\ ,
+            control_5 => \QuadDec_1:Cnt16:CounterUDB:control_5\ ,
+            control_4 => \QuadDec_1:Cnt16:CounterUDB:control_4\ ,
+            control_3 => \QuadDec_1:Cnt16:CounterUDB:control_3\ ,
+            control_2 => \QuadDec_1:Cnt16:CounterUDB:control_2\ ,
+            control_1 => \QuadDec_1:Cnt16:CounterUDB:control_1\ ,
+            control_0 => \QuadDec_1:Cnt16:CounterUDB:control_0\ );
         Properties:
         {
             cy_ctrl_mode_0 = "11111111"
@@ -2281,17 +2381,17 @@ Design Equations
         Clock Polarity: Active High
         Clock Enable: True
 
-    controlcell: Name =\QuadDec_2:Cnt8:CounterUDB:sCTRLReg:ctrlreg\
+    controlcell: Name =\QuadDec_2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\
         PORT MAP (
             clock => Net_202 ,
-            control_7 => \QuadDec_2:Cnt8:CounterUDB:control_7\ ,
-            control_6 => \QuadDec_2:Cnt8:CounterUDB:control_6\ ,
-            control_5 => \QuadDec_2:Cnt8:CounterUDB:control_5\ ,
-            control_4 => \QuadDec_2:Cnt8:CounterUDB:control_4\ ,
-            control_3 => \QuadDec_2:Cnt8:CounterUDB:control_3\ ,
-            control_2 => \QuadDec_2:Cnt8:CounterUDB:control_2\ ,
-            control_1 => \QuadDec_2:Cnt8:CounterUDB:control_1\ ,
-            control_0 => \QuadDec_2:Cnt8:CounterUDB:control_0\ );
+            control_7 => \QuadDec_2:Cnt16:CounterUDB:control_7\ ,
+            control_6 => \QuadDec_2:Cnt16:CounterUDB:control_6\ ,
+            control_5 => \QuadDec_2:Cnt16:CounterUDB:control_5\ ,
+            control_4 => \QuadDec_2:Cnt16:CounterUDB:control_4\ ,
+            control_3 => \QuadDec_2:Cnt16:CounterUDB:control_3\ ,
+            control_2 => \QuadDec_2:Cnt16:CounterUDB:control_2\ ,
+            control_1 => \QuadDec_2:Cnt16:CounterUDB:control_1\ ,
+            control_0 => \QuadDec_2:Cnt16:CounterUDB:control_0\ );
         Properties:
         {
             cy_ctrl_mode_0 = "11111111"
@@ -2301,6 +2401,26 @@ Design Equations
             cy_init_value = "00000000"
         }
         Clock Polarity: Active High
+        Clock Enable: True
+
+    controlcell: Name =\MotorStopReg:Sync:ctrl_reg\
+        PORT MAP (
+            control_7 => \MotorStopReg:control_7\ ,
+            control_6 => \MotorStopReg:control_6\ ,
+            control_5 => \MotorStopReg:control_5\ ,
+            control_4 => \MotorStopReg:control_4\ ,
+            control_3 => \MotorStopReg:control_3\ ,
+            control_2 => \MotorStopReg:control_2\ ,
+            control_1 => Net_293 ,
+            control_0 => Net_296 );
+        Properties:
+        {
+            cy_ctrl_mode_0 = "00000000"
+            cy_ctrl_mode_1 = "00000000"
+            cy_ext_reset = 0
+            cy_force_order = 1
+            cy_init_value = "00000000"
+        }
         Clock Enable: True
     </CYPRESSTAG>
     <CYPRESSTAG name="Count7 listing">
@@ -2402,6 +2522,15 @@ Design Equations
             int_type = "10"
             is_nmi = 0
         }
+
+    interrupt: Name =MotorUpdateSpeed
+        PORT MAP (
+            interrupt => Net_281 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -2412,27 +2541,27 @@ Technology mapping summary
 
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
-Digital Clocks                :    2 :    6 :    8 : 25.00 %
+Digital Clocks                :    3 :    5 :    8 : 37.50 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :   10 :   22 :   32 : 31.25 %
+Interrupts                    :   11 :   21 :   32 : 34.38 %
 IO                            :   18 :   30 :   48 : 37.50 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
 USB                           :    1 :    0 :    1 : 100.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
-Timer                         :    2 :    2 :    4 : 50.00 %
+Timer                         :    3 :    1 :    4 : 75.00 %
 UDB                           :      :      :      :        
   Macrocells                  :   59 :  133 :  192 : 30.73 %
   Unique P-terms              :  108 :  276 :  384 : 28.13 %
   Total P-terms               :  120 :      :      :        
-  Datapath Cells              :    2 :   22 :   24 :  8.33 %
+  Datapath Cells              :    4 :   20 :   24 : 16.67 %
   Status Cells                :    4 :   20 :   24 : 16.67 %
     StatusI Registers         :    4 :      :      :        
-  Control Cells               :    2 :   22 :   24 :  8.33 %
-    Control Registers         :    2 :      :      :        
+  Control Cells               :    3 :   21 :   24 : 12.50 %
+    Control Registers         :    3 :      :      :        
 Opamp                         :    0 :    4 :    4 :  0.00 %
 Comparator                    :    0 :    4 :    4 :  0.00 %
 Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
@@ -2442,8 +2571,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 17s.415ms
-Tech Mapping phase: Elapsed time ==> 17s.505ms
+Technology Mapping: Elapsed time ==> 19s.665ms
+Tech Mapping phase: Elapsed time ==> 19s.753ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -2463,10 +2592,10 @@ IO_1@[IOP=(2)][IoId=(1)] : TrackLED3(0) (fixed)
 IO_7@[IOP=(15)][IoId=(7)] : \USBUART_1:Dm(0)\ (fixed)
 IO_6@[IOP=(15)][IoId=(6)] : \USBUART_1:Dp(0)\ (fixed)
 USB[0]@[FFB(USB,0)] : \USBUART_1:USB\
-Analog Placement phase: Elapsed time ==> 0s.081ms
+Analog Placement phase: Elapsed time ==> 0s.073ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.002ms
+Analog Routing phase: Elapsed time ==> 0s.003ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2481,7 +2610,7 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.179ms
+Analog Code Generation phase: Elapsed time ==> 0s.172ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -2502,21 +2631,21 @@ PLD Packing Summary
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            6.80
+                   Inputs :            6.68
                    Pterms :            4.80
                Macrocells :            2.36
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.101ms
+PLD Packing: Elapsed time ==> 0s.117ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.092ms
+Partitioning: Elapsed time ==> 0s.094ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2526,7 +2655,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :         13 :      11.62 :       4.54
+                 UDB :         13 :       9.92 :       4.54
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2539,14 +2668,11 @@ UDB [UDB=(0,2)] is empty.
 UDB [UDB=(0,3)] is empty.
 UDB [UDB=(0,4)] is empty.
 UDB [UDB=(0,5)] is empty.
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] is empty.
-UDB [UDB=(1,4)] contents:
-LAB@[UDB=(1,4)][LB=0] #macrocells=1, #inputs=0, #pterms=0
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=1] #macrocells=1, #inputs=0, #pterms=0
 {
-    [McSlotId=0]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(1,4)][LB=0][MC=0]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=1]
         Total # of inputs        : 0
         Total # of product terms : 0
             Clock Enable: True
@@ -2554,35 +2680,49 @@ LAB@[UDB=(1,4)][LB=0] #macrocells=1, #inputs=0, #pterms=0
         !(
             0
         );
-        Output = __ONE__ (fanout=2)
+        Output = __ONE__ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(1,1)] is empty.
+UDB [UDB=(1,2)] is empty.
+UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,4)] is empty.
+UDB [UDB=(1,5)] is empty.
+UDB [UDB=(2,0)] contents:
+LAB@[UDB=(2,0)][LB=0] #macrocells=2, #inputs=12, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:state_1\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:state_1\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+        );
+        Output = \QuadDec_1:bQuadDec:state_1\ (fanout=8)
         Properties               : 
         {
         }
 
     [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-UDB [UDB=(1,5)] is empty.
-UDB [UDB=(2,0)] contents:
-LAB@[UDB=(2,0)][LB=0] #macrocells=3, #inputs=9, #pterms=6
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(2,0)][LB=0][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:overflow\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
     [McSlotId=2]:     MacroCell: Name=\QuadDec_2:bQuadDec:state_0\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=2]
         Total # of inputs        : 6
         Total # of product terms : 4
@@ -2608,50 +2748,12 @@ LAB@[UDB=(2,0)][LB=0] #macrocells=3, #inputs=9, #pterms=6
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_0\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              Net_205
-        );
-        Output = \QuadDec_2:bQuadDec:quad_B_delayed_0\ (fanout=2)
-        Properties               : 
-        {
-        }
+    [McSlotId=3]: (empty)
 }
 
 LAB@[UDB=(2,0)][LB=1] #macrocells=2, #inputs=7, #pterms=5
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:state_0\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_B_filt\ * 
-              !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_B_filt\ * 
-              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-        );
-        Output = \QuadDec_1:bQuadDec:state_0\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=1]
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_0\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -2659,110 +2761,16 @@ LAB@[UDB=(2,0)][LB=1] #macrocells=2, #inputs=7, #pterms=5
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_1:Cnt8:CounterUDB:overflow\
+              Net_204
         );
-        Output = \QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\ (fanout=1)
+        Output = \QuadDec_2:bQuadDec:quad_A_delayed_0\ (fanout=2)
         Properties               : 
         {
         }
 
+    [McSlotId=1]: (empty)
     [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-statusicell: Name =\QuadDec_1:Cnt8:CounterUDB:sSTSReg:stsreg\
-    PORT MAP (
-        reset => \QuadDec_1:Net_1260\ ,
-        clock => Net_202 ,
-        status_6 => \QuadDec_1:Cnt8:CounterUDB:status_6\ ,
-        status_5 => \QuadDec_1:Cnt8:CounterUDB:status_5\ ,
-        status_3 => \QuadDec_1:Cnt8:CounterUDB:status_3\ ,
-        status_2 => \QuadDec_1:Cnt8:CounterUDB:status_2\ ,
-        status_1 => \QuadDec_1:Cnt8:CounterUDB:status_1\ ,
-        status_0 => \QuadDec_1:Cnt8:CounterUDB:status_0\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "0011111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(2,1)] contents:
-LAB@[UDB=(2,1)][LB=0] #macrocells=3, #inputs=4, #pterms=3
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_1\, Mode=(D-Register) @ [UDB=(2,1)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:bQuadDec:quad_A_delayed_0\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_A_delayed_1\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_3\, Mode=(Combinatorial) @ [UDB=(2,1)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_3\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_2\, Mode=(D-Register) @ [UDB=(2,1)][LB=0][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:bQuadDec:quad_A_delayed_1\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_A_delayed_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(2,1)][LB=1] #macrocells=3, #inputs=11, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_filt\, Mode=(T-Register) @ [UDB=(2,1)][LB=1][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\QuadDec_1:bQuadDec:quad_A_delayed_0\ * 
-              !\QuadDec_1:bQuadDec:quad_A_delayed_1\ * 
-              !\QuadDec_1:bQuadDec:quad_A_delayed_2\ * 
-              \QuadDec_1:bQuadDec:quad_A_filt\
-            + \QuadDec_1:bQuadDec:quad_A_delayed_0\ * 
-              \QuadDec_1:bQuadDec:quad_A_delayed_1\ * 
-              \QuadDec_1:bQuadDec:quad_A_delayed_2\ * 
-              !\QuadDec_1:bQuadDec:quad_A_filt\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_A_filt\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:error\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=1]
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:bQuadDec:error\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=3]
         Total # of inputs        : 6
         Total # of product terms : 4
         List of special equations: 
@@ -2787,773 +2795,12 @@ LAB@[UDB=(2,1)][LB=1] #macrocells=3, #inputs=11, #pterms=7
         Properties               : 
         {
         }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_0\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              Net_199
-        );
-        Output = \QuadDec_1:bQuadDec:quad_A_delayed_0\ (fanout=2)
-        Properties               : 
-        {
-        }
 }
 
-UDB [UDB=(2,2)] contents:
-LAB@[UDB=(2,2)][LB=0] #macrocells=2, #inputs=6, #pterms=8
+UDB [UDB=(2,1)] contents:
+LAB@[UDB=(2,1)][LB=0] #macrocells=1, #inputs=7, #pterms=8
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:error\, Mode=(D-Register) @ [UDB=(2,2)][LB=0][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-        );
-        Output = \QuadDec_1:bQuadDec:error\ (fanout=9)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:state_1\, Mode=(D-Register) @ [UDB=(2,2)][LB=0][MC=1]
-        Total # of inputs        : 6
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:state_1\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-        );
-        Output = \QuadDec_1:bQuadDec:state_1\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(2,2)][LB=1] #macrocells=3, #inputs=10, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1260\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        !(
-              !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\
-            + !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-        );
-        Output = \QuadDec_2:Net_1260\ (fanout=10)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Net_1260\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        !(
-              !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\
-            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_1\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-        );
-        Output = \QuadDec_1:Net_1260\ (fanout=10)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:reload\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=1][MC=3]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              !\QuadDec_1:Net_1260\ * !\QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:reload\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-datapathcell: Name =\QuadDec_1:Cnt8:CounterUDB:sC8:counterdp:u0\
-    PORT MAP (
-        clock => Net_202 ,
-        cs_addr_2 => \QuadDec_1:Net_1251\ ,
-        cs_addr_1 => \QuadDec_1:Cnt8:CounterUDB:count_enable\ ,
-        cs_addr_0 => \QuadDec_1:Cnt8:CounterUDB:reload\ ,
-        z0_comb => \QuadDec_1:Cnt8:CounterUDB:status_1\ ,
-        f0_comb => \QuadDec_1:Cnt8:CounterUDB:overflow\ ,
-        ce1_comb => \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\ ,
-        f0_bus_stat_comb => \QuadDec_1:Cnt8:CounterUDB:status_6\ ,
-        f0_blk_stat_comb => \QuadDec_1:Cnt8:CounterUDB:status_5\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101000000000000000000001000000000000000000011000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(2,3)] contents:
-LAB@[UDB=(2,3)][LB=0] #macrocells=3, #inputs=12, #pterms=6
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1251\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=0]
-        Total # of inputs        : 8
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
-              !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
-              \QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\
-            + \QuadDec_1:Net_1251_split\
-        );
-        Output = \QuadDec_1:Net_1251\ (fanout=5)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:status_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Net_1276\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              !\QuadDec_1:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:overflow\
-        );
-        Output = \QuadDec_1:Net_1276\ (fanout=2)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(2,3)][LB=1] #macrocells=4, #inputs=8, #pterms=4
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=0]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:control_7\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:count_stored_i\ * 
-              \QuadDec_1:Net_1203\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:count_enable\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Net_530\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=1]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Net_1276\ * \QuadDec_1:Net_1251\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_1:Net_530\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=Net_368, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=2]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !Net_2460
-        );
-        Output = Net_368 (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\, Mode=(D-Register) @ [UDB=(2,3)][LB=1][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:status_1\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-statusicell: Name =\QuadDec_1:bQuadDec:Stsreg\
-    PORT MAP (
-        clock => Net_202 ,
-        status_3 => \QuadDec_1:bQuadDec:error\ ,
-        status_2 => \QuadDec_1:Net_1260\ ,
-        status_1 => \QuadDec_1:Net_611\ ,
-        status_0 => \QuadDec_1:Net_530\ ,
-        interrupt => Net_213 );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "0001111"
-        cy_md_select = "0001111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-controlcell: Name =\QuadDec_1:Cnt8:CounterUDB:sCTRLReg:ctrlreg\
-    PORT MAP (
-        clock => Net_202 ,
-        control_7 => \QuadDec_1:Cnt8:CounterUDB:control_7\ ,
-        control_6 => \QuadDec_1:Cnt8:CounterUDB:control_6\ ,
-        control_5 => \QuadDec_1:Cnt8:CounterUDB:control_5\ ,
-        control_4 => \QuadDec_1:Cnt8:CounterUDB:control_4\ ,
-        control_3 => \QuadDec_1:Cnt8:CounterUDB:control_3\ ,
-        control_2 => \QuadDec_1:Cnt8:CounterUDB:control_2\ ,
-        control_1 => \QuadDec_1:Cnt8:CounterUDB:control_1\ ,
-        control_0 => \QuadDec_1:Cnt8:CounterUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(2,4)] contents:
-LAB@[UDB=(2,4)][LB=0] #macrocells=3, #inputs=5, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Net_1203\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:count_stored_i\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_2\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:bQuadDec:quad_B_delayed_1\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_B_delayed_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Net_611\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Net_1276\ * !\QuadDec_1:Net_1251\ * 
-              !\QuadDec_1:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_1:Net_611\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(2,4)][LB=1] #macrocells=2, #inputs=5, #pterms=3
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_filt\, Mode=(T-Register) @ [UDB=(2,4)][LB=1][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\QuadDec_1:bQuadDec:quad_B_delayed_0\ * 
-              !\QuadDec_1:bQuadDec:quad_B_delayed_1\ * 
-              !\QuadDec_1:bQuadDec:quad_B_delayed_2\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\
-            + \QuadDec_1:bQuadDec:quad_B_delayed_0\ * 
-              \QuadDec_1:bQuadDec:quad_B_delayed_1\ * 
-              \QuadDec_1:bQuadDec:quad_B_delayed_2\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_B_filt\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_0\, Mode=(D-Register) @ [UDB=(2,4)][LB=1][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              Net_200
-        );
-        Output = \QuadDec_1:bQuadDec:quad_B_delayed_0\ (fanout=2)
-        Properties               : 
-        {
-        }
-}
-
-UDB [UDB=(2,5)] contents:
-LAB@[UDB=(2,5)][LB=0] #macrocells=3, #inputs=6, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_530\, Mode=(Combinatorial) @ [UDB=(2,5)][LB=0][MC=0]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Net_1276\ * \QuadDec_2:Net_1251\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_2:Net_530\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(2,5)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:prevCompare\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Net_1276\, Mode=(D-Register) @ [UDB=(2,5)][LB=0][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              !\QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow\
-        );
-        Output = \QuadDec_2:Net_1276\ (fanout=2)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(2,5)][LB=1] #macrocells=4, #inputs=6, #pterms=4
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_1\, Mode=(D-Register) @ [UDB=(2,5)][LB=1][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:bQuadDec:quad_B_delayed_0\
-        );
-        Output = \QuadDec_1:bQuadDec:quad_B_delayed_1\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_0\, Mode=(D-Register) @ [UDB=(2,5)][LB=1][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              Net_204
-        );
-        Output = \QuadDec_2:bQuadDec:quad_A_delayed_0\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Net_611\, Mode=(Combinatorial) @ [UDB=(2,5)][LB=1][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Net_1276\ * !\QuadDec_2:Net_1251\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_2:Net_611\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Cnt8:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(2,5)][LB=1][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
-        );
-        Output = \QuadDec_1:Cnt8:CounterUDB:prevCompare\ (fanout=3)
-        Properties               : 
-        {
-        }
-}
-
-statusicell: Name =\QuadDec_2:bQuadDec:Stsreg\
-    PORT MAP (
-        clock => Net_202 ,
-        status_3 => \QuadDec_2:bQuadDec:error\ ,
-        status_2 => \QuadDec_2:Net_1260\ ,
-        status_1 => \QuadDec_2:Net_611\ ,
-        status_0 => \QuadDec_2:Net_530\ ,
-        interrupt => Net_214 );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "0001111"
-        cy_md_select = "0001111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(3,0)] contents:
-LAB@[UDB=(3,0)][LB=0] #macrocells=3, #inputs=8, #pterms=6
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:state_1\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=1]
-        Total # of inputs        : 6
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              \QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:state_1\
-            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              \QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-            + \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
-        );
-        Output = \QuadDec_2:bQuadDec:state_1\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_1\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=2]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:bQuadDec:quad_B_delayed_0\
-        );
-        Output = \QuadDec_2:bQuadDec:quad_B_delayed_1\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=Net_362, Mode=(Combinatorial) @ [UDB=(3,0)][LB=0][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !Net_2404
-        );
-        Output = Net_362 (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(3,0)][LB=1] #macrocells=1, #inputs=1, #pterms=1
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_2\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:bQuadDec:quad_B_delayed_1\
-        );
-        Output = \QuadDec_2:bQuadDec:quad_B_delayed_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-UDB [UDB=(3,1)] contents:
-LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=6, #pterms=2
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Net_1203\, Mode=(D-Register) @ [UDB=(3,1)][LB=0][MC=1]
-        Total # of inputs        : 6
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\QuadDec_2:bQuadDec:quad_A_filt\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
-            + \QuadDec_2:Net_1203_split\
-        );
-        Output = \QuadDec_2:Net_1203\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,1)][LB=1] #macrocells=1, #inputs=7, #pterms=8
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1203_split\, Mode=(Combinatorial) @ [UDB=(3,1)][LB=1][MC=0]
-        Total # of inputs        : 7
-        Total # of product terms : 8
-            Clock Enable: True
-        Main Equation            : 8 pterms
-        (
-              !\QuadDec_1:Net_1260\ * \QuadDec_1:Net_1203\ * 
-              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
-              !\QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
-            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-        );
-        Output = \QuadDec_1:Net_1203_split\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-statusicell: Name =\QuadDec_2:Cnt8:CounterUDB:sSTSReg:stsreg\
-    PORT MAP (
-        reset => \QuadDec_2:Net_1260\ ,
-        clock => Net_202 ,
-        status_6 => \QuadDec_2:Cnt8:CounterUDB:status_6\ ,
-        status_5 => \QuadDec_2:Cnt8:CounterUDB:status_5\ ,
-        status_3 => \QuadDec_2:Cnt8:CounterUDB:status_3\ ,
-        status_2 => \QuadDec_2:Cnt8:CounterUDB:status_2\ ,
-        status_1 => \QuadDec_2:Cnt8:CounterUDB:status_1\ ,
-        status_0 => \QuadDec_2:Cnt8:CounterUDB:status_0\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "0011111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(3,2)] contents:
-LAB@[UDB=(3,2)][LB=0] #macrocells=2, #inputs=10, #pterms=4
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1203\, Mode=(D-Register) @ [UDB=(3,2)][LB=0][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\QuadDec_1:bQuadDec:quad_A_filt\ * 
-              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
-              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
-            + \QuadDec_1:Net_1203_split\
-        );
-        Output = \QuadDec_1:Net_1203\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_filt\, Mode=(T-Register) @ [UDB=(3,2)][LB=0][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\QuadDec_2:bQuadDec:quad_B_delayed_0\ * 
-              !\QuadDec_2:bQuadDec:quad_B_delayed_1\ * 
-              !\QuadDec_2:bQuadDec:quad_B_delayed_2\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\
-            + \QuadDec_2:bQuadDec:quad_B_delayed_0\ * 
-              \QuadDec_2:bQuadDec:quad_B_delayed_1\ * 
-              \QuadDec_2:bQuadDec:quad_B_delayed_2\ * 
-              !\QuadDec_2:bQuadDec:quad_B_filt\
-        );
-        Output = \QuadDec_2:bQuadDec:quad_B_filt\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,2)][LB=1] #macrocells=1, #inputs=7, #pterms=8
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1203_split\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1203_split\, Mode=(Combinatorial) @ [UDB=(2,1)][LB=0][MC=0]
         Total # of inputs        : 7
         Total # of product terms : 8
             Clock Enable: True
@@ -3594,41 +2841,109 @@ LAB@[UDB=(3,2)][LB=1] #macrocells=1, #inputs=7, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-UDB [UDB=(3,3)] contents:
-LAB@[UDB=(3,3)][LB=0] #macrocells=1, #inputs=7, #pterms=8
+LAB@[UDB=(2,1)][LB=1] #macrocells=2, #inputs=12, #pterms=6
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1251_split\, Mode=(Combinatorial) @ [UDB=(3,3)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:state_0\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_B_filt\ * 
+              !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_B_filt\ * 
+              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+        );
+        Output = \QuadDec_1:bQuadDec:state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Net_1203\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=1]
+        Total # of inputs        : 6
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\QuadDec_2:bQuadDec:quad_A_filt\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
+            + \QuadDec_2:Net_1203_split\
+        );
+        Output = \QuadDec_2:Net_1203\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\QuadDec_2:Cnt16:CounterUDB:sSTSReg:stsreg\
+    PORT MAP (
+        reset => \QuadDec_2:Net_1260\ ,
+        clock => Net_202 ,
+        status_6 => \QuadDec_2:Cnt16:CounterUDB:status_6\ ,
+        status_5 => \QuadDec_2:Cnt16:CounterUDB:status_5\ ,
+        status_3 => \QuadDec_2:Cnt16:CounterUDB:status_3\ ,
+        status_2 => \QuadDec_2:Cnt16:CounterUDB:status_2\ ,
+        status_1 => \QuadDec_2:Cnt16:CounterUDB:status_1\ ,
+        status_0 => \QuadDec_2:Cnt16:CounterUDB:status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0011111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,2)] contents:
+LAB@[UDB=(2,2)][LB=0] #macrocells=1, #inputs=7, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1203_split\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=0][MC=0]
         Total # of inputs        : 7
         Total # of product terms : 8
             Clock Enable: True
         Main Equation            : 8 pterms
         (
-              \QuadDec_2:Net_1251\ * !\QuadDec_2:Net_1260\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              !\QuadDec_2:bQuadDec:state_1\
-            + \QuadDec_2:Net_1251\ * !\QuadDec_2:Net_1260\ * 
-              \QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-            + \QuadDec_2:Net_1251\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-            + \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:quad_B_filt\ * 
-              !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
-              !\QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              \QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              \QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:state_0\
-            + !\QuadDec_2:bQuadDec:quad_A_filt\ * 
-              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
-              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
+              !\QuadDec_1:Net_1260\ * \QuadDec_1:Net_1203\ * 
+              \QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
         );
-        Output = \QuadDec_2:Net_1251_split\ (fanout=1)
+        Output = \QuadDec_1:Net_1203_split\ (fanout=1)
         Properties               : 
         {
         }
@@ -3638,9 +2953,423 @@ LAB@[UDB=(3,3)][LB=0] #macrocells=1, #inputs=7, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-LAB@[UDB=(3,3)][LB=1] #macrocells=1, #inputs=7, #pterms=8
+LAB@[UDB=(2,2)][LB=1] #macrocells=3, #inputs=7, #pterms=5
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1251_split\, Mode=(Combinatorial) @ [UDB=(3,3)][LB=1][MC=0]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Net_1260\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        !(
+              !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\
+            + !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+        );
+        Output = \QuadDec_2:Net_1260\ (fanout=10)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=1][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:control_7\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:count_stored_i\ * 
+              \QuadDec_2:Net_1203\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:count_enable\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Net_1203\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:count_stored_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u1\
+    PORT MAP (
+        clock => Net_202 ,
+        cs_addr_2 => \QuadDec_2:Net_1251\ ,
+        cs_addr_1 => \QuadDec_2:Cnt16:CounterUDB:count_enable\ ,
+        cs_addr_0 => \QuadDec_2:Cnt16:CounterUDB:reload\ ,
+        z0_comb => \QuadDec_2:Cnt16:CounterUDB:status_1\ ,
+        f0_comb => \QuadDec_2:Cnt16:CounterUDB:overflow\ ,
+        ce1_comb => \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\ ,
+        f0_bus_stat_comb => \QuadDec_2:Cnt16:CounterUDB:status_6\ ,
+        f0_blk_stat_comb => \QuadDec_2:Cnt16:CounterUDB:status_5\ ,
+        chain_in => \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u0\
+
+controlcell: Name =\QuadDec_2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\
+    PORT MAP (
+        clock => Net_202 ,
+        control_7 => \QuadDec_2:Cnt16:CounterUDB:control_7\ ,
+        control_6 => \QuadDec_2:Cnt16:CounterUDB:control_6\ ,
+        control_5 => \QuadDec_2:Cnt16:CounterUDB:control_5\ ,
+        control_4 => \QuadDec_2:Cnt16:CounterUDB:control_4\ ,
+        control_3 => \QuadDec_2:Cnt16:CounterUDB:control_3\ ,
+        control_2 => \QuadDec_2:Cnt16:CounterUDB:control_2\ ,
+        control_1 => \QuadDec_2:Cnt16:CounterUDB:control_1\ ,
+        control_0 => \QuadDec_2:Cnt16:CounterUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,3)] contents:
+LAB@[UDB=(2,3)][LB=0] #macrocells=4, #inputs=9, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:reload\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=0][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\QuadDec_1:Net_1260\ * !\QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:reload\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Net_1260\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        !(
+              !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\
+            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_1\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+        );
+        Output = \QuadDec_1:Net_1260\ (fanout=10)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:control_7\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:count_stored_i\ * 
+              \QuadDec_1:Net_1203\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:count_enable\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Net_1203\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:count_stored_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,3)][LB=1] #macrocells=3, #inputs=8, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1203\, Mode=(D-Register) @ [UDB=(2,3)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:Net_1203_split\
+        );
+        Output = \QuadDec_1:Net_1203\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:overflow\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(2,3)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u0\
+    PORT MAP (
+        clock => Net_202 ,
+        cs_addr_2 => \QuadDec_1:Net_1251\ ,
+        cs_addr_1 => \QuadDec_1:Cnt16:CounterUDB:count_enable\ ,
+        cs_addr_0 => \QuadDec_1:Cnt16:CounterUDB:reload\ ,
+        chain_out => \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101000000000000000000001000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u1\
+
+controlcell: Name =\QuadDec_1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\
+    PORT MAP (
+        clock => Net_202 ,
+        control_7 => \QuadDec_1:Cnt16:CounterUDB:control_7\ ,
+        control_6 => \QuadDec_1:Cnt16:CounterUDB:control_6\ ,
+        control_5 => \QuadDec_1:Cnt16:CounterUDB:control_5\ ,
+        control_4 => \QuadDec_1:Cnt16:CounterUDB:control_4\ ,
+        control_3 => \QuadDec_1:Cnt16:CounterUDB:control_3\ ,
+        control_2 => \QuadDec_1:Cnt16:CounterUDB:control_2\ ,
+        control_1 => \QuadDec_1:Cnt16:CounterUDB:control_1\ ,
+        control_0 => \QuadDec_1:Cnt16:CounterUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,4)] contents:
+LAB@[UDB=(2,4)][LB=0] #macrocells=4, #inputs=12, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1275\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_1:Net_1275\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:error\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=1]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+            + !\QuadDec_1:Net_1260\ * \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:bQuadDec:quad_A_filt\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_1\ * !\QuadDec_1:bQuadDec:state_0\
+        );
+        Output = \QuadDec_1:bQuadDec:error\ (fanout=9)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Net_611\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Net_1275\ * !\QuadDec_1:Net_1251\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
+        );
+        Output = \QuadDec_1:Net_611\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_0\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_205
+        );
+        Output = \QuadDec_2:bQuadDec:quad_B_delayed_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,4)][LB=1] #macrocells=3, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_3\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_3\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\, Mode=(D-Register) @ [UDB=(2,4)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:status_1\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:Net_530\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Net_1275\ * \QuadDec_1:Net_1251\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
+        );
+        Output = \QuadDec_1:Net_530\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(2,5)] contents:
+LAB@[UDB=(2,5)][LB=0] #macrocells=1, #inputs=7, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1251_split\, Mode=(Combinatorial) @ [UDB=(2,5)][LB=0][MC=0]
         Total # of inputs        : 7
         Total # of product terms : 8
             Clock Enable: True
@@ -3681,10 +3410,311 @@ LAB@[UDB=(3,3)][LB=1] #macrocells=1, #inputs=7, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-UDB [UDB=(3,4)] contents:
-LAB@[UDB=(3,4)][LB=0] #macrocells=2, #inputs=10, #pterms=5
+LAB@[UDB=(2,5)][LB=1] #macrocells=1, #inputs=8, #pterms=4
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1251\, Mode=(D-Register) @ [UDB=(3,4)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Net_1251\, Mode=(D-Register) @ [UDB=(2,5)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
+              !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              !\QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
+              \QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_0\
+            + \QuadDec_1:Net_1251\ * !\QuadDec_1:Net_1260\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:error\ * 
+              \QuadDec_1:bQuadDec:state_1\
+            + \QuadDec_1:Net_1251_split\
+        );
+        Output = \QuadDec_1:Net_1251\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\QuadDec_1:bQuadDec:Stsreg\
+    PORT MAP (
+        clock => Net_202 ,
+        status_3 => \QuadDec_1:bQuadDec:error\ ,
+        status_2 => \QuadDec_1:Net_1260\ ,
+        status_1 => \QuadDec_1:Net_611\ ,
+        status_0 => \QuadDec_1:Net_530\ ,
+        interrupt => Net_213 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0001111"
+        cy_md_select = "0001111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\MotorStopReg:Sync:ctrl_reg\
+    PORT MAP (
+        control_7 => \MotorStopReg:control_7\ ,
+        control_6 => \MotorStopReg:control_6\ ,
+        control_5 => \MotorStopReg:control_5\ ,
+        control_4 => \MotorStopReg:control_4\ ,
+        control_3 => \MotorStopReg:control_3\ ,
+        control_2 => \MotorStopReg:control_2\ ,
+        control_1 => Net_293 ,
+        control_0 => Net_296 );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000000"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Enable: True
+
+UDB [UDB=(3,0)] contents:
+LAB@[UDB=(3,0)][LB=0] #macrocells=2, #inputs=5, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=Net_362, Mode=(Combinatorial) @ [UDB=(3,0)][LB=0][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !Net_2404
+        );
+        Output = Net_362 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_filt\, Mode=(T-Register) @ [UDB=(3,0)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\QuadDec_2:bQuadDec:quad_A_delayed_0\ * 
+              !\QuadDec_2:bQuadDec:quad_A_delayed_1\ * 
+              !\QuadDec_2:bQuadDec:quad_A_delayed_2\ * 
+              \QuadDec_2:bQuadDec:quad_A_filt\
+            + \QuadDec_2:bQuadDec:quad_A_delayed_0\ * 
+              \QuadDec_2:bQuadDec:quad_A_delayed_1\ * 
+              \QuadDec_2:bQuadDec:quad_A_delayed_2\ * 
+              !\QuadDec_2:bQuadDec:quad_A_filt\
+        );
+        Output = \QuadDec_2:bQuadDec:quad_A_filt\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,0)][LB=1] #macrocells=3, #inputs=3, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_1\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:bQuadDec:quad_A_delayed_0\
+        );
+        Output = \QuadDec_2:bQuadDec:quad_A_delayed_1\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:status_1\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_2\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:bQuadDec:quad_A_delayed_1\
+        );
+        Output = \QuadDec_2:bQuadDec:quad_A_delayed_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\QuadDec_2:bQuadDec:Stsreg\
+    PORT MAP (
+        clock => Net_202 ,
+        status_3 => \QuadDec_2:bQuadDec:error\ ,
+        status_2 => \QuadDec_2:Net_1260\ ,
+        status_1 => \QuadDec_2:Net_611\ ,
+        status_0 => \QuadDec_2:Net_530\ ,
+        interrupt => Net_214 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0001111"
+        cy_md_select = "0001111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,1)] contents:
+LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=1, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_1\, Mode=(D-Register) @ [UDB=(3,1)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:bQuadDec:quad_A_delayed_0\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_A_delayed_1\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,1)][LB=1] #macrocells=3, #inputs=9, #pterms=6
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_3\, Mode=(Combinatorial) @ [UDB=(3,1)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_3\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:bQuadDec:state_1\, Mode=(D-Register) @ [UDB=(3,1)][LB=1][MC=2]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              \QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:state_1\
+            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              \QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+            + \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
+        );
+        Output = \QuadDec_2:bQuadDec:state_1\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(3,1)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:prevCompare\ (fanout=3)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=1, #inputs=7, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1251_split\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 8
+            Clock Enable: True
+        Main Equation            : 8 pterms
+        (
+              \QuadDec_2:Net_1251\ * !\QuadDec_2:Net_1260\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              !\QuadDec_2:bQuadDec:state_1\
+            + \QuadDec_2:Net_1251\ * !\QuadDec_2:Net_1260\ * 
+              \QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+            + \QuadDec_2:Net_1251\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+            + \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:quad_B_filt\ * 
+              !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * 
+              !\QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              \QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              \QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:Net_1260\ * \QuadDec_2:bQuadDec:quad_A_filt\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:state_0\
+            + !\QuadDec_2:bQuadDec:quad_A_filt\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:error\ * 
+              !\QuadDec_2:bQuadDec:state_1\ * !\QuadDec_2:bQuadDec:state_0\
+        );
+        Output = \QuadDec_2:Net_1251_split\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,2)][LB=1] #macrocells=2, #inputs=10, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Net_1251\, Mode=(D-Register) @ [UDB=(3,2)][LB=1][MC=0]
         Total # of inputs        : 8
         Total # of product terms : 4
         List of special equations: 
@@ -3703,87 +3733,35 @@ LAB@[UDB=(3,4)][LB=0] #macrocells=2, #inputs=10, #pterms=5
               \QuadDec_2:bQuadDec:state_1\
             + \QuadDec_2:Net_1251_split\
         );
-        Output = \QuadDec_2:Net_1251\ (fanout=5)
+        Output = \QuadDec_2:Net_1251\ (fanout=6)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:reload\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=0][MC=1]
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:reload\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=1][MC=3]
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         !(
-              !\QuadDec_2:Net_1260\ * !\QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow\
+              !\QuadDec_2:Net_1260\ * !\QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:reload\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,4)][LB=1] #macrocells=3, #inputs=7, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=1][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Cnt8:CounterUDB:overflow\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=1][MC=1]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Cnt8:CounterUDB:control_7\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:count_stored_i\ * 
-              \QuadDec_2:Net_1203\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:count_enable\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_3\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=1][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Cnt8:CounterUDB:status_1\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_3\ (fanout=1)
+        Output = \QuadDec_2:Cnt16:CounterUDB:reload\ (fanout=2)
         Properties               : 
         {
         }
 }
 
-datapathcell: Name =\QuadDec_2:Cnt8:CounterUDB:sC8:counterdp:u0\
+datapathcell: Name =\QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u0\
     PORT MAP (
         clock => Net_202 ,
         cs_addr_2 => \QuadDec_2:Net_1251\ ,
-        cs_addr_1 => \QuadDec_2:Cnt8:CounterUDB:count_enable\ ,
-        cs_addr_0 => \QuadDec_2:Cnt8:CounterUDB:reload\ ,
-        z0_comb => \QuadDec_2:Cnt8:CounterUDB:status_1\ ,
-        f0_comb => \QuadDec_2:Cnt8:CounterUDB:overflow\ ,
-        ce1_comb => \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\ ,
-        f0_bus_stat_comb => \QuadDec_2:Cnt8:CounterUDB:status_6\ ,
-        f0_blk_stat_comb => \QuadDec_2:Cnt8:CounterUDB:status_5\ );
+        cs_addr_1 => \QuadDec_2:Cnt16:CounterUDB:count_enable\ ,
+        cs_addr_0 => \QuadDec_2:Cnt16:CounterUDB:reload\ ,
+        chain_out => \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:carry\ );
     Properties:
     {
         a0_init = "00000000"
@@ -3810,96 +3788,176 @@ datapathcell: Name =\QuadDec_2:Cnt8:CounterUDB:sC8:counterdp:u0\
     }
     Clock Polarity: Active High
     Clock Enable: True
+    Next in chain : \QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u1\
 
-controlcell: Name =\QuadDec_2:Cnt8:CounterUDB:sCTRLReg:ctrlreg\
-    PORT MAP (
-        clock => Net_202 ,
-        control_7 => \QuadDec_2:Cnt8:CounterUDB:control_7\ ,
-        control_6 => \QuadDec_2:Cnt8:CounterUDB:control_6\ ,
-        control_5 => \QuadDec_2:Cnt8:CounterUDB:control_5\ ,
-        control_4 => \QuadDec_2:Cnt8:CounterUDB:control_4\ ,
-        control_3 => \QuadDec_2:Cnt8:CounterUDB:control_3\ ,
-        control_2 => \QuadDec_2:Cnt8:CounterUDB:control_2\ ,
-        control_1 => \QuadDec_2:Cnt8:CounterUDB:control_1\ ,
-        control_0 => \QuadDec_2:Cnt8:CounterUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(3,5)] contents:
-LAB@[UDB=(3,5)][LB=0] #macrocells=4, #inputs=4, #pterms=4
+UDB [UDB=(3,3)] contents:
+LAB@[UDB=(3,3)][LB=0] #macrocells=2, #inputs=3, #pterms=2
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=0]
-        Total # of inputs        : 1
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Net_530\, Mode=(Combinatorial) @ [UDB=(3,3)][LB=0][MC=2]
+        Total # of inputs        : 3
         Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:status_1\
+              \QuadDec_2:Net_1275\ * \QuadDec_2:Net_1251\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\ (fanout=1)
+        Output = \QuadDec_2:Net_530\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_2\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=1]
-        Total # of inputs        : 1
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Net_611\, Mode=(Combinatorial) @ [UDB=(3,3)][LB=0][MC=3]
+        Total # of inputs        : 3
         Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:bQuadDec:quad_A_delayed_1\
+              \QuadDec_2:Net_1275\ * !\QuadDec_2:Net_1251\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
         );
-        Output = \QuadDec_2:bQuadDec:quad_A_delayed_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_delayed_1\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=2]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:bQuadDec:quad_A_delayed_0\
-        );
-        Output = \QuadDec_2:bQuadDec:quad_A_delayed_1\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_202) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Net_1203\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:count_stored_i\ (fanout=1)
+        Output = \QuadDec_2:Net_611\ (fanout=1)
         Properties               : 
         {
         }
 }
 
-LAB@[UDB=(3,5)][LB=1] #macrocells=3, #inputs=7, #pterms=4
+LAB@[UDB=(3,3)][LB=1] #macrocells=3, #inputs=5, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_A_filt\, Mode=(T-Register) @ [UDB=(3,5)][LB=1][MC=0]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Net_1275\, Mode=(D-Register) @ [UDB=(3,3)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\QuadDec_2:Cnt16:CounterUDB:status_1\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_2:Net_1275\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(3,3)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\ * 
+              !\QuadDec_2:Cnt16:CounterUDB:prevCompare\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=Net_368, Mode=(Combinatorial) @ [UDB=(3,3)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !Net_2460
+        );
+        Output = Net_368 (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u1\
+    PORT MAP (
+        clock => Net_202 ,
+        cs_addr_2 => \QuadDec_1:Net_1251\ ,
+        cs_addr_1 => \QuadDec_1:Cnt16:CounterUDB:count_enable\ ,
+        cs_addr_0 => \QuadDec_1:Cnt16:CounterUDB:reload\ ,
+        z0_comb => \QuadDec_1:Cnt16:CounterUDB:status_1\ ,
+        f0_comb => \QuadDec_1:Cnt16:CounterUDB:overflow\ ,
+        ce1_comb => \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\ ,
+        f0_bus_stat_comb => \QuadDec_1:Cnt16:CounterUDB:status_6\ ,
+        f0_blk_stat_comb => \QuadDec_1:Cnt16:CounterUDB:status_5\ ,
+        chain_in => \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \QuadDec_1:Cnt16:CounterUDB:sC16:counterdp:u0\
+
+UDB [UDB=(3,4)] contents:
+LAB@[UDB=(3,4)][LB=0] #macrocells=4, #inputs=8, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:prevCompare\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(3,4)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:prevCompare\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(3,4)][LB=0][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:overflow\ * 
+              !\QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_filt\, Mode=(T-Register) @ [UDB=(3,4)][LB=0][MC=3]
         Total # of inputs        : 4
         Total # of product terms : 2
         List of special equations: 
@@ -3907,35 +3965,24 @@ LAB@[UDB=(3,5)][LB=1] #macrocells=3, #inputs=7, #pterms=4
             Clock Enable: True
         Main Equation            : 2 pterms
         (
-              !\QuadDec_2:bQuadDec:quad_A_delayed_0\ * 
-              !\QuadDec_2:bQuadDec:quad_A_delayed_1\ * 
-              !\QuadDec_2:bQuadDec:quad_A_delayed_2\ * 
-              \QuadDec_2:bQuadDec:quad_A_filt\
-            + \QuadDec_2:bQuadDec:quad_A_delayed_0\ * 
-              \QuadDec_2:bQuadDec:quad_A_delayed_1\ * 
-              \QuadDec_2:bQuadDec:quad_A_delayed_2\ * 
-              !\QuadDec_2:bQuadDec:quad_A_filt\
+              !\QuadDec_2:bQuadDec:quad_B_delayed_0\ * 
+              !\QuadDec_2:bQuadDec:quad_B_delayed_1\ * 
+              !\QuadDec_2:bQuadDec:quad_B_delayed_2\ * 
+              \QuadDec_2:bQuadDec:quad_B_filt\
+            + \QuadDec_2:bQuadDec:quad_B_delayed_0\ * 
+              \QuadDec_2:bQuadDec:quad_B_delayed_1\ * 
+              \QuadDec_2:bQuadDec:quad_B_delayed_2\ * 
+              !\QuadDec_2:bQuadDec:quad_B_filt\
         );
-        Output = \QuadDec_2:bQuadDec:quad_A_filt\ (fanout=8)
+        Output = \QuadDec_2:bQuadDec:quad_B_filt\ (fanout=8)
         Properties               : 
         {
         }
+}
 
-    [McSlotId=1]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(3,5)][LB=1][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\ * 
-              !\QuadDec_2:Cnt8:CounterUDB:prevCompare\
-        );
-        Output = \QuadDec_2:Cnt8:CounterUDB:status_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(3,5)][LB=1][MC=2]
+LAB@[UDB=(3,4)][LB=1] #macrocells=2, #inputs=2, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_2\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -3943,18 +3990,202 @@ LAB@[UDB=(3,5)][LB=1] #macrocells=3, #inputs=7, #pterms=4
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \QuadDec_2:Cnt8:CounterUDB:overflow\
+              \QuadDec_2:bQuadDec:quad_B_delayed_1\
         );
-        Output = \QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\ (fanout=1)
+        Output = \QuadDec_2:bQuadDec:quad_B_delayed_2\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=3]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:bQuadDec:quad_B_delayed_1\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:bQuadDec:quad_B_delayed_0\
+        );
+        Output = \QuadDec_2:bQuadDec:quad_B_delayed_1\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+statusicell: Name =\QuadDec_1:Cnt16:CounterUDB:sSTSReg:stsreg\
+    PORT MAP (
+        reset => \QuadDec_1:Net_1260\ ,
+        clock => Net_202 ,
+        status_6 => \QuadDec_1:Cnt16:CounterUDB:status_6\ ,
+        status_5 => \QuadDec_1:Cnt16:CounterUDB:status_5\ ,
+        status_3 => \QuadDec_1:Cnt16:CounterUDB:status_3\ ,
+        status_2 => \QuadDec_1:Cnt16:CounterUDB:status_2\ ,
+        status_1 => \QuadDec_1:Cnt16:CounterUDB:status_1\ ,
+        status_0 => \QuadDec_1:Cnt16:CounterUDB:status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0011111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,5)] contents:
+LAB@[UDB=(3,5)][LB=0] #macrocells=4, #inputs=4, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_2\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:bQuadDec:quad_B_delayed_1\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_B_delayed_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_0\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_200
+        );
+        Output = \QuadDec_1:bQuadDec:quad_B_delayed_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_1\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:bQuadDec:quad_B_delayed_0\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_B_delayed_1\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_0\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_199
+        );
+        Output = \QuadDec_1:bQuadDec:quad_A_delayed_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(3,5)][LB=1] #macrocells=4, #inputs=9, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_filt\, Mode=(T-Register) @ [UDB=(3,5)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\QuadDec_1:bQuadDec:quad_B_delayed_0\ * 
+              !\QuadDec_1:bQuadDec:quad_B_delayed_1\ * 
+              !\QuadDec_1:bQuadDec:quad_B_delayed_2\ * 
+              \QuadDec_1:bQuadDec:quad_B_filt\
+            + \QuadDec_1:bQuadDec:quad_B_delayed_0\ * 
+              \QuadDec_1:bQuadDec:quad_B_delayed_1\ * 
+              \QuadDec_1:bQuadDec:quad_B_delayed_2\ * 
+              !\QuadDec_1:bQuadDec:quad_B_filt\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_B_filt\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_delayed_2\, Mode=(D-Register) @ [UDB=(3,5)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:bQuadDec:quad_A_delayed_1\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_A_delayed_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(3,5)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_A_filt\, Mode=(T-Register) @ [UDB=(3,5)][LB=1][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\QuadDec_1:bQuadDec:quad_A_delayed_0\ * 
+              !\QuadDec_1:bQuadDec:quad_A_delayed_1\ * 
+              !\QuadDec_1:bQuadDec:quad_A_delayed_2\ * 
+              \QuadDec_1:bQuadDec:quad_A_filt\
+            + \QuadDec_1:bQuadDec:quad_A_delayed_0\ * 
+              \QuadDec_1:bQuadDec:quad_A_delayed_1\ * 
+              \QuadDec_1:bQuadDec:quad_A_delayed_2\ * 
+              !\QuadDec_1:bQuadDec:quad_A_filt\
+        );
+        Output = \QuadDec_1:bQuadDec:quad_A_filt\ (fanout=8)
+        Properties               : 
+        {
+        }
 }
 
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =MotorUpdateSpeed
+        PORT MAP (
+            interrupt => Net_281 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =QuadDec1Interrupt
         PORT MAP (
             interrupt => Net_213 );
@@ -3963,7 +4194,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(1)] 
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
     interrupt: Name =QuadDec2Interrupt
         PORT MAP (
             interrupt => Net_214 );
@@ -3972,7 +4203,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+  Intr@ [IntrContainer=(0)][IntrId=(3)] 
     interrupt: Name =\USBUART_1:ep_1\
         PORT MAP (
             interrupt => \USBUART_1:ep_int_1\ );
@@ -3981,7 +4212,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(3)] 
+  Intr@ [IntrContainer=(0)][IntrId=(4)] 
     interrupt: Name =\USBUART_1:ep_2\
         PORT MAP (
             interrupt => \USBUART_1:ep_int_2\ );
@@ -3990,7 +4221,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(4)] 
+  Intr@ [IntrContainer=(0)][IntrId=(5)] 
     interrupt: Name =\USBUART_1:ep_3\
         PORT MAP (
             interrupt => \USBUART_1:ep_int_3\ );
@@ -4324,11 +4555,12 @@ Pin : Name = M1_D1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
+        Required Capabilities: DIGITAL, ROUTABLE
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
         pa_out => M1_D1(0)__PA ,
+        pin_input => Net_296 ,
         pad => M1_D1(0)_PAD );
     Properties:
     {
@@ -4570,11 +4802,12 @@ Pin : Name = M2_D1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
+        Required Capabilities: DIGITAL, ROUTABLE
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
         pa_out => M2_D1(0)__PA ,
+        pin_input => Net_293 ,
         pad => M2_D1(0)_PAD );
     Properties:
     {
@@ -4752,7 +4985,9 @@ Clock group 0:
             dclk_glb_0 => Net_202 ,
             dclk_0 => Net_202_local ,
             dclk_glb_1 => CLK24M ,
-            dclk_1 => CLK24M_local );
+            dclk_1 => CLK24M_local ,
+            dclk_glb_2 => Net_284 ,
+            dclk_2 => Net_284_local );
         Properties:
         {
         }
@@ -4770,6 +5005,18 @@ SC group 0: empty
 SPC group 0: empty
 Timer group 0: 
     Timer Block @ F(Timer,0): 
+    timercell: Name =\MotorSpeedTimer:TimerHW\
+        PORT MAP (
+            clock => Net_284 ,
+            enable => __ONE__ ,
+            tc => Net_281 ,
+            cmp => \MotorSpeedTimer:Net_261\ ,
+            irq => \MotorSpeedTimer:Net_57\ );
+        Properties:
+        {
+            cy_registers = ""
+        }
+    Timer Block @ F(Timer,1): 
     timercell: Name =\PWM_1:PWMHW\
         PORT MAP (
             clock => CLK24M ,
@@ -4781,7 +5028,7 @@ Timer group 0:
         {
             cy_registers = ""
         }
-    Timer Block @ F(Timer,1): 
+    Timer Block @ F(Timer,2): 
     timercell: Name =\PWM_2:PWMHW\
         PORT MAP (
             clock => CLK24M ,
@@ -4851,14 +5098,14 @@ Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connecti
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
    2 |   1 |     * |      NONE |         CMOS_OUT |      TrackLED3(0) | 
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
-   3 |   3 |     * |      NONE |         CMOS_OUT |          M1_D1(0) | 
+   3 |   3 |     * |      NONE |         CMOS_OUT |          M1_D1(0) | In(Net_296)
      |   4 |     * |      NONE |         CMOS_OUT |         M1_IN2(0) | In(Net_362)
      |   5 |     * |      NONE |         CMOS_OUT |         M1_IN1(0) | In(Net_2404)
      |   6 |     * |      NONE |         CMOS_OUT |      TrackLED1(0) | 
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
   12 |   2 |     * |      NONE |         CMOS_OUT |         M2_IN1(0) | In(Net_2460)
      |   3 |     * |      NONE |         CMOS_OUT |         M2_IN2(0) | In(Net_368)
-     |   4 |     * |      NONE |         CMOS_OUT |          M2_D1(0) | 
+     |   4 |     * |      NONE |         CMOS_OUT |          M2_D1(0) | In(Net_293)
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
   15 |   6 |     * |   FALLING |      HI_Z_ANALOG | \USBUART_1:Dp(0)\ | Analog(\USBUART_1:Net_1000\)
      |   7 |     * |      NONE |      HI_Z_ANALOG | \USBUART_1:Dm(0)\ | Analog(\USBUART_1:Net_597\)
@@ -4866,33 +5113,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connecti
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 16s.767ms
-Digital Placement phase: Elapsed time ==> 18s.256ms
+Digital component placer commit/Report: Elapsed time ==> 20s.293ms
+Digital Placement phase: Elapsed time ==> 21s.898ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Final_r.vh2" --pcf-path "Final.pco" --des-name "Final" --dsf-path "Final.dsf" --sdc-path "Final.sdc" --lib-path "Final_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.453ms
+Digital Routing phase: Elapsed time ==> 3s.770ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.732ms
+Bitstream Generation phase: Elapsed time ==> 0s.782ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.058ms
+Bitstream Verification phase: Elapsed time ==> 0s.070ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Final_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.395ms
+Static timing analysis phase: Elapsed time ==> 0s.472ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.003ms
+Data reporting phase: Elapsed time ==> 0s.004ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.120ms
+Design database save phase: Elapsed time ==> 0s.121ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 40s.941ms
+cydsfit: Elapsed time ==> 47s.289ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 40s.949ms
-API generation phase: Elapsed time ==> 3s.600ms
-Dependency generation phase: Elapsed time ==> 0s.043ms
-Cleanup phase: Elapsed time ==> 0s.018ms
+Fitter phase: Elapsed time ==> 47s.296ms
+API generation phase: Elapsed time ==> 3s.955ms
+Dependency generation phase: Elapsed time ==> 0s.081ms
+Cleanup phase: Elapsed time ==> 0s.054ms
