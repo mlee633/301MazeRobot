@@ -12,6 +12,7 @@
 #include "project.h"
 #include "uart.h"
 #include "motor.h"
+#include "action.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,28 +45,10 @@ int main(void)
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
-        MotorController(-20.0f, 20.0f);
+        Action action = StateMachine();
+        MotorController(action.leftSpeed, action.rightSpeed);
     }
     
-}
-
-#define crBegin static int state=0; switch(state) { case 0:
-#define crReturn(x) do { state=__LINE__; return x; \
-                         case __LINE__:; } while (0)
-#define crFinish }
-
-#define sensML 1
-#define sensMR 1
-
-void StateMachine() {
-    crBegin;
-    
-    // Start of co-routine
-    while(!(sensML && sensMR)) {
-        crReturn();
-    }
-    
-    crFinish;
 }
 
 char* AppendStrToStr(char *result, const char* src, size_t len) {
