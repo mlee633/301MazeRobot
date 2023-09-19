@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.259ms
+Loading plugins phase: Elapsed time ==> 0s.179ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj -d CY8C5888LTI-LP097 -s H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.178ms
+Elaboration phase: Elapsed time ==> 1s.157ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.092ms
+HDL generation phase: Elapsed time ==> 0s.159ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Fri Sep 15 17:40:04 2023
+Tue Sep 19 12:04:43 2023
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Final.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Fri Sep 15 17:40:04 2023
+Tue Sep 19 12:04:43 2023
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -95,7 +95,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Fri Sep 15 17:40:04 2023
+Tue Sep 19 12:04:43 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -132,7 +132,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\3
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Fri Sep 15 17:40:05 2023
+Tue Sep 19 12:04:44 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -259,140 +259,142 @@ Aliasing \MotorSpeedTimer:Net_260\ to zero
 Aliasing \MotorSpeedTimer:Net_102\ to tmpOE__TrackLED3_net_0
 Aliasing \MotorStopReg:clk\ to zero
 Aliasing \MotorStopReg:rst\ to zero
+Aliasing tmpOE__PD1_net_0 to tmpOE__TrackLED3_net_0
 Aliasing \QuadDec_1:Cnt16:CounterUDB:prevCapture\\D\ to zero
 Aliasing \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_1:Cnt16:CounterUDB:prevCompare\\D\
 Aliasing \QuadDec_2:Cnt16:CounterUDB:prevCapture\\D\ to zero
 Aliasing \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec_2:Cnt16:CounterUDB:prevCompare\\D\
-Removing Lhs of wire one[10] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__TrackLED1_net_0[13] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__TrackLED2_net_0[20] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_1:Net_1275\[31] = \QuadDec_1:Cnt16:Net_49\[32]
-Removing Rhs of wire \QuadDec_1:Net_1275\[31] = \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\[89]
-Removing Lhs of wire \QuadDec_1:Cnt16:Net_89\[34] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_1\[45] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_0\[46] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_enable\[58] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_rising\[60] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_falling\[61] = \QuadDec_1:Cnt16:CounterUDB:prevCapture\[59]
-Removing Rhs of wire \QuadDec_1:Net_1260\[65] = \QuadDec_1:bQuadDec:state_2\[203]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:final_enable\[67] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:counter_enable\[68] = \QuadDec_1:Cnt16:CounterUDB:control_7\[50]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_0\[69] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_status\[70]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_1\[71] = \QuadDec_1:Cnt16:CounterUDB:per_zero\[72]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_2\[73] = \QuadDec_1:Cnt16:CounterUDB:overflow_status\[74]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_3\[75] = \QuadDec_1:Cnt16:CounterUDB:underflow_status\[76]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:status_4\[77] = \QuadDec_1:Cnt16:CounterUDB:hwCapture\[63]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_5\[78] = \QuadDec_1:Cnt16:CounterUDB:fifo_full\[79]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_6\[80] = \QuadDec_1:Cnt16:CounterUDB:fifo_nempty\[81]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow\[83] = \QuadDec_1:Cnt16:CounterUDB:per_FF\[84]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow\[85] = \QuadDec_1:Cnt16:CounterUDB:status_1\[71]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_i\[88] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[66]
-Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90] = \QuadDec_1:Cnt16:CounterUDB:cmp_equal\[91]
-Removing Rhs of wire \QuadDec_1:Net_1264\[94] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\[93]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:dp_dir\[98] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_2\[99] = \QuadDec_1:Net_1251\[35]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_1\[100] = \QuadDec_1:Cnt16:CounterUDB:count_enable\[97]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_0\[101] = \QuadDec_1:Cnt16:CounterUDB:reload\[64]
-Removing Lhs of wire \QuadDec_1:Net_1290\[178] = \QuadDec_1:Net_1275\[31]
-Removing Lhs of wire \QuadDec_1:bQuadDec:index_filt\[201] = \QuadDec_1:Net_1232\[202]
-Removing Lhs of wire \QuadDec_1:Net_1232\[202] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_1:bQuadDec:error\[204] = \QuadDec_1:bQuadDec:state_3\[205]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_0\[208] = \QuadDec_1:Net_530\[209]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_1\[210] = \QuadDec_1:Net_611\[211]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_2\[212] = \QuadDec_1:Net_1260\[65]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_3\[213] = \QuadDec_1:bQuadDec:error\[204]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_4\[214] = zero[5]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_5\[215] = zero[5]
-Removing Lhs of wire \QuadDec_1:bQuadDec:status_6\[216] = zero[5]
-Removing Lhs of wire \QuadDec_1:Net_1229\[221] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \QuadDec_1:Net_1272\[222] = \QuadDec_1:Net_1264\[94]
-Removing Rhs of wire \QuadDec_2:Net_1275\[226] = \QuadDec_2:Cnt16:Net_49\[227]
-Removing Rhs of wire \QuadDec_2:Net_1275\[226] = \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\[283]
-Removing Lhs of wire \QuadDec_2:Cnt16:Net_89\[229] = \QuadDec_2:Net_1251\[230]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_1\[239] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_0\[240] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_enable\[252] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_rising\[254] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_falling\[255] = \QuadDec_2:Cnt16:CounterUDB:prevCapture\[253]
-Removing Rhs of wire \QuadDec_2:Net_1260\[259] = \QuadDec_2:bQuadDec:state_2\[397]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:final_enable\[261] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:counter_enable\[262] = \QuadDec_2:Cnt16:CounterUDB:control_7\[244]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_0\[263] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_status\[264]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_1\[265] = \QuadDec_2:Cnt16:CounterUDB:per_zero\[266]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_2\[267] = \QuadDec_2:Cnt16:CounterUDB:overflow_status\[268]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_3\[269] = \QuadDec_2:Cnt16:CounterUDB:underflow_status\[270]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:status_4\[271] = \QuadDec_2:Cnt16:CounterUDB:hwCapture\[257]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_5\[272] = \QuadDec_2:Cnt16:CounterUDB:fifo_full\[273]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_6\[274] = \QuadDec_2:Cnt16:CounterUDB:fifo_nempty\[275]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow\[277] = \QuadDec_2:Cnt16:CounterUDB:per_FF\[278]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow\[279] = \QuadDec_2:Cnt16:CounterUDB:status_1\[265]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_i\[282] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[260]
-Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284] = \QuadDec_2:Cnt16:CounterUDB:cmp_equal\[285]
-Removing Rhs of wire \QuadDec_2:Net_1264\[288] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\[287]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:dp_dir\[292] = \QuadDec_2:Net_1251\[230]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_2\[293] = \QuadDec_2:Net_1251\[230]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_1\[294] = \QuadDec_2:Cnt16:CounterUDB:count_enable\[291]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_0\[295] = \QuadDec_2:Cnt16:CounterUDB:reload\[258]
-Removing Lhs of wire \QuadDec_2:Net_1290\[372] = \QuadDec_2:Net_1275\[226]
-Removing Lhs of wire \QuadDec_2:bQuadDec:index_filt\[395] = \QuadDec_2:Net_1232\[396]
-Removing Lhs of wire \QuadDec_2:Net_1232\[396] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire \QuadDec_2:bQuadDec:error\[398] = \QuadDec_2:bQuadDec:state_3\[399]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_0\[402] = \QuadDec_2:Net_530\[403]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_1\[404] = \QuadDec_2:Net_611\[405]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_2\[406] = \QuadDec_2:Net_1260\[259]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_3\[407] = \QuadDec_2:bQuadDec:error\[398]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_4\[408] = zero[5]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_5\[409] = zero[5]
-Removing Lhs of wire \QuadDec_2:bQuadDec:status_6\[410] = zero[5]
-Removing Lhs of wire \QuadDec_2:Net_1229\[415] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \QuadDec_2:Net_1272\[416] = \QuadDec_2:Net_1264\[288]
-Removing Lhs of wire tmpOE__Mot1A_net_0[419] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot1B_net_0[424] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot2A_net_0[429] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__Mot2B_net_0[434] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M2_IN1_net_0[444] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_2460[445] = \PWM_2:Net_57\[473]
-Removing Lhs of wire tmpOE__M2_IN2_net_0[451] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_2404[458] = \PWM_1:Net_57\[464]
-Removing Lhs of wire \PWM_1:Net_107\[460] = zero[5]
-Removing Lhs of wire \PWM_1:Net_113\[461] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire Net_2183[462] = zero[5]
-Removing Lhs of wire \PWM_2:Net_107\[470] = zero[5]
-Removing Lhs of wire \PWM_2:Net_113\[471] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M1_IN2_net_0[479] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M1_IN1_net_0[485] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire tmpOE__M2_D1_net_0[491] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_293[492] = \MotorStopReg:control_out_1\[581]
-Removing Rhs of wire Net_293[492] = \MotorStopReg:control_1\[601]
-Removing Lhs of wire tmpOE__M1_D1_net_0[498] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_296[499] = \MotorStopReg:control_out_0\[580]
-Removing Rhs of wire Net_296[499] = \MotorStopReg:control_0\[602]
-Removing Lhs of wire \USBUART_1:tmpOE__Dm_net_0\[507] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \USBUART_1:tmpOE__Dp_net_0\[514] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire Net_12[567] = zero[5]
-Removing Lhs of wire \MotorSpeedTimer:Net_260\[569] = zero[5]
-Removing Lhs of wire \MotorSpeedTimer:Net_266\[570] = tmpOE__TrackLED3_net_0[4]
-Removing Rhs of wire Net_281[575] = \MotorSpeedTimer:Net_51\[571]
-Removing Lhs of wire \MotorSpeedTimer:Net_102\[576] = tmpOE__TrackLED3_net_0[4]
-Removing Lhs of wire \MotorStopReg:clk\[578] = zero[5]
-Removing Lhs of wire \MotorStopReg:rst\[579] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCapture\\D\[604] = zero[5]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\\D\[605] = \QuadDec_1:Cnt16:CounterUDB:overflow\[83]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\\D\[606] = \QuadDec_1:Cnt16:CounterUDB:status_1\[71]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\\D\[607] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[66]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCompare\\D\[608] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\\D\[609] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[90]
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:count_stored_i\\D\[610] = \QuadDec_1:Net_1203\[96]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCapture\\D\[619] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\\D\[620] = \QuadDec_2:Cnt16:CounterUDB:overflow\[277]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\\D\[621] = \QuadDec_2:Cnt16:CounterUDB:status_1\[265]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\\D\[622] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[260]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCompare\\D\[623] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\\D\[624] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[284]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:count_stored_i\\D\[625] = \QuadDec_2:Net_1203\[290]
+Removing Lhs of wire one[11] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__TrackLED1_net_0[14] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__TrackLED2_net_0[21] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire \QuadDec_1:Net_1275\[32] = \QuadDec_1:Cnt16:Net_49\[33]
+Removing Rhs of wire \QuadDec_1:Net_1275\[32] = \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\[90]
+Removing Lhs of wire \QuadDec_1:Cnt16:Net_89\[35] = \QuadDec_1:Net_1251\[36]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_1\[46] = zero[10]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_capmode_0\[47] = zero[10]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:ctrl_enable\[59] = \QuadDec_1:Cnt16:CounterUDB:control_7\[51]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_rising\[61] = zero[10]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:capt_falling\[62] = \QuadDec_1:Cnt16:CounterUDB:prevCapture\[60]
+Removing Rhs of wire \QuadDec_1:Net_1260\[66] = \QuadDec_1:bQuadDec:state_2\[204]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:final_enable\[68] = \QuadDec_1:Cnt16:CounterUDB:control_7\[51]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:counter_enable\[69] = \QuadDec_1:Cnt16:CounterUDB:control_7\[51]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_0\[70] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_status\[71]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_1\[72] = \QuadDec_1:Cnt16:CounterUDB:per_zero\[73]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_2\[74] = \QuadDec_1:Cnt16:CounterUDB:overflow_status\[75]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_3\[76] = \QuadDec_1:Cnt16:CounterUDB:underflow_status\[77]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:status_4\[78] = \QuadDec_1:Cnt16:CounterUDB:hwCapture\[64]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_5\[79] = \QuadDec_1:Cnt16:CounterUDB:fifo_full\[80]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:status_6\[81] = \QuadDec_1:Cnt16:CounterUDB:fifo_nempty\[82]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow\[84] = \QuadDec_1:Cnt16:CounterUDB:per_FF\[85]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow\[86] = \QuadDec_1:Cnt16:CounterUDB:status_1\[72]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_i\[89] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[67]
+Removing Rhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[91] = \QuadDec_1:Cnt16:CounterUDB:cmp_equal\[92]
+Removing Rhs of wire \QuadDec_1:Net_1264\[95] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\[94]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:dp_dir\[99] = \QuadDec_1:Net_1251\[36]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_2\[100] = \QuadDec_1:Net_1251\[36]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_1\[101] = \QuadDec_1:Cnt16:CounterUDB:count_enable\[98]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cs_addr_0\[102] = \QuadDec_1:Cnt16:CounterUDB:reload\[65]
+Removing Lhs of wire \QuadDec_1:Net_1290\[179] = \QuadDec_1:Net_1275\[32]
+Removing Lhs of wire \QuadDec_1:bQuadDec:index_filt\[202] = \QuadDec_1:Net_1232\[203]
+Removing Lhs of wire \QuadDec_1:Net_1232\[203] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire \QuadDec_1:bQuadDec:error\[205] = \QuadDec_1:bQuadDec:state_3\[206]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_0\[209] = \QuadDec_1:Net_530\[210]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_1\[211] = \QuadDec_1:Net_611\[212]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_2\[213] = \QuadDec_1:Net_1260\[66]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_3\[214] = \QuadDec_1:bQuadDec:error\[205]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_4\[215] = zero[10]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_5\[216] = zero[10]
+Removing Lhs of wire \QuadDec_1:bQuadDec:status_6\[217] = zero[10]
+Removing Lhs of wire \QuadDec_1:Net_1229\[222] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \QuadDec_1:Net_1272\[223] = \QuadDec_1:Net_1264\[95]
+Removing Rhs of wire \QuadDec_2:Net_1275\[227] = \QuadDec_2:Cnt16:Net_49\[228]
+Removing Rhs of wire \QuadDec_2:Net_1275\[227] = \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\[284]
+Removing Lhs of wire \QuadDec_2:Cnt16:Net_89\[230] = \QuadDec_2:Net_1251\[231]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_1\[240] = zero[10]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_capmode_0\[241] = zero[10]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:ctrl_enable\[253] = \QuadDec_2:Cnt16:CounterUDB:control_7\[245]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_rising\[255] = zero[10]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:capt_falling\[256] = \QuadDec_2:Cnt16:CounterUDB:prevCapture\[254]
+Removing Rhs of wire \QuadDec_2:Net_1260\[260] = \QuadDec_2:bQuadDec:state_2\[398]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:final_enable\[262] = \QuadDec_2:Cnt16:CounterUDB:control_7\[245]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:counter_enable\[263] = \QuadDec_2:Cnt16:CounterUDB:control_7\[245]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_0\[264] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_status\[265]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_1\[266] = \QuadDec_2:Cnt16:CounterUDB:per_zero\[267]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_2\[268] = \QuadDec_2:Cnt16:CounterUDB:overflow_status\[269]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_3\[270] = \QuadDec_2:Cnt16:CounterUDB:underflow_status\[271]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:status_4\[272] = \QuadDec_2:Cnt16:CounterUDB:hwCapture\[258]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_5\[273] = \QuadDec_2:Cnt16:CounterUDB:fifo_full\[274]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:status_6\[275] = \QuadDec_2:Cnt16:CounterUDB:fifo_nempty\[276]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow\[278] = \QuadDec_2:Cnt16:CounterUDB:per_FF\[279]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow\[280] = \QuadDec_2:Cnt16:CounterUDB:status_1\[266]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_i\[283] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[261]
+Removing Rhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[285] = \QuadDec_2:Cnt16:CounterUDB:cmp_equal\[286]
+Removing Rhs of wire \QuadDec_2:Net_1264\[289] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\[288]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:dp_dir\[293] = \QuadDec_2:Net_1251\[231]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_2\[294] = \QuadDec_2:Net_1251\[231]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_1\[295] = \QuadDec_2:Cnt16:CounterUDB:count_enable\[292]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cs_addr_0\[296] = \QuadDec_2:Cnt16:CounterUDB:reload\[259]
+Removing Lhs of wire \QuadDec_2:Net_1290\[373] = \QuadDec_2:Net_1275\[227]
+Removing Lhs of wire \QuadDec_2:bQuadDec:index_filt\[396] = \QuadDec_2:Net_1232\[397]
+Removing Lhs of wire \QuadDec_2:Net_1232\[397] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire \QuadDec_2:bQuadDec:error\[399] = \QuadDec_2:bQuadDec:state_3\[400]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_0\[403] = \QuadDec_2:Net_530\[404]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_1\[405] = \QuadDec_2:Net_611\[406]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_2\[407] = \QuadDec_2:Net_1260\[260]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_3\[408] = \QuadDec_2:bQuadDec:error\[399]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_4\[409] = zero[10]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_5\[410] = zero[10]
+Removing Lhs of wire \QuadDec_2:bQuadDec:status_6\[411] = zero[10]
+Removing Lhs of wire \QuadDec_2:Net_1229\[416] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \QuadDec_2:Net_1272\[417] = \QuadDec_2:Net_1264\[289]
+Removing Lhs of wire tmpOE__Mot1A_net_0[420] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot1B_net_0[425] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot2A_net_0[430] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__Mot2B_net_0[435] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M2_IN1_net_0[445] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_2460[446] = \PWM_2:Net_57\[474]
+Removing Lhs of wire tmpOE__M2_IN2_net_0[452] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_2404[459] = \PWM_1:Net_57\[465]
+Removing Lhs of wire \PWM_1:Net_107\[461] = zero[10]
+Removing Lhs of wire \PWM_1:Net_113\[462] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire Net_2183[463] = zero[10]
+Removing Lhs of wire \PWM_2:Net_107\[471] = zero[10]
+Removing Lhs of wire \PWM_2:Net_113\[472] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M1_IN2_net_0[480] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M1_IN1_net_0[486] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire tmpOE__M2_D1_net_0[492] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_293[493] = \MotorStopReg:control_out_1\[582]
+Removing Rhs of wire Net_293[493] = \MotorStopReg:control_1\[602]
+Removing Lhs of wire tmpOE__M1_D1_net_0[499] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_296[500] = \MotorStopReg:control_out_0\[581]
+Removing Rhs of wire Net_296[500] = \MotorStopReg:control_0\[603]
+Removing Lhs of wire \USBUART_1:tmpOE__Dm_net_0\[508] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \USBUART_1:tmpOE__Dp_net_0\[515] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire Net_12[568] = zero[10]
+Removing Lhs of wire \MotorSpeedTimer:Net_260\[570] = zero[10]
+Removing Lhs of wire \MotorSpeedTimer:Net_266\[571] = tmpOE__TrackLED3_net_0[4]
+Removing Rhs of wire Net_281[576] = \MotorSpeedTimer:Net_51\[572]
+Removing Lhs of wire \MotorSpeedTimer:Net_102\[577] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \MotorStopReg:clk\[579] = zero[10]
+Removing Lhs of wire \MotorStopReg:rst\[580] = zero[10]
+Removing Lhs of wire tmpOE__PD1_net_0[605] = tmpOE__TrackLED3_net_0[4]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCapture\\D\[610] = zero[10]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:overflow_reg_i\\D\[611] = \QuadDec_1:Cnt16:CounterUDB:overflow\[84]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:underflow_reg_i\\D\[612] = \QuadDec_1:Cnt16:CounterUDB:status_1\[72]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:tc_reg_i\\D\[613] = \QuadDec_1:Cnt16:CounterUDB:reload_tc\[67]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:prevCompare\\D\[614] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[91]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:cmp_out_reg_i\\D\[615] = \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\[91]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:count_stored_i\\D\[616] = \QuadDec_1:Net_1203\[97]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCapture\\D\[625] = zero[10]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\\D\[626] = \QuadDec_2:Cnt16:CounterUDB:overflow\[278]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:underflow_reg_i\\D\[627] = \QuadDec_2:Cnt16:CounterUDB:status_1\[266]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:tc_reg_i\\D\[628] = \QuadDec_2:Cnt16:CounterUDB:reload_tc\[261]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:prevCompare\\D\[629] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[285]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:cmp_out_reg_i\\D\[630] = \QuadDec_2:Cnt16:CounterUDB:cmp_out_i\[285]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:count_stored_i\\D\[631] = \QuadDec_2:Net_1203\[291]
 
 ------------------------------------------------------
-Aliased 0 equations, 127 wires.
+Aliased 0 equations, 128 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -483,8 +485,8 @@ Alias Detection
 ------------------------------------------------------
 Aliasing \QuadDec_1:Cnt16:CounterUDB:hwCapture\ to zero
 Aliasing \QuadDec_2:Cnt16:CounterUDB:hwCapture\ to zero
-Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:hwCapture\[63] = zero[5]
-Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:hwCapture\[257] = zero[5]
+Removing Lhs of wire \QuadDec_1:Cnt16:CounterUDB:hwCapture\[64] = zero[10]
+Removing Lhs of wire \QuadDec_2:Cnt16:CounterUDB:hwCapture\[258] = zero[10]
 
 ------------------------------------------------------
 Aliased 0 equations, 2 wires.
@@ -517,14 +519,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj" -dcpsoc3 Final.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.565ms
+Warp synthesis phase: Elapsed time ==> 1s.793ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Friday, 15 September 2023 17:40:06
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Tuesday, 19 September 2023 12:04:45
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cyprj -d CY8C5888LTI-LP097 Final.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.057ms
+Design parsing phase: Elapsed time ==> 0s.060ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -641,11 +643,12 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL
+            Required Capabilities: DIGITAL, ROUTABLE
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
             pa_out => TrackLED3(0)__PA ,
+            pin_input => Net_305 ,
             pad => TrackLED3(0)_PAD );
         Properties:
         {
@@ -1207,6 +1210,46 @@ Design Equations
             pa_out => \USBUART_1:Dp(0)\__PA ,
             analog_term => \USBUART_1:Net_1000\ ,
             pad => \USBUART_1:Dp(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = PD1(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => PD1(0)__PA ,
+            fb => Net_305 ,
+            pad => PD1(0)_PAD );
         Properties:
         {
         }
@@ -2546,7 +2589,7 @@ Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
 Interrupts                    :   11 :   21 :   32 : 34.38 %
-IO                            :   18 :   30 :   48 : 37.50 %
+IO                            :   19 :   29 :   48 : 39.58 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -2571,8 +2614,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 19s.665ms
-Tech Mapping phase: Elapsed time ==> 19s.753ms
+Technology Mapping: Elapsed time ==> 22s.527ms
+Tech Mapping phase: Elapsed time ==> 22s.619ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -2586,16 +2629,17 @@ IO_0@[IOP=(0)][IoId=(0)] : Mot1A(0) (fixed)
 IO_1@[IOP=(0)][IoId=(1)] : Mot1B(0) (fixed)
 IO_7@[IOP=(1)][IoId=(7)] : Mot2A(0) (fixed)
 IO_6@[IOP=(1)][IoId=(6)] : Mot2B(0) (fixed)
+IO_6@[IOP=(2)][IoId=(6)] : PD1(0) (fixed)
 IO_6@[IOP=(3)][IoId=(6)] : TrackLED1(0) (fixed)
 IO_6@[IOP=(0)][IoId=(6)] : TrackLED2(0) (fixed)
 IO_1@[IOP=(2)][IoId=(1)] : TrackLED3(0) (fixed)
 IO_7@[IOP=(15)][IoId=(7)] : \USBUART_1:Dm(0)\ (fixed)
 IO_6@[IOP=(15)][IoId=(6)] : \USBUART_1:Dp(0)\ (fixed)
 USB[0]@[FFB(USB,0)] : \USBUART_1:USB\
-Analog Placement phase: Elapsed time ==> 0s.073ms
+Analog Placement phase: Elapsed time ==> 0s.077ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.003ms
+Analog Routing phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2610,11 +2654,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.172ms
+Analog Code Generation phase: Elapsed time ==> 0s.169ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.9 sec.
+I2076: Total run-time: 1.0 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2638,7 +2682,7 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.117ms
+PLD Packing: Elapsed time ==> 0s.126ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
@@ -4514,12 +4558,54 @@ Pin : Name = TrackLED3(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
+        Required Capabilities: DIGITAL, ROUTABLE
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
         pa_out => TrackLED3(0)__PA ,
+        pin_input => Net_305 ,
         pad => TrackLED3(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = PD1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PD1(0)__PA ,
+        fb => Net_305 ,
+        pad => PD1(0)_PAD );
     Properties:
     {
     }
@@ -5096,7 +5182,8 @@ Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connecti
    1 |   6 |     * |      NONE |     HI_Z_DIGITAL |          Mot2B(0) | FB(Net_205)
      |   7 |     * |      NONE |     HI_Z_DIGITAL |          Mot2A(0) | FB(Net_204)
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
-   2 |   1 |     * |      NONE |         CMOS_OUT |      TrackLED3(0) | 
+   2 |   1 |     * |      NONE |         CMOS_OUT |      TrackLED3(0) | In(Net_305)
+     |   6 |     * |      NONE |      RES_PULL_UP |            PD1(0) | FB(Net_305)
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
    3 |   3 |     * |      NONE |         CMOS_OUT |          M1_D1(0) | In(Net_296)
      |   4 |     * |      NONE |         CMOS_OUT |         M1_IN2(0) | In(Net_362)
@@ -5113,33 +5200,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connecti
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 20s.293ms
-Digital Placement phase: Elapsed time ==> 21s.898ms
+Digital component placer commit/Report: Elapsed time ==> 22s.333ms
+Digital Placement phase: Elapsed time ==> 24s.041ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Final_r.vh2" --pcf-path "Final.pco" --des-name "Final" --dsf-path "Final.dsf" --sdc-path "Final.sdc" --lib-path "Final_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.770ms
+Digital Routing phase: Elapsed time ==> 3s.741ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.782ms
+Bitstream Generation phase: Elapsed time ==> 1s.217ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.070ms
+Bitstream Verification phase: Elapsed time ==> 0s.057ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Final_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.472ms
+Static timing analysis phase: Elapsed time ==> 0s.487ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.004ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.121ms
+Design database save phase: Elapsed time ==> 0s.125ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 47s.289ms
+cydsfit: Elapsed time ==> 52s.715ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 47s.296ms
-API generation phase: Elapsed time ==> 3s.955ms
-Dependency generation phase: Elapsed time ==> 0s.081ms
-Cleanup phase: Elapsed time ==> 0s.054ms
+Fitter phase: Elapsed time ==> 52s.724ms
+API generation phase: Elapsed time ==> 4s.617ms
+Dependency generation phase: Elapsed time ==> 0s.061ms
+Cleanup phase: Elapsed time ==> 0s.023ms

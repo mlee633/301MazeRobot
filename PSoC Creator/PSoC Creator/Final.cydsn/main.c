@@ -39,15 +39,33 @@ int main(void)
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
+    // SetStopMotors(1, 1);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
-        
-        
-        FixMotorSpeeds(50);
+        MotorController(-20.0f, 20.0f);
     }
     
+}
+
+#define crBegin static int state=0; switch(state) { case 0:
+#define crReturn(x) do { state=__LINE__; return x; \
+                         case __LINE__:; } while (0)
+#define crFinish }
+
+#define sensML 1
+#define sensMR 1
+
+void StateMachine() {
+    crBegin;
+    
+    // Start of co-routine
+    while(!(sensML && sensMR)) {
+        crReturn();
+    }
+    
+    crFinish;
 }
 
 char* AppendStrToStr(char *result, const char* src, size_t len) {
