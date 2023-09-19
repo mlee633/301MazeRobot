@@ -232,6 +232,7 @@
 <OpenDocs>
 <name v=".\TopDesign\TopDesign.cysch" />
 <name v=".\main.c" />
+<name v=".\HardwareTask1.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -239,7 +240,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="99d04a23-29f9-4274-b341-59fdb5027661"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0d2fe445-4a58-47d4-b771-0be8ca8c24b6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\TopDesign\TopDesign.cysch" Guid="f1f22830-683a-47e0-a0d1-bbc799703a97" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\main.c" Guid="99d04a23-29f9-4274-b341-59fdb5027661" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="99d04a23-29f9-4274-b341-59fdb5027661"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0d2fe445-4a58-47d4-b771-0be8ca8c24b6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\TopDesign\TopDesign.cysch" Guid="f1f22830-683a-47e0-a0d1-bbc799703a97" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\main.c" Guid="99d04a23-29f9-4274-b341-59fdb5027661" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 1\HardwareTask1.cydsn\HardwareTask1.cydwr" Guid="68c2292f-6b01-4aae-99f9-10cc7efed1fb" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
