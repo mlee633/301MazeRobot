@@ -39,12 +39,12 @@ int main(void)
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
-    // SetStopMotors(1, 1);
+    SetStopMotors(1, 1);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
-        MotorController(-20.0f, 20.0f);
+        MotorController(0.0f, 0.0f);
     }
     
 }
