@@ -12,6 +12,7 @@
 #include "project.h"
 #include "uart.h"
 #include "motor.h"
+#include "sensors.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,15 +37,39 @@ int main(void)
     
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
     SetupMotors();
+    InitSensors();
+    
+    SensTimer1_Start();
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
-    SetStopMotors(1, 1);
+    char usbBuffer[512];
+    
+    // SetStopMotors(1, 1);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
-        MotorController(0.0f, 0.0f);
+        MotorController(10.0f, -10.0f);
+        
+        char* buff = usbBuffer;
+        uint8_t pd = PD_Read();
+        int count = sprintf(buff, "Counters: %d, %d, %d, %d, %d, %d, %d\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+            SensTimer1_ReadCounter(),
+            SensTimer2_ReadCounter(),
+            SensTimer3_ReadCounter(),
+            SensTimer4_ReadCounter(),
+            SensTimer5_ReadCounter(),
+            SensTimer6_ReadCounter(),
+            SensTimer7_ReadCounter(),
+            (bool)(pd & (1 << 4)),
+            (bool)(pd & (1 << 5)),
+            (bool)(pd & (1 << 6)),
+            (bool)(pd & (1 << 2)),
+            (bool)(pd & (1 << 0)),
+            (bool)(pd & (1 << 1)),
+            (bool)(pd & (1 << 3)));
+        WriteUARTString(usbBuffer, count);
     }
     
 }

@@ -32,8 +32,6 @@
 #define WHEEL_1_RADIUS_CM (3.25f)
 #define WHEEL_2_RADIUS_CM (3.25f)
 
-#define MAX_ERROR 2.0f
-
 volatile static int16_t motor1Count = 0, motor2Count = 0;
 volatile static bool shouldFixMotorSpeeds = false;
 
@@ -106,8 +104,8 @@ void MotorController(float speedLeft, float speedRight) {
     float mot1Cmp = PWM_1_ReadCompare();
     float mot2Cmp = PWM_2_ReadCompare();
     
-    float mot1Target = mot1Cmp + mot1Diff;
-    float mot2Target = mot2Cmp + mot2Diff;
+    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
+    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
     
 //    static char usbBuffer[128];
 //    char* buff = usbBuffer;

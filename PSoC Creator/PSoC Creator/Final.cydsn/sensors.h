@@ -13,3 +13,19 @@
 /* [] END OF FILE */
 #pragma once
 
+#include "project.h"
+#include <stdbool.h>
+
+inline void InitSensors() {
+    SensTimer1_Start();
+    SensTimer2_Start();
+    SensTimer3_Start();
+    SensTimer4_Start();
+    SensTimer5_Start();
+    SensTimer6_Start();
+    SensTimer7_Start();
+}
+
+inline uint8_t GetSensors() {
+    return PD_Read();
+}
