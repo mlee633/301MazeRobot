@@ -45,7 +45,7 @@ int main(void)
 
     char usbBuffer[512];
     
-    // SetStopMotors(1, 1);
+    SetStopMotors(1, 1);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
