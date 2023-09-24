@@ -24,53 +24,40 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
-    UART_Start();
     SetupMotors();
     InitSensors();
     
     SensTimer1_Start();
     
-    UART_PutString("I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man ");
-    UART_PutString("AT+NAMETeam 11 BT");
-    CyDelay(1001);
-    
-    char uartChar;
-    while((uartChar = UART_GetChar())) {
-        USBUART_1_PutChar(uartChar);
-    }
-    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
-    char usbBuffer[512];
+    char usbBuffer[1024];
     
-    SetStopMotors(1, 1);
+    // SetStopMotors(1, 1);
+    SetTargetSpeeds(20.0f, 20.0f);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
-        MotorController(10.0f, -10.0f);
-        
         char* buff = usbBuffer;
-        uint8_t pd = PD_Read();
-        int count = snprintf(buff, sizeof(usbBuffer),
-            "Counters: %d, %d, %d, %d, %d, %d, %d\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
-            SensTimer1_ReadCounter(),
-            SensTimer2_ReadCounter(),
-            SensTimer3_ReadCounter(),
-            SensTimer4_ReadCounter(),
-            SensTimer5_ReadCounter(),
-            SensTimer6_ReadCounter(),
-            SensTimer7_ReadCounter(),
-            (bool)(pd & (1 << 4)),
-            (bool)(pd & (1 << 5)),
-            (bool)(pd & (1 << 6)),
-            (bool)(pd & (1 << 2)),
-            (bool)(pd & (1 << 0)),
-            (bool)(pd & (1 << 1)),
-            (bool)(pd & (1 << 3)));
-      
-        UART_PutArray((const uint8_t *) usbBuffer, count);
         
+        uint8_t pd = PD_Read();
+        SetTargetLeftSpeed((pd & (1 << 0) ? 22.0f : 20.0f));
+        SetTargetRightSpeed((pd & (1 << 1)) ? 22.0f : 20.0f);
+        
+//        int count = snprintf(buff, sizeof(usbBuffer),
+//            "Speed: %dcm/s, %dcm/s\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+//            (int) q1,
+//            (int) q2,
+//            (bool)(pd & (1 << 4)),
+//            (bool)(pd & (1 << 5)),
+//            (bool)(pd & (1 << 6)),
+//            (bool)(pd & (1 << 2)),
+//            (bool)(pd & (1 << 0)),
+//            (bool)(pd & (1 << 1)),
+//            (bool)(pd & (1 << 3)));
+//      
+//        WriteUARTString(buff, count);
     }
     
 }

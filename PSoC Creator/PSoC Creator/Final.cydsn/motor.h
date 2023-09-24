@@ -22,4 +22,9 @@ int16_t GetQuadDecCountMotor1();
 int16_t GetQuadDecCountMotor2();
 float CalcMotor1Speed();
 float CalcMotor2Speed();
-void MotorController(float leftSpeed, float rightSpeed);
+
+float GetTargetLeftSpeed();
+float GetTargetRightSpeed();
+void SetTargetSpeeds(float left, float right);
+void SetTargetLeftSpeed(float);
+void SetTargetRightSpeed(float);

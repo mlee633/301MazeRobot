@@ -33,7 +33,9 @@
 #define WHEEL_2_RADIUS_CM (3.25f)
 
 volatile static int16_t motor1Count = 0, motor2Count = 0;
-volatile static bool shouldFixMotorSpeeds = false;
+volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
+
+static void MotorController(float leftSpeed, float rightSpeed);
 
 CY_ISR(MotorSpeedTimerOverflow) {
     motor1Count = QuadDec_1_GetCounter();
@@ -42,17 +44,17 @@ CY_ISR(MotorSpeedTimerOverflow) {
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
     
-    shouldFixMotorSpeeds = true;
+    MotorController(leftSpeedTarget, rightSpeedTarget);
 }
 
 void SetupMotors() {
     PWM_1_WritePeriod(255);
     PWM_1_Start();
-    PWM_1_WriteCompare(200); // writecompare value / write period = Duty cycle percentage
+    PWM_1_WriteCompare(127); // writecompare value / write period = Duty cycle percentage
     
     PWM_2_WritePeriod(255);
     PWM_2_Start();
-    PWM_2_WriteCompare(200);
+    PWM_2_WriteCompare(127);
     
     QuadDec_1_Start();
     QuadDec_2_Start();
@@ -62,6 +64,27 @@ void SetupMotors() {
     MotorSpeedTimer_WritePeriod(MOTOR_SPEED_CALC_PERIOD_MS - 1);
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
+}
+
+void SetTargetSpeeds(float left, float right) {
+    leftSpeedTarget = left;
+    rightSpeedTarget = right;
+}
+
+void SetTargetLeftSpeed(float l) {
+    leftSpeedTarget = l;
+}
+
+void SetTargetRightSpeed(float r) {
+    rightSpeedTarget = r;
+}
+
+float GetTargetLeftSpeed() {
+    return leftSpeedTarget;   
+}
+
+float GetTargetRightSpeed() {
+    return rightSpeedTarget;    
 }
 
 int16_t GetQuadDecCountMotor1() {
@@ -88,10 +111,7 @@ void SetStopMotors(bool m1, bool m2) {
     MotorStopReg_Write(m1 | (m2 << 1));
 }
 
-void MotorController(float speedLeft, float speedRight) {
-    if(!shouldFixMotorSpeeds) return;
-    shouldFixMotorSpeeds = false;
-    
+static void MotorController(float speedLeft, float speedRight) {    
     float mot1Speed = CalcMotor1Speed();
     float mot2Speed = CalcMotor2Speed();
     
