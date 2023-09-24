@@ -13,6 +13,7 @@
 #include "uart.h"
 #include "motor.h"
 #include "action.h"
+#include "sensors.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,31 +23,39 @@ char* AppendStrToStr(char *result, const char* src, size_t len);
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
-    // Enable pin interrupts
-//    LightSens1Edge_StartEx(light_sens1_interrupt);
-//    LightSens2Edge_StartEx(light_sens2_interrupt);
-//    
-//    // Enable timer interrupts
-//    LightSens1Overflow_StartEx(light_sens1_overflow_interrupt);
-//    LightSens2Overflow_StartEx(light_sens2_overflow_interrupt);
-//    
-//    // Enable timers
-//    LightSens1_TimeOut_Start();
-//    LightSens2_TimeOut_Start();
     
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
     SetupMotors();
+    InitSensors();
+    
+    SensTimer1_Start();
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
+    char usbBuffer[1024];
+    
     // SetStopMotors(1, 1);
+    SetTargetSpeeds(20.0f, 20.0f);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
         Action action = StateMachine();
-        MotorController(action.leftSpeed, action.rightSpeed);
+        SetTargetSpeeds(action.leftSpeed, action.rightSpeed);
+        
+//        int count = snprintf(buff, sizeof(usbBuffer),
+//            "Speed: %dcm/s, %dcm/s\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+//            (int) q1,
+//            (int) q2,
+//            (bool)(pd & (1 << 4)),
+//            (bool)(pd & (1 << 5)),
+//            (bool)(pd & (1 << 6)),
+//            (bool)(pd & (1 << 2)),
+//            (bool)(pd & (1 << 0)),
+//            (bool)(pd & (1 << 1)),
+//            (bool)(pd & (1 << 3)));
+//      
+//        WriteUARTString(buff, count);
     }
     
 }
