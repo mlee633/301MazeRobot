@@ -22,24 +22,22 @@ char* AppendStrToStr(char *result, const char* src, size_t len);
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
-    // Enable pin interrupts
-//    LightSens1Edge_StartEx(light_sens1_interrupt);
-//    LightSens2Edge_StartEx(light_sens2_interrupt);
-//    
-//    // Enable timer interrupts
-//    LightSens1Overflow_StartEx(light_sens1_overflow_interrupt);
-//    LightSens2Overflow_StartEx(light_sens2_overflow_interrupt);
-//    
-//    // Enable timers
-//    LightSens1_TimeOut_Start();
-//    LightSens2_TimeOut_Start();
     
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
+    UART_Start();
     SetupMotors();
     InitSensors();
     
     SensTimer1_Start();
+    
+    UART_PutString("I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man I am iron man ");
+    UART_PutString("AT+NAMETeam 11 BT");
+    CyDelay(1001);
+    
+    char uartChar;
+    while((uartChar = UART_GetChar())) {
+        USBUART_1_PutChar(uartChar);
+    }
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
@@ -54,7 +52,8 @@ int main(void)
         
         char* buff = usbBuffer;
         uint8_t pd = PD_Read();
-        int count = sprintf(buff, "Counters: %d, %d, %d, %d, %d, %d, %d\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+        int count = snprintf(buff, sizeof(usbBuffer),
+            "Counters: %d, %d, %d, %d, %d, %d, %d\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
             SensTimer1_ReadCounter(),
             SensTimer2_ReadCounter(),
             SensTimer3_ReadCounter(),
@@ -69,7 +68,9 @@ int main(void)
             (bool)(pd & (1 << 0)),
             (bool)(pd & (1 << 1)),
             (bool)(pd & (1 << 3)));
-        WriteUARTString(usbBuffer, count);
+      
+        UART_PutArray((const uint8_t *) usbBuffer, count);
+        
     }
     
 }

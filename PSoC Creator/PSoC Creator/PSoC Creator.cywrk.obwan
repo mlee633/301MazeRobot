@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\TopDesign</v>
+<v>PSoC Creator\Final\Final.cydwr</v>
+<v>PSoC Creator\Final\Final.cydwr\Pins</v>
+<v>PSoC Creator\Final\Final.cydwr\Analog</v>
+<v>PSoC Creator\Final\Final.cydwr\Clocks</v>
+<v>PSoC Creator\Final\Final.cydwr\Interrupts</v>
+<v>PSoC Creator\Final\Final.cydwr\DMA</v>
+<v>PSoC Creator\Final\Final.cydwr\System</v>
+<v>PSoC Creator\Final\Final.cydwr\Directives</v>
+<v>PSoC Creator\Final\Final.cydwr\Flash Security</v>
+<v>PSoC Creator\Final\Final.cydwr\EEPROM</v>
+<v>PSoC Creator\Final\Header Files</v>
+<v>PSoC Creator\Final\Header Files\cyapicallbacks.h</v>
+<v>PSoC Creator\Final\Header Files\motor.h</v>
+<v>PSoC Creator\Final\Header Files\sensors.h</v>
+<v>PSoC Creator\Final\Header Files\uart.h</v>
+<v>PSoC Creator\Final\Source Files</v>
+<v>PSoC Creator\Final\Source Files\main.c</v>
+<v>PSoC Creator\Final\Source Files\motor.c</v>
+<v>PSoC Creator\Final\Source Files\uart.c</v>
+<v>PSoC Creator\Final\Generated_Source</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\TopDesign</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Pins</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Analog</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Clocks</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Interrupts</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\DMA</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\System</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Directives</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\Flash Security</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.cydwr\EEPROM</v>
+<v>PSoC Creator\Light Sensor Read Test\Header Files</v>
+<v>PSoC Creator\Light Sensor Read Test\Header Files\cyapicallbacks.h</v>
+<v>PSoC Creator\Light Sensor Read Test\Source Files</v>
+<v>PSoC Creator\Light Sensor Read Test\Source Files\main.c</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source</v>
+<v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\TopDesign</v>
+<v>PSoC Creator\Final\Final.cydwr</v>
+<v>PSoC Creator\Final\Final.cydwr\Pins</v>
+<v>PSoC Creator\Final\Final.cydwr\Analog</v>
+<v>PSoC Creator\Final\Final.cydwr\Clocks</v>
+<v>PSoC Creator\Final\Final.cydwr\Interrupts</v>
+<v>PSoC Creator\Final\Final.cydwr\DMA</v>
+<v>PSoC Creator\Final\Final.cydwr\System</v>
+<v>PSoC Creator\Final\Final.cydwr\Directives</v>
+<v>PSoC Creator\Final\Final.cydwr\Flash Security</v>
+<v>PSoC Creator\Final\Final.cydwr\EEPROM</v>
+<v>PSoC Creator\Final\Header Files</v>
+<v>PSoC Creator\Final\Header Files\cyapicallbacks.h</v>
+<v>PSoC Creator\Final\Header Files\motor.h</v>
+<v>PSoC Creator\Final\Header Files\sensors.h</v>
+<v>PSoC Creator\Final\Header Files\uart.h</v>
+<v>PSoC Creator\Final\Source Files</v>
+<v>PSoC Creator\Final\Source Files\main.c</v>
+<v>PSoC Creator\Final\Source Files\motor.c</v>
+<v>PSoC Creator\Final\Source Files\uart.c</v>
+<v>PSoC Creator\Final\Generated_Source</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Clock_PWM</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\cy_boot</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M1_D1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M1_IN1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M1_IN2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M2_D1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M2_IN1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\M2_IN2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Mot1A</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Mot1B</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Mot2A</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\Mot2B</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\MotorSpeedTimer</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\MotorStopReg</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\MotorUpdateSpeed</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD3</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD4</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD5</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD6</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD7</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PWM_1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PWM_2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_1_Cnt16</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_2_Cnt16</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec1Interrupt</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec2Interrupt</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDecClk</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensorClk</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer2</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer3</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer4</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer5</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer6</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer7</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\timer_clock</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\TrackLED1</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\TrackLED2</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\TopDesign</v>
+<v>PSoC Creator\Final\TopDesign\TopDesign.cysch</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\TopDesign</v>
+<v>PSoC Creator\Light Sensor Read Test\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\TopDesign</v>
+<v>PSoC Creator\Final\TopDesign\TopDesign.cysch</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\TopDesign</v>
+<v>PSoC Creator\Light Sensor Read Test\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\CortexM3</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\motor.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorUpdateSpeed.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD5.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD6.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD7.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec1Interrupt.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec2Interrupt.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDecClk.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensorClk.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer3_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer4_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer5.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer5_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer6.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer6_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer7.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer7_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\uart.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_audio.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_boot.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cdc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_cls.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_descr.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_Dp.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_drv.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_episr.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_hid.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_midi.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_msc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_pm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_std.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\USBUART_1_vnd.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Final.elf</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Final.hex</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Final.map</v>
+<v>PSoC Creator\Final\Final.gpdsc</v>
+<v>PSoC Creator\Final\Final.rpt</v>
+<v>PSoC Creator\Final\Final_timing.html</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.gpdsc</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.rpt</v>
+<v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\CortexM3</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\motor.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorUpdateSpeed.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD5.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD6.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD7.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec1Interrupt.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec2Interrupt.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDecClk.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensorClk.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer2_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer3_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer4_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer5.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\PSoC 5LP Architecture TRM</v>
+<v>PSoC Creator\Final\CY8C58LP Family Datasheet</v>
+<v>PSoC Creator\Final\System Reference Guides</v>
+<v>PSoC Creator\Final\System Reference Guides\cy_boot_v5_82</v>
+<v>PSoC Creator\Final\cy_clock_v2_20</v>
+<v>PSoC Creator\Final\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Creator\Final\cy_constant_v1_0.pdf</v>
+<v>PSoC Creator\Final\cy_isr_v1_71</v>
+<v>PSoC Creator\Final\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC Creator\Final\cy_pins_v2_20</v>
+<v>PSoC Creator\Final\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC Creator\Final\cy_srff_v1_0</v>
+<v>PSoC Creator\Final\cy_srff_v1_0\cy_srff_v1_0.pdf</v>
+<v>PSoC Creator\Final\CyControlReg_v1_80.pdf</v>
+<v>PSoC Creator\Final\CyStatusReg_v1_90.pdf</v>
+<v>PSoC Creator\Final\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Final\LED_v1_0</v>
+<v>PSoC Creator\Final\LED_v1_0\LED_v1_0.pdf</v>
+<v>PSoC Creator\Final\not_v1_0</v>
+<v>PSoC Creator\Final\not_v1_0\not_v1_0.pdf</v>
+<v>PSoC Creator\Final\PWM_v3_30</v>
+<v>PSoC Creator\Final\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>PSoC Creator\Final\QuadDec_v3_0</v>
+<v>PSoC Creator\Final\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>PSoC Creator\Final\Timer_v2_80</v>
+<v>PSoC Creator\Final\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>PSoC Creator\Final\UART_v2_50.pdf</v>
+<v>PSoC Creator\Final\USBFS_v3_20.pdf</v>
+<v>PSoC Creator\Final\ZeroTerminal.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\PSoC 5LP Architecture TRM</v>
+<v>PSoC Creator\Light Sensor Read Test\CY8C58LP Family Datasheet</v>
+<v>PSoC Creator\Light Sensor Read Test\System Reference Guides</v>
+<v>PSoC Creator\Light Sensor Read Test\System Reference Guides\cy_boot_v5_82</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_clock_v2_20</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_isr_v1_71</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\CyControlReg_v1_80.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0\LED_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Timer_v2_80</v>
+<v>PSoC Creator\Light Sensor Read Test\Timer_v2_80\Timer_v2_80.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC Creator</v>
+<v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\PSoC 5LP Architecture TRM</v>
+<v>PSoC Creator\Final\CY8C58LP Family Datasheet</v>
+<v>PSoC Creator\Final\System Reference Guides</v>
+<v>PSoC Creator\Final\System Reference Guides\cy_boot_v5_82</v>
+<v>PSoC Creator\Final\cy_clock_v2_20</v>
+<v>PSoC Creator\Final\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Creator\Final\cy_constant_v1_0.pdf</v>
+<v>PSoC Creator\Final\cy_isr_v1_71</v>
+<v>PSoC Creator\Final\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC Creator\Final\cy_pins_v2_20</v>
+<v>PSoC Creator\Final\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC Creator\Final\cy_srff_v1_0</v>
+<v>PSoC Creator\Final\cy_srff_v1_0\cy_srff_v1_0.pdf</v>
+<v>PSoC Creator\Final\CyControlReg_v1_80.pdf</v>
+<v>PSoC Creator\Final\CyStatusReg_v1_90.pdf</v>
+<v>PSoC Creator\Final\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Final\LED_v1_0</v>
+<v>PSoC Creator\Final\LED_v1_0\LED_v1_0.pdf</v>
+<v>PSoC Creator\Final\not_v1_0</v>
+<v>PSoC Creator\Final\not_v1_0\not_v1_0.pdf</v>
+<v>PSoC Creator\Final\PWM_v3_30</v>
+<v>PSoC Creator\Final\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>PSoC Creator\Final\QuadDec_v3_0</v>
+<v>PSoC Creator\Final\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>PSoC Creator\Final\Timer_v2_80</v>
+<v>PSoC Creator\Final\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>PSoC Creator\Final\UART_v2_50.pdf</v>
+<v>PSoC Creator\Final\USBFS_v3_20.pdf</v>
+<v>PSoC Creator\Final\ZeroTerminal.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\PSoC 5LP Architecture TRM</v>
+<v>PSoC Creator\Light Sensor Read Test\CY8C58LP Family Datasheet</v>
+<v>PSoC Creator\Light Sensor Read Test\System Reference Guides</v>
+<v>PSoC Creator\Light Sensor Read Test\System Reference Guides\cy_boot_v5_82</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_clock_v2_20</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_isr_v1_71</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20</v>
+<v>PSoC Creator\Light Sensor Read Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\CyControlReg_v1_80.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0</v>
+<v>PSoC Creator\Light Sensor Read Test\LED_v1_0\LED_v1_0.pdf</v>
+<v>PSoC Creator\Light Sensor Read Test\Timer_v2_80</v>
+<v>PSoC Creator\Light Sensor Read Test\Timer_v2_80\Timer_v2_80.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Final.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Final.cydsn\Final.cydwr" />
+<name v=".\Final.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2079, 1071" SelectedTabbedMdiWindow="a5179a61-fa52-4ee1-aa8e-71a9d1783468"><DocumentWindow Key="C:\Users\obwan\Documents\repos\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="d272b430-67a0-4211-a0cd-54cd3b34d4bc" /><DocumentWindow Key="C:\Users\obwan\Documents\repos\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\Final.cydwr" Guid="3e70ab06-d7d1-4271-bd91-64903f1489f8" /><DocumentWindow Key="C:\Users\obwan\Documents\repos\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="a5179a61-fa52-4ee1-aa8e-71a9d1783468" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6df60781-1dcf-41a7-b4b6-dffc302d39d0" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
