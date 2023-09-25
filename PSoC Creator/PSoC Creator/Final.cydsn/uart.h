@@ -18,3 +18,4 @@
 
 size_t FormatInt(int32_t num, char* buffer);
 void WriteUARTString(char* string, size_t length);
+char ReadUARTChar();

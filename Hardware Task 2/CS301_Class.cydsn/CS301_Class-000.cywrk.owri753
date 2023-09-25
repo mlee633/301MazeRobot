@@ -240,6 +240,28 @@
 <v>CS301_Class-000\CS301_Class\PSoC 5LP Architecture TRM</v>
 <v>CS301_Class-000\CS301_Class\CY8C58LP Family Datasheet</v>
 <v>CS301_Class-000\CS301_Class\System Reference Guides</v>
+<v>CS301_Class-000\CS301_Class\System Reference Guides\cy_boot_v5_82</v>
+<v>CS301_Class-000\CS301_Class\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_clock_v2_20</v>
+<v>CS301_Class-000\CS301_Class\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_constant_v1_0</v>
+<v>CS301_Class-000\CS301_Class\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_isr_v1_71</v>
+<v>CS301_Class-000\CS301_Class\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_pins_v2_20</v>
+<v>CS301_Class-000\CS301_Class\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\CyControlReg_v1_80.pdf</v>
+<v>CS301_Class-000\CS301_Class\mux_v1_10.pdf</v>
+<v>CS301_Class-000\CS301_Class\not_v1_0</v>
+<v>CS301_Class-000\CS301_Class\not_v1_0\not_v1_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\PWM_v3_30</v>
+<v>CS301_Class-000\CS301_Class\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>CS301_Class-000\CS301_Class\QuadDec_v3_0</v>
+<v>CS301_Class-000\CS301_Class\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\Timer_v2_80.pdf</v>
+<v>CS301_Class-000\CS301_Class\UART_v2_50.pdf</v>
+<v>CS301_Class-000\CS301_Class\USBFS_v3_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>CS301_Class-000</v>
@@ -247,6 +269,28 @@
 <v>CS301_Class-000\CS301_Class\PSoC 5LP Architecture TRM</v>
 <v>CS301_Class-000\CS301_Class\CY8C58LP Family Datasheet</v>
 <v>CS301_Class-000\CS301_Class\System Reference Guides</v>
+<v>CS301_Class-000\CS301_Class\System Reference Guides\cy_boot_v5_82</v>
+<v>CS301_Class-000\CS301_Class\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_clock_v2_20</v>
+<v>CS301_Class-000\CS301_Class\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_constant_v1_0</v>
+<v>CS301_Class-000\CS301_Class\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_isr_v1_71</v>
+<v>CS301_Class-000\CS301_Class\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>CS301_Class-000\CS301_Class\cy_pins_v2_20</v>
+<v>CS301_Class-000\CS301_Class\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\CyControlReg_v1_80.pdf</v>
+<v>CS301_Class-000\CS301_Class\mux_v1_10.pdf</v>
+<v>CS301_Class-000\CS301_Class\not_v1_0</v>
+<v>CS301_Class-000\CS301_Class\not_v1_0\not_v1_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\PWM_v3_30</v>
+<v>CS301_Class-000\CS301_Class\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>CS301_Class-000\CS301_Class\QuadDec_v3_0</v>
+<v>CS301_Class-000\CS301_Class\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>CS301_Class-000\CS301_Class\Timer_v2_80.pdf</v>
+<v>CS301_Class-000\CS301_Class\UART_v2_50.pdf</v>
+<v>CS301_Class-000\CS301_Class\USBFS_v3_20.pdf</v>
+<v>CS301_Class-000\CS301_Class\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -271,7 +315,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1693, 711" SelectedTabbedMdiWindow="e1b44f24-4823-4d0d-8a5d-4fc123ccbeae"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0d2fe445-4a58-47d4-b771-0be8ca8c24b6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\TopDesign\TopDesign.cysch" Guid="4ab20a3b-3654-4682-93c6-f9f939fc20c6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\main.c" Guid="ddad00f3-fb5a-4c2b-a753-1b0c3005afad" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\CS301_Class.cydwr" Guid="e1b44f24-4823-4d0d-8a5d-4fc123ccbeae" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="4ab20a3b-3654-4682-93c6-f9f939fc20c6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0d2fe445-4a58-47d4-b771-0be8ca8c24b6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\TopDesign\TopDesign.cysch" Guid="4ab20a3b-3654-4682-93c6-f9f939fc20c6" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\main.c" Guid="ddad00f3-fb5a-4c2b-a753-1b0c3005afad" /><DocumentWindow Key="H:\Documents\301_Project\Hardware Task 2\CS301_Class.cydsn\CS301_Class.cydwr" Guid="e1b44f24-4823-4d0d-8a5d-4fc123ccbeae" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

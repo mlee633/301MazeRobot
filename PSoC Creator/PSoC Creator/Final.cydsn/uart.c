@@ -37,3 +37,16 @@ size_t FormatInt(int32_t num, char* buffer) {
     
     return length + isNegative;
 }
+
+char ReadUARTChar() {
+    static bool hasConfigured = false;
+    
+    if(!hasConfigured && USBUART_1_GetConfiguration()) {
+        USBUART_1_CDC_Init();
+        hasConfigured = true;
+    } else if(hasConfigured && USBUART_1_DataIsReady()) {
+        return USBUART_1_GetChar();
+    }
+    
+    return 0;
+}
