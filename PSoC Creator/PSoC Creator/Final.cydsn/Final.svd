@@ -19,7 +19,7 @@
         <register>
           <name>PD_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006568</addressOffset>
+          <addressOffset>0x4000656B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>PD_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006588</addressOffset>
+          <addressOffset>0x4000658B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>PD_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006598</addressOffset>
+          <addressOffset>0x4000659B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -172,9 +172,27 @@
       </addressBlock>
       <registers>
         <register>
+          <name>SensTimer7_COUNTER</name>
+          <description>UDB.A0 - Current Down Counter Value</description>
+          <addressOffset>0x40006407</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>SensTimer7_PERIOD</name>
+          <description>UDB.D0 - Assigned Period</description>
+          <addressOffset>0x40006427</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>SensTimer7_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647B</addressOffset>
+          <addressOffset>0x40006477</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -218,27 +236,9 @@
           </fields>
         </register>
         <register>
-          <name>SensTimer7_COUNTER</name>
-          <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x40006509</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>SensTimer7_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006529</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>SensTimer7_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006589</addressOffset>
+          <addressOffset>0x40006488</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -277,7 +277,7 @@
         <register>
           <name>SensTimer7_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006599</addressOffset>
+          <addressOffset>0x40006498</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -414,7 +414,7 @@
         <register>
           <name>SensTimer1_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x4000640A</addressOffset>
+          <addressOffset>0x40006509</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -423,7 +423,7 @@
         <register>
           <name>SensTimer1_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x4000642A</addressOffset>
+          <addressOffset>0x40006529</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -432,7 +432,7 @@
         <register>
           <name>SensTimer1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647A</addressOffset>
+          <addressOffset>0x40006579</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -478,7 +478,7 @@
         <register>
           <name>SensTimer1_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000648A</addressOffset>
+          <addressOffset>0x40006589</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -517,7 +517,7 @@
         <register>
           <name>SensTimer1_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000649A</addressOffset>
+          <addressOffset>0x40006599</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -654,7 +654,7 @@
         <register>
           <name>SensTimer5_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x4000650B</addressOffset>
+          <addressOffset>0x4000650A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -663,7 +663,7 @@
         <register>
           <name>SensTimer5_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x4000652B</addressOffset>
+          <addressOffset>0x4000652A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -718,7 +718,7 @@
         <register>
           <name>SensTimer5_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000658B</addressOffset>
+          <addressOffset>0x4000658A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -757,7 +757,7 @@
         <register>
           <name>SensTimer5_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659B</addressOffset>
+          <addressOffset>0x4000659A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -894,7 +894,7 @@
         <register>
           <name>SensTimer4_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x40006505</addressOffset>
+          <addressOffset>0x40006504</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -903,7 +903,7 @@
         <register>
           <name>SensTimer4_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006525</addressOffset>
+          <addressOffset>0x40006524</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -912,7 +912,7 @@
         <register>
           <name>SensTimer4_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006575</addressOffset>
+          <addressOffset>0x40006574</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -958,7 +958,7 @@
         <register>
           <name>SensTimer4_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006585</addressOffset>
+          <addressOffset>0x40006584</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -997,7 +997,7 @@
         <register>
           <name>SensTimer4_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006595</addressOffset>
+          <addressOffset>0x40006594</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1134,7 +1134,7 @@
         <register>
           <name>SensTimer2_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x40006504</addressOffset>
+          <addressOffset>0x40006408</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1143,7 +1143,7 @@
         <register>
           <name>SensTimer2_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006524</addressOffset>
+          <addressOffset>0x40006428</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1152,7 +1152,7 @@
         <register>
           <name>SensTimer2_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006574</addressOffset>
+          <addressOffset>0x40006578</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1198,7 +1198,7 @@
         <register>
           <name>SensTimer2_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006584</addressOffset>
+          <addressOffset>0x40006588</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1237,7 +1237,7 @@
         <register>
           <name>SensTimer2_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006594</addressOffset>
+          <addressOffset>0x40006598</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1664,36 +1664,9 @@
       </addressBlock>
       <registers>
         <register>
-          <name>RX_UART_RX_ADDRESS1</name>
-          <description>RX Address1 Register</description>
-          <addressOffset>0x4000642C</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_ADDRESS2</name>
-          <description>RX Address2 Register</description>
-          <addressOffset>0x4000643C</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>TX_UART_TX_DATA</name>
           <description>TX Data Register</description>
-          <addressOffset>0x40006447</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_DATA</name>
-          <description>RX Data Register</description>
-          <addressOffset>0x4000644C</addressOffset>
+          <addressOffset>0x4000644B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1702,7 +1675,7 @@
         <register>
           <name>TX_UART_TX_STATUS</name>
           <description>TX status register</description>
-          <addressOffset>0x40006467</addressOffset>
+          <addressOffset>0x4000646B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1739,9 +1712,36 @@
           </fields>
         </register>
         <register>
+          <name>RX_UART_RX_ADDRESS1</name>
+          <description>RX Address1 Register</description>
+          <addressOffset>0x40006526</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_ADDRESS2</name>
+          <description>RX Address2 Register</description>
+          <addressOffset>0x40006536</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_DATA</name>
+          <description>RX Data Register</description>
+          <addressOffset>0x40006546</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>RX_UART_RX_STATUS</name>
           <description>RX status register</description>
-          <addressOffset>0x4000646E</addressOffset>
+          <addressOffset>0x40006567</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1813,7 +1813,7 @@
         <register>
           <name>SensTimer3_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x40006408</addressOffset>
+          <addressOffset>0x40006405</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1822,16 +1822,62 @@
         <register>
           <name>SensTimer3_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006428</addressOffset>
+          <addressOffset>0x40006425</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
+          <name>SensTimer3_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x40006576</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CTRL_ENABLE</name>
+              <description>Enable the Timer</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMODE</name>
+              <description>Capture Mode</description>
+              <lsb>5</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_TEN</name>
+              <description>Trigger Enable Bit</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_TMODE</name>
+              <description>Trigger Mode</description>
+              <lsb>2</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_IC</name>
+              <description>Interrupt Count</description>
+              <lsb>0</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
           <name>SensTimer3_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006488</addressOffset>
+          <addressOffset>0x40006585</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1870,7 +1916,7 @@
         <register>
           <name>SensTimer3_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006498</addressOffset>
+          <addressOffset>0x40006595</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1992,52 +2038,6 @@
             </field>
           </fields>
         </register>
-        <register>
-          <name>SensTimer3_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006577</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable the Timer</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMODE</name>
-              <description>Capture Mode</description>
-              <lsb>5</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_TEN</name>
-              <description>Trigger Enable Bit</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_TMODE</name>
-              <description>Trigger Mode</description>
-              <lsb>2</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_IC</name>
-              <description>Interrupt Count</description>
-              <lsb>0</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
       </registers>
     </peripheral>
     <peripheral>
@@ -2051,9 +2051,27 @@
       </addressBlock>
       <registers>
         <register>
+          <name>SensTimer6_COUNTER</name>
+          <description>UDB.A0 - Current Down Counter Value</description>
+          <addressOffset>0x40006409</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>SensTimer6_PERIOD</name>
+          <description>UDB.D0 - Assigned Period</description>
+          <addressOffset>0x40006429</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>SensTimer6_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647F</addressOffset>
+          <addressOffset>0x40006479</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2097,27 +2115,9 @@
           </fields>
         </register>
         <register>
-          <name>SensTimer6_COUNTER</name>
-          <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x4000650A</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>SensTimer6_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x4000652A</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>SensTimer6_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000658A</addressOffset>
+          <addressOffset>0x40006489</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2156,7 +2156,7 @@
         <register>
           <name>SensTimer6_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659A</addressOffset>
+          <addressOffset>0x40006499</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2293,7 +2293,7 @@
         <register>
           <name>QuadDec_2_Cnt16_COUNTER</name>
           <description>Counter value</description>
-          <addressOffset>0x40006402</addressOffset>
+          <addressOffset>0x4000640E</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2302,7 +2302,7 @@
         <register>
           <name>QuadDec_2_STATUS_REG</name>
           <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x40006460</addressOffset>
+          <addressOffset>0x4000646E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2354,7 +2354,7 @@
         <register>
           <name>QuadDec_2_Cnt16_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006402</addressOffset>
+          <addressOffset>0x4000640E</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2363,7 +2363,7 @@
         <register>
           <name>QuadDec_2_Cnt16_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006422</addressOffset>
+          <addressOffset>0x4000642E</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2372,7 +2372,7 @@
         <register>
           <name>QuadDec_2_Cnt16_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006432</addressOffset>
+          <addressOffset>0x4000643E</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2381,7 +2381,7 @@
         <register>
           <name>QuadDec_2_Cnt16_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006474</addressOffset>
+          <addressOffset>0x4000647C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2413,7 +2413,7 @@
         <register>
           <name>QuadDec_2_Cnt16_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006483</addressOffset>
+          <addressOffset>0x4000648C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2473,7 +2473,7 @@
         <register>
           <name>QuadDec_2_Cnt16_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006493</addressOffset>
+          <addressOffset>0x4000649C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4468,7 +4468,7 @@
         <register>
           <name>QuadDec_1_Cnt16_COUNTER</name>
           <description>Counter value</description>
-          <addressOffset>0x40006404</addressOffset>
+          <addressOffset>0x40006400</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4477,7 +4477,7 @@
         <register>
           <name>QuadDec_1_STATUS_REG</name>
           <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x40006566</addressOffset>
+          <addressOffset>0x40006463</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4529,7 +4529,7 @@
         <register>
           <name>QuadDec_1_Cnt16_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006404</addressOffset>
+          <addressOffset>0x40006400</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4538,7 +4538,7 @@
         <register>
           <name>QuadDec_1_Cnt16_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006424</addressOffset>
+          <addressOffset>0x40006420</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4547,7 +4547,7 @@
         <register>
           <name>QuadDec_1_Cnt16_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006434</addressOffset>
+          <addressOffset>0x40006430</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4556,7 +4556,7 @@
         <register>
           <name>QuadDec_1_Cnt16_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006476</addressOffset>
+          <addressOffset>0x40006471</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4785,7 +4785,7 @@
         <register>
           <name>MotorStopReg_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006473</addressOffset>
+          <addressOffset>0x4000647D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

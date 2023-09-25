@@ -104,7 +104,7 @@ void StateMachine(bool reset) {
                     
                 motorBoostLeft = PD_GET(sensors, 1) ? 2.9f : 0.0f;
                 motorBoostRight = PD_GET(sensors, 2) ? 2.5f : 0.0f;
-                SetTargetSpeeds(12.0f + 3.0f * PD_GET(sensors, 1), 12.0f + 3.0f * PD_GET(sensors, 2));  
+                SetTargetSpeeds(15.0f + (PD_GET(sensors, 1) ? 3.0f : 0.0f), 16.0f + (PD_GET(sensors, 2) ? 3.0f : 0.0f));  
             
             } 
             
@@ -134,8 +134,8 @@ void StateMachine(bool reset) {
                 
                 motorBoostLeft = driftParams.goLeft ? 2.9f : 0.0f;
                 motorBoostRight = driftParams.goRight ? 2.5f : 0.0f;
-                SetTargetSpeeds(12.0f, 12.0f);
-            } 
+                SetTargetSpeeds(15.0f, 15.0f);
+            }
             
             if(!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
                 current_state = TURN_LEFT;

@@ -40,7 +40,7 @@ int main(void)
     char usbBuffer[1024];
     bool active = true;
     
-    SetTargetSpeeds(17.0f, 17.0f);
+    SetTargetSpeeds(15.0f, 15.0f);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
@@ -49,11 +49,11 @@ int main(void)
         if(c == ' ') {
             active = !active;
             if(active) {
-                SetStopMotors(1, 1);
+                SetStopMotors(0, 0);
                 WriteUARTString("Robot Active\r\n", sizeof("Robot Active\r\n"));
             }
             else {
-                SetStopMotors(0, 0);
+                SetStopMotors(1, 1);
                 WriteUARTString("Robot Inactive\r\n", sizeof("Robot Inactive\r\n"));
             }
         }
@@ -81,17 +81,20 @@ int main(void)
             int count = sprintf(usbBuffer, "Running speed mode\r\n");
             WriteUARTString(usbBuffer, count);
             
+            SetStopMotors(0, 0);
             EnableSpeedISR();
             motorBoostLeft = 0.0f;
             motorBoostRight = 0.0f;
             
             SetTargetSpeeds(30.0f, 30.0f);
-            Timer_1_WriteCounter(65535);
+            Timer_1_WritePeriod(3333 + 300);
+            Timer_1_WriteCounter(3333 + 300);
             Timer_1_Start();
-            for(; motorLengthFin == false;) {
+            while(motorLengthFin == false) {
                 MotorController();
             }
             SetStopMotors(1, 1);
+            Timer_1_Stop();
             
             count = sprintf(usbBuffer, "Finished speed mode\r\n");
             WriteUARTString(usbBuffer, count);
