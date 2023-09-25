@@ -97,16 +97,11 @@ Action StateMachine() {
                 action = (Action) {
                     .leftSpeed = 20.0f + PD_GET(sensors, 1) * 3.0f,
                     .rightSpeed = 20.0f + PD_GET(sensors, 2) * 3.0f,
-                    .motorBoostLeft =  PD_GET(sensors, 1) ? 2.8f :  0.0f,
-                    .motorBoostRight =  PD_GET(sensors, 2) ? 2.2f :  0.0f,
+                    .motorBoostLeft =  PD_GET(sensors, 1) ? 2.6f :  0.0f,
+                    .motorBoostRight =  PD_GET(sensors, 2) ? 2.0f :  0.0f,
                     .actionType = ACTION_CHANGE_SPEED
                 };
-            } else if (PD_GET(sensors, 5) {
-                current_state = TURN_LEFT;
-                PRINT_STATE(TURN_LEFT);
-                
             }
-            
             
             
             break;
@@ -122,8 +117,8 @@ Action StateMachine() {
                   .actionType = ACTION_CHANGE_SPEED,
                     .leftSpeed = 20.0f,
                     .rightSpeed = 20.0f,
-                    .motorBoostLeft = driftParams.goLeft ? 2.8f : 0.0f,
-                    .motorBoostRight = driftParams.goRight ? 2.2f : 0.0f,
+                    .motorBoostLeft = driftParams.goLeft ? 3.0f : 0.0f,
+                    .motorBoostRight = driftParams.goRight ? 2.4f : 0.0f,
                 };
             }
             break;
