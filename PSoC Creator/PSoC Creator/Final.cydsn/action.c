@@ -101,11 +101,25 @@ Action StateMachine() {
                     .motorBoostRight =  PD_GET(sensors, 2) ? 2.2f :  0.0f,
                     .actionType = ACTION_CHANGE_SPEED
                 };
-            } else if (PD_GET(sensors, 5) {
+            } else if (PD_GET(sensors, 3)) {
                 current_state = TURN_LEFT;
                 PRINT_STATE(TURN_LEFT);
                 
-            }
+                action = (Action) {
+                    .leftSpeed = -20.0f,
+                    .rightSpeed = 20.0f,
+                    .actionType = ACTION_CHANGE_SPEED,
+                };
+                
+            } else if (PD_GET(sensors, 4)) {
+                current_state = TURN_RIGHT;
+                PRINT_STATE(TURN_RIGHT);
+                
+                action = (Action) {
+                    .leftSpeed = 20.0f,
+                    .rightSpeed = -20.0f,
+                    .actionType = ACTION_CHANGE_SPEED,
+                };
             
             
             
@@ -127,6 +141,11 @@ Action StateMachine() {
                 };
             }
             break;
+            
+        case TURN_LEFT:
+            
+            
+            
         default:
             ASSERT_MSG(false, "Invalid state reached");
 
