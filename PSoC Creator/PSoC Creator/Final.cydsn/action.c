@@ -95,19 +95,7 @@ void StateMachine(bool reset) {
     
     switch (current_state) {
         case STRAIGHT:
-        
-            if(XOR(PD_GET(sensors, 1), PD_GET(sensors, 2))) {
-                current_state = CORRECT_DRIFT;
-                PRINT_STATE(CORRECT_DRIFT);
-                driftParams.goLeft = PD_GET(sensors, 2);
-                driftParams.goRight = PD_GET(sensors, 1);
-                    
-                motorBoostLeft = PD_GET(sensors, 1) ? 2.6f : 0.0f;
-                motorBoostRight = PD_GET(sensors, 2) ? 2.3f : 0.0f;
-                SetTargetSpeeds(15.0f + (PD_GET(sensors, 1) ? 3.0f : 0.0f), 16.0f + (PD_GET(sensors, 2) ? 3.0f : 0.0f));  
-            
-            } 
-            
+
             if (!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
                 current_state = TURN_LEFT;
                 PRINT_STATE(TURN_LEFT);
@@ -124,34 +112,6 @@ void StateMachine(bool reset) {
             
             
             break;
-            
-        case CORRECT_DRIFT:
-            ASSERT(!(driftParams.goLeft && driftParams.goRight));
-            
-            if((!PD_GET(sensors, 1) && driftParams.goRight) || (!PD_GET(sensors, 2) && driftParams.goLeft)) {
-                current_state = STRAIGHT;
-                PRINT_STATE(STRAIGHT);
-                
-                motorBoostLeft = driftParams.goLeft ? 2.6f : 0.0f;
-                motorBoostRight = driftParams.goRight ? 2.3f : 0.0f;
-                SetTargetSpeeds(15.0f, 15.0f);
-            }
-            
-            if(!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
-                current_state = TURN_LEFT;
-                PRINT_STATE(TURN_LEFT);
-                
-                InitLeftTurn();
-            }
-            
-            if(!PD_GET(sensors, 4) && !postTurnIgnore.pd4) {
-                current_state = TURN_RIGHT;
-                PRINT_STATE(TURN_RIGHT);
-                
-                InitRightTurn();
-            }
-            
-            break;
         case TURN_LEFT:
             
             if(PD_GET(sensors, 6)) break; 
@@ -162,9 +122,9 @@ void StateMachine(bool reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             PRINT_STATE(STRAIGHT);
-            motorBoostLeft = 0.0f;
-            motorBoostRight = 0.0f;
-            SetTargetSpeeds(12.0f, 12.0f);
+            motorBoostLeft = 0.0001f;
+            motorBoostRight = 0.0001f;
+            SetTargetSpeeds(15.0f, 15.0f);
             
             postTurnIgnore.pd3 = true;
             
@@ -177,9 +137,9 @@ void StateMachine(bool reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             PRINT_STATE(STRAIGHT);
-            motorBoostLeft = 0.0f;
-            motorBoostRight = 0.0f;
-            SetTargetSpeeds(12.0f, 12.0f);
+            motorBoostLeft = 0.0001f;
+            motorBoostRight = 0.0001f;
+            SetTargetSpeeds(15.0f, 15.0f);
             
             postTurnIgnore.pd4 = true;
             

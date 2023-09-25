@@ -134,8 +134,8 @@ void MotorController() {
     float mot1Cmp = PWM_1_ReadCompare();
     float mot2Cmp = PWM_2_ReadCompare();
     
-    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
-    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
+    float mot1Target = mot1Cmp + /* 0.5 * */ mot1Diff;
+    float mot2Target = mot2Cmp + /* 0.5 * */ mot2Diff;
     
     static char usbBuffer[128];
     char* buff = usbBuffer;

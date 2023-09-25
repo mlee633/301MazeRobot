@@ -47,10 +47,10 @@ void speed_run() {
     motorBoostLeft = 0.0f;
     motorBoostRight = 0.0f;
     
-    SetTargetSpeeds(40.0f, 40.0f);
+    SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
     Timer_1_Start();
-    Timer_1_WritePeriod(2000 + 1000);
-    Timer_1_WriteCounter(2000 + 1000);
+    Timer_1_WritePeriod(2500);
+    Timer_1_WriteCounter(2500);
     
     while(motorLengthFin == false) {
         MotorController();
@@ -74,7 +74,7 @@ int main(void)
     EnableSpeedISR();
     
     
-#define SPEED_RUN 0
+#define SPEED_RUN 1
 
 #if SPEED_RUN
     speed_run();        
