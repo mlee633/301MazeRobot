@@ -18,23 +18,9 @@
 #include <math.h>
 #include <stdio.h>
 
-#if QuadDec_1_COUNTER_RESOLUTION != QuadDec_2_COUNTER_RESOLUTION
-#error The quadrature decoders for both wheels must have the same resolution
-#endif
-
-// in ms
-#define MOTOR_SPEED_CALC_PERIOD_MS 40
-#define MOTOR_SPEED_CALC_PERIOD_S (((float) MOTOR_SPEED_CALC_PERIOD_MS) / 1000.0f)
-
-#define MOTOR_GEAR_RATIO 19
-#define PULSES_PER_ROTATION ((MOTOR_GEAR_RATIO) * 3 * (QuadDec_1_COUNTER_RESOLUTION))
-
-#define WHEEL_1_RADIUS_CM (3.25f)
-#define WHEEL_2_RADIUS_CM (3.25f)
-
 volatile static int16_t motor1Count = 0, motor2Count = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
-volatile float motorBoostLeft = 2.2f, motorBoostRight = 1.4f;
+volatile float motorBoostLeft = 0.0f, motorBoostRight = 0.0f;
 volatile static bool shouldUpdateSpeed = false;
 
 CY_ISR(MotorSpeedTimerOverflow) {
@@ -64,6 +50,18 @@ void SetupMotors() {
     MotorSpeedTimer_WritePeriod(MOTOR_SPEED_CALC_PERIOD_MS - 1);
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
+}
+
+void DisableSpeedISR() {
+    shouldUpdateSpeed = false;
+    MotorUpdateSpeed_Disable();
+}
+
+void EnableSpeedISR() {
+    shouldUpdateSpeed = false;
+    QuadDec_1_SetCounter(0);
+    QuadDec_2_SetCounter(0);
+    MotorUpdateSpeed_Enable();   
 }
 
 void SetTargetSpeeds(float left, float right) {

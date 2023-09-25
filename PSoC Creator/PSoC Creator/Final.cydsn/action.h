@@ -12,15 +12,18 @@
 
 /* [] END OF FILE */
 #pragma once
+#include <stdbool.h>
 
 typedef struct Action {
     enum {
         ACTION_NOTHING,
-        ACTION_CHANGE_SPEED
+        ACTION_CHANGE_SPEED,
+        ACTION_TURN_LEFT,
+        ACTION_TURN_RIGHT
     } actionType;
     
     float leftSpeed, rightSpeed;
     float motorBoostLeft, motorBoostRight;
 } Action;
 
-Action StateMachine();
+void StateMachine(bool reset);

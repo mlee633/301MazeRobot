@@ -14,18 +14,17 @@
 #include "action.h"
 #include "project.h"
 #include "uart.h"
+#include "motor.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 
 #define PD_GET(s, n) ((s) & (1 << ((n) - 1)))
 #define ASSERT(c) Assert(c, #c "\r\n")
 #define ASSERT_MSG(c, msg) Assert(c, #c "; " msg "\r\n")
 #define PRINT_STATE(s) WriteUARTString("State: " #s "\r\n", sizeof("State: " #s "\r\n"))
 #define XOR(a, b) (!(a) != !(b))
-
-#define LBOOST 2.4f
-#define RBOOST 1.4f
 
 typedef enum {
     STRAIGHT,
@@ -37,13 +36,6 @@ typedef enum {
     TURN_RIGHT
 } State;
 
-int top_left_sensor_active();
-int top_right_sensor_active();
-int middle_left_sensor_active();
-int middle_right_sensor_active();
-void execute_turn_left();
-void execute_turn_right();
-
 void Assert(bool cond, const char* msg) {
     if(!cond) {
         WriteUARTString("ASSERT: ", sizeof("ASSERT: "));
@@ -54,53 +46,80 @@ void Assert(bool cond, const char* msg) {
     }
 }
 
-Action StateMachine() {
+void InitLeftTurn() {
+    DisableSpeedISR();
+    PWM_1_WriteCompare(94);
+    PWM_2_WriteCompare(160);
+}
+
+void InitRightTurn() {           
+    DisableSpeedISR();
+    PWM_1_WriteCompare(160);
+    PWM_2_WriteCompare(94);
+}
+
+void StateMachine(bool reset) {
     static State current_state = STRAIGHT;
     static struct {
         bool goLeft;
         bool goRight;
     } driftParams = { false, false };
-    static bool hasInit = false;
-    if(!hasInit) {
-        hasInit = true;   
-        return (Action) {
-            .actionType = ACTION_CHANGE_SPEED,
-            .leftSpeed = 20.0f,
-            .rightSpeed = 20.0f
-        };
+    
+    static struct {
+        bool pd3, pd4;
+    } postTurnIgnore = {false, false};
+    
+    if(reset) {
+        current_state = STRAIGHT;
+        postTurnIgnore.pd3 = false;
+        postTurnIgnore.pd4 = false;
+        driftParams.goLeft = false;
+        driftParams.goRight = false;
+        PRINT_STATE(STRAIGHT);
+        EnableSpeedISR();
+        return;
+    }
+    
+    // Updated at end of function
+    static uint8_t prevSensors = 0;
+    uint8_t sensors = PD_Read();
+    
+    if(PD_GET(sensors, 3) && !PD_GET(prevSensors, 3)) {
+        postTurnIgnore.pd3 = false;   
+    }
+    
+    if(PD_GET(sensors, 4) && !PD_GET(prevSensors, 4)) {
+        postTurnIgnore.pd4 = false;   
     }
     
     
-    uint8_t sensors = PD_Read();
-    Action action = {
-      .actionType = ACTION_NOTHING
-    };
-    
     switch (current_state) {
         case STRAIGHT:
-//            // Top right and Top left sensors
-//            if(PD_GET(sensors, 5) && PD_GET(sensors, 7)) {
-//                current_state = BOTH_FLAGGED;
-//            // Top left sensor
-//            } else if (PD_GET(sensors, 5)) {
-//                current_state = LEFT_FLAGGED;
-//            // Top right sensor
-//            } else if (PD_GET(sensors, 7)) {
-//                current_state = RIGHT_FLAGGED;
-            if (XOR(PD_GET(sensors, 1), PD_GET(sensors, 2))) {
+        
+            if(XOR(PD_GET(sensors, 1), PD_GET(sensors, 2))) {
                 current_state = CORRECT_DRIFT;
                 PRINT_STATE(CORRECT_DRIFT);
                 driftParams.goLeft = PD_GET(sensors, 2);
                 driftParams.goRight = PD_GET(sensors, 1);
+                    
+                motorBoostLeft = PD_GET(sensors, 1) ? 2.9f : 0.0f;
+                motorBoostRight = PD_GET(sensors, 2) ? 2.5f : 0.0f;
+                SetTargetSpeeds(12.0f + 3.0f * PD_GET(sensors, 1), 12.0f + 3.0f * PD_GET(sensors, 2));  
+            
+            } 
+            
+            if (!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
+                current_state = TURN_LEFT;
+                PRINT_STATE(TURN_LEFT);
                 
+                InitLeftTurn();
+            } 
+            
+            if (!PD_GET(sensors, 4) && !postTurnIgnore.pd4) {
+                current_state = TURN_RIGHT;
+                PRINT_STATE(TURN_RIGHT);
                 
-                action = (Action) {
-                    .leftSpeed = 20.0f + PD_GET(sensors, 1) * 3.0f,
-                    .rightSpeed = 20.0f + PD_GET(sensors, 2) * 3.0f,
-                    .motorBoostLeft =  PD_GET(sensors, 1) ? 2.6f :  0.0f,
-                    .motorBoostRight =  PD_GET(sensors, 2) ? 2.0f :  0.0f,
-                    .actionType = ACTION_CHANGE_SPEED
-                };
+                InitRightTurn();
             }
             
             
@@ -113,76 +132,63 @@ Action StateMachine() {
                 current_state = STRAIGHT;
                 PRINT_STATE(STRAIGHT);
                 
-                action = (Action) {
-                  .actionType = ACTION_CHANGE_SPEED,
-                    .leftSpeed = 20.0f,
-                    .rightSpeed = 20.0f,
-                    .motorBoostLeft = driftParams.goLeft ? 3.0f : 0.0f,
-                    .motorBoostRight = driftParams.goRight ? 2.4f : 0.0f,
-                };
+                motorBoostLeft = driftParams.goLeft ? 2.9f : 0.0f;
+                motorBoostRight = driftParams.goRight ? 2.5f : 0.0f;
+                SetTargetSpeeds(12.0f, 12.0f);
+            } 
+            
+            if(!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
+                current_state = TURN_LEFT;
+                PRINT_STATE(TURN_LEFT);
+                
+                InitLeftTurn();
             }
+            
+            if(!PD_GET(sensors, 4) && !postTurnIgnore.pd4) {
+                current_state = TURN_RIGHT;
+                PRINT_STATE(TURN_RIGHT);
+                
+                InitRightTurn();
+            }
+            
             break;
+        case TURN_LEFT:
+            
+            if(PD_GET(sensors, 6)) break; 
+            
+            PWM_1_WriteCompare(127);
+            PWM_2_WriteCompare(127);
+            
+            current_state = STRAIGHT;
+            EnableSpeedISR();
+            PRINT_STATE(STRAIGHT);
+            motorBoostLeft = 0.0f;
+            motorBoostRight = 0.0f;
+            SetTargetSpeeds(12.0f, 12.0f);
+            
+            postTurnIgnore.pd3 = true;
+            
+            break;
+
+        case TURN_RIGHT:
+            
+            if(PD_GET(sensors, 6)) break;
+            
+            current_state = STRAIGHT;
+            EnableSpeedISR();
+            PRINT_STATE(STRAIGHT);
+            motorBoostLeft = 0.0f;
+            motorBoostRight = 0.0f;
+            SetTargetSpeeds(12.0f, 12.0f);
+            
+            postTurnIgnore.pd4 = true;
+            
+            break;
+            
         default:
             ASSERT_MSG(false, "Invalid state reached");
-
-//        case LEFT_FLAGGED:
-//            if (middle_left_sensor_active()) {
-//                current_state = TURN_LEFT;
-//            } else if (!top_left_sensor_active()) {
-//                current_state = STRAIGHT;
-//            }
-//            break;
-//
-//        case RIGHT_FLAGGED:
-//            if (middle_right_sensor_active()) {
-//                current_state = TURN_RIGHT;
-//            } else if (!top_right_sensor_active()) {
-//                current_state = STRAIGHT;
-//            }
-//            break;
-//
-//        case BOTH_FLAGGED:
-//            if (middle_left_sensor_active()) {
-//                current_state = TURN_LEFT;
-//            } else if (middle_right_sensor_active()) {
-//                current_state = TURN_RIGHT;
-//            } else if (!top_left_sensor_active() && !top_right_sensor_active()) {
-//                current_state = STRAIGHT;
-//            }
-//            break;
-//
-//        case TURN_LEFT:
-//            execute_turn_left();
-//            current_state = STRAIGHT;
-//            break;
-//
-//        case TURN_RIGHT:
-//            execute_turn_right();
-//            current_state = STRAIGHT;
-//            break;
     }
     
-    
-//    switch (current_state) {
-//        case STRAIGHT: return (Action) {
-//            .leftSpeed = 10.0f,
-//            .rightSpeed = 10.0f
-//        }; //go forward action;
-//        break;
-//        case TURN_LEFT: return (Action) {
-//            .leftSpeed = 10.0f,
-//            .rightSpeed = 5.0f
-//        };
-//        break;// turn left action;
-//        case TURN_RIGHT: return (Action) {
-//            .leftSpeed = 5.0f,
-//            .rightSpeed = 10.0f
-//        };
-//        break;// turn right action;
-//        case CORRECT_DRIFT: return (Action) {
-//            
-//        }// correct drift action
-//    }
-    
-    return action;
+    prevSensors = sensors;
+    if(current_state != TURN_LEFT && current_state != TURN_RIGHT) MotorController();
 }
