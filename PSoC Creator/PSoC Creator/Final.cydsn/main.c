@@ -25,27 +25,31 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     
     InitSensors();
-    CyDelay(100);
     
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);
     SetupMotors();
     
 
     char usbBuffer[1024];
-    // SetStopMotors(1, 1);
-    SetTargetSpeeds(20.0f, 20.0f);
     for(;;) {
         float q1 = CalcMotor1Speed();
         float q2 = CalcMotor2Speed();
         
         Action action = StateMachine();
-        SetTargetSpeeds(action.leftSpeed, action.rightSpeed);
+        if(action.actionType == ACTION_CHANGE_SPEED) {
+            motorBoostLeft = action.motorBoostLeft;
+            motorBoostRight = action.motorBoostRight;
+            SetTargetSpeeds(action.leftSpeed, action.rightSpeed);
+        }
+        
+        MotorController();
         
         char c = ReadUARTChar();
         if(c == 's') {
             uint8_t pd = PD_Read();
             int count = snprintf(usbBuffer, sizeof(usbBuffer),
-                "Speed: %dcm/s, %dcm/s\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+                "PWM: %d, %d\r\nSpeed: %dcm/s, %dcm/s\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+                PWM_1_ReadCompare(), PWM_2_ReadCompare(),
                 (int) q1,
                 (int) q2,
                 (bool)(pd & (1 << 4)),

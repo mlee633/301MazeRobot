@@ -16,6 +16,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+extern volatile float motorBoostLeft, motorBoostRight;
+
 void SetupMotors();
 void SetStopMotors(bool m1, bool m2);
 int16_t GetQuadDecCountMotor1();
@@ -28,3 +30,5 @@ float GetTargetRightSpeed();
 void SetTargetSpeeds(float left, float right);
 void SetTargetLeftSpeed(float);
 void SetTargetRightSpeed(float);
+
+void MotorController();

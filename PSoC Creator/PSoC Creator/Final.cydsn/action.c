@@ -24,6 +24,9 @@
 #define PRINT_STATE(s) WriteUARTString("State: " #s "\r\n", sizeof("State: " #s "\r\n"))
 #define XOR(a, b) (!(a) != !(b))
 
+#define LBOOST 2.4f
+#define RBOOST 1.4f
+
 typedef enum {
     STRAIGHT,
     LEFT_FLAGGED,
@@ -44,7 +47,7 @@ void execute_turn_right();
 void Assert(bool cond, const char* msg) {
     if(!cond) {
         WriteUARTString("ASSERT: ", sizeof("ASSERT: "));
-        WriteUARTString(msg, strlen(msg));
+        WriteUARTString((char *)msg, strlen(msg));
         while(1) {
             CyDelay(100);
         }
@@ -56,14 +59,23 @@ Action StateMachine() {
     static struct {
         bool goLeft;
         bool goRight;
-    } correctDiftParams = { false, false };
+    } driftParams = { false, false };
+    static bool hasInit = false;
+    if(!hasInit) {
+        hasInit = true;   
+        return (Action) {
+            .actionType = ACTION_CHANGE_SPEED,
+            .leftSpeed = 20.0f,
+            .rightSpeed = 20.0f
+        };
+    }
+    
     
     uint8_t sensors = PD_Read();
-    
     Action action = {
-      .leftSpeed = 0.0f,
-      .rightSpeed = 0.0f,
+      .actionType = ACTION_NOTHING
     };
+    
     switch (current_state) {
         case STRAIGHT:
 //            // Top right and Top left sensors
@@ -78,40 +90,43 @@ Action StateMachine() {
             if (XOR(PD_GET(sensors, 1), PD_GET(sensors, 2))) {
                 current_state = CORRECT_DRIFT;
                 PRINT_STATE(CORRECT_DRIFT);
+                driftParams.goLeft = PD_GET(sensors, 2);
+                driftParams.goRight = PD_GET(sensors, 1);
                 
-                correctDiftParams.goLeft = PD_GET(sensors, 1);
-                correctDiftParams.goRight = PD_GET(sensors, 2);
+                
+                action = (Action) {
+                    .leftSpeed = 20.0f + PD_GET(sensors, 1) * 3.0f,
+                    .rightSpeed = 20.0f + PD_GET(sensors, 2) * 3.0f,
+                    .motorBoostLeft =  PD_GET(sensors, 1) ? 2.8f :  0.0f,
+                    .motorBoostRight =  PD_GET(sensors, 2) ? 2.2f :  0.0f,
+                    .actionType = ACTION_CHANGE_SPEED
+                };
+            } else if (PD_GET(sensors, 5) {
+                current_state = TURN_LEFT;
+                PRINT_STATE(TURN_LEFT);
+                
             }
             
-            action = (Action) {
-                .leftSpeed = 20.0f,
-                .rightSpeed = 20.0f,
-            };
+            
             
             break;
             
         case CORRECT_DRIFT:
-            ASSERT(!(correctDiftParams.goLeft && correctDiftParams.goRight));
+            ASSERT(!(driftParams.goLeft && driftParams.goRight));
             
-            if((!PD_GET(sensors, 1) && correctDiftParams.goLeft) || (!PD_GET(sensors, 2) && correctDiftParams.goRight)) {
+            if((!PD_GET(sensors, 1) && driftParams.goRight) || (!PD_GET(sensors, 2) && driftParams.goLeft)) {
                 current_state = STRAIGHT;
                 PRINT_STATE(STRAIGHT);
-                break;
-            }
-            
-            if(correctDiftParams.goLeft) {
+                
                 action = (Action) {
+                  .actionType = ACTION_CHANGE_SPEED,
                     .leftSpeed = 20.0f,
-                    .rightSpeed = 10.0f
-                };
-            } else {
-                action = (Action) {
-                    .leftSpeed = 10.0f,
-                    .rightSpeed = 20.0f
+                    .rightSpeed = 20.0f,
+                    .motorBoostLeft = driftParams.goLeft ? 2.8f : 0.0f,
+                    .motorBoostRight = driftParams.goRight ? 2.2f : 0.0f,
                 };
             }
             break;
-            
         default:
             ASSERT_MSG(false, "Invalid state reached");
 

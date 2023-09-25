@@ -14,8 +14,13 @@
 #pragma once
 
 typedef struct Action {
+    enum {
+        ACTION_NOTHING,
+        ACTION_CHANGE_SPEED
+    } actionType;
+    
     float leftSpeed, rightSpeed;
+    float motorBoostLeft, motorBoostRight;
 } Action;
-
 
 Action StateMachine();

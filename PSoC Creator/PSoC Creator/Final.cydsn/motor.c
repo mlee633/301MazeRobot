@@ -23,7 +23,7 @@
 #endif
 
 // in ms
-#define MOTOR_SPEED_CALC_PERIOD_MS 100
+#define MOTOR_SPEED_CALC_PERIOD_MS 40
 #define MOTOR_SPEED_CALC_PERIOD_S (((float) MOTOR_SPEED_CALC_PERIOD_MS) / 1000.0f)
 
 #define MOTOR_GEAR_RATIO 19
@@ -34,8 +34,8 @@
 
 volatile static int16_t motor1Count = 0, motor2Count = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
-
-static void MotorController(float leftSpeed, float rightSpeed);
+volatile float motorBoostLeft = 2.2f, motorBoostRight = 1.4f;
+volatile static bool shouldUpdateSpeed = false;
 
 CY_ISR(MotorSpeedTimerOverflow) {
     motor1Count = QuadDec_1_GetCounter();
@@ -44,7 +44,7 @@ CY_ISR(MotorSpeedTimerOverflow) {
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
     
-    MotorController(leftSpeedTarget, rightSpeedTarget);
+    shouldUpdateSpeed = true;
 }
 
 void SetupMotors() {
@@ -67,7 +67,16 @@ void SetupMotors() {
 }
 
 void SetTargetSpeeds(float left, float right) {
+    if(motorBoostLeft != 0.0f) {
+        float approxPWM = 127 + left * motorBoostLeft; 
+        PWM_1_WriteCompare((approxPWM < 0) ? 0 : (approxPWM > 255) ? 255 : approxPWM);
+    }
     leftSpeedTarget = left;
+    
+    if(motorBoostRight != 0.0f) {
+        float approxPWM2 = 127 + right * motorBoostRight;   
+        PWM_2_WriteCompare((approxPWM2 < 0) ? 0 : (approxPWM2 > 255) ? 255 : approxPWM2);
+    }
     rightSpeedTarget = right;
 }
 
@@ -111,12 +120,15 @@ void SetStopMotors(bool m1, bool m2) {
     MotorStopReg_Write(m1 | (m2 << 1));
 }
 
-static void MotorController(float speedLeft, float speedRight) {    
+void MotorController() {  
+    if(!shouldUpdateSpeed) return;
+    shouldUpdateSpeed = false;
+    
     float mot1Speed = CalcMotor1Speed();
     float mot2Speed = CalcMotor2Speed();
     
-    float mot1Diff = speedLeft - mot1Speed;
-    float mot2Diff = speedRight - mot2Speed;
+    float mot1Diff = leftSpeedTarget - mot1Speed;
+    float mot2Diff = rightSpeedTarget - mot2Speed;
     
     //mot1Diff = (mot1Diff > MAX_ERROR) ? MAX_ERROR : (mot1Diff < -MAX_ERROR) ? -MAX_ERROR : 0;
     //mot2Diff = (mot2Diff > MAX_ERROR) ? MAX_ERROR : (mot2Diff < -MAX_ERROR) ? -MAX_ERROR : 0;
@@ -127,21 +139,12 @@ static void MotorController(float speedLeft, float speedRight) {
     float mot1Target = mot1Cmp + 0.5 * mot1Diff;
     float mot2Target = mot2Cmp + 0.5 * mot2Diff;
     
-//    static char usbBuffer[128];
-//    char* buff = usbBuffer;
-//    int count;
-//    
-//    count = sprintf(buff, "Current speed: %d mm/s, %d mm/s \r\n", (int)(mot1Speed * 10), (int)(mot2Speed * 10));
-//    WriteUARTString(usbBuffer, count);
-//    
-//    count = sprintf(buff, "Current error: %d mm/s, %d mm/s \r\n", (int)(mot1Diff * 10), (int)(mot2Diff * 10));
-//    WriteUARTString(usbBuffer, count);
-//    
-//    count = sprintf(buff, "Current compare value: %d, %d \r\n", (int)(mot1Cmp), (int)(mot2Cmp));
-//    WriteUARTString(usbBuffer, count);
-//    
-//    count = sprintf(buff, "Target compare value: %d, %d \r\n\r\n", (int)(mot1Target), (int)(mot2Target));
-//    WriteUARTString(usbBuffer, count);
+    static char usbBuffer[128];
+    char* buff = usbBuffer;
+    int count;
+    
+    //count = sprintf(buff, "Current quad encs: %d, %d\r\n", (int)(motor1Count), (int)(motor2Count));
+    //WriteUARTString(usbBuffer, count);
     
     if(mot1Target > 255) {
         PWM_1_WriteCompare(255);    
