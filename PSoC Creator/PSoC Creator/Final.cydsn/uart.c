@@ -17,7 +17,7 @@
 #include <stdbool.h>
 
 void WriteUARTString(char* string, size_t length) {
-    if(USBUART_1_CDCIsReady() == 0) return; // TODO: Change back to re-introduce debugging
+    while(USBUART_1_CDCIsReady() == 0) {};
     USBUART_1_PutData((uint8_t *)string, length);
 }
 

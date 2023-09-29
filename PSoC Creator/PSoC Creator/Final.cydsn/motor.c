@@ -20,7 +20,6 @@
 
 volatile static int16_t motor1Count = 0, motor2Count = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
-volatile float motorBoostLeft = 0.0f, motorBoostRight = 0.0f;
 volatile static bool shouldUpdateSpeed = false;
 
 CY_ISR(MotorSpeedTimerOverflow) {
@@ -64,17 +63,34 @@ void EnableSpeedISR() {
     MotorUpdateSpeed_Enable();   
 }
 
+void BoostLeftMotor(int8_t pwmCount) {
+    uint8_t current = PWM_1_ReadCompare();
+    if(pwmCount >= 0 && (uint8_t)pwmCount >= 255 - current) {
+        PWM_1_WriteCompare(255);
+    } else if(pwmCount < 0 && (uint8_t)(-pwmCount) >= current) {
+        PWM_1_WriteCompare(0);
+    } else {
+        if(pwmCount >= 0) PWM_1_WriteCompare(current + pwmCount);
+        else PWM_1_WriteCompare(current - (uint8_t)(-pwmCount));
+    }
+}
+
+
+void BoostRightMotor(int8_t pwmCount) {
+    uint8_t current = PWM_2_ReadCompare();
+    if(pwmCount >= 0 && (uint8_t)pwmCount >= 255 - current) {
+        PWM_2_WriteCompare(255);
+    } else if(pwmCount < 0 && (uint8_t)(-pwmCount) >= current) {
+        PWM_2_WriteCompare(0);
+    } else {
+        if(pwmCount >= 0) PWM_2_WriteCompare(current + pwmCount);
+        else PWM_2_WriteCompare(current - (uint8_t)(-pwmCount));
+    }
+}
+
+
 void SetTargetSpeeds(float left, float right) {
-    if(motorBoostLeft != 0.0f) {
-        float approxPWM = 127 + left * motorBoostLeft; 
-        PWM_1_WriteCompare((approxPWM < 0) ? 0 : (approxPWM > 255) ? 255 : approxPWM);
-    }
     leftSpeedTarget = left;
-    
-    if(motorBoostRight != 0.0f) {
-        float approxPWM2 = 127 + right * motorBoostRight;   
-        PWM_2_WriteCompare((approxPWM2 < 0) ? 0 : (approxPWM2 > 255) ? 255 : approxPWM2);
-    }
     rightSpeedTarget = right;
 }
 

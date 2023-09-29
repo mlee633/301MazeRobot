@@ -33,6 +33,26 @@ void normal() {
     SetTargetSpeeds(15.0f, 15.0f);
     for(;;) {
         StateMachine(false);
+        
+        if(ReadUARTChar() == 's') {
+            uint8_t q1 = PWM_1_ReadCompare();
+            uint8_t q2 = PWM_2_ReadCompare();
+            uint8_t pd = PD_Read();
+            int count = snprintf(usbBuffer, sizeof(usbBuffer),
+                "PWM: %d, %d\r\nSpeed: %dcm/s, %dcm/s\r\n%d  %d  %d\r\n%d %d %d %d\r\n", 
+                PWM_1_ReadCompare(), PWM_2_ReadCompare(),
+                (int) q1,
+                (int) q2,
+                (bool)(pd & (1 << 4)),
+                (bool)(pd & (1 << 5)),
+                (bool)(pd & (1 << 6)),
+                (bool)(pd & (1 << 2)),
+                (bool)(pd & (1 << 0)),
+                (bool)(pd & (1 << 1)),
+                (bool)(pd & (1 << 3)));
+  
+            WriteUARTString(usbBuffer, count);      
+        }
     }
     
 }
@@ -44,8 +64,6 @@ void speed_run() {
     
     SetStopMotors(0, 0);
     EnableSpeedISR();
-    motorBoostLeft = 0.0f;
-    motorBoostRight = 0.0f;
     
     SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
     Timer_1_Start();
@@ -74,7 +92,7 @@ int main(void)
     EnableSpeedISR();
     
     
-#define SPEED_RUN 1
+#define SPEED_RUN 0
 
 #if SPEED_RUN
     speed_run();        

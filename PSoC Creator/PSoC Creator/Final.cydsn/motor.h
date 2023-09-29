@@ -31,8 +31,6 @@
 #define WHEEL_1_RADIUS_CM (3.25f)
 #define WHEEL_2_RADIUS_CM (3.25f)
 
-extern volatile float motorBoostLeft, motorBoostRight;
-
 void SetupMotors();
 void SetStopMotors(bool m1, bool m2);
 int16_t GetQuadDecCountMotor1();
@@ -49,5 +47,8 @@ float GetTargetRightSpeed();
 void SetTargetSpeeds(float left, float right);
 void SetTargetLeftSpeed(float);
 void SetTargetRightSpeed(float);
+
+void BoostLeftMotor(int8_t);
+void BoostRightMotor(int8_t);
 
 void MotorController();
