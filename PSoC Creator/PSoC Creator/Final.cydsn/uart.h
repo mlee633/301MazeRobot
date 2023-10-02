@@ -15,6 +15,10 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include <stdbool.h>
+
+void SetUseUSB(bool val);
+bool UARTIsReady();
 
 size_t FormatInt(int32_t num, char* buffer);
 void WriteUARTString(char* string, size_t length);

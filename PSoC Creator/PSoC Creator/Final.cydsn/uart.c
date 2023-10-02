@@ -12,11 +12,25 @@
 
 /* [] END OF FILE */
 
+#define USE_UART 0
+
 #include "uart.h"
 #include <project.h>
 #include <stdbool.h>
 
+volatile static bool useUSB = true;
+
+void SetUseUSB(bool val) {
+    useUSB = val;
+}
+
+bool UARTIsReady() {
+    return USBUART_1_CDCIsReady();   
+}
+
 void WriteUARTString(char* string, size_t length) {
+    if(!useUSB) return;
+    
     while(USBUART_1_CDCIsReady() == 0) {};
     USBUART_1_PutData((uint8_t *)string, length);
 }
@@ -40,6 +54,8 @@ size_t FormatInt(int32_t num, char* buffer) {
 
 char ReadUARTChar() {
     static bool hasConfigured = false;
+
+    if(!useUSB) return 0;
     
     if(!hasConfigured && USBUART_1_GetConfiguration()) {
         USBUART_1_CDC_Init();

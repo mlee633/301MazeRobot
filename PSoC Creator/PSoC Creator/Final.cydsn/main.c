@@ -27,8 +27,14 @@ CY_ISR(MotorLengthFin) {
 char* AppendStrToStr(char *result, const char* src, size_t len);
 
 void normal() {
-     char usbBuffer[1024];
+    char usbBuffer[1024];
     bool active = true;
+    
+    if(UARTIsReady() == 0) {
+        SetUseUSB(false);
+    } else {
+        WriteUARTString("UART Is Connected! \r\n", sizeof("UART Is Connected! \r\n"));
+    }
     
     SetTargetSpeeds(15.0f, 15.0f);
     for(;;) {
