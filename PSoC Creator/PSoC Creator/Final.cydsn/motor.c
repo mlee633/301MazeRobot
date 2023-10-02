@@ -22,6 +22,8 @@ volatile static int16_t motor1Count = 0, motor2Count = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
 volatile static bool shouldUpdateSpeed = false;
 
+volatile static uint8_t oldPwmLeft = 127, oldPwmRight = 127;
+
 CY_ISR(MotorSpeedTimerOverflow) {
     motor1Count = QuadDec_1_GetCounter();
     motor2Count = QuadDec_2_GetCounter();
@@ -64,7 +66,7 @@ void EnableSpeedISR() {
 }
 
 void BoostLeftMotor(int8_t pwmCount) {
-    uint8_t current = PWM_1_ReadCompare();
+    uint8_t current = oldPwmLeft;
     if(pwmCount >= 0 && (uint8_t)pwmCount >= 255 - current) {
         PWM_1_WriteCompare(255);
     } else if(pwmCount < 0 && (uint8_t)(-pwmCount) >= current) {
@@ -77,7 +79,7 @@ void BoostLeftMotor(int8_t pwmCount) {
 
 
 void BoostRightMotor(int8_t pwmCount) {
-    uint8_t current = PWM_2_ReadCompare();
+    uint8_t current = oldPwmRight;
     if(pwmCount >= 0 && (uint8_t)pwmCount >= 255 - current) {
         PWM_2_WriteCompare(255);
     } else if(pwmCount < 0 && (uint8_t)(-pwmCount) >= current) {
@@ -161,12 +163,14 @@ void MotorController() {
     //WriteUARTString(usbBuffer, count);
     
     if(mot1Target > 255) {
-        PWM_1_WriteCompare(255);    
+        PWM_1_WriteCompare(255);
     } else if(mot1Target < 0) {
         PWM_1_WriteCompare(0);
     } else {
         PWM_1_WriteCompare((uint8_t) mot1Target);
     }
+    
+    oldPwmLeft = PWM_1_ReadCompare();
     
     if(mot2Target > 255) {
         PWM_2_WriteCompare(255);    
@@ -175,4 +179,6 @@ void MotorController() {
     } else {
         PWM_2_WriteCompare((uint8_t) mot2Target);
     }
+    
+    oldPwmRight = PWM_2_ReadCompare();
 }

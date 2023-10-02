@@ -28,12 +28,8 @@
 
 typedef enum {
     STRAIGHT,
-    LEFT_FLAGGED,
-    RIGHT_FLAGGED,
-    BOTH_FLAGGED,
-    CORRECT_DRIFT,
     TURN_LEFT,
-    TURN_RIGHT
+    TURN_RIGHT,
 } State;
 
 void Assert(bool cond, const char* msg) {
@@ -48,63 +44,47 @@ void Assert(bool cond, const char* msg) {
 
 void InitLeftTurn() {
     DisableSpeedISR();
-    PWM_1_WriteCompare(94);
-    PWM_2_WriteCompare(160);
+    PWM_1_WriteCompare(99);
+    PWM_2_WriteCompare(155);
 }
 
 void InitRightTurn() {           
     DisableSpeedISR();
-    PWM_1_WriteCompare(160);
-    PWM_2_WriteCompare(94);
+    PWM_1_WriteCompare(155);
+    PWM_2_WriteCompare(99);
 }
 
 void StateMachine(bool reset) {
     static State current_state = STRAIGHT;
     static struct {
-        bool goLeft;
-        bool goRight;
-    } 
-    driftParams = { false, false };
-    
-    static struct {
         bool pd3, pd4;
     } postTurnIgnore = {false, false};
     
+    
     if(reset) {
         current_state = STRAIGHT;
-        postTurnIgnore.pd3 = false;
-        postTurnIgnore.pd4 = false;
-        driftParams.goLeft = false;
-        driftParams.goRight = false;
         PRINT_STATE(STRAIGHT);
         EnableSpeedISR();
         return;
     }
     
     // Updated at end of function
-    static uint8_t prevSensors = 0;
     uint8_t sensors = PD_Read();
-    
-    if(PD_GET(sensors, 3) && !PD_GET(prevSensors, 3)) {
-        postTurnIgnore.pd3 = false;   
-    }
-    
-    if(PD_GET(sensors, 4) && !PD_GET(prevSensors, 4)) {
-        postTurnIgnore.pd4 = false;   
-    }
-    
     
     switch (current_state) {
         case STRAIGHT:
            
+            if(PD_GET(sensors, 3)) postTurnIgnore.pd3 = false;
+            if(PD_GET(sensors, 4)) postTurnIgnore.pd4 = false;
+            
+            // Disable boost by default and then boost if 
+            // necessary if one sensor is off
+            BoostLeftMotor(0);
+            BoostRightMotor(0);
             if (XOR(PD_GET(sensors,1), PD_GET(sensors,2))) {
-     
-                driftParams.goLeft = PD_GET(sensors,2);
-                driftParams.goRight = PD_GET(sensors,1);
-                
-                if (driftParams.goLeft) BoostLeftMotor(1);
-                else if (driftParams.goRight) BoostRightMotor(1);    
-            }  
+                if (PD_GET(sensors, 2)) BoostRightMotor(2);
+                else BoostLeftMotor(2);
+            }
         
             if (!PD_GET(sensors, 3) && !postTurnIgnore.pd3) {
                 current_state = TURN_LEFT;
@@ -142,6 +122,9 @@ void StateMachine(bool reset) {
             
             if(PD_GET(sensors, 6)) break;
             
+            PWM_1_WriteCompare(127);
+            PWM_2_WriteCompare(127);
+            
             current_state = STRAIGHT;
             EnableSpeedISR();
             PRINT_STATE(STRAIGHT);
@@ -155,6 +138,5 @@ void StateMachine(bool reset) {
             ASSERT_MSG(false, "Invalid state reached");
     }
     
-    prevSensors = sensors;
     if(current_state != TURN_LEFT && current_state != TURN_RIGHT) MotorController();
 }
