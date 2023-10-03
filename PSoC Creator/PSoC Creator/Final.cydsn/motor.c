@@ -18,17 +18,18 @@
 #include <math.h>
 #include <stdio.h>
 
-volatile static int16_t motor1Count = 0, motor2Count = 0;
+volatile static int16_t motor1Count = 0, motor2Count = 0, count = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
 volatile static bool shouldUpdateSpeed = false;
 
 CY_ISR(MotorSpeedTimerOverflow) {
-    motor1Count = QuadDec_1_GetCounter();
-    motor2Count = QuadDec_2_GetCounter();
+    motor1Count = QuadDec_1_GetCounter() - oldCount1;
+    motor2Count = QuadDec_2_GetCounter() - oldCount2;
     
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
     
+    oldCount1 = QuadDec_1_GetCounter();
     shouldUpdateSpeed = true;
 }
 
@@ -116,6 +117,13 @@ int16_t GetQuadDecCountMotor1() {
 
 int16_t GetQuadDecCountMotor2() {
     return motor2Count;
+}
+
+float CalcDistance() {
+    count = QuadDec_1_GetCounter();
+    float numRots = count / (float)PULSES_PER_ROTATION;
+    float rads = 2 * M_PI * numRots;
+    return rads * WHEEL_1_RADIUS_CM / 100; // Distance in meters
 }
 
 float CalcMotor1Speed() {
