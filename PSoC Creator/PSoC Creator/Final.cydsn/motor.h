@@ -42,6 +42,10 @@ void EnableSpeedISR();
 float CalcMotor1Speed();
 float CalcMotor2Speed();
 
+float CalcDistance1Meter();
+float CalcDistance2Meter();
+float CalcTotalDistanceMeter();
+
 float GetTargetLeftSpeed();
 float GetTargetRightSpeed();
 void SetTargetSpeeds(float left, float right);

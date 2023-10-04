@@ -18,12 +18,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static bool motorLengthFin = false;
-
-CY_ISR(MotorLengthFin) {
-    motorLengthFin = true;
-}
-
 char* AppendStrToStr(char *result, const char* src, size_t len);
 
 void normal() {
@@ -58,24 +52,21 @@ void normal() {
 }
 
 void speed_run() {
-    MotorLengthFinish_StartEx(MotorLengthFin);
+
     
-    motorLengthFin = false;
+    float distance = CalcTotalDistanceMeter();
+
+    
     
     SetStopMotors(0, 0);
     EnableSpeedISR();
-    
     SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
-    Timer_1_Start();
-    Timer_1_WritePeriod(2500);
-    Timer_1_WriteCounter(2500);
     
-    while(motorLengthFin == false) {
+    while(distance < 1) {
         MotorController();
     }
     
     SetStopMotors(1, 1);
-    Timer_1_Stop();
 }
 
 int main(void)
@@ -92,7 +83,7 @@ int main(void)
     EnableSpeedISR();
     
     
-#define SPEED_RUN 0
+#define SPEED_RUN 1
 
 #if SPEED_RUN
     speed_run();        

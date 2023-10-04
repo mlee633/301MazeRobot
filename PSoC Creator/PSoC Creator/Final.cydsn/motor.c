@@ -18,7 +18,7 @@
 #include <math.h>
 #include <stdio.h>
 
-volatile static int16_t motor1Count = 0, motor2Count = 0, count = 0;
+volatile static int16_t motor1Count = 0, motor2Count = 0, oldCount1 = 0, oldCount2 = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
 volatile static bool shouldUpdateSpeed = false;
 
@@ -26,10 +26,9 @@ CY_ISR(MotorSpeedTimerOverflow) {
     motor1Count = QuadDec_1_GetCounter() - oldCount1;
     motor2Count = QuadDec_2_GetCounter() - oldCount2;
     
-    QuadDec_1_SetCounter(0);
-    QuadDec_2_SetCounter(0);
     
     oldCount1 = QuadDec_1_GetCounter();
+    oldCount2 = QuadDec_2_GetCounter();
     shouldUpdateSpeed = true;
 }
 
@@ -59,8 +58,6 @@ void DisableSpeedISR() {
 
 void EnableSpeedISR() {
     shouldUpdateSpeed = false;
-    QuadDec_1_SetCounter(0);
-    QuadDec_2_SetCounter(0);
     MotorUpdateSpeed_Enable();   
 }
 
@@ -119,11 +116,22 @@ int16_t GetQuadDecCountMotor2() {
     return motor2Count;
 }
 
-float CalcDistance() {
-    count = QuadDec_1_GetCounter();
-    float numRots = count / (float)PULSES_PER_ROTATION;
+float CalcDistance1Meter() {
+    float numRots = QuadDec_1_GetCounter() / (float)PULSES_PER_ROTATION;
     float rads = 2 * M_PI * numRots;
     return rads * WHEEL_1_RADIUS_CM / 100; // Distance in meters
+}
+
+float CalcDistance2Meter() {
+    float numRots = QuadDec_2_GetCounter() / (float)PULSES_PER_ROTATION;
+    float rads = 2 * M_PI * numRots;
+    return rads * WHEEL_1_RADIUS_CM / 100; // Distance in meters
+}
+
+float CalcTotalDistanceMeter() {
+    float total = CalcDistance1Meter() + CalcDistance2Meter();
+    float average = total / 2;
+    return average;  
 }
 
 float CalcMotor1Speed() {
@@ -141,6 +149,7 @@ float CalcMotor2Speed() {
 void SetStopMotors(bool m1, bool m2) {
     MotorStopReg_Write(m1 | (m2 << 1));
 }
+
 
 void MotorController() {  
     if(!shouldUpdateSpeed) return;
