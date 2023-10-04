@@ -56,12 +56,14 @@ void SetupMotors() {
 void DisableSpeedISR() {
     shouldUpdateSpeed = false;
     MotorUpdateSpeed_Disable();
+    MotorSpeedTimer_Enable();
 }
 
 void EnableSpeedISR() {
     shouldUpdateSpeed = false;
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
+    MotorSpeedTimer_Start();
     MotorUpdateSpeed_Enable();   
 }
 
@@ -149,8 +151,8 @@ void MotorController() {
     //mot1Diff = (mot1Diff > MAX_ERROR) ? MAX_ERROR : (mot1Diff < -MAX_ERROR) ? -MAX_ERROR : 0;
     //mot2Diff = (mot2Diff > MAX_ERROR) ? MAX_ERROR : (mot2Diff < -MAX_ERROR) ? -MAX_ERROR : 0;
     
-    float mot1Cmp = PWM_1_ReadCompare();
-    float mot2Cmp = PWM_2_ReadCompare();
+    float mot1Cmp = oldPwmLeft;
+    float mot2Cmp = oldPwmRight;
     
     float mot1Target = mot1Cmp + /* 0.5 * */ mot1Diff;
     float mot2Target = mot2Cmp + /* 0.5 * */ mot2Diff;

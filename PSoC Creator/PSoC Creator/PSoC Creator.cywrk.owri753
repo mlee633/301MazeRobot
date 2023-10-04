@@ -65,6 +65,15 @@
 <v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>PSoC Creator\Final\Final.cydwr\Clocks</v>
+<v>PSoC Creator\Final\Final.cydwr\Interrupts</v>
+<v>PSoC Creator\Final\Final.cydwr\DMA</v>
+<v>PSoC Creator\Final\Final.cydwr\System</v>
+<v>PSoC Creator\Final\Final.cydwr\Directives</v>
+<v>PSoC Creator\Final\Final.cydwr\Flash Security</v>
+<v>PSoC Creator\Final\Final.cydwr\EEPROM</v>
+<v>PSoC Creator\Final\Header Files</v>
+<v>PSoC Creator\Final\Header Files\action.h</v>
 <v>PSoC Creator\Final\Header Files\cyapicallbacks.h</v>
 <v>PSoC Creator\Final\Header Files\motor.h</v>
 <v>PSoC Creator\Final\Header Files\sensors.h</v>
@@ -104,15 +113,6 @@
 <v>PSoC Creator\Final\Generated_Source\PSoC5\PWM_1</v>
 <v>PSoC Creator\Final\Generated_Source\PSoC5\PWM_2</v>
 <v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_1</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_1_Cnt16</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_2</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec_2_Cnt16</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec1Interrupt</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDec2Interrupt</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\QuadDecClk</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\SensorClk</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer1</v>
-<v>PSoC Creator\Final\Generated_Source\PSoC5\SensTimer2</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -295,6 +295,52 @@
 <VisibleNodeIds>
 <v>PSoC Creator</v>
 <v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\CortexM3</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\action.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\motor.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorLengthFinish.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorUpdateSpeed.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD5.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD6.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD7.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -432,7 +478,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="891ad1fe-26ff-4600-8100-1de8aab2a95f"><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\TopDesign\TopDesign.cysch" Guid="efac27c0-5ce2-48c8-8628-7908b2ac32f1" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\main.c" Guid="87f286ff-06b4-460a-911e-b2fb0eaf3f25" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="b03beb4f-e2d2-40e9-b2eb-12094add6016" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="9b82d769-5d00-4e09-9425-b5329da2f02d" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="891ad1fe-26ff-4600-8100-1de8aab2a95f" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="5cd5a8e0-102c-4aeb-a123-1fa9e6ce30d9" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\motor.h" Guid="1fe394ff-13a8-43f6-9c60-16b2acc1c05d" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\uart.c" Guid="20fb4c5c-e978-46a4-9644-5250757b6b03" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\uart.h" Guid="27056072-0761-492e-bb00-342b874bf8c3" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cydwr" Guid="24d0a2b8-a19e-472d-a673-3659be51c459" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\sensors.h" Guid="dc5dcacf-21b9-4684-bad5-2c2518de6908" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\action.h" Guid="fd36ca41-45ef-4b0d-9a11-4029ad68e69d" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="157cbea2-fce6-4091-8b54-f61da55577e2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="9b82d769-5d00-4e09-9425-b5329da2f02d"><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\TopDesign\TopDesign.cysch" Guid="efac27c0-5ce2-48c8-8628-7908b2ac32f1" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Light Sensor Read Test.cydsn\main.c" Guid="87f286ff-06b4-460a-911e-b2fb0eaf3f25" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="b03beb4f-e2d2-40e9-b2eb-12094add6016" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="9b82d769-5d00-4e09-9425-b5329da2f02d" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="891ad1fe-26ff-4600-8100-1de8aab2a95f" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="5cd5a8e0-102c-4aeb-a123-1fa9e6ce30d9" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\motor.h" Guid="1fe394ff-13a8-43f6-9c60-16b2acc1c05d" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\uart.c" Guid="20fb4c5c-e978-46a4-9644-5250757b6b03" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\uart.h" Guid="27056072-0761-492e-bb00-342b874bf8c3" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\Final.cydwr" Guid="24d0a2b8-a19e-472d-a673-3659be51c459" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\sensors.h" Guid="dc5dcacf-21b9-4684-bad5-2c2518de6908" /><DocumentWindow Key="H:\Documents\301_Project\PSoC Creator\PSoC Creator\Final.cydsn\action.h" Guid="fd36ca41-45ef-4b0d-9a11-4029ad68e69d" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="157cbea2-fce6-4091-8b54-f61da55577e2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
