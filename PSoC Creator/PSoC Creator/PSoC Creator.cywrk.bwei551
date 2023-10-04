@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Creator\Final\Header Files\motor.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Creator\Final\Source Files\motor.c">
 <ExpandedNodeIds>
 <v>PSoC Creator</v>
 <v>PSoC Creator\Final</v>
@@ -208,10 +208,14 @@
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer6_PM.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer7.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\SensTimer7_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\StateMachineTimer.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\StateMachineTimer_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\StateMachineTimerInterrupt.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock_2.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED1.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED2.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\TrackLED3.lst</v>
@@ -243,6 +247,43 @@
 <v>PSoC Creator\Final\Final.rpt</v>
 <v>PSoC Creator\Final\Final_timing.html</v>
 <v>PSoC Creator\Light Sensor Read Test</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\DebugLED.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\DebugTCPin.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens1.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens1_TimeOut.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens1_TimeOut_PM.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens1Edge.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens1Overflow.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2_TimeOut.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2_TimeOut_PM.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Edge.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LightSens2Overflow.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug1.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\LSDebug2.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\TimeOutResetReg_PM.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock_1.lst</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Light Sensor Read Test.elf</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Light Sensor Read Test.hex</v>
+<v>PSoC Creator\Light Sensor Read Test\CortexM3\ARM_GCC_541\Debug\Light Sensor Read Test.map</v>
 <v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.gpdsc</v>
 <v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test.rpt</v>
 <v>PSoC Creator\Light Sensor Read Test\Light Sensor Read Test_timing.html</v>
@@ -367,7 +408,18 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Final.cydsn\main.c" />
+<name v=".\Final.cydsn\action.c" />
+<name v=".\Final.cydsn\motor.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b241d897-aaa8-4f2e-990b-e6a286fb9159"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="b4780b8d-c4d9-4cf4-bdf5-e371b67a0797" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="4c750f9d-7cb2-4fbb-98cc-1e5fe8a14574" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="b241d897-aaa8-4f2e-990b-e6a286fb9159" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="4972d2f6-4abc-4d3a-93cf-269edbd47b38" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -27,6 +27,12 @@
 #define PRINT_STATE(s) WriteUARTString("State: " #s "\r\n", sizeof("State: " #s "\r\n"))
 #define XOR(a, b) (!(a) != !(b))
 
+volatile static bool ignore = false; //to help ignore certain sensors 
+
+CY_ISR(StateMachineTimerInterrupt) {
+    ignore = false;
+}
+
 typedef enum {
     STRAIGHT,
     TURN_LEFT,
@@ -48,8 +54,9 @@ void InitLeftTurn() {
     
     // NOTE: Trying to correct for overturning when off the line!
     // might remove
-    if(PD_GET(PD_Read(), 2)) PWM_1_WriteCompare(92);
-    else PWM_1_WriteCompare(99);
+    //if(PD_GET(PD_Read(), 2)) PWM_1_WriteCompare(92);
+    //else PWM_1_WriteCompare(99);
+    PWM_1_WriteCompare(99);
     PWM_2_WriteCompare(155);
 }
 
@@ -59,31 +66,27 @@ void InitRightTurn() {
     PWM_1_WriteCompare(155);
     // NOTE: Trying to correct for overturning when off the line!
     // might remove
-    if(PD_GET(PD_Read(), 1)) PWM_2_WriteCompare(92);
-    else PWM_2_WriteCompare(99);
+    //if(PD_GET(PD_Read(), 1)) PWM_2_WriteCompare(92);
+    //else PWM_2_WriteCompare(99);
+    PWM_2_WriteCompare(99);
 }
+
 
 void StateMachine(bool reset) {
     static State current_state = STRAIGHT;
-//    
-//    static struct {
-//        bool pd3, pd4;
-//    } noSensDriftDir = { false, false };
-//    
     static float driftErrorPrev = 0.0f;
+    static bool hasInit = false;
     
-    if(reset) {
-        current_state = STRAIGHT;
-        PRINT_STATE(STRAIGHT);
-        EnableSpeedISR();
-        return;
+    if(!hasInit) {
+        StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
+        hasInit = true;
     }
     
     // Updated at end of function
     uint8_t sensors = PD_Read();
     
-    static char usbBuffer[255];
-    static int count = 0;
+    //static char usbBuffer[255];
+    //static int count = 0;
     
     switch (current_state) {
         case STRAIGHT:
@@ -96,6 +99,17 @@ void StateMachine(bool reset) {
             BoostRightMotor(-pid);
             BoostLeftMotor(pid);
             driftErrorPrev = driftErrorApprox;
+            
+            if (!PD_GET(sensors, 4) /*&& !ignore*/) { 
+                current_state = TURN_RIGHT;
+                //PRINT_STATE(TURN_RIGHT);
+                InitRightTurn();
+            }
+            if (!PD_GET(sensors, 3) /*&& !ignore*/) {
+               current_state = TURN_LEFT;
+               PRINT_STATE(TURN_LEFT);
+               InitLeftTurn();
+             }
 
             break;
         case TURN_LEFT:
@@ -110,6 +124,9 @@ void StateMachine(bool reset) {
             PRINT_STATE(STRAIGHT);
             SetTargetSpeeds(15.0f, 15.0f);
             
+            StateMachineTimer_Start();
+            ignore = true;
+            
             break;
 
         case TURN_RIGHT:
@@ -123,6 +140,9 @@ void StateMachine(bool reset) {
             EnableSpeedISR();
             PRINT_STATE(STRAIGHT);
             SetTargetSpeeds(15.0f, 15.0f);
+            
+            StateMachineTimer_Start();
+            ignore = false;
             
             break;
             
