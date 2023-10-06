@@ -27,10 +27,64 @@
 #define PRINT_STATE(s) WriteUARTString("State: " #s "\r\n", sizeof("State: " #s "\r\n"))
 #define XOR(a, b) (!(a) != !(b))
 
-volatile static bool ignore = false; //to help ignore certain sensors 
+typedef enum TimerDo {
+    TIMER_DO_IGNORE_SENSORS,
+    TIMER_DO_NEXT_ACTION,
+} TimerDo;
 
+volatile static bool ignore = false; //to help ignore certain sensors 
+volatile static TimerDo timerDo;
+volatile static bool runningTimer = false;
+
+//-------------------TODO: Remove these, because they'll be in maze.h---------
+typedef enum ActionType {
+    ACTION_IGNORE_INTERSECTION,
+    ACTION_TURN_LEFT,
+    ACTION_TURN_RIGHT,
+    ACTION_THREE_SIXTY,
+} ActionType;
+
+typedef struct Action {
+     ActionType type;
+} Action;
+
+static Action _actions[256] = {
+    { ACTION_TURN_RIGHT },
+    { ACTION_TURN_LEFT },
+    { ACTION_TURN_LEFT },
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+
+    
+};
+static size_t _actionIndex = 0;
+
+Action GetAction() {   
+    return _actions[_actionIndex];
+}
+
+void NextAction() {
+    _actionIndex++;   
+}
+//----------------------------------------------------------------------------
 CY_ISR(StateMachineTimerInterrupt) {
-    ignore = false;
+    if(timerDo == TIMER_DO_IGNORE_SENSORS) {
+        ignore = false;
+        StateMachineTimer_Stop();
+    } else if(timerDo == TIMER_DO_NEXT_ACTION) {
+        NextAction();   
+    }
+    
+    runningTimer = false;
 }
 
 typedef enum {
@@ -51,26 +105,27 @@ void Assert(bool cond, const char* msg) {
 
 void InitLeftTurn() {
     DisableSpeedISR();
-    
-    // NOTE: Trying to correct for overturning when off the line!
-    // might remove
-    //if(PD_GET(PD_Read(), 2)) PWM_1_WriteCompare(92);
-    //else PWM_1_WriteCompare(99);
     PWM_1_WriteCompare(99);
     PWM_2_WriteCompare(155);
 }
 
 void InitRightTurn() {
-
     DisableSpeedISR();
     PWM_1_WriteCompare(155);
-    // NOTE: Trying to correct for overturning when off the line!
-    // might remove
-    //if(PD_GET(PD_Read(), 1)) PWM_2_WriteCompare(92);
-    //else PWM_2_WriteCompare(99);
     PWM_2_WriteCompare(99);
 }
 
+void TimerDoStuff(TimerDo timerAction) {
+    if(runningTimer) return;
+    
+    timerDo = timerAction;
+    if(timerDo == TIMER_DO_IGNORE_SENSORS) {
+        ignore = true;
+    }
+    
+    StateMachineTimer_Start();
+    runningTimer = true;
+}
 
 void StateMachine(bool reset) {
     static State current_state = STRAIGHT;
@@ -79,6 +134,7 @@ void StateMachine(bool reset) {
     
     if(!hasInit) {
         StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
+        StateMachineTimer_WritePeriod(50000);
         hasInit = true;
     }
     
@@ -100,15 +156,27 @@ void StateMachine(bool reset) {
             BoostLeftMotor(pid);
             driftErrorPrev = driftErrorApprox;
             
-            if (!PD_GET(sensors, 4) /*&& !ignore*/) { 
-                current_state = TURN_RIGHT;
-                //PRINT_STATE(TURN_RIGHT);
-                InitRightTurn();
+            if (!PD_GET(sensors, 4) && !ignore) {
+                if(GetAction().type == ACTION_IGNORE_INTERSECTION) {
+                    TimerDoStuff(TIMER_DO_NEXT_ACTION);
+                    break;
+                } else if (GetAction().type == ACTION_TURN_RIGHT) {
+                    NextAction();
+                    InitRightTurn();
+                    current_state = TURN_RIGHT;
+                    PRINT_STATE(TURN_RIGHT);
+                }
             }
-            if (!PD_GET(sensors, 3) /*&& !ignore*/) {
-               current_state = TURN_LEFT;
-               PRINT_STATE(TURN_LEFT);
-               InitLeftTurn();
+            if (!PD_GET(sensors, 3) && !ignore) {
+                if(GetAction().type == ACTION_IGNORE_INTERSECTION) {
+                    TimerDoStuff(TIMER_DO_NEXT_ACTION);
+                    break;              
+                }else if (GetAction().type == ACTION_TURN_LEFT) {
+                    NextAction();   
+                    InitLeftTurn();
+                    current_state = TURN_LEFT;
+                    PRINT_STATE(TURN_LEFT);
+                }
              }
 
             break;
@@ -124,8 +192,8 @@ void StateMachine(bool reset) {
             PRINT_STATE(STRAIGHT);
             SetTargetSpeeds(15.0f, 15.0f);
             
-            StateMachineTimer_Start();
-            ignore = true;
+
+            TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             
             break;
 
@@ -141,8 +209,7 @@ void StateMachine(bool reset) {
             PRINT_STATE(STRAIGHT);
             SetTargetSpeeds(15.0f, 15.0f);
             
-            StateMachineTimer_Start();
-            ignore = false;
+            TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             
             break;
             

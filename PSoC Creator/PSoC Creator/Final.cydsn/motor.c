@@ -55,7 +55,6 @@ void SetupMotors() {
 
 void DisableSpeedISR() {
     shouldUpdateSpeed = false;
-    MotorUpdateSpeed_Disable();
     MotorSpeedTimer_Enable();
 }
 
@@ -64,7 +63,6 @@ void EnableSpeedISR() {
     QuadDec_1_SetCounter(0);
     QuadDec_2_SetCounter(0);
     MotorSpeedTimer_Start();
-    MotorUpdateSpeed_Enable();   
 }
 
 void BoostLeftMotor(int8_t pwmCount) {
@@ -154,8 +152,8 @@ void MotorController() {
     float mot1Cmp = oldPwmLeft;
     float mot2Cmp = oldPwmRight;
     
-    float mot1Target = mot1Cmp + /* 0.5 * */ mot1Diff;
-    float mot2Target = mot2Cmp + /* 0.5 * */ mot2Diff;
+    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
+    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
     
     static char usbBuffer[128];
     char* buff = usbBuffer;
