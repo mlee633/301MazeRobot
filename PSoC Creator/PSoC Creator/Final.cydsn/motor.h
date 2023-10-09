@@ -31,6 +31,8 @@
 #define WHEEL_1_RADIUS_CM (3.25f)
 #define WHEEL_2_RADIUS_CM (3.25f)
 
+#define MOTOR_SPEED (15.0f)
+
 void SetupMotors();
 void SetStopMotors(bool m1, bool m2);
 int16_t GetQuadDecCountMotor1();
@@ -50,5 +52,8 @@ void SetTargetRightSpeed(float);
 
 void BoostLeftMotor(int8_t);
 void BoostRightMotor(int8_t);
+
+void UpdatePWMLeft(uint8_t);
+void UpdatePWMRight(uint8_t);
 
 void MotorController();

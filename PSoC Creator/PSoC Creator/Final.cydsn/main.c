@@ -36,7 +36,7 @@ void normal() {
         WriteUARTString("UART Is Connected! \r\n", sizeof("UART Is Connected! \r\n"));
     }
     
-    SetTargetSpeeds(15.0f, 15.0f);
+    SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
     for(;;) {
         StateMachine(false);
         
@@ -96,7 +96,6 @@ int main(void)
     
     DisableSpeedISR();
     EnableSpeedISR();
-    
     
 #define SPEED_RUN 0
 

@@ -55,7 +55,6 @@ void SetupMotors() {
 
 void DisableSpeedISR() {
     shouldUpdateSpeed = false;
-    MotorSpeedTimer_Enable();
 }
 
 void EnableSpeedISR() {
@@ -120,6 +119,16 @@ int16_t GetQuadDecCountMotor2() {
     return motor2Count;
 }
 
+void UpdatePWMLeft(uint8_t pwm) {
+    PWM_1_WriteCompare(pwm);
+    oldPwmLeft = pwm;
+}
+
+void UpdatePWMRight(uint8_t pwm) {
+    PWM_2_WriteCompare(pwm);
+    oldPwmRight = pwm;
+}
+
 float CalcMotor1Speed() {
     float numRots = (float)motor1Count / (float)PULSES_PER_ROTATION;
     float radsPerSec = 2 * M_PI * numRots / MOTOR_SPEED_CALC_PERIOD_S;
@@ -152,8 +161,8 @@ void MotorController() {
     float mot1Cmp = oldPwmLeft;
     float mot2Cmp = oldPwmRight;
     
-    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
-    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
+    float mot1Target = mot1Cmp + 0.8 * mot1Diff;
+    float mot2Target = mot2Cmp + 0.8 * mot2Diff;
     
     static char usbBuffer[128];
     char* buff = usbBuffer;
