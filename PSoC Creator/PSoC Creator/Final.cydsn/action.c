@@ -199,7 +199,7 @@ void StateMachine(bool reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(100);
+            CyDelay(50);
             
             current_state = STRAIGHT;
             EnableSpeedISR();
@@ -218,7 +218,7 @@ void StateMachine(bool reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(100);
+            CyDelay(50);
             
             current_state = STRAIGHT;
             EnableSpeedISR();
