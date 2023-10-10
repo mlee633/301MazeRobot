@@ -42,7 +42,7 @@ typedef enum ActionType {
     ACTION_IGNORE_INTERSECTION,
     ACTION_TURN_LEFT,
     ACTION_TURN_RIGHT,
-    ACTION_THREE_SIXTY,
+    ACTION_180,
 } ActionType;
 
 typedef struct Action {
@@ -50,15 +50,68 @@ typedef struct Action {
 } Action;
 
 static Action _actions[256] = {
-    { ACTION_TURN_RIGHT },
-    { ACTION_TURN_RIGHT },
-    { ACTION_TURN_LEFT },
-    { ACTION_TURN_LEFT },
-    { ACTION_TURN_RIGHT },
-    { ACTION_TURN_RIGHT },
-    { ACTION_TURN_LEFT },
-    { ACTION_IGNORE_INTERSECTION },
-    { ACTION_TURN_LEFT },
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT}, //Start of entering 360 loop at 2
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT},//Start of straight line
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_LEFT}, //Start of at the bottom
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_LEFT}, //Reached bottom right corner
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT}, //Reach 3
+    {ACTION_TURN_LEFT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},//Start of straight line
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_LEFT}, //Start of at the bottom
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT}, //Reached 4
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_IGNORE_INTERSECTION},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_LEFT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT},
+    {ACTION_TURN_RIGHT}
+     // {ACTION_180},
+    
+    
 };
 volatile static size_t _actionIndex = 0;
 
@@ -89,6 +142,7 @@ typedef enum {
     TURN_LEFT_END,
     TURN_RIGHT_START,
     TURN_RIGHT_END,
+    START_180,
 } State;
 
 void Assert(bool cond, const char* msg) {
@@ -142,7 +196,8 @@ void StateMachine(bool reset) {
     
     // Updated at end of function
     uint8_t sensors = PD_Read();
-    
+    uint16_t driftError[10];
+    uint8_t i = 0;
     //static char usbBuffer[255];
     //static int count = 0;+
     
@@ -150,12 +205,18 @@ void StateMachine(bool reset) {
         case STRAIGHT:
             if(0) {}
             
-            int16_t pd1Drift = (255 - SensTimer1_ReadCapture()) / 5;
-            int16_t pd2Drift = (255 - SensTimer2_ReadCapture()) / 5;
+            uint8_t sensCap1 = SensTimer1_ReadCapture();
+            //sensCap1 = sensCap1 > 249 ? 255 : sensCap1;
+            
+            uint8_t sensCap2 = SensTimer1_ReadCapture();
+            //sensCap1 = sensCap2 > 249 ? 255 : sensCap2;
+            
+            int16_t pd1Drift = (255 - sensCap1) / 5;
+            int16_t pd2Drift = (255 - sensCap2) / 5;
             
             int16_t driftErrorApprox = -1 * (-PD_ON(sensors, 1) * pd1Drift  + PD_ON(sensors, 2) * pd2Drift); 
-            int8_t diff = (driftErrorApprox - driftErrorPrev);
-            int8_t pid =  driftErrorApprox + diff;
+            int8_t diff = (driftErrorApprox + driftErrorPrev);
+            int8_t pid = (driftErrorApprox + diff);
             
             if(!ignore && PD_GET(sensors, 4) && PD_GET(sensors, 3)) {
                 BoostRightMotor(-pid);
@@ -186,9 +247,27 @@ void StateMachine(bool reset) {
                     current_state = TURN_LEFT_START;
                     PRINT_STATE(TURN_LEFT_START);
                     break;
-                }
+                } 
              }
-
+            //Just realised this is somewut reliant on distance, especially for ones in the corners. 
+           // if (GetAction().type == ACTION_180) {
+               // if (PD_GET(sensors,6) && !ignore) { //For dead end 180
+                    //NextAction();
+                    //InitLeftTurn();
+                    //current_state = START_180;
+                    //PRINT_STATE(START_180);
+                    //break;
+               // } //else if (!PD_GET(sensors, 3) &&!ignore) { //If detected any corner that has a turn left option (hopefully this takes first priority :pray:)
+                    //NextAction();
+                    //InitLeftTurn();
+                    //current_state = START_180;
+                    //break;
+                //} else if (!PD_GET_sensors,4) && !ignore) { //If detected any corner that has a turn right option
+                    //NextAction();
+                    //InitRightTurn();
+                    //current_state = START_180;
+                    //break;
+            //}
             break;
         case TURN_LEFT_START:
             if(PD_GET(sensors, 5)) break;
@@ -199,7 +278,7 @@ void StateMachine(bool reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(50);
+            CyDelay(100);
             
             current_state = STRAIGHT;
             EnableSpeedISR();
@@ -209,16 +288,18 @@ void StateMachine(bool reset) {
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             
             break;
+            
         case TURN_RIGHT_START:
             if(PD_GET(sensors, 7)) break;
             current_state = TURN_RIGHT_END;
+            
         case TURN_RIGHT_END:
             if(PD_GET(sensors, 6)) break;
             
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(50);
+            CyDelay(100);
             
             current_state = STRAIGHT;
             EnableSpeedISR();
@@ -227,6 +308,18 @@ void StateMachine(bool reset) {
             
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             break;
+        
+        //case START_180:
+            //logic should only work for dead end condition. Intersection 180 needs more logic.  
+            //if(PD_GET(sensors, 6)) break;
+            //current_state = END_180;
+            //TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
+            
+            
+           
+            
+                
+            
             
         default:
             ASSERT_MSG(false, "Invalid state reached");
