@@ -64,6 +64,7 @@ void speed_run() {
     
     while(distance < 1) {
         MotorController();
+        distance = CalcTotalDistanceMeter();
     }
     
     SetStopMotors(1, 1);

@@ -253,6 +253,52 @@
 <VisibleNodeIds>
 <v>PSoC Creator</v>
 <v>PSoC Creator\Final</v>
+<v>PSoC Creator\Final\CortexM3</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\action.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_D1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_IN2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot1B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2A.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\Mot2B.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\motor.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorLengthFinish.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorSpeedTimer_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorStopReg_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorUpdateSpeed.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD2.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD3.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD4.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD5.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD6.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PD7.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -385,7 +431,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="36f31f71-fee8-4c3b-9176-f1b6fd33d1ce"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="fa8d9cce-8216-42b0-8e87-8d53b7b5333e" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="837ffbd8-56fa-4cba-8248-2de56be13506" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="4e58fa84-1aaf-4b6c-b1f4-215adcf6f100" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\uart.c" Guid="89a6e7d5-4f37-48d2-9f4e-0de2734202f6" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="36f31f71-fee8-4c3b-9176-f1b6fd33d1ce" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="af41297c-405d-4ac0-9ecc-5afa8a01a1ca" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.h" Guid="99bef6eb-286b-40ef-bda3-d0abc32e2213" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.h" Guid="b54dbc8d-65f3-4908-a976-ec9603fc00a2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="837ffbd8-56fa-4cba-8248-2de56be13506"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="fa8d9cce-8216-42b0-8e87-8d53b7b5333e" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="837ffbd8-56fa-4cba-8248-2de56be13506" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="4e58fa84-1aaf-4b6c-b1f4-215adcf6f100" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\uart.c" Guid="89a6e7d5-4f37-48d2-9f4e-0de2734202f6" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="36f31f71-fee8-4c3b-9176-f1b6fd33d1ce" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="af41297c-405d-4ac0-9ecc-5afa8a01a1ca" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.h" Guid="99bef6eb-286b-40ef-bda3-d0abc32e2213" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.h" Guid="b54dbc8d-65f3-4908-a976-ec9603fc00a2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
