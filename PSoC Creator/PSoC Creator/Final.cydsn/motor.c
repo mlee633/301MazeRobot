@@ -117,20 +117,20 @@ int16_t GetQuadDecCountMotor2() {
 }
 
 float CalcDistance1Meter() {
-    float numRots = QuadDec_1_GetCounter() / (float)PULSES_PER_ROTATION;
-    float rads = 2 * M_PI * numRots;
-    return rads * WHEEL_1_RADIUS_CM / 100; // Distance in meters
+    float numRots = (float) QuadDec_1_GetCounter() / (float)PULSES_PER_ROTATION;
+    float rads = 2.0 * M_PI * numRots;
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
 }
 
 float CalcDistance2Meter() {
-    float numRots = QuadDec_2_GetCounter() / (float)PULSES_PER_ROTATION;
-    float rads = 2 * M_PI * numRots;
-    return rads * WHEEL_1_RADIUS_CM / 100; // Distance in meters
+    float numRots = (float) QuadDec_2_GetCounter() / (float)PULSES_PER_ROTATION;
+    float rads = 2.0 * M_PI * numRots;
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
 }
 
 float CalcTotalDistanceMeter() {
     float total = CalcDistance1Meter() + CalcDistance2Meter();
-    float average = total / 2;
+    float average = total / 2.0;
     return average;  
 }
 

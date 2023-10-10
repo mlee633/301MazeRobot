@@ -62,7 +62,7 @@ void speed_run() {
     EnableSpeedISR();
     SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
     
-    while(distance < 1) {
+    while(distance < 20) {
         MotorController();
         distance = CalcTotalDistanceMeter();
     }
