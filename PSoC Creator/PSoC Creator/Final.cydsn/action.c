@@ -178,15 +178,12 @@ void TimerDoStuff(TimerDo timerAction) {
     }
     
     TrackLED2_Write(0xff);
-    
     StateMachineTimer_Start();
     runningTimer = true;
 }
 
 void StateMachine(bool reset) {
     static State current_state = STRAIGHT;
-    static float driftErrorPrev = 0.0f;
-    static int8_t prevVals[10];
     static bool hasInit = false;
     
     if(!hasInit) {
@@ -196,7 +193,6 @@ void StateMachine(bool reset) {
     
     // Updated at end of function
     uint8_t sensors = PD_Read();
-    uint16_t driftError[10];
     uint8_t i = 0;
     //static char usbBuffer[255];
     //static int count = 0;+
@@ -211,19 +207,16 @@ void StateMachine(bool reset) {
             uint8_t sensCap2 = SensTimer1_ReadCapture();
             //sensCap1 = sensCap2 > 249 ? 255 : sensCap2;
             
-            int16_t pd1Drift = (255 - sensCap1) / 5;
-            int16_t pd2Drift = (255 - sensCap2) / 5;
+            int16_t pd1Drift = (255 - sensCap1) / 4;
+            int16_t pd2Drift = (255 - sensCap2) / 4;
             
-            int16_t driftErrorApprox = -1 * (-PD_ON(sensors, 1) * pd1Drift  + PD_ON(sensors, 2) * pd2Drift); 
-            int8_t diff = (driftErrorApprox + driftErrorPrev);
-            int8_t pid = (driftErrorApprox + diff);
+            int16_t driftErrorApprox = -1 * (-PD_ON(sensors, 1) * pd1Drift  + PD_ON(sensors, 2) * pd2Drift);
+            int8_t pid = driftErrorApprox;
+
+
+            BoostRightMotor(-pid);
+            BoostLeftMotor(pid);
             
-            if(!ignore && PD_GET(sensors, 4) && PD_GET(sensors, 3)) {
-                BoostRightMotor(-pid);
-                BoostLeftMotor(pid);
-            }
-            
-            driftErrorPrev = driftErrorApprox;
             
             if (!PD_GET(sensors, 4) && !ignore) {
                 if(GetAction().type == ACTION_IGNORE_INTERSECTION) {

@@ -70,7 +70,6 @@ void speed_run() {
     
     SetStopMotors(0, 0);
     EnableSpeedISR();
-    
     SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
     Timer_1_Start();
     Timer_1_WritePeriod(2500);
