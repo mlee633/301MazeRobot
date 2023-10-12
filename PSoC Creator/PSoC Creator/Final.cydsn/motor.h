@@ -33,17 +33,17 @@
 
 void SetupMotors();
 void SetStopMotors(bool m1, bool m2);
-int16_t GetQuadDecCountMotor1();
-int16_t GetQuadDecCountMotor2();
 
+int32_t GetQuadDecCountLeftMotor();
+int32_t GetQuadDecCountRightMotor();
 void DisableSpeedISR();
 void EnableSpeedISR();
 
 float CalcMotor1Speed();
 float CalcMotor2Speed();
 
-float CalcDistance1Meter();
-float CalcDistance2Meter();
+float CalcDistanceLeftMotorCm(int32_t compareCount);
+float CalcDistanceRightMotorCm(int32_t compareCount);
 float CalcTotalDistanceMeter();
 
 float GetTargetLeftSpeed();

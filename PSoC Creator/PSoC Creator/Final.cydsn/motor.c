@@ -18,7 +18,7 @@
 #include <math.h>
 #include <stdio.h>
 
-volatile static int16_t motor1Count = 0, motor2Count = 0, oldCount1 = 0, oldCount2 = 0;
+volatile static int32_t motor1Count = 0, motor2Count = 0, oldCount1 = 0, oldCount2 = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
 volatile static bool shouldUpdateSpeed = false;
 
@@ -108,30 +108,24 @@ float GetTargetRightSpeed() {
     return rightSpeedTarget;    
 }
 
-int16_t GetQuadDecCountMotor1() {
-    return motor1Count;
+int32_t GetQuadDecCountLeftMotor() {
+    return QuadDec_1_GetCounter();
 }
 
-int16_t GetQuadDecCountMotor2() {
-    return motor2Count;
+int32_t GetQuadDecCountRightMotor() {
+    return QuadDec_2_GetCounter();
 }
 
-float CalcDistance1Meter() {
-    float numRots = (float) QuadDec_1_GetCounter() / (float)PULSES_PER_ROTATION;
+float CalcDistanceLeftMotorCm(int32_t compareCount) {
+    float numRots = (float) (QuadDec_1_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
     float rads = 2.0 * M_PI * numRots;
     return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
 }
 
-float CalcDistance2Meter() {
-    float numRots = (float) QuadDec_2_GetCounter() / (float)PULSES_PER_ROTATION;
+float CalcDistanceRightMotorCm(int32_t compareCount) {
+    float numRots = (float) (QuadDec_2_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
     float rads = 2.0 * M_PI * numRots;
     return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
-}
-
-float CalcTotalDistanceMeter() {
-    float total = CalcDistance1Meter() + CalcDistance2Meter();
-    float average = total / 2.0;
-    return average;  
 }
 
 float CalcMotor1Speed() {
