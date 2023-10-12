@@ -202,17 +202,19 @@ void StateMachine(bool reset) {
             if(0) {}
             
             uint8_t sensCap1 = SensTimer1_ReadCapture();
-            //sensCap1 = sensCap1 > 249 ? 255 : sensCap1;
+            sensCap1 = sensCap1 >= 247 ? 255 : sensCap1;
             
             uint8_t sensCap2 = SensTimer1_ReadCapture();
-            //sensCap1 = sensCap2 > 249 ? 255 : sensCap2;
+            sensCap1 = sensCap2 >= 247 ? 255 : sensCap2;
             
-            int16_t pd1Drift = (255 - sensCap1) / 4;
-            int16_t pd2Drift = (255 - sensCap2) / 4;
+            int16_t pd1Drift = (255 - sensCap1) / 2;
+            int16_t pd2Drift = (255 - sensCap2) / 3;
             
-            int16_t driftErrorApprox = -1 * (-PD_ON(sensors, 1) * pd1Drift  + PD_ON(sensors, 2) * pd2Drift);
+            int16_t driftErrorApprox = 1 * (PD_ON(sensors, 1) * pd1Drift  - PD_ON(sensors, 2) * pd2Drift);
             int8_t pid = driftErrorApprox;
 
+            if(pid > 6) pid = 6;
+            if(pid < -6) pid = -6;
 
             BoostRightMotor(-pid);
             BoostLeftMotor(pid);

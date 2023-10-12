@@ -6,7 +6,7 @@ clear;
 close all;
 
 %% fb = 120Hz design
-f = 120;
+f = 10;
 T = 1/(2 * pi * f);
 sys = tf([T, 0], [T, 1]);
 
