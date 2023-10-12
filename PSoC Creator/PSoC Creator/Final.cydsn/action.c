@@ -295,17 +295,13 @@ void StateMachine(bool _reset) {
             current_state = NEXT_180_ONE;
             
         case NEXT_180_ONE:
-            if(!PD_GET(sensors,6)) {
+            if(PD_GET(sensors,6)) break ;
                 current_state = NEXT_180_TWO;
-                break;
-            }
         case NEXT_180_TWO:
-            if (!PD_GET(sensors,5)) {
-                current_state = END_180;
-                break;
-            }
+            if (PD_GET(sensors,5)) break;
+                current_state = END_180;        
         case END_180:
-            
+            if (PD_GET(sensors,6)) break;            
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             CyDelay(100);
@@ -313,10 +309,7 @@ void StateMachine(bool _reset) {
             EnableSpeedISR();
             PRINT_STATE(STRAIGHT);
             SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
-            
-            
-                
-            
+            break;
             
         default:
             ASSERT_MSG(false, "Invalid state reached");
