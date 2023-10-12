@@ -75,8 +75,8 @@ static uint8_t map[15][19] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
 
-// Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
-Point food_list[5] = {{1, 9}, {9, 9}, {5, 5}, {7, 1}, {13, 5}};
+Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
+// Point food_list[5] = {{1, 9}, {9, 9}, {5, 5}, {7, 1}, {13, 5}};
 Point start = {1, 1};
 
 char* AppendStrToStr(char *result, const char* src, size_t len);
@@ -130,7 +130,6 @@ void speed_run() {
     
     while(1) {
         MotorController();
-        distance = CalcTotalDistanceMeter();
     }
     
     SetStopMotors(1, 1);

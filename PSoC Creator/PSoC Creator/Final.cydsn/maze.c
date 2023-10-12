@@ -117,7 +117,7 @@ static void CreateTurnAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
     if (actionList[actionCount].flags180 == 0) {
       // Edit previous command to make it go a certain distance
       // instead of waiting for an intersection
-      actionList[actionCount - 1].distance =
+      actionList[actionCount].distance =
           abs(lastActionPos.y - curr.y) * SQUARE_HEIGHT_CM +
           abs(lastActionPos.x - curr.x) * SQUARE_WIDTH_CM;
     }

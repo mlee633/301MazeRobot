@@ -108,7 +108,7 @@ Action GetAction() {
 
 void NextAction() {
     if(actionIndex + 1 < GetActionCount())
-        actionIndex++;   
+        actionIndex++;
 }
 //----------------------------------------------------------------------------
 CY_ISR(StateMachineTimerInterrupt) {
@@ -182,6 +182,8 @@ void TimerDoStuff(TimerDo timerAction) {
 void StateMachine(bool _reset) {
     static State current_state = STRAIGHT;
     static bool hasInit = false;
+    static int32_t lastActionLeftMotorQuadEnc = 0;
+    static int32_t lastActionRightMotorQuadEnc = 0;
     
     if(!hasInit) {
         StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
@@ -191,19 +193,21 @@ void StateMachine(bool _reset) {
     // Updated at end of function
     static int8_t integratorVals[3] = {0};
     uint8_t sensors = PD_Read();
+    float distanceSinceLastAction = 0.0f;
     //static char usbBuffer[255];
     //static int count = 0;+
     
     switch (current_state) {
         case STRAIGHT:
-            if(0) {}
+            if(0) {} // Need this for some reason
             
+            // **** PID Controller Starts Here ****
             int16_t driftErrorApprox = 1 * (PD_ON(sensors, 1)  - PD_ON(sensors, 2));
             int16_t integral = 0;
             for(int i = 0; i < 3; i++) {
                 integral += integratorVals[i];   
             }
-            int8_t pid = 4 * driftErrorApprox + integral;
+            int8_t pid = 3 * driftErrorApprox + integral / 2;
             
             for(int i = 2; i > 0; i--) {
                 integratorVals[i] = integratorVals[i - 1];
@@ -212,11 +216,19 @@ void StateMachine(bool _reset) {
 
             BoostRightMotor(-pid);
             BoostLeftMotor(pid);
+            // **** PID Controller Ends Here ****
             
-            
+            // If we see PD4 in the dark, and we aren't ignoring
+            // the sensors after a turn, check the current action,
+            // and perform it
             if (!PD_GET(sensors, 4) && !ignore) {
                 if(GetAction().type == ACTION_IGNORE_INTERSECTION) {
                     TimerDoStuff(TIMER_DO_NEXT_ACTION);
+                    
+                    // Save quad encoders, so we can calculate the distance after this intersection
+                    lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
+                    lastActionRightMotorQuadEnc = GetQuadDecCountRightMotor();
+                    
                     break;
                 } else if (GetAction().type == ACTION_TURN_RIGHT) {
                     NextAction();
@@ -224,12 +236,37 @@ void StateMachine(bool _reset) {
                     current_state = TURN_RIGHT_START;
                     LOG_STATE(TURN_RIGHT_START);
                     break;
+                } else if(GetAction().type == ACTION_180) {
+                    if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
+                        NextAction();
+                        InitLeftTurn();
+                        current_state = START_180;
+                        LOG_STATE(START_180);
+                    } else if (GetAction().flags180 & FLAG_180_EXPECT_LEFT) {
+                        NextAction();
+                        InitRightTurn();
+                        current_state = TURN_RIGHT_START;
+                        LOG_STATE(TURN_RIGHT_START);
+                    } else if (GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
+                        NextAction();
+                        InitLeftTurn();
+                        current_state = TURN_LEFT_START;
+                        LOG_STATE(TURN_LEFT_START);
+                    }   
                 }
             }
             
+            // If we see PD3 in the dark, and we aren't ignoring
+            // the sensors after a turn, check the current action,
+            // and perform it
             if (!PD_GET(sensors, 3) && !ignore) {
                 if(GetAction().type == ACTION_IGNORE_INTERSECTION) {
                     TimerDoStuff(TIMER_DO_NEXT_ACTION);
+                    
+                    // Save quad encoders, so we can calculate the distance after this intersection
+                    lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
+                    lastActionRightMotorQuadEnc = GetQuadDecCountRightMotor();
+                    
                     break;              
                 } else if (GetAction().type == ACTION_TURN_LEFT) {
                     NextAction();
@@ -237,27 +274,41 @@ void StateMachine(bool _reset) {
                     current_state = TURN_LEFT_START;
                     LOG_STATE(TURN_LEFT_START);
                     break;
-                } 
+                }  else if(GetAction().type == ACTION_180) {
+                    if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
+                        NextAction();
+                        InitLeftTurn();
+                        current_state = START_180;
+                        LOG_STATE(START_180);
+                    } else if (GetAction().flags180 & FLAG_180_EXPECT_LEFT) {
+                        NextAction();
+                        InitRightTurn();
+                        current_state = TURN_RIGHT_START;
+                        LOG_STATE(TURN_RIGHT_START);
+                    } else if (GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
+                        NextAction();
+                        InitLeftTurn();
+                        current_state = TURN_LEFT_START;
+                        LOG_STATE(TURN_LEFT_START);
+                    }
+                }
              }
             
-            if (GetAction().type == ACTION_180 && GetAction().distance == -1 && (!PD_GET(sensors, 3) || !PD_GET(sensors, 4)) && !ignore) {
-                if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
-                    NextAction();
-                    InitLeftTurn();
-                    current_state = START_180;
-                    LOG_STATE(START_180);
-                } else if (GetAction().flags180 & FLAG_180_EXPECT_LEFT) {
-                    NextAction();
-                    InitRightTurn();
-                    current_state = TURN_RIGHT_START;
-                    LOG_STATE(TURN_RIGHT_START);
-                } else if (GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
+            // Calculate the distance travelled since last action
+            distanceSinceLastAction = (CalcDistanceLeftMotorCm(lastActionLeftMotorQuadEnc) +
+                                       CalcDistanceRightMotorCm(lastActionRightMotorQuadEnc)) / 2;
+            
+            // Check how far we've travelled, if the current action requires us to travel a certain distance
+            if(GetAction().distance != -1) {
+                if(distanceSinceLastAction >= GetAction().distance) {
                     NextAction();
                     InitLeftTurn();
                     current_state = TURN_LEFT_START;
                     LOG_STATE(TURN_LEFT_START);
                 }
             }
+            
+            
             break;
         case TURN_LEFT_START:
             if(PD_GET(sensors, 5)) break;
@@ -269,6 +320,10 @@ void StateMachine(bool _reset) {
             UpdatePWMRight(127);
             
             CyDelay(100);
+            
+            // Save quad encoders, so we can calculate the distance after this intersection
+            lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
+            lastActionRightMotorQuadEnc = GetQuadDecCountRightMotor();
             
             current_state = STRAIGHT;
             EnableSpeedISR();
@@ -291,6 +346,10 @@ void StateMachine(bool _reset) {
             UpdatePWMRight(127);
             
             CyDelay(100);
+
+            // Save quad encoders, so we can calculate the distance after this intersection
+            lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
+            lastActionRightMotorQuadEnc = GetQuadDecCountRightMotor();
             
             current_state = STRAIGHT;
             EnableSpeedISR();
@@ -316,10 +375,17 @@ void StateMachine(bool _reset) {
             LOG_STATE(END_180);
             
         case END_180:
-            if (PD_GET(sensors,6)) break;            
+            if (PD_GET(sensors,6)) break;         
+            
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
+            
             CyDelay(100);
+                        
+            // Save quad encoders, so we can calculate the distance after this intersection
+            lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
+            lastActionRightMotorQuadEnc = GetQuadDecCountRightMotor();
+            
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);

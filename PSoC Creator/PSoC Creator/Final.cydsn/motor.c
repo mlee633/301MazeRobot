@@ -120,13 +120,13 @@ int32_t GetQuadDecCountRightMotor() {
 float CalcDistanceLeftMotorCm(int32_t compareCount) {
     float numRots = (float) (QuadDec_1_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
     float rads = 2.0 * M_PI * numRots;
-    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in cm
 }
 
 float CalcDistanceRightMotorCm(int32_t compareCount) {
     float numRots = (float) (QuadDec_2_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
     float rads = 2.0 * M_PI * numRots;
-    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in cm
 }
 
 void UpdatePWMLeft(uint8_t pwm) {
