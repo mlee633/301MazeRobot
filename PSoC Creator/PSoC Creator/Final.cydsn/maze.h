@@ -20,6 +20,9 @@
 #define MAP_WIDTH 19
 #define MAP_HEIGHT 15
 
+#define FLAG_180_EXPECT_LEFT (1 << 0)
+#define FLAG_180_EXPECT_RIGHT (1 << 1)
+
 typedef enum ActionType {
   ACTION_IGNORE_INTERSECTION,
   ACTION_TURN_LEFT,

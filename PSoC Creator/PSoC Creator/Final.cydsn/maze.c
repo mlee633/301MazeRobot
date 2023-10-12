@@ -28,9 +28,6 @@
 #define ABOVE(p) ((Point){.x = (p).x, .y = (p).y - 1})
 #define BELOW(p) ((Point){.x = (p).x, .y = (p).y + 1})
 
-#define FLAG_180_EXPECT_LEFT (1 << 0)
-#define FLAG_180_EXPECT_RIGHT (1 << 1)
-
 #define SQUARE_WIDTH_CM
 #define SQUARE_HEIGHT_CM 8
 

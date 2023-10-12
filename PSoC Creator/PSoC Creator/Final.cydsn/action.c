@@ -46,26 +46,26 @@ static Action _actions[256] = {
     {ACTION_TURN_LEFT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_LEFT, -1, 0},
-    {ACTION_TURN_LEFT}, //Start of entering 360 loop at 2
+    {ACTION_TURN_LEFT,-1, 0}, //Start of entering 360 loop at 2
     {ACTION_IGNORE_INTERSECTION, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_IGNORE_INTERSECTION, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_LEFT, -1, 0},
-    {ACTION_TURN_LEFT},//Start of straight line
+    {ACTION_TURN_LEFT, -1, 0},//Start of straight line
     {ACTION_IGNORE_INTERSECTION, -1, 0},
-    {ACTION_TURN_LEFT}, //Start of at the bottom
+    {ACTION_TURN_LEFT, -1, 0}, //Start of at the bottom
     {ACTION_TURN_LEFT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_LEFT, -1, 0},
     {ACTION_IGNORE_INTERSECTION, -1, 0},
-    {ACTION_TURN_LEFT}, //Reached bottom right corner
+    {ACTION_TURN_LEFT, -1, 0}, //Reached bottom right corner
     {ACTION_TURN_LEFT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
-    {ACTION_TURN_LEFT}, //Reach 3
+    {ACTION_TURN_LEFT, -1, 0}, //Reach 3
     {ACTION_TURN_LEFT, -1, 0},
     {ACTION_IGNORE_INTERSECTION, -1, 0},
     {ACTION_TURN_RIGHT, -1, 0},
@@ -132,6 +132,10 @@ typedef enum {
     TURN_RIGHT_START,
     TURN_RIGHT_END,
     START_180,
+    NEXT_180_ONE,
+    NEXT_180_TWO,
+    END_180
+    
 } State;
 
 void Assert(bool cond, const char* msg) {
@@ -230,25 +234,21 @@ void StateMachine(bool _reset) {
                     break;
                 } 
              }
-            //Just realised this is somewut reliant on distance, especially for ones in the corners. 
-           // if (GetAction().type == ACTION_180) {
-               // if (PD_GET(sensors,6) && !ignore) { //For dead end 180
-                    //NextAction();
-                    //InitLeftTurn();
-                    //current_state = START_180;
-                    //PRINT_STATE(START_180);
-                    //break;
-               // } //else if (!PD_GET(sensors, 3) &&!ignore) { //If detected any corner that has a turn left option (hopefully this takes first priority :pray:)
-                    //NextAction();
-                    //InitLeftTurn();
-                    //current_state = START_180;
-                    //break;
-                //} else if (!PD_GET_sensors,4) && !ignore) { //If detected any corner that has a turn right option
-                    //NextAction();
-                    //InitRightTurn();
-                    //current_state = START_180;
-                    //break;
-            //}
+            
+            if (GetAction().type == ACTION_180 && GetAction().distance == -1 && (PD_GET(sensors, 3) || PD_GET(sensors, 4))) {
+                if (GetAction().flags180 & FLAG_180_EXPECT_LEFT && (GetAction().flags180 & FLAG_180_EXPECT_RIGHT) == 0) {
+                    NextAction();
+                    InitRightTurn();
+                    current_state = TURN_RIGHT_START;
+            
+                } else if (GetAction().type & FLAG_180_EXPECT_RIGHT && (GetAction().flags180 & FLAG_180_EXPECT_LEFT) == 0) {
+                    NextAction();
+                    InitLeftTurn();
+                    current_state = TURN_LEFT_START;
+                } else 
+                    InitLeftTurn();
+                    current_state = START_180;
+            }
             break;
         case TURN_LEFT_START:
             if(PD_GET(sensors, 5)) break;
@@ -290,14 +290,30 @@ void StateMachine(bool _reset) {
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             break;
         
-        //case START_180:
-            //logic should only work for dead end condition. Intersection 180 needs more logic.  
-            //if(PD_GET(sensors, 6)) break;
-            //current_state = END_180;
-            //TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
+        case START_180:
+            if (PD_GET(sensors, 5)) break;
+            current_state = NEXT_180_ONE;
             
+        case NEXT_180_ONE:
+            if(!PD_GET(sensors,6)) {
+                current_state = NEXT_180_TWO;
+                break;
+            }
+        case NEXT_180_TWO:
+            if (!PD_GET(sensors,5)) {
+                current_state = END_180;
+                break;
+            }
+        case END_180:
             
-           
+            UpdatePWMLeft(127);
+            UpdatePWMRight(127);
+            CyDelay(100);
+            current_state = STRAIGHT;
+            EnableSpeedISR();
+            PRINT_STATE(STRAIGHT);
+            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
+            
             
                 
             

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Creator\Final\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Creator\Final\Source Files\maze.c">
 <ExpandedNodeIds>
 <v>PSoC Creator</v>
 <v>PSoC Creator\Final</v>
@@ -61,12 +61,6 @@
 <v>PSoC Creator\Light Sensor Read Test\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>PSoC Creator</v>
-<v>PSoC Creator\Final</v>
-<v>PSoC Creator\Final\TopDesign</v>
-<v>PSoC Creator\Final\Final.cydwr</v>
-<v>PSoC Creator\Final\Final.cydwr\Pins</v>
-<v>PSoC Creator\Final\Final.cydwr\Analog</v>
 <v>PSoC Creator\Final\Final.cydwr\Clocks</v>
 <v>PSoC Creator\Final\Final.cydwr\Interrupts</v>
 <v>PSoC Creator\Final\Final.cydwr\DMA</v>
@@ -77,12 +71,14 @@
 <v>PSoC Creator\Final\Header Files</v>
 <v>PSoC Creator\Final\Header Files\action.h</v>
 <v>PSoC Creator\Final\Header Files\cyapicallbacks.h</v>
+<v>PSoC Creator\Final\Header Files\maze.h</v>
 <v>PSoC Creator\Final\Header Files\motor.h</v>
 <v>PSoC Creator\Final\Header Files\sensors.h</v>
 <v>PSoC Creator\Final\Header Files\uart.h</v>
 <v>PSoC Creator\Final\Source Files</v>
 <v>PSoC Creator\Final\Source Files\action.c</v>
 <v>PSoC Creator\Final\Source Files\main.c</v>
+<v>PSoC Creator\Final\Source Files\maze.c</v>
 <v>PSoC Creator\Final\Source Files\motor.c</v>
 <v>PSoC Creator\Final\Source Files\uart_.c</v>
 <v>PSoC Creator\Final\Generated_Source</v>
@@ -109,6 +105,10 @@
 <v>PSoC Creator\Final\Generated_Source\PSoC5\PD2</v>
 <v>PSoC Creator\Final\Generated_Source\PSoC5\PD3</v>
 <v>PSoC Creator\Final\Generated_Source\PSoC5\PD4</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD5</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD6</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PD7</v>
+<v>PSoC Creator\Final\Generated_Source\PSoC5\PWM_1</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -468,7 +468,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b241d897-aaa8-4f2e-990b-e6a286fb9159"><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="4c750f9d-7cb2-4fbb-98cc-1e5fe8a14574" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="b241d897-aaa8-4f2e-990b-e6a286fb9159" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="4972d2f6-4abc-4d3a-93cf-269edbd47b38" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="4f1f2056-aabb-4cbf-97aa-95aa2c425650" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="07e66505-c7ab-4aa2-b8d3-a69fd680dbbd" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="4c750f9d-7cb2-4fbb-98cc-1e5fe8a14574"><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\main.c" Guid="4c750f9d-7cb2-4fbb-98cc-1e5fe8a14574" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\action.c" Guid="b241d897-aaa8-4f2e-990b-e6a286fb9159" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\motor.c" Guid="4972d2f6-4abc-4d3a-93cf-269edbd47b38" /><DocumentWindow Key="H:\Documents\301MazeRobot\PSoC Creator\PSoC Creator\Final.cydsn\TopDesign\TopDesign.cysch" Guid="4f1f2056-aabb-4cbf-97aa-95aa2c425650" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="07e66505-c7ab-4aa2-b8d3-a69fd680dbbd" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
