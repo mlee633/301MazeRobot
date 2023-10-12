@@ -42,13 +42,9 @@ typedef enum RobotDirection {
 static Action actionList[256];
 static size_t actionCount = 0;
 
-Action* GetActionList() {
-    return actionList;   
-}
+Action *GetActionList() { return actionList; }
 
-size_t GetActionCount() {
-    return actionCount;   
-}
+size_t GetActionCount() { return actionCount; }
 
 RobotDirection GetDirectionFromPoints(Point first, Point second) {
   int8_t xdiff = second.x - first.x;
@@ -94,8 +90,9 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
           actionList[actionCount++] = (Action){ACTION_TURN_RIGHT, -1, 0};
         else if (diff == -1 || diff == 3)
           actionList[actionCount++] = (Action){ACTION_TURN_LEFT, -1, 0};
-        else //TODO: Fill out flags
+        else {
           actionList[actionCount++] = (Action){ACTION_180, -1, 0};
+        }
 
         currDirection = nextDir;
       } else {
@@ -104,19 +101,23 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
         if (path[i - 1].x - 1 >= 0 &&
             map[path[i - 1].y][path[i - 1].x - 1] == 0 &&
             currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+          actionList[actionCount++] =
+              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
         else if (path[i - 1].x + 1 < MAP_WIDTH &&
                  map[path[i - 1].y][path[i - 1].x + 1] == 0 &&
                  currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+          actionList[actionCount++] =
+              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
         else if (path[i - 1].y - 1 >= 0 &&
                  map[path[i - 1].y - 1][path[i - 1].x] == 0 &&
                  currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+          actionList[actionCount++] =
+              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
         else if (path[i - 1].y + 1 < MAP_HEIGHT &&
                  map[path[i - 1].y + 1][path[i - 1].x] == 0 &&
                  currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+          actionList[actionCount++] =
+              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
       }
     }
     currentPos = path[result.pathLength - 1];

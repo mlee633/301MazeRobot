@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <stdint.h>
 #include <string.h>
+#include <wchar.h>
 
 #define IDX_POINT(map, p) ((map)[(p).y][(p).x])
 
@@ -52,7 +53,6 @@ AlgoResult run_algo(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
   AlgoResult result;
 
   // Initialise
-  memset(visitAndParentMap, 0, sizeof(visitAndParentMap));
   IDX_POINT(visitAndParentMap, start) |= 1;
   point_queue_init(&queue, queueMem, sizeof(queueMem) / sizeof(Point));
   enqueue_point(&queue, start);

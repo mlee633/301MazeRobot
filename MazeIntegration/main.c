@@ -14,11 +14,10 @@
 
 #include <assert.h>
 #include <limits.h>
-#include <locale.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <wchar.h>
 
 #define HEURISTIC_WEIGHT 10
 
@@ -33,34 +32,8 @@
 #define FLAG_180_EXPECT_LEFT (1 << 0)
 #define FLAG_180_EXPECT_RIGHT (1 << 1)
 
-#define SQUARE_WIDTH_CM
-#define SQUARE_HEIGHT_CM 8
-
-typedef enum ActionType {
-  ACTION_IGNORE_INTERSECTION,
-  ACTION_TURN_LEFT,
-  ACTION_TURN_RIGHT,
-  ACTION_180,
-  ACTION_WAIT,
-} ActionType;
-
-// -----O-----+
-//            |
-//            |
-//            |
-//            *
-
-typedef struct Action {
-  ActionType type;
-  // distance == -1 if we continue until next
-  // intersection. Otherwise, distance = num cms
-  // to travel.
-  int8_t distance;
-  // contains information about surrounding paths when we do
-  // a 180. If the FLAG_180_EXPECT_LEFT bit is set, we should expect a left path
-  // when we do a 180 If the FLAG_
-  uint8_t flags180;
-} Action;
+#define SQUARE_WIDTH_CM (12.5f)
+#define SQUARE_HEIGHT_CM (8.0f)
 
 typedef enum RobotDirection {
   ROBOT_INVALID_DIR,
@@ -70,8 +43,12 @@ typedef enum RobotDirection {
   ROBOT_LEFT,
 } RobotDirection;
 
-static Action actionList[256];
+static Action actionList[256] = {0};
 static size_t actionCount = 0;
+
+Action *GetActionList() { return actionList; }
+
+size_t GetActionCount() { return actionCount; }
 
 RobotDirection GetDirectionFromPoints(Point first, Point second) {
   int8_t xdiff = second.x - first.x;
@@ -89,12 +66,96 @@ RobotDirection GetDirectionFromPoints(Point first, Point second) {
   return ROBOT_INVALID_DIR;
 }
 
+// helper function to generate turns
+static void CreateTurnAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                             Point curr, Point next,
+                             RobotDirection currDirection,
+                             Point lastActionPos) {
+  RobotDirection nextDir = GetDirectionFromPoints(curr, next);
+  if (nextDir == currDirection) {
+    return;
+  }
+
+  // Calculate clockwise distance
+  int diff = nextDir - currDirection;
+  if (diff == 1 || diff == -3)
+    actionList[actionCount++] = (Action){ACTION_TURN_RIGHT, -1, 0};
+  else if (diff == -1 || diff == 3)
+    actionList[actionCount++] = (Action){ACTION_TURN_LEFT, -1, 0};
+  else {
+    actionList[actionCount] = (Action){ACTION_180, -1, 0};
+    switch (currDirection) {
+    case ROBOT_UP:
+      if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+      if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+
+      break;
+    case ROBOT_DOWN:
+      if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+      if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+
+      break;
+
+    case ROBOT_LEFT:
+      if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+      if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+
+    case ROBOT_RIGHT:
+      if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+      if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+
+      break;
+
+    default:
+      break;
+    }
+
+    if (actionList[actionCount].flags180 == 0) {
+      // Edit previous command to make it go a certain distance
+      // instead of waiting for an intersection
+      actionList[actionCount - 1].distance =
+          abs(lastActionPos.y - curr.y) * SQUARE_HEIGHT_CM +
+          abs(lastActionPos.x - curr.x) * SQUARE_WIDTH_CM;
+    }
+
+    actionCount++;
+  }
+}
+
+static void CreateIgnoreIntersection(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                                     Point curr, RobotDirection currDirection) {
+  // We're going straight so we need to detect
+  // if there is an intersection we need to ignore
+  if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0 &&
+      currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0 &&
+           currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0 &&
+           currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0 &&
+           currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+}
+
 bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
                         Point *food, int foodCount) {
   Point path[256];
   Point currentPos = start;
   RobotDirection currDirection = ROBOT_INVALID_DIR;
   bool firstRun = true;
+
+  Point lastActionPoint;
 
   for (int foodIndex = 0; foodIndex < foodCount; foodIndex++) {
     Point currFood = food[foodIndex];
@@ -110,40 +171,22 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
     // Now we can deal with our path
     for (int i = 1; i < result.pathLength; i++) {
       RobotDirection nextDir = GetDirectionFromPoints(path[i - 1], path[i]);
-      if (nextDir != currDirection) {
-        // Calculate clockwise distance
-        int diff = nextDir - currDirection;
-        if (diff == 1 || diff == -3)
-          actionList[actionCount++] = (Action){ACTION_TURN_RIGHT};
-        else if (diff == -1 || diff == 3)
-          actionList[actionCount++] = (Action){ACTION_TURN_LEFT};
-        else
-          actionList[actionCount++] = (Action){ACTION_180};
+      Point curr = path[i - 1];
 
+      size_t preGenSize = actionCount;
+      if (nextDir != currDirection) {
+        CreateTurnAction(map, curr, path[i], currDirection, lastActionPoint);
         currDirection = nextDir;
       } else {
-        // We're going straight so we need to detect
-        // if there is an intersection we need to ignore
-        if (path[i - 1].x - 1 >= 0 &&
-            map[path[i - 1].y][path[i - 1].x - 1] == 0 &&
-            currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION};
-        else if (path[i - 1].x + 1 < MAP_WIDTH &&
-                 map[path[i - 1].y][path[i - 1].x + 1] == 0 &&
-                 currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION};
-        else if (path[i - 1].y - 1 >= 0 &&
-                 map[path[i - 1].y - 1][path[i - 1].x] == 0 &&
-                 currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION};
-        else if (path[i - 1].y + 1 < MAP_HEIGHT &&
-                 map[path[i - 1].y + 1][path[i - 1].x] == 0 &&
-                 currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION};
+        CreateIgnoreIntersection(map, curr, currDirection);
+      }
+
+      // We generated an action,
+      // update the last action location
+      if (preGenSize != actionCount) {
+        lastActionPoint = curr;
       }
     }
-
-    actionList[actionCount++] = (Action){ACTION_WAIT};
     currentPos = path[result.pathLength - 1];
 
     // Always set first run to false
@@ -274,8 +317,7 @@ AlgoResult RunAStar(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
 // Don't need to modify this
 bool point_eq(Point a, Point b) { return a.x == b.x && a.y == b.y; }
 
-// ************* TESTING **************
-
+// ************* TESTING ******************
 // static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = {
 //     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 //     {1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
@@ -329,52 +371,68 @@ static uint8_t map[15][19] = {
     {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
-Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
+
+// Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
+Point food_list[] = {{5, 5}, {9, 9}, {1, 9}};
+
+#define COUNT_OF(x) (sizeof((x)) / sizeof((x)[0]))
 
 int main() {
 
-  // Print map
   for (int i = 0; i < MAP_HEIGHT; i++) {
     for (int j = 0; j < MAP_WIDTH; j++) {
-      bool isFood = false;
-      for (int f = 0; f < sizeof(food_list) / sizeof(Point); f++)
+      int foodIndex = -1;
+      for (int f = 0; f < COUNT_OF(food_list); f++)
         if (food_list[f].x == j && food_list[f].y == i)
-          isFood = true;
+          foodIndex = f;
 
-      if (isFood)
+      if (foodIndex != -1) {
         printf("o ");
-      else if (map[i][j])
-        printf("X ");
-      else
+        continue;
+      }
+      if (map[i][j]) {
+        if (j + 1 < MAP_WIDTH && map[i][j + 1])
+          printf("X-");
+        else
+          printf("X ");
+      } else
         printf("_ ");
     }
 
     printf("\r\n");
   }
 
-  printf("\r\n");
+  assert(
+      GenerateActionList(map, (Point){1, 1}, food_list, COUNT_OF(food_list)));
 
-  Point start = {1, 1};
-  bool success = GenerateActionList(map, start, food_list,
-                                    sizeof(food_list) / sizeof(Point));
-  if (!success) {
-    printf("! > Failed while generating action list\r\n");
-  }
-  printf(":: %d Actions Generated\r\n", actionCount);
+  for (int i = 0; i < actionCount; i++) {
+    Action act = actionList[i];
+    switch (act.type) {
+    case ACTION_TURN_LEFT:
+      printf("-> ACTION_TURN_LEFT");
+      break;
+    case ACTION_TURN_RIGHT:
+      printf("-> ACTION_TURN_RIGHT");
+      break;
 
-#define CASE_AND_PRINT(x)                                                      \
-  case x:                                                                      \
-    printf("-> " #x "\r\n");                                                   \
-    break;
-  for (size_t i = 0; i < actionCount; i++) {
-    switch (actionList[i].type) {
-      CASE_AND_PRINT(ACTION_IGNORE_INTERSECTION)
-      CASE_AND_PRINT(ACTION_180)
-      CASE_AND_PRINT(ACTION_TURN_LEFT)
-      CASE_AND_PRINT(ACTION_TURN_RIGHT)
-    case ACTION_WAIT:
-      printf("<+> Wait on food\r\n\r\n");
+    case ACTION_180:
+      printf("-> ACTION_180");
+      if (act.flags180 & FLAG_180_EXPECT_LEFT)
+        printf(", L");
+      if (act.flags180 & FLAG_180_EXPECT_RIGHT)
+        printf(", R");
+
+      break;
+
+    case ACTION_IGNORE_INTERSECTION:
+      printf("-> ACTION_IGNORE_INTERSECTION");
       break;
     }
+
+    if (act.distance != -1) {
+      printf(" (%dcm)", act.distance);
+    }
+
+    printf("\r\n");
   }
 }
