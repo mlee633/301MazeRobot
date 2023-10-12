@@ -12,10 +12,8 @@
 
 #include "maze.h"
 
-#include <assert.h>
-#include <limits.h>
 #include <stdint.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define HEURISTIC_WEIGHT 10
@@ -28,8 +26,11 @@
 #define ABOVE(p) ((Point){.x = (p).x, .y = (p).y - 1})
 #define BELOW(p) ((Point){.x = (p).x, .y = (p).y + 1})
 
-#define SQUARE_WIDTH_CM
-#define SQUARE_HEIGHT_CM 8
+#define FLAG_180_EXPECT_LEFT (1 << 0)
+#define FLAG_180_EXPECT_RIGHT (1 << 1)
+
+#define SQUARE_WIDTH_CM (12.5f)
+#define SQUARE_HEIGHT_CM (8.0f)
 
 typedef enum RobotDirection {
   ROBOT_INVALID_DIR,
@@ -61,6 +62,87 @@ RobotDirection GetDirectionFromPoints(Point first, Point second) {
 
   return ROBOT_INVALID_DIR;
 }
+// helper function to generate turns
+static void CreateTurnAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                             Point curr, Point next,
+                             RobotDirection currDirection,
+                             Point lastActionPos) {
+  RobotDirection nextDir = GetDirectionFromPoints(curr, next);
+  if (nextDir == currDirection) {
+    return;
+  }
+
+  // Calculate clockwise distance
+  int diff = nextDir - currDirection;
+  if (diff == 1 || diff == -3)
+    actionList[actionCount++] = (Action){ACTION_TURN_RIGHT, -1, 0};
+  else if (diff == -1 || diff == 3)
+    actionList[actionCount++] = (Action){ACTION_TURN_LEFT, -1, 0};
+  else {
+    actionList[actionCount] = (Action){ACTION_180, -1, 0};
+    switch (currDirection) {
+    case ROBOT_UP:
+      if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+      if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+
+      break;
+    case ROBOT_DOWN:
+      if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+      if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+
+      break;
+
+    case ROBOT_LEFT:
+      if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+      if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+
+    case ROBOT_RIGHT:
+      if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
+      if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0)
+        actionList[actionCount].flags180 |= FLAG_180_EXPECT_RIGHT;
+
+      break;
+
+    default:
+      break;
+    }
+
+    if (actionList[actionCount].flags180 == 0) {
+      // Edit previous command to make it go a certain distance
+      // instead of waiting for an intersection
+      actionList[actionCount - 1].distance =
+          abs(lastActionPos.y - curr.y) * SQUARE_HEIGHT_CM +
+          abs(lastActionPos.x - curr.x) * SQUARE_WIDTH_CM;
+    }
+
+    actionCount++;
+  }
+}
+
+static void CreateIgnoreIntersection(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                                     Point curr, RobotDirection currDirection) {
+  // We're going straight so we need to detect
+  // if there is an intersection we need to ignore
+  if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0 &&
+      currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0 &&
+           currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0 &&
+           currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+  else if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0 &&
+           currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
+    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+}
 
 bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
                         Point *food, int foodCount) {
@@ -68,6 +150,8 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
   Point currentPos = start;
   RobotDirection currDirection = ROBOT_INVALID_DIR;
   bool firstRun = true;
+
+  Point lastActionPoint;
 
   for (int foodIndex = 0; foodIndex < foodCount; foodIndex++) {
     Point currFood = food[foodIndex];
@@ -83,41 +167,20 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
     // Now we can deal with our path
     for (int i = 1; i < result.pathLength; i++) {
       RobotDirection nextDir = GetDirectionFromPoints(path[i - 1], path[i]);
-      if (nextDir != currDirection) {
-        // Calculate clockwise distance
-        int diff = nextDir - currDirection;
-        if (diff == 1 || diff == -3)
-          actionList[actionCount++] = (Action){ACTION_TURN_RIGHT, -1, 0};
-        else if (diff == -1 || diff == 3)
-          actionList[actionCount++] = (Action){ACTION_TURN_LEFT, -1, 0};
-        else {
-          actionList[actionCount++] = (Action){ACTION_180, -1, 0};
-        }
+      Point curr = path[i - 1];
 
+      size_t preGenSize = actionCount;
+      if (nextDir != currDirection) {
+        CreateTurnAction(map, curr, path[i], currDirection, lastActionPoint);
         currDirection = nextDir;
       } else {
-        // We're going straight so we need to detect
-        // if there is an intersection we need to ignore
-        if (path[i - 1].x - 1 >= 0 &&
-            map[path[i - 1].y][path[i - 1].x - 1] == 0 &&
-            currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] =
-              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
-        else if (path[i - 1].x + 1 < MAP_WIDTH &&
-                 map[path[i - 1].y][path[i - 1].x + 1] == 0 &&
-                 currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-          actionList[actionCount++] =
-              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
-        else if (path[i - 1].y - 1 >= 0 &&
-                 map[path[i - 1].y - 1][path[i - 1].x] == 0 &&
-                 currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] =
-              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
-        else if (path[i - 1].y + 1 < MAP_HEIGHT &&
-                 map[path[i - 1].y + 1][path[i - 1].x] == 0 &&
-                 currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-          actionList[actionCount++] =
-              (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+        CreateIgnoreIntersection(map, curr, currDirection);
+      }
+
+      // We generated an action,
+      // update the last action location
+      if (preGenSize != actionCount) {
+        lastActionPoint = curr;
       }
     }
     currentPos = path[result.pathLength - 1];
