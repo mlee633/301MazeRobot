@@ -18,19 +18,19 @@
 #include <math.h>
 #include <stdio.h>
 
-volatile static int16_t motor1Count = 0, motor2Count = 0;
+volatile static int32_t motor1Count = 0, motor2Count = 0, oldCount1 = 0, oldCount2 = 0;
 volatile static float leftSpeedTarget = 0, rightSpeedTarget = 0;
 volatile static bool shouldUpdateSpeed = false;
 
 volatile static uint8_t oldPwmLeft = 127, oldPwmRight = 127;
 
 CY_ISR(MotorSpeedTimerOverflow) {
-    motor1Count = QuadDec_1_GetCounter();
-    motor2Count = QuadDec_2_GetCounter();
+    motor1Count = QuadDec_1_GetCounter() - oldCount1;
+    motor2Count = QuadDec_2_GetCounter() - oldCount2;
     
-    QuadDec_1_SetCounter(0);
-    QuadDec_2_SetCounter(0);
     
+    oldCount1 = QuadDec_1_GetCounter();
+    oldCount2 = QuadDec_2_GetCounter();
     shouldUpdateSpeed = true;
 }
 
@@ -59,9 +59,7 @@ void DisableSpeedISR() {
 
 void EnableSpeedISR() {
     shouldUpdateSpeed = false;
-    QuadDec_1_SetCounter(0);
-    QuadDec_2_SetCounter(0);
-    MotorSpeedTimer_Start();
+    MotorUpdateSpeed_Enable();   
 }
 
 void BoostLeftMotor(int8_t pwmCount) {
@@ -111,12 +109,24 @@ float GetTargetRightSpeed() {
     return rightSpeedTarget;    
 }
 
-int16_t GetQuadDecCountMotor1() {
-    return motor1Count;
+int32_t GetQuadDecCountLeftMotor() {
+    return QuadDec_1_GetCounter();
 }
 
-int16_t GetQuadDecCountMotor2() {
-    return motor2Count;
+int32_t GetQuadDecCountRightMotor() {
+    return QuadDec_2_GetCounter();
+}
+
+float CalcDistanceLeftMotorCm(int32_t compareCount) {
+    float numRots = (float) (QuadDec_1_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
+    float rads = 2.0 * M_PI * numRots;
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
+}
+
+float CalcDistanceRightMotorCm(int32_t compareCount) {
+    float numRots = (float) (QuadDec_2_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
+    float rads = 2.0 * M_PI * numRots;
+    return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in meters
 }
 
 void UpdatePWMLeft(uint8_t pwm) {
@@ -144,6 +154,7 @@ float CalcMotor2Speed() {
 void SetStopMotors(bool m1, bool m2) {
     MotorStopReg_Write(m1 | (m2 << 1));
 }
+
 
 void MotorController() {  
     if(!shouldUpdateSpeed) return;

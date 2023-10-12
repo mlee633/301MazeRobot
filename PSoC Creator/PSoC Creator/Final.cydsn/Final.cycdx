@@ -48,6 +48,15 @@
         <value name="E_CNT_START1" value="1" desc="Enable counter" />
       </field>
     </register>
+    <register name="SensTimer7_COUNTER" address="0x40006507" bitWidth="8" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
+    <register name="SensTimer7_PERIOD" address="0x40006527" bitWidth="8" desc="UDB.D0 - Assigned Period" hidden="false" />
+    <register name="SensTimer7_Control_Reg" address="0x40006574" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+      <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the Timer" hidden="false" />
+      <field name="CTRL_CMODE" from="6" to="5" access="RW" resetVal="" desc="Capture Mode" hidden="false" />
+      <field name="CTRL_TEN" from="4" to="4" access="RW" resetVal="" desc="Trigger Enable Bit" hidden="false" />
+      <field name="CTRL_TMODE" from="3" to="2" access="RW" resetVal="" desc="Trigger Mode" hidden="false" />
+      <field name="CTRL_IC" from="1" to="0" access="RW" resetVal="" desc="Interrupt Count" hidden="false" />
+    </register>
   </block>
   <block name="SensorClk_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PD6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1306,10 +1315,13 @@
   <block name="QuadDec_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="QuadDec_1_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
       <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
       <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1363,9 +1375,6 @@
         </field>
       </register>
     </block>
-    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="QuadDec_1_Cnt16_COUNTER" address="0x4000640E" bitWidth="16" desc="Counter value" hidden="false" />
     <register name="QuadDec_1_STATUS_REG" address="0x4000646D" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">

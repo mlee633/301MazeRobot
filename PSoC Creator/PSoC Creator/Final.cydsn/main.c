@@ -127,16 +127,13 @@ void speed_run() {
     SetStopMotors(0, 0);
     EnableSpeedISR();
     SetTargetSpeeds(39.0f + 1.0f, 39.0f + 1.0f);
-    Timer_1_Start();
-    Timer_1_WritePeriod(2500);
-    Timer_1_WriteCounter(2500);
     
     while(1) {
         MotorController();
+        distance = CalcTotalDistanceMeter();
     }
     
     SetStopMotors(1, 1);
-    Timer_1_Stop();
 }
 
 int main(void)

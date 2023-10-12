@@ -5762,6 +5762,24 @@ Design Equations
             is_nmi = 0
         }
 
+    interrupt: Name =\QuadDec_1:isr\
+        PORT MAP (
+            interrupt => Net_213 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+
+    interrupt: Name =\QuadDec_2:isr\
+        PORT MAP (
+            interrupt => Net_214 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+
     interrupt: Name =QuadDec1Interrupt
         PORT MAP (
             interrupt => Net_213 );
@@ -5898,7 +5916,7 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.136ms
+Analog Code Generation phase: Elapsed time ==> 0s.133ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -5913,7 +5931,7 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :   46 :    2 :   48 :  95.83%
+                     PLDs :   47 :    1 :   48 :  97.92%
 
 <CYPRESSTAG name="PLD Statistics">
 
@@ -8671,8 +8689,56 @@ LAB@[UDB=(2,5)][LB=1] #macrocells=2, #inputs=8, #pterms=7
         {
         }
 
-    [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,4)][LB=1] #macrocells=3, #inputs=3, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\QuadDec_1:Cnt16:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_1:Cnt16:CounterUDB:cmp_out_i\
+        );
+        Output = \QuadDec_1:Cnt16:CounterUDB:prevCompare\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\QuadDec_1:bQuadDec:quad_B_delayed_0\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_200
+        );
+        Output = \QuadDec_1:bQuadDec:quad_B_delayed_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_202) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \QuadDec_2:Cnt16:CounterUDB:overflow\
+        );
+        Output = \QuadDec_2:Cnt16:CounterUDB:overflow_reg_i\ (fanout=1)
+        Properties               : 
+        {
+        }
 }
 
 datapathcell: Name =\QuadDec_2:Cnt16:CounterUDB:sC16:counterdp:u0\

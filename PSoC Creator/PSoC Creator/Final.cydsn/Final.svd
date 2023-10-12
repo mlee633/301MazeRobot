@@ -323,7 +323,7 @@
         <register>
           <name>SensTimer3_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006584</addressOffset>
+          <addressOffset>0x40006589</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -362,7 +362,7 @@
         <register>
           <name>SensTimer3_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006594</addressOffset>
+          <addressOffset>0x40006599</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -803,7 +803,7 @@
         <register>
           <name>SensTimer2_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006486</addressOffset>
+          <addressOffset>0x40006584</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -842,7 +842,7 @@
         <register>
           <name>SensTimer2_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006496</addressOffset>
+          <addressOffset>0x40006594</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3999,7 +3999,7 @@
         <register>
           <name>QuadDec_1_Cnt16_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647F</addressOffset>
+          <addressOffset>0x40006473</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

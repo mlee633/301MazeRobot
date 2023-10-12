@@ -186,10 +186,14 @@
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_INT.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_isr.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_1_PM.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_Cnt16_PM.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_INT.lst</v>
+<v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_isr.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_2_PM.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec1Interrupt.lst</v>
 <v>PSoC Creator\Final\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec2Interrupt.lst</v>
