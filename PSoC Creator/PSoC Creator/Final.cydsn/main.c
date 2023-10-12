@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define COUNT_OF(x) (sizeof(x)/sizeof((x)[0]))
 
 // static uint8_t map[MAP_HEIGHT][MAP_WIDTH] = {
 //     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -74,13 +75,19 @@ static uint8_t map[15][19] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
 
-Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
-
+// Point food_list[5] = {{1, 9}, {5, 5}, {7, 1}, {13, 5}, {9, 9}};
+Point food_list[5] = {{1, 9}, {9, 9}, {5, 5}, {7, 1}, {13, 5}};
+Point start = {1, 1};
 
 char* AppendStrToStr(char *result, const char* src, size_t len);
 
 void normal() {
     char usbBuffer[1024];
+    
+    if(GenerateActionList(map, start, food_list, COUNT_OF(food_list)) == false) {
+        TrackLED3_Write(0xff);
+        return;
+    }   
     
     if(UARTIsReady() == 0) {
         SetUseUSB(false);

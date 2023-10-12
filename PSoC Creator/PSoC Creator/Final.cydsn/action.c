@@ -37,78 +37,78 @@ volatile static bool ignore = false; //to help ignore certain sensors
 volatile static TimerDo timerDo = TIMER_DO_NOTHING;
 volatile static bool runningTimer = false;
 
-static Action _actions[] = {
+//static Action _actions[] = {
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT,-1, 0}, //Start of entering 360 loop at 2
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},//Start of straight line
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0}, //Start of at the bottom
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0}, //Reached bottom right corner
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0}, //Reach 3
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},//Start of straight line
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0}, //Start of at the bottom
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0}, //Reached 4
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_IGNORE_INTERSECTION, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_LEFT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0},
+////    {ACTION_TURN_RIGHT, -1, 0}
 //    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT,-1, 0}, //Start of entering 360 loop at 2
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},//Start of straight line
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0}, //Start of at the bottom
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0}, //Reached bottom right corner
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0}, //Reach 3
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},//Start of straight line
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0}, //Start of at the bottom
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0}, //Reached 4
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_IGNORE_INTERSECTION, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_LEFT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0},
-//    {ACTION_TURN_RIGHT, -1, 0}
-    {ACTION_TURN_LEFT, -1, 0},
-    {ACTION_180, -1, FLAG_180_EXPECT_RIGHT | FLAG_180_EXPECT_LEFT} // right intersection
-    
-};
-volatile static size_t _actionIndex = 0;
+//    {ACTION_180, -1, FLAG_180_EXPECT_RIGHT | FLAG_180_EXPECT_LEFT} // right intersection
+//    
+//};
+volatile static size_t actionIndex = 0;
 
 Action GetAction() {   
-    return _actions[_actionIndex];
+    return GetActionList()[actionIndex];
 }
 
 void NextAction() {
-    if(_actionIndex + 1 < (sizeof(_actions)/sizeof(Action)))
-        _actionIndex++;   
+    if(actionIndex + 1 < GetActionCount())
+        actionIndex++;   
 }
 //----------------------------------------------------------------------------
 CY_ISR(StateMachineTimerInterrupt) {
@@ -189,6 +189,7 @@ void StateMachine(bool _reset) {
     }
     
     // Updated at end of function
+    static int8_t integratorVals[3] = {0};
     uint8_t sensors = PD_Read();
     //static char usbBuffer[255];
     //static int count = 0;+
@@ -197,18 +198,17 @@ void StateMachine(bool _reset) {
         case STRAIGHT:
             if(0) {}
             
-            uint8_t sensCap1 = SensTimer1_ReadCapture();
+            int16_t driftErrorApprox = 1 * (PD_ON(sensors, 1)  - PD_ON(sensors, 2));
+            int16_t integral = 0;
+            for(int i = 0; i < 3; i++) {
+                integral += integratorVals[i];   
+            }
+            int8_t pid = 4 * driftErrorApprox + integral;
             
-            uint8_t sensCap2 = SensTimer1_ReadCapture();
-            
-            int16_t pd1Drift = (255 - sensCap1) / 2;
-            int16_t pd2Drift = (255 - sensCap2) / 2;
-            
-            int16_t driftErrorApprox = 1 * (PD_ON(sensors, 1) * pd1Drift  - PD_ON(sensors, 2) * pd2Drift);
-            int8_t pid = driftErrorApprox;
-
-            if(pid > 6) pid = 6;
-            if(pid < -6) pid = -6;
+            for(int i = 2; i > 0; i--) {
+                integratorVals[i] = integratorVals[i - 1];
+            }
+            integratorVals[0] = driftErrorApprox;
 
             BoostRightMotor(-pid);
             BoostLeftMotor(pid);
