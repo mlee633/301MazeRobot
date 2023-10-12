@@ -20,6 +20,26 @@
 #define MAP_WIDTH 19
 #define MAP_HEIGHT 15
 
+typedef enum ActionType {
+  ACTION_IGNORE_INTERSECTION,
+  ACTION_TURN_LEFT,
+  ACTION_TURN_RIGHT,
+  ACTION_180,
+  ACTION_WAIT,
+} ActionType;
+
+typedef struct Action {
+  ActionType type;
+  // distance == -1 if we continue until next
+  // intersection. Otherwise, distance = num cms
+  // to travel.
+  int8_t distance;
+  // contains information about surrounding paths when we do
+  // a 180. If the FLAG_180_EXPECT_LEFT bit is set, we should expect a left path
+  // when we do a 180 If the FLAG_
+  uint8_t flags180;
+} Action;
+
 typedef struct Point {
     int8_t x, y;
 } Point;
@@ -36,8 +56,13 @@ typedef struct AlgoResult {
 
 AlgoResult RunAStar(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
                     Point start,
-                    const Point *food,
-                    size_t foodCount,
+                    Point food,
                     Point *result);
+
+bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
+                        Point *food, int foodCount);
+
+Action* GetActionList();
+size_t GetActionCount();
 
 bool point_eq(Point a, Point b);

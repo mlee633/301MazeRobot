@@ -163,14 +163,7 @@ void MotorController() {
     
     float mot1Target = mot1Cmp + 0.8 * mot1Diff;
     float mot2Target = mot2Cmp + 0.8 * mot2Diff;
-    
-    static char usbBuffer[128];
-    char* buff = usbBuffer;
-    int count;
-    
-    //count = sprintf(buff, "Current quad encs: %d, %d\r\n", (int)(motor1Count), (int)(motor2Count));
-    //WriteUARTString(usbBuffer, count);
-    
+
     if(mot1Target > 255) {
         PWM_1_WriteCompare(255);
     } else if(mot1Target < 0) {
