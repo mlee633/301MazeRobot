@@ -172,8 +172,8 @@ void MotorController() {
     float mot1Cmp = oldPwmLeft;
     float mot2Cmp = oldPwmRight;
     
-    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
-    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
+    float mot1Target = mot1Cmp + 0.8 * mot1Diff;
+    float mot2Target = mot2Cmp + 0.8 * mot2Diff;
 
     if(mot1Target > 255) {
         PWM_1_WriteCompare(255);

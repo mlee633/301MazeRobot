@@ -210,13 +210,13 @@ void StateMachine(bool _reset) {
 
 
             if(!PD_GET(sensors, 1)) {
-                BoostRightMotor(18);
-                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 5);
+                BoostRightMotor(16);
+                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 9);
             }
             
             if(!PD_GET(sensors, 2)) {
-                BoostLeftMotor(18);
-                SetTargetSpeeds(MOTOR_SPEED + 5, MOTOR_SPEED);
+                BoostLeftMotor(16);
+                SetTargetSpeeds(MOTOR_SPEED + 9, MOTOR_SPEED);
             }
 
             //BoostRightMotor(-pid);
@@ -345,7 +345,7 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
+            SetTargetSpeeds(MOTOR_SPEED + 2, MOTOR_SPEED);
 
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             
@@ -371,7 +371,7 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
+            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 2);
             
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             break;
