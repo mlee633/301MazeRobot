@@ -193,8 +193,8 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
   size_t preGenSize = actionCount;
   CreateIntersectionAction(map, lastFoodPosition, currDirection, ACTION_STOP);
   if(preGenSize == actionCount) {
-    actionList[actionCount++] = (Action){ACTION_STOP, -1, 0};
-    actionList[actionCount].distance =
+    actionList[actionCount] = (Action){ACTION_STOP, -1, 0};
+    actionList[actionCount++].distance =
           abs(lastActionPoint.y - lastFoodPosition.y) * SQUARE_HEIGHT_CM +
           abs(lastActionPoint.x - lastFoodPosition.x) * SQUARE_WIDTH_CM;
   }
