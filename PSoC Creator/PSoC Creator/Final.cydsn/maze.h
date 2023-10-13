@@ -17,30 +17,13 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include "action.h"
+
 #define MAP_WIDTH 19
 #define MAP_HEIGHT 15
 
 #define FLAG_180_EXPECT_LEFT (1 << 0)
 #define FLAG_180_EXPECT_RIGHT (1 << 1)
-
-typedef enum ActionType {
-  ACTION_IGNORE_INTERSECTION,
-  ACTION_TURN_LEFT,
-  ACTION_TURN_RIGHT,
-  ACTION_180,
-} ActionType;
-
-typedef struct Action {
-  ActionType type;
-  // distance == -1 if we continue until next
-  // intersection. Otherwise, distance = num cms
-  // to travel.
-  int8_t distance;
-  // contains information about surrounding paths when we do
-  // a 180. If the FLAG_180_EXPECT_LEFT bit is set, we should expect a left path
-  // when we do a 180 If the FLAG_
-  uint8_t flags180;
-} Action;
 
 typedef struct Point {
   int8_t x, y;

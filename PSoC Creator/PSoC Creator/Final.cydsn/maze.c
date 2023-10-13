@@ -126,28 +126,29 @@ static void CreateTurnAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
   }
 }
 
-static void CreateIgnoreIntersection(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
-                                     Point curr, RobotDirection currDirection) {
+static void CreateIntersectionAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
+                                     Point curr, RobotDirection currDirection,
+                                     ActionType type) {
   // We're going straight so we need to detect
   // if there is an intersection we need to ignore
   if (curr.x >= 1 && map[curr.y][curr.x - 1] == 0 &&
       currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+    actionList[actionCount++] = (Action){type, -1, 0};
   else if (curr.x + 1 < MAP_WIDTH && map[curr.y][curr.x + 1] == 0 &&
            currDirection != ROBOT_LEFT && currDirection != ROBOT_RIGHT)
-    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+    actionList[actionCount++] = (Action){type, -1, 0};
   else if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0 &&
            currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+    actionList[actionCount++] = (Action){type, -1, 0};
   else if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0 &&
            currDirection != ROBOT_DOWN && currDirection != ROBOT_UP)
-    actionList[actionCount++] = (Action){ACTION_IGNORE_INTERSECTION, -1, 0};
+    actionList[actionCount++] = (Action){type, -1, 0};
 }
 
 bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
                         Point *food, int foodCount) {
   Point path[256];
-  Point currentPos = start;
+  Point lastFoodPosition = start;
   RobotDirection currDirection = ROBOT_INVALID_DIR;
   bool firstRun = true;
 
@@ -155,7 +156,7 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
 
   for (int foodIndex = 0; foodIndex < foodCount; foodIndex++) {
     Point currFood = food[foodIndex];
-    AlgoResult result = RunAStar(map, currentPos, currFood, path);
+    AlgoResult result = RunAStar(map, lastFoodPosition, currFood, path);
 
     // Get the starting direction if this is the first run
     if (firstRun) {
@@ -174,7 +175,7 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
         CreateTurnAction(map, curr, path[i], currDirection, lastActionPoint);
         currDirection = nextDir;
       } else {
-        CreateIgnoreIntersection(map, curr, currDirection);
+        CreateIntersectionAction(map, curr, currDirection, ACTION_IGNORE_INTERSECTION);
       }
 
       // We generated an action,
@@ -183,10 +184,19 @@ bool GenerateActionList(const uint8_t map[MAP_HEIGHT][MAP_WIDTH], Point start,
         lastActionPoint = curr;
       }
     }
-    currentPos = path[result.pathLength - 1];
+    lastFoodPosition = path[result.pathLength - 1];
 
     // Always set first run to false
     firstRun = false;
+  }
+
+  size_t preGenSize = actionCount;
+  CreateIntersectionAction(map, lastFoodPosition, currDirection, ACTION_STOP);
+  if(preGenSize == actionCount) {
+    actionList[actionCount++] = (Action){ACTION_STOP, -1, 0};
+    actionList[actionCount].distance =
+          abs(lastActionPoint.y - lastFoodPosition.y) * SQUARE_HEIGHT_CM +
+          abs(lastActionPoint.x - lastFoodPosition.x) * SQUARE_WIDTH_CM;
   }
 
   return true;

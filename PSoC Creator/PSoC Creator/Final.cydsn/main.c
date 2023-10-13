@@ -85,7 +85,7 @@ void normal() {
     char usbBuffer[1024];
     
     if(GenerateActionList(map, start, food_list, COUNT_OF(food_list)) == false) {
-        TrackLED3_Write(0xff);
+        TrackLED1_Write(0xff);
         return;
     }   
     

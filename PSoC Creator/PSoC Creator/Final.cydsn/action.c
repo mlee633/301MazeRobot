@@ -152,18 +152,18 @@ void Assert(bool cond, const char* msg) {
     }
 }
 
-#define MOVE_SPEED 35
+#define ROTATE_SPEED 35
 
 void InitLeftTurn() {
     DisableSpeedISR();
-    UpdatePWMLeft(127 - MOVE_SPEED);
-    UpdatePWMRight(127 + MOVE_SPEED);
+    UpdatePWMLeft(127 - ROTATE_SPEED);
+    UpdatePWMRight(127 + ROTATE_SPEED);
 }
 
 void InitRightTurn() {
     DisableSpeedISR();
-    UpdatePWMLeft(127 + MOVE_SPEED);
-    UpdatePWMRight(127 - MOVE_SPEED);
+    UpdatePWMLeft(127 + ROTATE_SPEED);
+    UpdatePWMRight(127 - ROTATE_SPEED);
 }
 
 void TimerDoStuff(TimerDo timerAction) {
@@ -185,6 +185,9 @@ void StateMachine(bool _reset) {
     static int32_t lastActionLeftMotorQuadEnc = 0;
     static int32_t lastActionRightMotorQuadEnc = 0;
     
+    static int32_t pd1Integral = 0;
+    static int32_t pd2Integral = 0;
+    
     if(!hasInit) {
         StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
         hasInit = true;
@@ -202,20 +205,25 @@ void StateMachine(bool _reset) {
             if(0) {} // Need this for some reason
             
             // **** PID Controller Starts Here ****
-            int16_t driftErrorApprox = 1 * (PD_ON(sensors, 1)  - PD_ON(sensors, 2));
-            int16_t integral = 0;
-            for(int i = 0; i < 3; i++) {
-                integral += integratorVals[i];   
-            }
-            int8_t pid = 3 * driftErrorApprox + integral / 2;
-            
-            for(int i = 2; i > 0; i--) {
-                integratorVals[i] = integratorVals[i - 1];
-            }
-            integratorVals[0] = driftErrorApprox;
+            //int8_t pd1Cap = (255 - SensTimer1_ReadCapture()) / 4;
+            //int8_t pd2Cap = (255 - SensTimer2_ReadCapture()) / 4;
 
-            BoostRightMotor(-pid);
-            BoostLeftMotor(pid);
+            
+            int16_t driftErrorApprox = 1* (PD_ON(sensors, 1) - 1* PD_ON(sensors, 2));
+            int8_t pid = 2 * driftErrorApprox;
+
+            if(!PD_GET(sensors, 1)) {
+                BoostRightMotor(5);
+                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 2);
+            }
+            
+            if(!PD_GET(sensors, 2)) {
+                BoostLeftMotor(5);   
+                SetTargetSpeeds(MOTOR_SPEED + 2, MOTOR_SPEED);
+            }
+
+            //BoostRightMotor(-pid);
+            //BoostLeftMotor(pid);
             // **** PID Controller Ends Here ****
             
             // If we see PD4 in the dark, and we aren't ignoring
@@ -237,6 +245,7 @@ void StateMachine(bool _reset) {
                     LOG_STATE(TURN_RIGHT_START);
                     break;
                 } else if(GetAction().type == ACTION_180) {
+                    
                     if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
                         NextAction();
                         InitLeftTurn();
@@ -253,6 +262,8 @@ void StateMachine(bool _reset) {
                         current_state = TURN_LEFT_START;
                         LOG_STATE(TURN_LEFT_START);
                     }   
+                } else if(GetAction().type == ACTION_STOP) {
+                    SetStopMotors(1,1);   
                 }
             }
             
@@ -291,6 +302,8 @@ void StateMachine(bool _reset) {
                         current_state = TURN_LEFT_START;
                         LOG_STATE(TURN_LEFT_START);
                     }
+                } else if(GetAction().type == ACTION_STOP) {
+                    SetStopMotors(1,1);   
                 }
              }
             
@@ -300,12 +313,19 @@ void StateMachine(bool _reset) {
             
             // Check how far we've travelled, if the current action requires us to travel a certain distance
             if(GetAction().distance != -1) {
+                TrackLED3_Write(0xff);
                 if(distanceSinceLastAction >= GetAction().distance) {
-                    NextAction();
-                    InitLeftTurn();
-                    current_state = TURN_LEFT_START;
-                    LOG_STATE(TURN_LEFT_START);
+                    if(GetAction().type == ACTION_180) {
+                        NextAction();
+                        InitLeftTurn();
+                        current_state = TURN_LEFT_START;
+                        LOG_STATE(TURN_LEFT_START);
+                    } else if(GetAction().type == ACTION_STOP) {
+                        SetStopMotors(1, 1);   
+                    }
                 }
+            } else {
+                TrackLED3_Write(0x00);   
             }
             
             

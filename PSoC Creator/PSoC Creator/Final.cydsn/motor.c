@@ -119,13 +119,13 @@ int32_t GetQuadDecCountRightMotor() {
 
 float CalcDistanceLeftMotorCm(int32_t compareCount) {
     float numRots = (float) (QuadDec_1_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
-    float rads = 2.0 * M_PI * numRots;
+    float rads = -2.0 * M_PI * numRots;
     return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in cm
 }
 
 float CalcDistanceRightMotorCm(int32_t compareCount) {
     float numRots = (float) (QuadDec_2_GetCounter() - compareCount) / (float)PULSES_PER_ROTATION;
-    float rads = 2.0 * M_PI * numRots;
+    float rads = -2.0 * M_PI * numRots;
     return ((rads * WHEEL_1_RADIUS_CM) ); // Distance in cm
 }
 
@@ -172,8 +172,8 @@ void MotorController() {
     float mot1Cmp = oldPwmLeft;
     float mot2Cmp = oldPwmRight;
     
-    float mot1Target = mot1Cmp + 0.8 * mot1Diff;
-    float mot2Target = mot2Cmp + 0.8 * mot2Diff;
+    float mot1Target = mot1Cmp + 0.5 * mot1Diff;
+    float mot2Target = mot2Cmp + 0.5 * mot2Diff;
 
     if(mot1Target > 255) {
         PWM_1_WriteCompare(255);
