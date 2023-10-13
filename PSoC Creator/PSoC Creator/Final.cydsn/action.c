@@ -208,18 +208,15 @@ void StateMachine(bool _reset) {
             //int8_t pd1Cap = (255 - SensTimer1_ReadCapture()) / 4;
             //int8_t pd2Cap = (255 - SensTimer2_ReadCapture()) / 4;
 
-            
-            int16_t driftErrorApprox = 1* (PD_ON(sensors, 1) - 1* PD_ON(sensors, 2));
-            int8_t pid = 2 * driftErrorApprox;
 
             if(!PD_GET(sensors, 1)) {
-                BoostRightMotor(5);
-                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 2);
+                BoostRightMotor(18);
+                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 5);
             }
             
             if(!PD_GET(sensors, 2)) {
-                BoostLeftMotor(5);   
-                SetTargetSpeeds(MOTOR_SPEED + 2, MOTOR_SPEED);
+                BoostLeftMotor(18);
+                SetTargetSpeeds(MOTOR_SPEED + 5, MOTOR_SPEED);
             }
 
             //BoostRightMotor(-pid);
@@ -339,7 +336,7 @@ void StateMachine(bool _reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(100);
+            CyDelay(10);
             
             // Save quad encoders, so we can calculate the distance after this intersection
             lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
@@ -365,7 +362,7 @@ void StateMachine(bool _reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(100);
+            CyDelay(10);
 
             // Save quad encoders, so we can calculate the distance after this intersection
             lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
