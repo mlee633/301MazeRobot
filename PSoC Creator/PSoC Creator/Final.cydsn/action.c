@@ -20,6 +20,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #define PD_GET(s, n) ((s) & (1 << ((n) - 1)))
 #define PD_ON(s, n) (((s) & (1 << ((n) - 1))) ? 1 : 0)
@@ -185,20 +186,19 @@ void StateMachine(bool _reset) {
     static int32_t lastActionLeftMotorQuadEnc = 0;
     static int32_t lastActionRightMotorQuadEnc = 0;
     
-    static int32_t pd1Integral = 0;
-    static int32_t pd2Integral = 0;
-    
     if(!hasInit) {
         StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
         hasInit = true;
     }
     
     // Updated at end of function
-    static int8_t integratorVals[3] = {0};
     uint8_t sensors = PD_Read();
-    float distanceSinceLastAction = 0.0f;
-    //static char usbBuffer[255];
-    //static int count = 0;+
+    float distanceSinceLastAction = (CalcDistanceLeftMotorCm(lastActionLeftMotorQuadEnc) +
+                                     CalcDistanceRightMotorCm(lastActionRightMotorQuadEnc)) / 2;
+    
+    float x = distanceSinceLastAction;
+    float D = GetAction().distance < 0 ? -GetAction().distance : GetAction().distance;
+    float speed = (D - x > 1.5 || GetAction().type == ACTION_IGNORE_INTERSECTION) ? MOTOR_SPEED : 15.0f;
     
     switch (current_state) {
         case STRAIGHT:
@@ -208,20 +208,32 @@ void StateMachine(bool _reset) {
             //int8_t pd1Cap = (255 - SensTimer1_ReadCapture()) / 4;
             //int8_t pd2Cap = (255 - SensTimer2_ReadCapture()) / 4;
 
-
+            // Change speed based on distance till next point
+            // Something like
+            //          ________
+            // speed   /        \
+            // ^      /          \
+            // |     /            \ 
+            // ---> time
+        
+            
+            SetTargetSpeeds(speed, speed);
+            
             if(!PD_GET(sensors, 1)) {
-                BoostRightMotor(16);
-                SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 9);
+               BoostRightMotor(7);
+               SetTargetSpeeds(speed, speed + 4);
             }
             
             if(!PD_GET(sensors, 2)) {
-                BoostLeftMotor(16);
-                SetTargetSpeeds(MOTOR_SPEED + 9, MOTOR_SPEED);
+                BoostLeftMotor(7);
+                SetTargetSpeeds(speed + 4, speed);
             }
 
             //BoostRightMotor(-pid);
             //BoostLeftMotor(pid);
             // **** PID Controller Ends Here ****
+            
+
             
             // If we see PD4 in the dark, and we aren't ignoring
             // the sensors after a turn, check the current action,
@@ -304,12 +316,8 @@ void StateMachine(bool _reset) {
                 }
              }
             
-            // Calculate the distance travelled since last action
-            distanceSinceLastAction = (CalcDistanceLeftMotorCm(lastActionLeftMotorQuadEnc) +
-                                       CalcDistanceRightMotorCm(lastActionRightMotorQuadEnc)) / 2;
-            
             // Check how far we've travelled, if the current action requires us to travel a certain distance
-            if(GetAction().distance != -1) {
+            if(GetAction().distance > 0) {
                 TrackLED3_Write(0xff);
                 if(distanceSinceLastAction >= GetAction().distance) {
                     if(GetAction().type == ACTION_180) {
@@ -336,7 +344,7 @@ void StateMachine(bool _reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(10);
+            CyDelay(50);
             
             // Save quad encoders, so we can calculate the distance after this intersection
             lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
@@ -345,7 +353,7 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED + 2, MOTOR_SPEED);
+            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
 
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             
@@ -362,7 +370,7 @@ void StateMachine(bool _reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(10);
+            CyDelay(50);
 
             // Save quad encoders, so we can calculate the distance after this intersection
             lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
@@ -371,7 +379,7 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED + 2);
+            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
             
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             break;

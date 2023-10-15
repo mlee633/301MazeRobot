@@ -28,7 +28,7 @@ typedef struct Action {
   // distance == -1 if we continue until next
   // intersection. Otherwise, distance = num cms
   // to travel.
-  int8_t distance;
+  float distance;
   // contains information about surrounding paths when we do
   // a 180. If the FLAG_180_EXPECT_LEFT bit is set, we should expect a left path
   // when we do a 180 If the FLAG_
