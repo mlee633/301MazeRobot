@@ -122,7 +122,6 @@ CY_ISR(StateMachineTimerInterrupt) {
     }
     
     runningTimer = false;
-    TrackLED2_Write(0x00);
 }
 
 typedef enum {
@@ -173,10 +172,15 @@ void TimerDoStuff(TimerDo timerAction) {
     timerDo = timerAction;
     if(timerDo == TIMER_DO_IGNORE_SENSORS) {
         ignore = true;
+        StateMachineTimer_WritePeriod(4500);
+    } else {
+        StateMachineTimer_WritePeriod(4500);
     }
     
-    TrackLED2_Write(0xff);
     StateMachineTimer_Start();
+    StateMachineTimerReset_Write(1);
+    CyDelay(1);
+    StateMachineTimerReset_Write(0);
     runningTimer = true;
 }
 
@@ -185,10 +189,12 @@ void StateMachine(bool _reset) {
     static bool hasInit = false;
     static int32_t lastActionLeftMotorQuadEnc = 0;
     static int32_t lastActionRightMotorQuadEnc = 0;
+    static bool isTurn180 = false;
     
     if(!hasInit) {
         StateMachineTimerInterrupt_StartEx(StateMachineTimerInterrupt);
         hasInit = true;
+        StateMachineTimer_WritePeriod(4500);
     }
     
     // Updated at end of function
@@ -198,7 +204,8 @@ void StateMachine(bool _reset) {
     
     float x = distanceSinceLastAction;
     float D = GetAction().distance < 0 ? -GetAction().distance : GetAction().distance;
-    float speed = (D - x > 1.5 || GetAction().type == ACTION_IGNORE_INTERSECTION) ? MOTOR_SPEED : 15.0f;
+    float speed = ((D - x > 3.0f && D - x < (D - 1)) || GetAction().type == ACTION_IGNORE_INTERSECTION) ? MOTOR_SPEED : 15.0f;
+    if(D < 13.5f) speed = 15.0f;
     
     switch (current_state) {
         case STRAIGHT:
@@ -215,18 +222,17 @@ void StateMachine(bool _reset) {
             // ^      /          \
             // |     /            \ 
             // ---> time
-        
             
-            SetTargetSpeeds(speed, speed);
-            
-            if(!PD_GET(sensors, 1)) {
+            if(!PD_GET(sensors, 1) && PD_GET(sensors, 5)) {
                BoostRightMotor(7);
-               SetTargetSpeeds(speed, speed + 4);
+               SetTargetSpeeds(speed, speed + 7);
             }
             
-            if(!PD_GET(sensors, 2)) {
+            else if(!PD_GET(sensors, 2)  && PD_GET(sensors, 7)) {
                 BoostLeftMotor(7);
-                SetTargetSpeeds(speed + 4, speed);
+                SetTargetSpeeds(speed + 7, speed);
+            } else {
+                SetTargetSpeeds(speed, speed); 
             }
 
             //BoostRightMotor(-pid);
@@ -254,6 +260,8 @@ void StateMachine(bool _reset) {
                     LOG_STATE(TURN_RIGHT_START);
                     break;
                 } else if(GetAction().type == ACTION_180) {
+                    
+                    isTurn180 = true;
                     
                     if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
                         NextAction();
@@ -295,6 +303,9 @@ void StateMachine(bool _reset) {
                     LOG_STATE(TURN_LEFT_START);
                     break;
                 }  else if(GetAction().type == ACTION_180) {
+                    
+                    isTurn180 = true;
+                    
                     if(GetAction().flags180 & FLAG_180_EXPECT_LEFT && GetAction().flags180 & FLAG_180_EXPECT_RIGHT) {
                         NextAction();
                         InitLeftTurn();
@@ -318,7 +329,6 @@ void StateMachine(bool _reset) {
             
             // Check how far we've travelled, if the current action requires us to travel a certain distance
             if(GetAction().distance > 0) {
-                TrackLED3_Write(0xff);
                 if(distanceSinceLastAction >= GetAction().distance) {
                     if(GetAction().type == ACTION_180) {
                         NextAction();
@@ -329,8 +339,6 @@ void StateMachine(bool _reset) {
                         SetStopMotors(1, 1);   
                     }
                 }
-            } else {
-                TrackLED3_Write(0x00);   
             }
             
             
@@ -353,10 +361,10 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
+            SetTargetSpeeds(15, 15);
 
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
-            
+                
             break;
             
         case TURN_RIGHT_START:
@@ -379,7 +387,7 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
+            SetTargetSpeeds(15, 15);
             
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
             break;
@@ -405,7 +413,7 @@ void StateMachine(bool _reset) {
             UpdatePWMLeft(127);
             UpdatePWMRight(127);
             
-            CyDelay(100);
+            CyDelay(50);
                         
             // Save quad encoders, so we can calculate the distance after this intersection
             lastActionLeftMotorQuadEnc = GetQuadDecCountLeftMotor();
@@ -414,10 +422,10 @@ void StateMachine(bool _reset) {
             current_state = STRAIGHT;
             EnableSpeedISR();
             LOG_STATE(STRAIGHT);
-            SetTargetSpeeds(MOTOR_SPEED, MOTOR_SPEED);
-            break;
+            SetTargetSpeeds(15, 15);
             
             TimerDoStuff(TIMER_DO_IGNORE_SENSORS);
+            break;
             
         default:
             ASSERT_MSG(false, "Invalid state reached");

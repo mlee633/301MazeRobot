@@ -75,9 +75,24 @@ static uint8_t map[15][19] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
 
-Point food_list[5] = {{1, 9}, {7, 1}, {5, 5}, {13, 5}, {9, 9}};
+// Point food_list[5] = {{1, 9}, {7, 1}, {5, 5}, {13, 5}, {9, 9}};
 // Point food_list[5] = {{1, 9}, {9, 9}, {5, 5}, {7, 1}, {13, 5}};
-Point start = {1, 1};
+// Point food_list[5] = {{15, 13}, {11, 1}, {7, 9}, {9, 2}, {9, 9}};
+// Point food_list[5] = {{9, 1}, {6, 13}, {5, 3}, {8, 1}, {9, 9}};
+// Point food_list[5] = {{16, 7}, {11, 4}, {5, 7}, {7, 6}, {9, 9}};
+// Point food_list[5] = {{17, 11}, {5, 1}, {9, 9}, {7, 11}, {9, 9}}; 
+// Point food_list[5] = {{8, 11}, {4, 11}, {9, 5}, {11, 5}, {9, 9}}; 
+// Point food_list[5] = {{9, 9}, {1, 1}, {14, 13}, {1, 5}, {14, 3}}; 
+// Point food_list[5] = {{2, 5}, {5, 13}, {5, 3}, {1, 9}, {1, 6}}; 
+// Point food_list[5] = {{14, 3}, {13, 8}, {8, 11}, {1, 3}, {9, 1}}; 
+Point food_list[5] = {
+	{5,3},
+	{1,3},
+	{11,7},
+	{17,1},
+	{15,13}
+};
+Point start = {7,9};
 
 char* AppendStrToStr(char *result, const char* src, size_t len);
 
@@ -138,6 +153,10 @@ void speed_run() {
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
+    
+    TrackLED1_Write(0xff);
+    TrackLED2_Write(0xff);
+    TrackLED3_Write(0xff);
     
     InitSensors();
     USBUART_1_Start(0, USBUART_1_5V_OPERATION);

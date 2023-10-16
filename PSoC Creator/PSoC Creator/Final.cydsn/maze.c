@@ -30,7 +30,7 @@
 #define FLAG_180_EXPECT_RIGHT (1 << 1)
 
 #define SQUARE_WIDTH_CM (10.0f)
-#define SQUARE_HEIGHT_CM (6.0f)
+#define SQUARE_HEIGHT_CM (6.5f)
 
 typedef enum RobotDirection {
   ROBOT_INVALID_DIR,
@@ -106,6 +106,8 @@ static void CreateTurnAction(const uint8_t map[MAP_HEIGHT][MAP_WIDTH],
       if (curr.y + 1 < MAP_HEIGHT && map[curr.y + 1][curr.x] == 0)
         actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
 
+        break;
+        
     case ROBOT_RIGHT:
       if (curr.y >= 1 && map[curr.y - 1][curr.x] == 0)
         actionList[actionCount].flags180 |= FLAG_180_EXPECT_LEFT;
