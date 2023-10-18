@@ -31,7 +31,7 @@
 #define WHEEL_1_RADIUS_CM (3.25f)
 #define WHEEL_2_RADIUS_CM (3.25f)
 
-#define MOTOR_SPEED (34.0f)
+#define MOTOR_SPEED (52.0f)
 
 void SetupMotors();
 void SetStopMotors(bool m1, bool m2);

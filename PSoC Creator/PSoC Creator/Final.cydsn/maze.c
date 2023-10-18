@@ -29,8 +29,8 @@
 #define FLAG_180_EXPECT_LEFT (1 << 0)
 #define FLAG_180_EXPECT_RIGHT (1 << 1)
 
-#define SQUARE_WIDTH_CM (10.0f)
-#define SQUARE_HEIGHT_CM (6.5f)
+#define SQUARE_WIDTH_CM (9.0f)
+#define SQUARE_HEIGHT_CM (6.25f)
 
 typedef enum RobotDirection {
   ROBOT_INVALID_DIR,
